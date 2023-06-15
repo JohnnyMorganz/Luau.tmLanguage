@@ -1,0 +1,4 @@
+---
+name: Luau
+scopeName: source.luau
+fileTypes: [luau, lua]

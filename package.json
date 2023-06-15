@@ -1,0 +1,34 @@
+{
+  "name": "luau.tmlanguage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TextMate grammar files for the Luau programming language",
+  "main": "build/build.js",
+  "scripts": {
+    "build": "npm run build:grammar && npm run build:tests",
+    "build:grammar": "tsc -b build -v && node build/build.js",
+    "build:tests": "tsc -b tests -v",
+    "pretest": "npm run build",
+    "test": "mocha --full-trace tests/test.js  --reporter mocha-multi-reporters",
+    "diff": "cross-env-shell $DIFF tests/baselines tests/generated",
+    "accept": "copyfiles -u 2 \"tests/generated/*\" tests/baselines"
+  },
+  "dependencies": {
+    "@types/chai": "latest",
+    "@types/js-yaml": "latest",
+    "@types/mocha": "latest",
+    "@types/node": "latest",
+    "chai": "latest",
+    "js-yaml": "latest",
+    "mocha": "latest",
+    "plist": "latest",
+    "typescript": "latest",
+    "vscode-oniguruma": "latest",
+    "vscode-textmate": "latest"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.3.0",
+    "cross-env": "^5.1.1",
+    "mocha-multi-reporters": "^1.1.7"
+  }
+}
