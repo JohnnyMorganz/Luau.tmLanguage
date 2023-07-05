@@ -2,8 +2,8 @@ original file
 -----------------------------------
 --[[
 local emotes = {
-	[":thinking:"] = "http://www.roblox.com/asset/?id=643340245",
-	[":bug:"] = "http://www.roblox.com/asset/?id=860037275"
+  [":thinking:"] = "http://www.roblox.com/asset/?id=643340245",
+  [":bug:"] = "http://www.roblox.com/asset/?id=860037275"
 }
 ]]
 -----------------------------------
@@ -14,11 +14,11 @@ local emotes = {
 >local emotes = {
  ^^^^^^^^^^^^^^^^^
  source.luau comment.block.luau
->	[":thinking:"] = "http://www.roblox.com/asset/?id=643340245",
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  [":thinking:"] = "http://www.roblox.com/asset/?id=643340245",
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.luau comment.block.luau
->	[":bug:"] = "http://www.roblox.com/asset/?id=860037275"
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  [":bug:"] = "http://www.roblox.com/asset/?id=860037275"
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.luau comment.block.luau
 >}
  ^^

@@ -1,12 +1,12 @@
 original file
 -----------------------------------
 local function assertEq(left, right)
-	assert(typeof(left) == "string", "left is a " .. typeof(left))
-	assert(typeof(right) == "string", "right is a " .. typeof(right))
+  assert(typeof(left) == "string", "left is a " .. typeof(left))
+  assert(typeof(right) == "string", "right is a " .. typeof(right))
 
-	if left ~= right then
-		error(string.format("%q ~= %q", left, right))
-	end
+  if left ~= right then
+  	error(string.format("%q ~= %q", left, right))
+  end
 end
 
 assertEq(`hello {"world"}`, "hello world")
@@ -23,7 +23,7 @@ assertEq(`true = {true}`, "true = true")
 
 local name = "Luau"
 assertEq(`Welcome to {
-	name
+  name
 }!`, "Welcome to Luau!")
 
 local nameNotConstantEvaluated = (function() return "Luau" end)()
@@ -50,7 +50,7 @@ local health = 50
 assert(`You have {health}% health` == "You have 50% health")
 
 local function shadowsString(string)
-	return `Value is {string}`
+  return `Value is {string}`
 end
 
 assertEq(shadowsString("hello"), "Value is hello")
@@ -83,68 +83,19 @@ return "OK"
                                source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
                                     ^
                                     source.luau meta.function.luau
->	assert(typeof(left) == "string", "left is a " .. typeof(left))
- ^
+>  assert(typeof(left) == "string", "left is a " .. typeof(left))
+ ^^
  source.luau
-  ^^^^^^
-  source.luau support.function.luau
-        ^
-        source.luau
-         ^^^^^^
-         source.luau support.function.luau
-               ^
-               source.luau
-                ^^^^
-                source.luau variable.other.readwrite.luau
-                    ^^
-                    source.luau
-                      ^
-                      source.luau keyword.operator.assignment.luau
-                       ^
-                       source.luau keyword.operator.assignment.luau
-                        ^
-                        source.luau
-                         ^
-                         source.luau string.quoted.double.luau
-                          ^^^^^^
-                          source.luau string.quoted.double.luau
-                                ^
-                                source.luau string.quoted.double.luau
-                                 ^^
-                                 source.luau
-                                   ^
-                                   source.luau string.quoted.double.luau
-                                    ^^^^^^^^^^
-                                    source.luau string.quoted.double.luau
-                                              ^
-                                              source.luau string.quoted.double.luau
-                                               ^
-                                               source.luau
-                                                ^^
-                                                source.luau keyword.operator.other.luau
-                                                  ^
-                                                  source.luau
-                                                   ^^^^^^
-                                                   source.luau support.function.luau
-                                                         ^
-                                                         source.luau
-                                                          ^^^^
-                                                          source.luau variable.other.readwrite.luau
-                                                              ^^^
-                                                              source.luau
->	assert(typeof(right) == "string", "right is a " .. typeof(right))
- ^
- source.luau
-  ^^^^^^
-  source.luau support.function.luau
-        ^
-        source.luau
-         ^^^^^^
-         source.luau support.function.luau
-               ^
-               source.luau
-                ^^^^^
-                source.luau variable.other.readwrite.luau
+   ^^^^^^
+   source.luau support.function.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau support.function.luau
+                ^
+                source.luau
+                 ^^^^
+                 source.luau variable.other.readwrite.luau
                      ^^
                      source.luau
                        ^
@@ -163,80 +114,129 @@ return "OK"
                                   source.luau
                                     ^
                                     source.luau string.quoted.double.luau
-                                     ^^^^^^^^^^^
+                                     ^^^^^^^^^^
                                      source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
                                                 ^
-                                                source.luau string.quoted.double.luau
+                                                source.luau
+                                                 ^^
+                                                 source.luau keyword.operator.other.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^^^
+                                                    source.luau support.function.luau
+                                                          ^
+                                                          source.luau
+                                                           ^^^^
+                                                           source.luau variable.other.readwrite.luau
+                                                               ^^^
+                                                               source.luau
+>  assert(typeof(right) == "string", "right is a " .. typeof(right))
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.function.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau support.function.luau
+                ^
+                source.luau
+                 ^^^^^
+                 source.luau variable.other.readwrite.luau
+                      ^^
+                      source.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau keyword.operator.assignment.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau string.quoted.double.luau
+                            ^^^^^^
+                            source.luau string.quoted.double.luau
+                                  ^
+                                  source.luau string.quoted.double.luau
+                                   ^^
+                                   source.luau
+                                     ^
+                                     source.luau string.quoted.double.luau
+                                      ^^^^^^^^^^^
+                                      source.luau string.quoted.double.luau
                                                  ^
-                                                 source.luau
-                                                  ^^
-                                                  source.luau keyword.operator.other.luau
-                                                    ^
-                                                    source.luau
-                                                     ^^^^^^
-                                                     source.luau support.function.luau
-                                                           ^
-                                                           source.luau
-                                                            ^^^^^
-                                                            source.luau variable.other.readwrite.luau
-                                                                 ^^^
-                                                                 source.luau
+                                                 source.luau string.quoted.double.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^
+                                                   source.luau keyword.operator.other.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^^^^^
+                                                      source.luau support.function.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^^^
+                                                             source.luau variable.other.readwrite.luau
+                                                                  ^^^
+                                                                  source.luau
 >
  ^
  source.luau
->	if left ~= right then
- ^
- source.luau
-  ^^
-  source.luau keyword.control.luau
-    ^
-    source.luau
-     ^^^^
-     source.luau variable.other.readwrite.luau
-         ^
-         source.luau
-          ^^
-          source.luau keyword.operator.comparison.luau
-            ^
-            source.luau
-             ^^^^^
-             source.luau variable.other.readwrite.luau
-                  ^
-                  source.luau
-                   ^^^^
-                   source.luau keyword.control.luau
->		error(string.format("%q ~= %q", left, right))
+>  if left ~= right then
  ^^
  source.luau
-   ^^^^^
-   source.luau support.function.luau
-        ^
-        source.luau
-         ^^^^^^^^^^^^^
-         source.luau support.function.luau
-                      ^
-                      source.luau
-                       ^
-                       source.luau string.quoted.double.luau
-                        ^^^^^^^^
-                        source.luau string.quoted.double.luau
-                                ^
-                                source.luau string.quoted.double.luau
-                                 ^^
-                                 source.luau
-                                   ^^^^
-                                   source.luau variable.other.readwrite.luau
-                                       ^^
-                                       source.luau
-                                         ^^^^^
-                                         source.luau variable.other.readwrite.luau
-                                              ^^^
-                                              source.luau
->	end
- ^
+   ^^
+   source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.operator.comparison.luau
+             ^
+             source.luau
+              ^^^^^
+              source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^^^
+                    source.luau keyword.control.luau
+>  	error(string.format("%q ~= %q", left, right))
+ ^^^
  source.luau
-  ^^^
-  source.luau keyword.control.luau
+    ^^^^^
+    source.luau support.function.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^
+          source.luau support.function.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^^^^^^^^
+                         source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau string.quoted.double.luau
+                                  ^^
+                                  source.luau
+                                    ^^^^
+                                    source.luau variable.other.readwrite.luau
+                                        ^^
+                                        source.luau
+                                          ^^^^^
+                                          source.luau variable.other.readwrite.luau
+                                               ^^^
+                                               source.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
 >end
  ^^^
  source.luau keyword.control.luau
@@ -569,11 +569,11 @@ return "OK"
            source.luau string.interpolated.luau
                       ^
                       source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
->	name
- ^
+>  name
+ ^^
  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
-  ^^^^
-  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+   ^^^^
+   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
 >}!`, "Welcome to Luau!")
  ^
  source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
@@ -1052,25 +1052,25 @@ return "OK"
                               source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
                                     ^
                                     source.luau meta.function.luau
->	return `Value is {string}`
- ^
+>  return `Value is {string}`
+ ^^
  source.luau
-  ^^^^^^
-  source.luau keyword.control.luau
-        ^
-        source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
          ^
-         source.luau string.interpolated.luau
-          ^^^^^^^^^
+         source.luau
+          ^
           source.luau string.interpolated.luau
-                   ^
-                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
-                    ^^^^^^
-                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.constant.luau
-                          ^
-                          source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+           ^^^^^^^^^
+           source.luau string.interpolated.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                     ^^^^^^
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.constant.luau
                            ^
-                           source.luau string.interpolated.luau
+                           source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                            ^
+                            source.luau string.interpolated.luau
 >end
  ^^^
  source.luau keyword.control.luau

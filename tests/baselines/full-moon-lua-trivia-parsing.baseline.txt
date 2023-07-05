@@ -7,9 +7,9 @@ local bar = baz
 local baz = foo
 
 do
-	local foo = bar
-	-- comment
-	local bar = baz
+  local foo = bar
+  -- comment
+  local bar = baz
 end
 -----------------------------------
 
@@ -78,47 +78,47 @@ end
 >do
  ^^
  source.luau keyword.control.luau
->	local foo = bar
- ^
+>  local foo = bar
+ ^^
  source.luau
-  ^^^^^
-  source.luau storage.modifier.local.luau
-       ^
-       source.luau
-        ^^^
-        source.luau variable.other.luau
-           ^
-           source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.luau
             ^
-            source.luau keyword.operator.assignment.luau
+            source.luau
              ^
-             source.luau
-              ^^^
-              source.luau variable.other.readwrite.luau
->	-- comment
- ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
+>  -- comment
+ ^^
  source.luau
-  ^^
-  source.luau comment.line.double-dash.luau
-    ^^^^^^^^
-    source.luau comment.line.double-dash.luau
->	local bar = baz
- ^
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  local bar = baz
+ ^^
  source.luau
-  ^^^^^
-  source.luau storage.modifier.local.luau
-       ^
-       source.luau
-        ^^^
-        source.luau variable.other.luau
-           ^
-           source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.luau
             ^
-            source.luau keyword.operator.assignment.luau
+            source.luau
              ^
-             source.luau
-              ^^^
-              source.luau variable.other.readwrite.luau
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
 >end
  ^^^
  source.luau keyword.control.luau

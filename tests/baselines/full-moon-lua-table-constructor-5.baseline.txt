@@ -1,8 +1,8 @@
 original file
 -----------------------------------
 local x = {
-	[call()] = 1,
-	2,
+  [call()] = 1,
+  2,
 }
 -----------------------------------
 
@@ -19,28 +19,28 @@ local x = {
          source.luau keyword.operator.assignment.luau
           ^^^
           source.luau
->	[call()] = 1,
+>  [call()] = 1,
+ ^^^
+ source.luau
+    ^^^^
+    source.luau entity.name.function.luau
+        ^^^^
+        source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+               ^^
+               source.luau
+>  2,
  ^^
  source.luau
-   ^^^^
-   source.luau entity.name.function.luau
-       ^^^^
-       source.luau
-           ^
-           source.luau keyword.operator.assignment.luau
-            ^
-            source.luau
-             ^
-             source.luau constant.numeric.decimal.luau
-              ^^
-              source.luau
->	2,
- ^
- source.luau
-  ^
-  source.luau constant.numeric.decimal.luau
-   ^^
-   source.luau
+   ^
+   source.luau constant.numeric.decimal.luau
+    ^^
+    source.luau
 >}
  ^^
  source.luau

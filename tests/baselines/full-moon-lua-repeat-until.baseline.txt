@@ -1,20 +1,20 @@
 original file
 -----------------------------------
 repeat
-	call()
+  call()
 until condition
 -----------------------------------
 
 >repeat
  ^^^^^^
  source.luau keyword.control.luau
->	call()
- ^
+>  call()
+ ^^
  source.luau
-  ^^^^
-  source.luau entity.name.function.luau
-      ^^^
-      source.luau
+   ^^^^
+   source.luau entity.name.function.luau
+       ^^^
+       source.luau
 >until condition
  ^^^^^
  source.luau keyword.control.luau

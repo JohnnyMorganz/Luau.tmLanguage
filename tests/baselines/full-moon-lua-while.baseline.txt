@@ -1,8 +1,8 @@
 original file
 -----------------------------------
 while condition do
-	call()
-	break
+  call()
+  break
 end
 -----------------------------------
 
@@ -17,18 +17,18 @@ end
                 source.luau
                  ^^
                  source.luau keyword.control.luau
->	call()
- ^
+>  call()
+ ^^
  source.luau
-  ^^^^
-  source.luau entity.name.function.luau
-      ^^^
-      source.luau
->	break
- ^
+   ^^^^
+   source.luau entity.name.function.luau
+       ^^^
+       source.luau
+>  break
+ ^^
  source.luau
-  ^^^^^
-  source.luau keyword.control.luau
+   ^^^^^
+   source.luau keyword.control.luau
 >end
  ^^^
  source.luau keyword.control.luau

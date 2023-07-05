@@ -2,7 +2,7 @@ original file
 -----------------------------------
 -- Very important loop here
 while true do
-	continue
+  continue
 end
 
 continue()
@@ -26,11 +26,11 @@ local continue = 4
            source.luau
             ^^
             source.luau keyword.control.luau
->	continue
- ^
+>  continue
+ ^^
  source.luau
-  ^^^^^^^^
-  source.luau keyword.control.luau
+   ^^^^^^^^
+   source.luau keyword.control.luau
 >end
  ^^^
  source.luau keyword.control.luau

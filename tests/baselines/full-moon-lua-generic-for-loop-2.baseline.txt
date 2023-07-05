@@ -1,7 +1,7 @@
 original file
 -----------------------------------
 for index, value in next, list do
-	call(index, value)
+  call(index, value)
 end
 -----------------------------------
 
@@ -32,21 +32,21 @@ end
                                source.luau
                                 ^^
                                 source.luau keyword.control.luau
->	call(index, value)
- ^
+>  call(index, value)
+ ^^
  source.luau
-  ^^^^
-  source.luau entity.name.function.luau
-      ^
-      source.luau
-       ^^^^^
-       source.luau variable.other.readwrite.luau
-            ^^
-            source.luau
-              ^^^^^
-              source.luau variable.other.readwrite.luau
-                   ^^
-                   source.luau
+   ^^^^
+   source.luau entity.name.function.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau variable.other.readwrite.luau
+             ^^
+             source.luau
+               ^^^^^
+               source.luau variable.other.readwrite.luau
+                    ^^
+                    source.luau
 >end
  ^^^
  source.luau keyword.control.luau

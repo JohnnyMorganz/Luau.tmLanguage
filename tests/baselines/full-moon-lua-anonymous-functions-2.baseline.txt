@@ -1,7 +1,7 @@
 original file
 -----------------------------------
 call(function()
-	foo("bar")
+  foo("bar")
 end)
 -----------------------------------
 
@@ -16,21 +16,21 @@ end)
               source.luau meta.function.luau
                ^
                source.luau meta.function.luau
->	foo("bar")
- ^
+>  foo("bar")
+ ^^
  source.luau
-  ^^^
-  source.luau entity.name.function.luau
-     ^
-     source.luau
+   ^^^
+   source.luau entity.name.function.luau
       ^
-      source.luau string.quoted.double.luau
-       ^^^
+      source.luau
+       ^
        source.luau string.quoted.double.luau
-          ^
-          source.luau string.quoted.double.luau
-           ^^
-           source.luau
+        ^^^
+        source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^
+            source.luau
 >end)
  ^^^
  source.luau keyword.control.luau

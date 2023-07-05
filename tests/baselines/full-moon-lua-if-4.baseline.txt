@@ -1,11 +1,11 @@
 original file
 -----------------------------------
 if x then
-	foo()
+  foo()
 elseif y then
-	bar()
+  bar()
 else
-	baz()
+  baz()
 end
 -----------------------------------
 
@@ -20,13 +20,13 @@ end
      source.luau
       ^^^^
       source.luau keyword.control.luau
->	foo()
- ^
+>  foo()
+ ^^
  source.luau
-  ^^^
-  source.luau entity.name.function.luau
-     ^^^
-     source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^^^
+      source.luau
 >elseif y then
  ^^^^^^
  source.luau keyword.control.luau
@@ -38,23 +38,23 @@ end
          source.luau
           ^^^^
           source.luau keyword.control.luau
->	bar()
- ^
+>  bar()
+ ^^
  source.luau
-  ^^^
-  source.luau entity.name.function.luau
-     ^^^
-     source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^^^
+      source.luau
 >else
  ^^^^
  source.luau keyword.control.luau
->	baz()
- ^
+>  baz()
+ ^^
  source.luau
-  ^^^
-  source.luau entity.name.function.luau
-     ^^^
-     source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^^^
+      source.luau
 >end
  ^^^
  source.luau keyword.control.luau

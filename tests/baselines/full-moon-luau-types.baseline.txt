@@ -19,8 +19,8 @@ type Callback4 = (string) -> (string) -> ()
 type NetworkError = { message: string? } & { handled: true }
 
 type Foo = {
-	bar: number,
-	baz: number,
+  bar: number,
+  baz: number,
 }
 
 local foo0: number = 3
@@ -37,13 +37,13 @@ local _intersection: number & string
 local _multiIntersection: number & string & nil
 
 function _fn0(param: string): string
-	return param
+  return param
 end
 
 function _fn2(a: string, b: string, ...) end
 
 local _fn3 = function(): number | nil
-	return 3
+  return 3
 end
 
 local function _concat<T, S>(source: Array<T>, ...: Array<S> | S): Array<T> & Array<S>
@@ -630,32 +630,32 @@ end
            source.luau
             ^
             source.luau
->	bar: number,
- ^
+>  bar: number,
+ ^^
  source.luau
-  ^^^
-  source.luau variable.property.luau
-     ^
-     source.luau keyword.operator.type.luau
+   ^^^
+   source.luau variable.property.luau
       ^
-      source.luau
-       ^^^^^^
-       source.luau support.type.primitive.luau
-             ^^
-             source.luau
->	baz: number,
- ^
+      source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau support.type.primitive.luau
+              ^^
+              source.luau
+>  baz: number,
+ ^^
  source.luau
-  ^^^
-  source.luau variable.property.luau
-     ^
-     source.luau keyword.operator.type.luau
+   ^^^
+   source.luau variable.property.luau
       ^
-      source.luau
-       ^^^^^^
-       source.luau support.type.primitive.luau
-             ^^
-             source.luau
+      source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau support.type.primitive.luau
+              ^^
+              source.luau
 >}
  ^
  source.luau
@@ -932,15 +932,15 @@ end
                               source.luau meta.function.luau
                                ^^^^^^
                                source.luau meta.function.luau support.type.primitive.luau
->	return param
- ^
+>  return param
+ ^^
  source.luau
-  ^^^^^^
-  source.luau keyword.control.luau
-        ^
-        source.luau
-         ^^^^^
-         source.luau variable.other.readwrite.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau variable.other.readwrite.luau
 >end
  ^^^
  source.luau keyword.control.luau
@@ -1018,15 +1018,15 @@ end
                                   source.luau meta.function.luau
                                    ^^^
                                    source.luau meta.function.luau support.type.primitive.luau
->	return 3
- ^
+>  return 3
+ ^^
  source.luau
-  ^^^^^^
-  source.luau keyword.control.luau
-        ^
-        source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
          ^
-         source.luau constant.numeric.decimal.luau
+         source.luau
+          ^
+          source.luau constant.numeric.decimal.luau
 >end
  ^^^
  source.luau keyword.control.luau

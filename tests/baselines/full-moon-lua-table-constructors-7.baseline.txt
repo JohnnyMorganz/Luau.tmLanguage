@@ -1,9 +1,9 @@
 original file
 -----------------------------------
 local blacklist = {
-	["Audio file failed to load (18)."] = true;
-	["HTTP 0 (HTTP 429 (HTTP/1.1 429 ProvisionedThroughputExceeded))"] = true;
-	["LoadCharacter can only be called when Player is in the world"] = true;
+  ["Audio file failed to load (18)."] = true;
+  ["HTTP 0 (HTTP 429 (HTTP/1.1 429 ProvisionedThroughputExceeded))"] = true;
+  ["LoadCharacter can only be called when Player is in the world"] = true;
 }
 -----------------------------------
 
@@ -20,63 +20,63 @@ local blacklist = {
                  source.luau keyword.operator.assignment.luau
                   ^^^
                   source.luau
->	["Audio file failed to load (18)."] = true;
- ^^
+>  ["Audio file failed to load (18)."] = true;
+ ^^^
  source.luau
-   ^
-   source.luau string.quoted.double.luau
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ^
     source.luau string.quoted.double.luau
-                                   ^
-                                   source.luau string.quoted.double.luau
-                                    ^^
-                                    source.luau
-                                      ^
-                                      source.luau keyword.operator.assignment.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau string.quoted.double.luau
+                                    ^
+                                    source.luau string.quoted.double.luau
+                                     ^^
+                                     source.luau
                                        ^
-                                       source.luau
-                                        ^^^^
-                                        source.luau constant.language.boolean.true.luau
-                                            ^^
-                                            source.luau
->	["HTTP 0 (HTTP 429 (HTTP/1.1 429 ProvisionedThroughputExceeded))"] = true;
- ^^
+                                       source.luau keyword.operator.assignment.luau
+                                        ^
+                                        source.luau
+                                         ^^^^
+                                         source.luau constant.language.boolean.true.luau
+                                             ^^
+                                             source.luau
+>  ["HTTP 0 (HTTP 429 (HTTP/1.1 429 ProvisionedThroughputExceeded))"] = true;
+ ^^^
  source.luau
-   ^
-   source.luau string.quoted.double.luau
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ^
     source.luau string.quoted.double.luau
-                                                                  ^
-                                                                  source.luau string.quoted.double.luau
-                                                                   ^^
-                                                                   source.luau
-                                                                     ^
-                                                                     source.luau keyword.operator.assignment.luau
-                                                                      ^
-                                                                      source.luau
-                                                                       ^^^^
-                                                                       source.luau constant.language.boolean.true.luau
-                                                                           ^^
-                                                                           source.luau
->	["LoadCharacter can only be called when Player is in the world"] = true;
- ^^
- source.luau
-   ^
-   source.luau string.quoted.double.luau
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    source.luau string.quoted.double.luau
-                                                                ^
-                                                                source.luau string.quoted.double.luau
-                                                                 ^^
-                                                                 source.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau string.quoted.double.luau
                                                                    ^
-                                                                   source.luau keyword.operator.assignment.luau
-                                                                    ^
+                                                                   source.luau string.quoted.double.luau
+                                                                    ^^
                                                                     source.luau
-                                                                     ^^^^
-                                                                     source.luau constant.language.boolean.true.luau
-                                                                         ^^
-                                                                         source.luau
+                                                                      ^
+                                                                      source.luau keyword.operator.assignment.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^^^^
+                                                                        source.luau constant.language.boolean.true.luau
+                                                                            ^^
+                                                                            source.luau
+>  ["LoadCharacter can only be called when Player is in the world"] = true;
+ ^^^
+ source.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau string.quoted.double.luau
+                                                                 ^
+                                                                 source.luau string.quoted.double.luau
+                                                                  ^^
+                                                                  source.luau
+                                                                    ^
+                                                                    source.luau keyword.operator.assignment.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^^^^
+                                                                      source.luau constant.language.boolean.true.luau
+                                                                          ^^
+                                                                          source.luau
 >}
  ^^
  source.luau

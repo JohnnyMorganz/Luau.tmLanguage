@@ -1,7 +1,7 @@
 original file
 -----------------------------------
 print("foo\
-	bar")
+  bar")
 
 -----------------------------------
 
@@ -14,13 +14,13 @@ print("foo\
        source.luau string.quoted.double.luau
         ^^^^^
         source.luau string.quoted.double.luau
->	bar")
- ^^^^
+>  bar")
+ ^^^^^
  source.luau string.quoted.double.luau
-     ^
-     source.luau string.quoted.double.luau
-      ^^
-      source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^
+       source.luau
 >
  ^
  source.luau

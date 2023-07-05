@@ -2,22 +2,22 @@ original file
 -----------------------------------
 --[=[
 
-	This description starts one line down,
+  This description starts one line down,
 
-	And has a line in the middle, followed by trailing lines.
+  And has a line in the middle, followed by trailing lines.
 
-	```lua
-	function test()
-		print("indentation")
+  ```lua
+  function test()
+  	print("indentation")
 
-		do
-			print("more indented")
-		end
-	end
-	```
+  	do
+  		print("more indented")
+  	end
+  end
+  ```
 
 
-	@class indentation
+  @class indentation
 
 
 ]=]
@@ -29,60 +29,37 @@ original file
 >
  ^
  source.luau comment.block.luau
->	This description starts one line down,
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  This description starts one line down,
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.luau comment.block.luau
 >
  ^
  source.luau comment.block.luau
->	And has a line in the middle, followed by trailing lines.
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  And has a line in the middle, followed by trailing lines.
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.luau comment.block.luau
 >
  ^
  source.luau comment.block.luau
->	```lua
- ^
+>  ```lua
+ ^^
  source.luau comment.block.luau
-  ^^^^^^
-  source.luau comment.block.luau keyword.operator.other.luau comment.luau
->	function test()
- ^
+   ^^^^^^
+   source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>  function test()
+ ^^
  source.luau comment.block.luau keyword.operator.other.luau
-  ^^^^^^^^
-  source.luau comment.block.luau keyword.operator.other.luau meta.function.luau keyword.control.luau
-          ^
-          source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
-           ^^^^
-           source.luau comment.block.luau keyword.operator.other.luau meta.function.luau entity.name.function.luau
-               ^
-               source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
+   ^^^^^^^^
+   source.luau comment.block.luau keyword.operator.other.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
+            ^^^^
+            source.luau comment.block.luau keyword.operator.other.luau meta.function.luau entity.name.function.luau
                 ^
                 source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
->		print("indentation")
- ^^
- source.luau comment.block.luau keyword.operator.other.luau
-   ^^^^^
-   source.luau comment.block.luau keyword.operator.other.luau support.function.luau
-        ^
-        source.luau comment.block.luau keyword.operator.other.luau
-         ^
-         source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-          ^^^^^^^^^^^
-          source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-                     ^
-                     source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-                      ^^
-                      source.luau comment.block.luau keyword.operator.other.luau
->
- ^
- source.luau comment.block.luau keyword.operator.other.luau
->		do
- ^^
- source.luau comment.block.luau keyword.operator.other.luau
-   ^^
-   source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
->			print("more indented")
+                 ^
+                 source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
+>  	print("indentation")
  ^^^
  source.luau comment.block.luau keyword.operator.other.luau
     ^^^^^
@@ -91,40 +68,63 @@ original file
          source.luau comment.block.luau keyword.operator.other.luau
           ^
           source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-           ^^^^^^^^^^^^^
+           ^^^^^^^^^^^
            source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-                        ^
-                        source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-                         ^^
-                         source.luau comment.block.luau keyword.operator.other.luau
->		end
+                      ^
+                      source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
+                       ^^
+                       source.luau comment.block.luau keyword.operator.other.luau
+>
+ ^
+ source.luau comment.block.luau keyword.operator.other.luau
+>  	do
+ ^^^
+ source.luau comment.block.luau keyword.operator.other.luau
+    ^^
+    source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
+>  		print("more indented")
+ ^^^^
+ source.luau comment.block.luau keyword.operator.other.luau
+     ^^^^^
+     source.luau comment.block.luau keyword.operator.other.luau support.function.luau
+          ^
+          source.luau comment.block.luau keyword.operator.other.luau
+           ^
+           source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
+            ^^^^^^^^^^^^^
+            source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
+                         ^
+                         source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
+                          ^^
+                          source.luau comment.block.luau keyword.operator.other.luau
+>  	end
+ ^^^
+ source.luau comment.block.luau keyword.operator.other.luau
+    ^^^
+    source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
+>  end
  ^^
  source.luau comment.block.luau keyword.operator.other.luau
    ^^^
    source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
->	end
- ^
+>  ```
+ ^^
  source.luau comment.block.luau keyword.operator.other.luau
-  ^^^
-  source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
->	```
- ^
- source.luau comment.block.luau keyword.operator.other.luau
-  ^^^
-  source.luau comment.block.luau keyword.operator.other.luau comment.luau
+   ^^^
+   source.luau comment.block.luau keyword.operator.other.luau comment.luau
 >
  ^
  source.luau comment.block.luau
 >
  ^
  source.luau comment.block.luau
->	@class indentation
- ^
+>  @class indentation
+ ^^
  source.luau comment.block.luau
-  ^^^^^^
-  source.luau comment.block.luau storage.type.class.luadoc.luau
-        ^^^^^^^^^^^^^
-        source.luau comment.block.luau
+   ^^^^^^
+   source.luau comment.block.luau storage.type.class.luadoc.luau
+         ^^^^^^^^^^^^^
+         source.luau comment.block.luau
 >
  ^
  source.luau comment.block.luau

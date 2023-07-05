@@ -1,15 +1,15 @@
 original file
 -----------------------------------
 local x = {
-	a = 1,
-	b = 2,
-	c = 3
+  a = 1,
+  b = 2,
+  c = 3
 }
 
 local y = {
-	a = 1,
-	b = 2,
-	c = 3,
+  a = 1,
+  b = 2,
+  c = 3,
 }
 -----------------------------------
 
@@ -26,49 +26,49 @@ local y = {
          source.luau keyword.operator.assignment.luau
           ^^^
           source.luau
->	a = 1,
- ^
+>  a = 1,
+ ^^
  source.luau
-  ^
-  source.luau variable.other.readwrite.luau
    ^
-   source.luau
+   source.luau variable.other.readwrite.luau
     ^
-    source.luau keyword.operator.assignment.luau
+    source.luau
      ^
-     source.luau
+     source.luau keyword.operator.assignment.luau
       ^
-      source.luau constant.numeric.decimal.luau
-       ^^
-       source.luau
->	b = 2,
- ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^^
+        source.luau
+>  b = 2,
+ ^^
  source.luau
-  ^
-  source.luau variable.other.readwrite.luau
    ^
-   source.luau
+   source.luau variable.other.readwrite.luau
     ^
-    source.luau keyword.operator.assignment.luau
+    source.luau
      ^
-     source.luau
+     source.luau keyword.operator.assignment.luau
       ^
-      source.luau constant.numeric.decimal.luau
-       ^^
-       source.luau
->	c = 3
- ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^^
+        source.luau
+>  c = 3
+ ^^
  source.luau
-  ^
-  source.luau variable.other.readwrite.luau
    ^
-   source.luau
+   source.luau variable.other.readwrite.luau
     ^
-    source.luau keyword.operator.assignment.luau
+    source.luau
      ^
-     source.luau
+     source.luau keyword.operator.assignment.luau
       ^
-      source.luau constant.numeric.decimal.luau
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
 >}
  ^^
  source.luau
@@ -88,51 +88,51 @@ local y = {
          source.luau keyword.operator.assignment.luau
           ^^^
           source.luau
->	a = 1,
- ^
+>  a = 1,
+ ^^
  source.luau
-  ^
-  source.luau variable.other.readwrite.luau
    ^
-   source.luau
+   source.luau variable.other.readwrite.luau
     ^
-    source.luau keyword.operator.assignment.luau
+    source.luau
      ^
-     source.luau
+     source.luau keyword.operator.assignment.luau
       ^
-      source.luau constant.numeric.decimal.luau
-       ^^
-       source.luau
->	b = 2,
- ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^^
+        source.luau
+>  b = 2,
+ ^^
  source.luau
-  ^
-  source.luau variable.other.readwrite.luau
    ^
-   source.luau
+   source.luau variable.other.readwrite.luau
     ^
-    source.luau keyword.operator.assignment.luau
+    source.luau
      ^
-     source.luau
+     source.luau keyword.operator.assignment.luau
       ^
-      source.luau constant.numeric.decimal.luau
-       ^^
-       source.luau
->	c = 3,
- ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^^
+        source.luau
+>  c = 3,
+ ^^
  source.luau
-  ^
-  source.luau variable.other.readwrite.luau
    ^
-   source.luau
+   source.luau variable.other.readwrite.luau
     ^
-    source.luau keyword.operator.assignment.luau
+    source.luau
      ^
-     source.luau
+     source.luau keyword.operator.assignment.luau
       ^
-      source.luau constant.numeric.decimal.luau
-       ^^
-       source.luau
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^^
+        source.luau
 >}
  ^^
  source.luau

@@ -1,10 +1,10 @@
 original file
 -----------------------------------
--- tab	in comment
+-- tab  in comment
 -----------------------------------
 
->-- tab	in comment
+>-- tab  in comment
  ^^
  source.luau comment.line.double-dash.luau
-   ^^^^^^^^^^^^^^^
+   ^^^^^^^^^^^^^^^^
    source.luau comment.line.double-dash.luau

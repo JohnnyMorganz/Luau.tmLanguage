@@ -1,8 +1,8 @@
 original file
 -----------------------------------
 type Foo = {
-	bar: number;
-	baz: number;
+  bar: number;
+  baz: number;
 }
 -----------------------------------
 
@@ -21,32 +21,32 @@ type Foo = {
            source.luau
             ^
             source.luau
->	bar: number;
- ^
+>  bar: number;
+ ^^
  source.luau
-  ^^^
-  source.luau variable.property.luau
-     ^
-     source.luau keyword.operator.type.luau
+   ^^^
+   source.luau variable.property.luau
       ^
-      source.luau
-       ^^^^^^
-       source.luau support.type.primitive.luau
-             ^^
-             source.luau
->	baz: number;
- ^
+      source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau support.type.primitive.luau
+              ^^
+              source.luau
+>  baz: number;
+ ^^
  source.luau
-  ^^^
-  source.luau variable.property.luau
-     ^
-     source.luau keyword.operator.type.luau
+   ^^^
+   source.luau variable.property.luau
       ^
-      source.luau
-       ^^^^^^
-       source.luau support.type.primitive.luau
-             ^^
-             source.luau
+      source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau support.type.primitive.luau
+              ^^
+              source.luau
 >}
  ^
  source.luau

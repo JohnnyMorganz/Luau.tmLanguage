@@ -1,7 +1,7 @@
 original file
 -----------------------------------
 if x then
-	call()
+  call()
 end
 -----------------------------------
 
@@ -16,13 +16,13 @@ end
      source.luau
       ^^^^
       source.luau keyword.control.luau
->	call()
- ^
+>  call()
+ ^^
  source.luau
-  ^^^^
-  source.luau entity.name.function.luau
-      ^^^
-      source.luau
+   ^^^^
+   source.luau entity.name.function.luau
+       ^^^
+       source.luau
 >end
  ^^^
  source.luau keyword.control.luau

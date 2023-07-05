@@ -8,17 +8,17 @@ local function _bar<x>()
 end
 
 export type Foo0 = {
-	bar: <T>(
-		a: T,
-		b: nil | number | boolean
-	) -> T,
+  bar: <T>(
+  	a: T,
+  	b: nil | number | boolean
+  ) -> T,
 }
 local _baz
 export type Foo1 = {
-	bar: <T>(
-		a: T,
-		b: nil | number | boolean
-	) -> ((arg0: T) -> ())?,
+  bar: <T>(
+  	a: T,
+  	b: nil | number | boolean
+  ) -> ((arg0: T) -> ())?,
 }
 
 _baz = function<T>(a: T, b: number | boolean | nil): nil | T
@@ -104,76 +104,76 @@ end
                    source.luau
                     ^
                     source.luau
->	bar: <T>(
- ^
- source.luau
-  ^^^
-  source.luau variable.property.luau
-     ^
-     source.luau keyword.operator.type.luau
-      ^^
-      source.luau
-        ^
-        source.luau entity.name.type.luau
-         ^
-         source.luau
-          ^
-          source.luau
->		a: T,
+>  bar: <T>(
  ^^
  source.luau
-   ^
-   source.luau variable.parameter.luau variable.parameter.luau
-    ^
-    source.luau variable.parameter.luau keyword.operator.type.luau
-     ^
-     source.luau
+   ^^^
+   source.luau variable.property.luau
       ^
-      source.luau entity.name.type.luau
+      source.luau keyword.operator.type.luau
        ^^
        source.luau
->		b: nil | number | boolean
- ^^
- source.luau
-   ^
-   source.luau variable.parameter.luau variable.parameter.luau
-    ^
-    source.luau variable.parameter.luau keyword.operator.type.luau
-     ^
-     source.luau
-      ^^^
-      source.luau support.type.primitive.luau
          ^
-         source.luau
+         source.luau entity.name.type.luau
           ^
-          source.luau keyword.operator.type.luau
+          source.luau
            ^
            source.luau
-            ^^^^^^
-            source.luau support.type.primitive.luau
-                  ^
-                  source.luau
-                   ^
-                   source.luau keyword.operator.type.luau
-                    ^
-                    source.luau
-                     ^^^^^^^
-                     source.luau support.type.primitive.luau
->	) -> T,
- ^
+>  	a: T,
+ ^^^
  source.luau
-  ^
-  source.luau
-   ^
-   source.luau
-    ^^
-    source.luau keyword.operator.type.luau
+    ^
+    source.luau variable.parameter.luau variable.parameter.luau
+     ^
+     source.luau variable.parameter.luau keyword.operator.type.luau
       ^
       source.luau
        ^
        source.luau entity.name.type.luau
         ^^
         source.luau
+>  	b: nil | number | boolean
+ ^^^
+ source.luau
+    ^
+    source.luau variable.parameter.luau variable.parameter.luau
+     ^
+     source.luau variable.parameter.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^^^
+       source.luau support.type.primitive.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau support.type.primitive.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^^^^^
+                      source.luau support.type.primitive.luau
+>  ) -> T,
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^
+    source.luau
+     ^^
+     source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^
+        source.luau entity.name.type.luau
+         ^^
+         source.luau
 >}
  ^
  source.luau
@@ -203,92 +203,90 @@ end
                    source.luau
                     ^
                     source.luau
->	bar: <T>(
- ^
- source.luau
-  ^^^
-  source.luau variable.property.luau
-     ^
-     source.luau keyword.operator.type.luau
-      ^^
-      source.luau
-        ^
-        source.luau entity.name.type.luau
-         ^
-         source.luau
-          ^
-          source.luau
->		a: T,
+>  bar: <T>(
  ^^
  source.luau
-   ^
-   source.luau variable.parameter.luau variable.parameter.luau
-    ^
-    source.luau variable.parameter.luau keyword.operator.type.luau
-     ^
-     source.luau
+   ^^^
+   source.luau variable.property.luau
       ^
-      source.luau entity.name.type.luau
+      source.luau keyword.operator.type.luau
        ^^
        source.luau
->		b: nil | number | boolean
+         ^
+         source.luau entity.name.type.luau
+          ^
+          source.luau
+           ^
+           source.luau
+>  	a: T,
+ ^^^
+ source.luau
+    ^
+    source.luau variable.parameter.luau variable.parameter.luau
+     ^
+     source.luau variable.parameter.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^
+       source.luau entity.name.type.luau
+        ^^
+        source.luau
+>  	b: nil | number | boolean
+ ^^^
+ source.luau
+    ^
+    source.luau variable.parameter.luau variable.parameter.luau
+     ^
+     source.luau variable.parameter.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^^^
+       source.luau support.type.primitive.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau support.type.primitive.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^^^^^
+                      source.luau support.type.primitive.luau
+>  ) -> ((arg0: T) -> ())?,
  ^^
  source.luau
    ^
-   source.luau variable.parameter.luau variable.parameter.luau
-    ^
-    source.luau variable.parameter.luau keyword.operator.type.luau
-     ^
-     source.luau
-      ^^^
-      source.luau support.type.primitive.luau
-         ^
-         source.luau
-          ^
-          source.luau keyword.operator.type.luau
-           ^
-           source.luau
-            ^^^^^^
-            source.luau support.type.primitive.luau
-                  ^
-                  source.luau
-                   ^
-                   source.luau keyword.operator.type.luau
-                    ^
-                    source.luau
-                     ^^^^^^^
-                     source.luau support.type.primitive.luau
->	) -> ((arg0: T) -> ())?,
- ^
- source.luau
-  ^
-  source.luau
-   ^
    source.luau
-    ^^
-    source.luau keyword.operator.type.luau
-      ^
-      source.luau
+    ^
+    source.luau
+     ^^
+     source.luau keyword.operator.type.luau
        ^
        source.luau
         ^
         source.luau
-         ^^^^
-         source.luau variable.parameter.luau variable.parameter.luau
-             ^
-             source.luau variable.parameter.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau variable.parameter.luau variable.parameter.luau
               ^
-              source.luau
+              source.luau variable.parameter.luau keyword.operator.type.luau
                ^
-               source.luau entity.name.type.luau
+               source.luau
                 ^
-                source.luau
+                source.luau entity.name.type.luau
                  ^
                  source.luau
-                  ^^
-                  source.luau keyword.operator.type.luau
-                    ^
-                    source.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.operator.type.luau
                      ^
                      source.luau
                       ^
@@ -296,9 +294,11 @@ end
                        ^
                        source.luau
                         ^
-                        source.luau keyword.operator.type.luau
-                         ^^
-                         source.luau
+                        source.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^^
+                          source.luau
 >}
  ^
  source.luau

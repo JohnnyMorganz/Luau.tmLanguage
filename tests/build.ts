@@ -116,6 +116,9 @@ function generateScopesWorker(
   for (const i in oriLines) {
     let line = oriLines[i];
 
+    // Replace tabs with 2-width spaces
+    line = line.replace("\t", "  ");
+
     const mainLineTokens = tokenizeLine(mainGrammar, line);
 
     cleanLines.push(line);

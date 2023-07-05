@@ -1,8 +1,8 @@
 original file
 -----------------------------------
 return {
-	["Noob Attack: Periastron"] = "Noob Attack - Periastron";
-	["Noob Attack꞉ Periastron"] = "Noob Attack - Periastron";
+  ["Noob Attack: Periastron"] = "Noob Attack - Periastron";
+  ["Noob Attack꞉ Periastron"] = "Noob Attack - Periastron";
 }
 
 -----------------------------------
@@ -12,52 +12,52 @@ return {
  source.luau keyword.control.luau
        ^^^
        source.luau
->	["Noob Attack: Periastron"] = "Noob Attack - Periastron";
- ^^
+>  ["Noob Attack: Periastron"] = "Noob Attack - Periastron";
+ ^^^
  source.luau
-   ^
-   source.luau string.quoted.double.luau
-    ^^^^^^^^^^^^^^^^^^^^^^^
+    ^
     source.luau string.quoted.double.luau
-                           ^
-                           source.luau string.quoted.double.luau
-                            ^^
-                            source.luau
-                              ^
-                              source.luau keyword.operator.assignment.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau string.quoted.double.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^
+                             source.luau
                                ^
-                               source.luau
+                               source.luau keyword.operator.assignment.luau
                                 ^
-                                source.luau string.quoted.double.luau
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+                                source.luau
+                                 ^
                                  source.luau string.quoted.double.luau
-                                                         ^
-                                                         source.luau string.quoted.double.luau
-                                                          ^^
-                                                          source.luau
->	["Noob Attack꞉ Periastron"] = "Noob Attack - Periastron";
- ^^
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+                                  source.luau string.quoted.double.luau
+                                                          ^
+                                                          source.luau string.quoted.double.luau
+                                                           ^^
+                                                           source.luau
+>  ["Noob Attack꞉ Periastron"] = "Noob Attack - Periastron";
+ ^^^
  source.luau
-   ^
-   source.luau string.quoted.double.luau
-    ^^^^^^^^^^^^^^^^^^^^^^^
+    ^
     source.luau string.quoted.double.luau
-                           ^
-                           source.luau string.quoted.double.luau
-                            ^^
-                            source.luau
-                              ^
-                              source.luau keyword.operator.assignment.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau string.quoted.double.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^
+                             source.luau
                                ^
-                               source.luau
+                               source.luau keyword.operator.assignment.luau
                                 ^
-                                source.luau string.quoted.double.luau
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+                                source.luau
+                                 ^
                                  source.luau string.quoted.double.luau
-                                                         ^
-                                                         source.luau string.quoted.double.luau
-                                                          ^^
-                                                          source.luau
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+                                  source.luau string.quoted.double.luau
+                                                          ^
+                                                          source.luau string.quoted.double.luau
+                                                           ^^
+                                                           source.luau
 >}
  ^^
  source.luau

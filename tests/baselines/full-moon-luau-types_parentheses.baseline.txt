@@ -4,7 +4,7 @@ original file
 type GField<_crack, __fuzzing> = {}
 local TypeInfo = {}
 function TypeInfo.new(
-	getFieldDefFn: (() -> GField<any, any>?)?
+  getFieldDefFn: (() -> GField<any, any>?)?
 )
 end
 
@@ -21,13 +21,13 @@ local GError = {}
 type GError = typeof(GError)
 type Error = { message: string?, stacktrace: string? }
 function GError.new(
-	originalError: (Error & { extensions: any? }) -- new syntax
+  originalError: (Error & { extensions: any? }) -- new syntax
 ): GError?
   return nil
 end
 
 type IProperties = {
-	RemoveOnCollision: (string | (IProperties, BasePart, Vector3, Vector3, Enum.Material, number) -> boolean)?,
+  RemoveOnCollision: (string | (IProperties, BasePart, Vector3, Vector3, Enum.Material, number) -> boolean)?,
 }
 -----------------------------------
 
@@ -85,15 +85,13 @@ type IProperties = {
           source.luau meta.function.luau entity.name.function.luau
                       ^
                       source.luau meta.function.luau
->	getFieldDefFn: (() -> GField<any, any>?)?
- ^
+>  getFieldDefFn: (() -> GField<any, any>?)?
+ ^^
  source.luau meta.function.luau meta.parameters.luau
-  ^^^^^^^^^^^^^
-  source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-               ^
-               source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+   ^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
                 ^
-                source.luau meta.function.luau meta.parameters.luau
+                source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                  ^
                  source.luau meta.function.luau meta.parameters.luau
                   ^
@@ -102,28 +100,30 @@ type IProperties = {
                    source.luau meta.function.luau meta.parameters.luau
                     ^
                     source.luau meta.function.luau meta.parameters.luau
-                     ^^
-                     source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
-                       ^
-                       source.luau meta.function.luau meta.parameters.luau
-                        ^^^^^^
-                        source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
-                              ^
-                              source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
-                               ^^^
-                               source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
-                                  ^^
-                                  source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
-                                    ^^^
-                                    source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
-                                       ^
-                                       source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameters.luau
+                      ^^
+                      source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                        ^
+                        source.luau meta.function.luau meta.parameters.luau
+                         ^^^^^^
+                         source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
+                               ^
+                               source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                ^^^
+                                source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                   ^^
+                                   source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                     ^^^
+                                     source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
                                         ^
                                         source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                          ^
-                                         source.luau meta.function.luau meta.parameters.luau
+                                         source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                           ^
-                                          source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                          source.luau meta.function.luau meta.parameters.luau
+                                           ^
+                                           source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
 >)
  ^
  source.luau meta.function.luau
@@ -424,51 +424,51 @@ type IProperties = {
           source.luau meta.function.luau entity.name.function.luau
                     ^
                     source.luau meta.function.luau
->	originalError: (Error & { extensions: any? }) -- new syntax
- ^
+>  originalError: (Error & { extensions: any? }) -- new syntax
+ ^^
  source.luau meta.function.luau meta.parameters.luau
-  ^^^^^^^^^^^^^
-  source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-               ^
-               source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+   ^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
                 ^
-                source.luau meta.function.luau meta.parameters.luau
+                source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                  ^
                  source.luau meta.function.luau meta.parameters.luau
-                  ^^^^^
-                  source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
-                       ^
-                       source.luau meta.function.luau meta.parameters.luau
+                  ^
+                  source.luau meta.function.luau meta.parameters.luau
+                   ^^^^^
+                   source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
                         ^
-                        source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                        source.luau meta.function.luau meta.parameters.luau
                          ^
-                         source.luau meta.function.luau meta.parameters.luau
+                         source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                           ^
                           source.luau meta.function.luau meta.parameters.luau
                            ^
                            source.luau meta.function.luau meta.parameters.luau
-                            ^^^^^^^^^^
-                            source.luau meta.function.luau meta.parameters.luau variable.property.luau
-                                      ^
-                                      source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                            ^
+                            source.luau meta.function.luau meta.parameters.luau
+                             ^^^^^^^^^^
+                             source.luau meta.function.luau meta.parameters.luau variable.property.luau
                                        ^
-                                       source.luau meta.function.luau meta.parameters.luau
-                                        ^^^
-                                        source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
-                                           ^
-                                           source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                       source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau meta.function.luau meta.parameters.luau
+                                         ^^^
+                                         source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
                                             ^
-                                            source.luau meta.function.luau meta.parameters.luau
+                                            source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                              ^
                                              source.luau meta.function.luau meta.parameters.luau
                                               ^
                                               source.luau meta.function.luau meta.parameters.luau
                                                ^
                                                source.luau meta.function.luau meta.parameters.luau
-                                                ^^
-                                                source.luau meta.function.luau meta.parameters.luau comment.line.double-dash.luau
-                                                  ^^^^^^^^^^^
-                                                  source.luau meta.function.luau meta.parameters.luau comment.line.double-dash.luau
+                                                ^
+                                                source.luau meta.function.luau meta.parameters.luau
+                                                 ^^
+                                                 source.luau meta.function.luau meta.parameters.luau comment.line.double-dash.luau
+                                                   ^^^^^^^^^^^
+                                                   source.luau meta.function.luau meta.parameters.luau comment.line.double-dash.luau
 >): GError?
  ^
  source.luau meta.function.luau
@@ -510,69 +510,69 @@ type IProperties = {
                    source.luau
                     ^
                     source.luau
->	RemoveOnCollision: (string | (IProperties, BasePart, Vector3, Vector3, Enum.Material, number) -> boolean)?,
- ^
+>  RemoveOnCollision: (string | (IProperties, BasePart, Vector3, Vector3, Enum.Material, number) -> boolean)?,
+ ^^
  source.luau
-  ^^^^^^^^^^^^^^^^^
-  source.luau variable.property.luau
-                   ^
-                   source.luau keyword.operator.type.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
                     ^
-                    source.luau
+                    source.luau keyword.operator.type.luau
                      ^
                      source.luau
-                      ^^^^^^
-                      source.luau support.type.primitive.luau
-                            ^
-                            source.luau
+                      ^
+                      source.luau
+                       ^^^^^^
+                       source.luau support.type.primitive.luau
                              ^
-                             source.luau keyword.operator.type.luau
+                             source.luau
                               ^
-                              source.luau
+                              source.luau keyword.operator.type.luau
                                ^
                                source.luau
-                                ^^^^^^^^^^^
-                                source.luau entity.name.type.luau
-                                           ^^
-                                           source.luau
-                                             ^^^^^^^^
-                                             source.luau entity.name.type.luau
-                                                     ^^
-                                                     source.luau
-                                                       ^^^^^^^
-                                                       source.luau entity.name.type.luau
-                                                              ^^
-                                                              source.luau
-                                                                ^^^^^^^
-                                                                source.luau entity.name.type.luau
-                                                                       ^^
-                                                                       source.luau
-                                                                         ^^^^
-                                                                         source.luau entity.name.type.luau
-                                                                             ^
-                                                                             source.luau
-                                                                              ^^^^^^^^
-                                                                              source.luau entity.name.type.luau
-                                                                                      ^^
-                                                                                      source.luau
-                                                                                        ^^^^^^
-                                                                                        source.luau support.type.primitive.luau
-                                                                                              ^
-                                                                                              source.luau
+                                ^
+                                source.luau
+                                 ^^^^^^^^^^^
+                                 source.luau entity.name.type.luau
+                                            ^^
+                                            source.luau
+                                              ^^^^^^^^
+                                              source.luau entity.name.type.luau
+                                                      ^^
+                                                      source.luau
+                                                        ^^^^^^^
+                                                        source.luau entity.name.type.luau
+                                                               ^^
+                                                               source.luau
+                                                                 ^^^^^^^
+                                                                 source.luau entity.name.type.luau
+                                                                        ^^
+                                                                        source.luau
+                                                                          ^^^^
+                                                                          source.luau entity.name.type.luau
+                                                                              ^
+                                                                              source.luau
+                                                                               ^^^^^^^^
+                                                                               source.luau entity.name.type.luau
+                                                                                       ^^
+                                                                                       source.luau
+                                                                                         ^^^^^^
+                                                                                         source.luau support.type.primitive.luau
                                                                                                ^
                                                                                                source.luau
-                                                                                                ^^
-                                                                                                source.luau keyword.operator.type.luau
-                                                                                                  ^
-                                                                                                  source.luau
-                                                                                                   ^^^^^^^
-                                                                                                   source.luau support.type.primitive.luau
-                                                                                                          ^
-                                                                                                          source.luau
+                                                                                                ^
+                                                                                                source.luau
+                                                                                                 ^^
+                                                                                                 source.luau keyword.operator.type.luau
+                                                                                                   ^
+                                                                                                   source.luau
+                                                                                                    ^^^^^^^
+                                                                                                    source.luau support.type.primitive.luau
                                                                                                            ^
-                                                                                                           source.luau keyword.operator.type.luau
-                                                                                                            ^^
-                                                                                                            source.luau
+                                                                                                           source.luau
+                                                                                                            ^
+                                                                                                            source.luau keyword.operator.type.luau
+                                                                                                             ^^
+                                                                                                             source.luau
 >}
  ^
  source.luau

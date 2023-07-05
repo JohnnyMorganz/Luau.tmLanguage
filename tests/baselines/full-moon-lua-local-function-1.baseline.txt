@@ -1,7 +1,7 @@
 original file
 -----------------------------------
 local function x()
-	call(1)
+  call(1)
 end
 
 -----------------------------------
@@ -21,17 +21,17 @@ end
                  source.luau meta.function.luau
                   ^
                   source.luau meta.function.luau
->	call(1)
- ^
+>  call(1)
+ ^^
  source.luau
-  ^^^^
-  source.luau entity.name.function.luau
-      ^
-      source.luau
+   ^^^^
+   source.luau entity.name.function.luau
        ^
-       source.luau constant.numeric.decimal.luau
-        ^^
-        source.luau
+       source.luau
+        ^
+        source.luau constant.numeric.decimal.luau
+         ^^
+         source.luau
 >end
  ^^^
  source.luau keyword.control.luau

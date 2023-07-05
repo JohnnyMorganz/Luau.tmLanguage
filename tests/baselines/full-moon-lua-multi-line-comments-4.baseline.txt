@@ -1,23 +1,23 @@
 original file
 -----------------------------------
 --[=====[
-	lua be like
+  lua be like
 ]====]
-	still going
+  still going
 ]=====]
 -----------------------------------
 
 >--[=====[
  ^^^^^^^^^
  source.luau comment.block.luau
->	lua be like
- ^^^^^^^^^^^^^
+>  lua be like
+ ^^^^^^^^^^^^^^
  source.luau comment.block.luau
 >]====]
  ^^^^^^^
  source.luau comment.block.luau
->	still going
- ^^^^^^^^^^^^^
+>  still going
+ ^^^^^^^^^^^^^^
  source.luau comment.block.luau
 >]=====]
  ^^^^^^^

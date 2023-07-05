@@ -1,23 +1,23 @@
 original file
 -----------------------------------
 --[[
-	such comments
-	much lines
-	wow
+  such comments
+  much lines
+  wow
 ]]
 -----------------------------------
 
 >--[[
  ^^^^
  source.luau comment.block.luau
->	such comments
- ^^^^^^^^^^^^^^^
+>  such comments
+ ^^^^^^^^^^^^^^^^
  source.luau comment.block.luau
->	much lines
- ^^^^^^^^^^^^
+>  much lines
+ ^^^^^^^^^^^^^
  source.luau comment.block.luau
->	wow
- ^^^^^
+>  wow
+ ^^^^^^
  source.luau comment.block.luau
 >]]
  ^^

@@ -1,11 +1,11 @@
 original file
 -----------------------------------
 do
-	return 1
+  return 1
 end
 
 do
-	break
+  break
 end
 
 return call()
@@ -15,15 +15,15 @@ return call()
 >do
  ^^
  source.luau keyword.control.luau
->	return 1
- ^
+>  return 1
+ ^^
  source.luau
-  ^^^^^^
-  source.luau keyword.control.luau
-        ^
-        source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
          ^
-         source.luau constant.numeric.decimal.luau
+         source.luau
+          ^
+          source.luau constant.numeric.decimal.luau
 >end
  ^^^
  source.luau keyword.control.luau
@@ -33,11 +33,11 @@ return call()
 >do
  ^^
  source.luau keyword.control.luau
->	break
- ^
+>  break
+ ^^
  source.luau
-  ^^^^^
-  source.luau keyword.control.luau
+   ^^^^^
+   source.luau keyword.control.luau
 >end
  ^^^
  source.luau keyword.control.luau
