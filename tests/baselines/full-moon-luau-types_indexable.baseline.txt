@@ -1,0 +1,168 @@
+original file
+-----------------------------------
+local x: module.Foo = nil
+local x: module.Array<string> = { "bar" }
+local x: module.Foo | string = "bar"
+local x: module.Foo? = nil
+local x: module.Foo<...string> = nil
+-----------------------------------
+
+>local x: module.Foo = nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau entity.name.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau entity.name.type.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.assignment.luau
+                      ^
+                      source.luau
+                       ^^^
+                       source.luau constant.language.nil.luau
+>local x: module.Array<string> = { "bar" }
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau entity.name.type.luau
+                ^
+                source.luau
+                 ^^^^^
+                 source.luau entity.name.type.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^^^^^^
+                       source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau keyword.operator.assignment.luau
+                                ^^^
+                                source.luau
+                                   ^
+                                   source.luau string.quoted.double.luau
+                                    ^^^
+                                    source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^^
+                                        source.luau
+>local x: module.Foo | string = "bar"
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau entity.name.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau entity.name.type.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.type.luau
+                      ^
+                      source.luau
+                       ^^^^^^
+                       source.luau variable.other.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau keyword.operator.assignment.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^^^
+                                 source.luau string.quoted.double.luau
+                                    ^
+                                    source.luau string.quoted.double.luau
+>local x: module.Foo? = nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau entity.name.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau entity.name.type.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau
+                        ^^^
+                        source.luau constant.language.nil.luau
+>local x: module.Foo<...string> = nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau entity.name.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau entity.name.type.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^^^
+                     source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                        ^^^^^^
+                        source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                              ^
+                              source.luau keyword.operator.type.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau keyword.operator.assignment.luau
+                                 ^
+                                 source.luau
+                                  ^^^
+                                  source.luau constant.language.nil.luau

@@ -1,0 +1,52 @@
+original file
+-----------------------------------
+for index, value in pairs(list) do
+	call(index, value)
+end
+-----------------------------------
+
+>for index, value in pairs(list) do
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^^^^^
+     source.luau variable.parameter.luau
+          ^^
+          source.luau
+            ^^^^^
+            source.luau variable.parameter.luau
+                 ^
+                 source.luau
+                  ^^
+                  source.luau keyword.control.luau
+                    ^
+                    source.luau
+                     ^^^^^
+                     source.luau support.function.luau
+                          ^
+                          source.luau
+                           ^^^^
+                           source.luau variable.other.readwrite.luau
+                               ^^
+                               source.luau
+                                 ^^
+                                 source.luau keyword.control.luau
+>	call(index, value)
+ ^
+ source.luau
+  ^^^^
+  source.luau entity.name.function.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^^
+            source.luau
+              ^^^^^
+              source.luau variable.other.readwrite.luau
+                   ^^
+                   source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

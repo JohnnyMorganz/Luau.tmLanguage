@@ -1,0 +1,26 @@
+original file
+-----------------------------------
+print("👚 " .. message)
+-----------------------------------
+
+>print("👚 " .. message)
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^^
+        source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.operator.other.luau
+               ^
+               source.luau
+                ^^^^^^^
+                source.luau variable.other.readwrite.luau
+                       ^^
+                       source.luau

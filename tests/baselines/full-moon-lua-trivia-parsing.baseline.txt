@@ -1,0 +1,124 @@
+original file
+-----------------------------------
+local foo = bar -- trailing comment
+
+-- leading comment
+local bar = baz
+local baz = foo
+
+do
+	local foo = bar
+	-- comment
+	local bar = baz
+end
+-----------------------------------
+
+>local foo = bar -- trailing comment
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau comment.line.double-dash.luau
+                   ^^^^^^^^^^^^^^^^^
+                   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>-- leading comment
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local bar = baz
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau variable.other.readwrite.luau
+>local baz = foo
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>	local foo = bar
+ ^
+ source.luau
+  ^^^^^
+  source.luau storage.modifier.local.luau
+       ^
+       source.luau
+        ^^^
+        source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^
+              source.luau variable.other.readwrite.luau
+>	-- comment
+ ^
+ source.luau
+  ^^
+  source.luau comment.line.double-dash.luau
+    ^^^^^^^^
+    source.luau comment.line.double-dash.luau
+>	local bar = baz
+ ^
+ source.luau
+  ^^^^^
+  source.luau storage.modifier.local.luau
+       ^
+       source.luau
+        ^^^
+        source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^
+              source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

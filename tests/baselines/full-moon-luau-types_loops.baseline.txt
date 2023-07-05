@@ -1,0 +1,88 @@
+original file
+-----------------------------------
+for i, v: string in pairs() do
+
+end
+
+for i: number = 1, 10, 2 do
+    
+end
+-----------------------------------
+
+>for i, v: string in pairs() do
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^^
+      source.luau
+        ^
+        source.luau variable.parameter.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^
+           source.luau support.type.primitive.luau
+                 ^
+                 source.luau
+                  ^^
+                  source.luau keyword.control.luau
+                    ^
+                    source.luau
+                     ^^^^^
+                     source.luau support.function.luau
+                          ^^^
+                          source.luau
+                             ^^
+                             source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>for i: number = 1, 10, 2 do
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^
+      source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau support.type.primitive.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.control.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau
+                  ^^
+                  source.luau
+                    ^^
+                    source.luau constant.numeric.decimal.luau
+                      ^^
+                      source.luau
+                        ^
+                        source.luau constant.numeric.decimal.luau
+                         ^
+                         source.luau
+                          ^^
+                          source.luau keyword.control.luau
+>    
+ ^^^^^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

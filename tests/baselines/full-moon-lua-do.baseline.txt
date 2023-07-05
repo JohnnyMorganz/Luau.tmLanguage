@@ -1,0 +1,20 @@
+original file
+-----------------------------------
+do
+	call()
+end
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>	call()
+ ^
+ source.luau
+  ^^^^
+  source.luau entity.name.function.luau
+      ^^^
+      source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

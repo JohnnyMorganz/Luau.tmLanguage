@@ -1,0 +1,62 @@
+original file
+-----------------------------------
+call("double")
+call('single')
+call("foo\nbar")
+call("")
+-----------------------------------
+
+>call("double")
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^
+       source.luau string.quoted.double.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^^
+              source.luau
+>call('single')
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.single.luau
+       ^^^^^^
+       source.luau string.quoted.single.luau
+             ^
+             source.luau string.quoted.single.luau
+              ^^
+              source.luau
+>call("foo\nbar")
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^
+       source.luau string.quoted.double.luau
+          ^^
+          source.luau string.quoted.double.luau constant.character.escape.luau
+            ^^^
+            source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^^
+                source.luau
+>call("")
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^
+        source.luau

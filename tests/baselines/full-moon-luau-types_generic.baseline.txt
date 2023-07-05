@@ -1,0 +1,64 @@
+original file
+-----------------------------------
+type Array<T> = { T }
+local x: Array<Array<number>>
+
+-----------------------------------
+
+>type Array<T> = { T }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau entity.name.type.alias.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau entity.name.type.alias.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau variable.property.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau
+>local x: Array<Array<number>>
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau entity.name.type.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^^^^^
+                source.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                     ^
+                     source.luau meta.parameter.type.variable keyword.operator.type.luau INCORRECT_SCOPE_EXTENSION
+                      ^^^^^^
+                      source.luau meta.parameter.type.variable meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                            ^
+                            source.luau meta.parameter.type.variable keyword.operator.type.luau INCORRECT_SCOPE_EXTENSION
+                             ^
+                             source.luau keyword.operator.type.luau
+>
+ ^
+ source.luau

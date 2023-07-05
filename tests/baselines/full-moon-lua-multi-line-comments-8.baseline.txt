@@ -1,0 +1,32 @@
+original file
+-----------------------------------
+--[[👨🏾‍💻]]
+local more_code = here
+
+-----------------------------------
+
+>--[[👨🏾‍💻]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>local more_code = here
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^
+       source.luau variable.other.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^^^^
+                   source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau

@@ -1,0 +1,30 @@
+original file
+-----------------------------------
+--[comment
+--(comment)
+--[=comment
+--
+
+-----------------------------------
+
+>--[comment
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>--(comment)
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>--[=comment
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>--
+ ^^
+ source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau

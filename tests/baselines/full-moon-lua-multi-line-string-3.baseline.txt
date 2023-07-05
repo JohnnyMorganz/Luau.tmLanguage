@@ -1,0 +1,40 @@
+original file
+-----------------------------------
+local x = [[
+local emotes = {
+	[":thinking:"] = "http://www.roblox.com/asset/?id=643340245",
+	[":bug:"] = "http://www.roblox.com/asset/?id=860037275"
+}
+]]
+-----------------------------------
+
+>local x = [[
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^
+           source.luau string.other.multiline.luau
+>local emotes = {
+ ^^^^^^^^^^^^^^^^^
+ source.luau string.other.multiline.luau
+>	[":thinking:"] = "http://www.roblox.com/asset/?id=643340245",
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau string.other.multiline.luau
+>	[":bug:"] = "http://www.roblox.com/asset/?id=860037275"
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau string.other.multiline.luau
+>}
+ ^^
+ source.luau string.other.multiline.luau
+>]]
+ ^^
+ source.luau string.other.multiline.luau

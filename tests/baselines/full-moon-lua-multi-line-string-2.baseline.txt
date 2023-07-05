@@ -1,0 +1,32 @@
+original file
+-----------------------------------
+local x = [=[This is
+several equal
+signs]=]
+-----------------------------------
+
+>local x = [=[This is
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^
+           source.luau string.other.multiline.luau
+              ^^^^^^^^
+              source.luau string.other.multiline.luau
+>several equal
+ ^^^^^^^^^^^^^^
+ source.luau string.other.multiline.luau
+>signs]=]
+ ^^^^^
+ source.luau string.other.multiline.luau
+      ^^^
+      source.luau string.other.multiline.luau

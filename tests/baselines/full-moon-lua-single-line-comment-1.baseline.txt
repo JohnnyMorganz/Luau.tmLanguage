@@ -1,0 +1,16 @@
+original file
+-----------------------------------
+-- hello world
+-- and doge you too
+-----------------------------------
+
+>-- hello world
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>-- and doge you too
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau

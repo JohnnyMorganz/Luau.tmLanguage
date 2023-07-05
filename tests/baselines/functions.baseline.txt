@@ -1,0 +1,134 @@
+original file
+-----------------------------------
+function foo()
+end
+
+local function foo()
+end
+
+function foo(x, y, z)
+end
+
+local function foo(x, y, z)
+end
+
+function foo(...)
+end
+
+-----------------------------------
+
+>function foo()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau
+              ^
+              source.luau meta.function.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local function foo()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau
+                    ^
+                    source.luau meta.function.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo(x, y, z)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau
+              ^
+              source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+               ^^
+               source.luau meta.function.luau meta.parameters.luau
+                 ^
+                 source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                  ^^
+                  source.luau meta.function.luau meta.parameters.luau
+                    ^
+                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                     ^
+                     source.luau meta.function.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local function foo(x, y, z)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau
+                    ^
+                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                     ^^
+                     source.luau meta.function.luau meta.parameters.luau
+                       ^
+                       source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                        ^^
+                        source.luau meta.function.luau meta.parameters.luau
+                          ^
+                          source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                           ^
+                           source.luau meta.function.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo(...)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau
+              ^^^
+              source.luau meta.function.luau meta.parameters.luau
+                 ^
+                 source.luau meta.function.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

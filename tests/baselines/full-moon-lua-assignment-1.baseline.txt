@@ -1,0 +1,16 @@
+original file
+-----------------------------------
+x = 1
+-----------------------------------
+
+>x = 1
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^
+     source.luau constant.numeric.decimal.luau

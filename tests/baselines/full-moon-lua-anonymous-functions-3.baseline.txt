@@ -1,0 +1,30 @@
+original file
+-----------------------------------
+local x = function(...) end
+-----------------------------------
+
+>local x = function(...) end
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^^^^
+           source.luau meta.function.luau keyword.control.luau
+                   ^
+                   source.luau meta.function.luau
+                    ^^^
+                    source.luau meta.function.luau meta.parameters.luau
+                       ^
+                       source.luau meta.function.luau
+                        ^
+                        source.luau
+                         ^^^
+                         source.luau keyword.control.luau

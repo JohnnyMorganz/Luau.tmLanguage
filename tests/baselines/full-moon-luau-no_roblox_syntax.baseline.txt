@@ -1,0 +1,772 @@
+original file
+-----------------------------------
+-- Taken from https://raw.githubusercontent.com/Kampfkarren/Roblox/master/Modules/LineOfSight.lua
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+
+local Raycast = require(ReplicatedStorage.Modules.Raycast)
+
+local DEBUG = true
+DEBUG = DEBUG and RunService:IsStudio()
+
+local debug
+
+if DEBUG then
+	function debug(...)
+		print("[LineOfSight]", ...)
+	end
+else
+	function debug()
+	end
+end
+
+return function(origin, character, range, ignoreIf, blacklist)
+	if typeof(origin) == "Instance" then
+		if origin.Position:FuzzyEq(character.PrimaryPart.Position) then
+			debug("ORIGIN WAS CHARACTER")
+			return origin, origin.Position
+		end
+
+		origin = origin.Position
+	end
+
+	blacklist = blacklist or {}
+
+	local hit, point do
+		while true do
+			hit, point = Raycast(Ray.new(origin, (origin - character.PrimaryPart.Position).Unit * -range), blacklist)
+
+			if hit and hit:IsDescendantOf(character) then
+				break
+			elseif hit and ignoreIf(hit) then
+				debug("IGNORING OFF IF", hit:GetFullName())
+				blacklist[#blacklist + 1] = hit
+			else
+				break
+			end
+		end
+	end
+
+	debug("LOS RESULT", hit and hit:GetFullName())
+
+	return hit and hit:IsDescendantOf(character), point
+end
+
+-----------------------------------
+
+>-- Taken from https://raw.githubusercontent.com/Kampfkarren/Roblox/master/Modules/LineOfSight.lua
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local ReplicatedStorage = game:GetService("ReplicatedStorage")
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^
+       source.luau variable.other.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau keyword.operator.assignment.luau
+                          ^
+                          source.luau
+                           ^^^^
+                           source.luau constant.language.luau
+                               ^
+                               source.luau
+                                ^^^^^^^^^^
+                                source.luau entity.name.function.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau string.quoted.double.luau
+                                            ^^^^^^^^^^^^^^^^^
+                                            source.luau string.quoted.double.luau
+                                                             ^
+                                                             source.luau string.quoted.double.luau
+                                                              ^^
+                                                              source.luau
+>local RunService = game:GetService("RunService")
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^
+       source.luau variable.other.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^^^
+                    source.luau constant.language.luau
+                        ^
+                        source.luau
+                         ^^^^^^^^^^
+                         source.luau entity.name.function.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau string.quoted.double.luau
+                                     ^^^^^^^^^^
+                                     source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
+                                                ^^
+                                                source.luau
+>
+ ^
+ source.luau
+>local Raycast = require(ReplicatedStorage.Modules.Raycast)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^^^^^^
+                 source.luau support.function.luau
+                        ^
+                        source.luau
+                         ^^^^^^^^^^^^^^^^^
+                         source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau
+                                           ^^^^^^^
+                                           source.luau variable.other.property.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^^^^^^
+                                                   source.luau variable.other.property.luau
+                                                          ^^
+                                                          source.luau
+>
+ ^
+ source.luau
+>local DEBUG = true
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.constant.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau constant.language.boolean.true.luau
+>DEBUG = DEBUG and RunService:IsStudio()
+ ^^^^^
+ source.luau variable.other.constant.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.constant.luau
+              ^
+              source.luau
+               ^^^
+               source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                  ^
+                  source.luau
+                   ^^^^^^^^^^
+                   source.luau variable.other.readwrite.luau
+                             ^
+                             source.luau
+                              ^^^^^^^^
+                              source.luau entity.name.function.luau
+                                      ^^^
+                                      source.luau
+>
+ ^
+ source.luau
+>local debug
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+>
+ ^
+ source.luau
+>if DEBUG then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^^^^^
+    source.luau variable.other.constant.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau keyword.control.luau
+>	function debug(...)
+ ^
+ source.luau
+  ^^^^^^^^
+  source.luau meta.function.luau keyword.control.luau
+          ^
+          source.luau meta.function.luau
+           ^^^^^
+           source.luau meta.function.luau entity.name.function.luau
+                ^
+                source.luau meta.function.luau
+                 ^^^
+                 source.luau meta.function.luau meta.parameters.luau
+                    ^
+                    source.luau meta.function.luau
+>		print("[LineOfSight]", ...)
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^^^^^^^^^
+          source.luau string.quoted.double.luau
+                       ^
+                       source.luau string.quoted.double.luau
+                        ^^
+                        source.luau
+                          ^^^
+                          source.luau keyword.other.unit.luau
+                             ^^
+                             source.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>else
+ ^^^^
+ source.luau keyword.control.luau
+>	function debug()
+ ^
+ source.luau
+  ^^^^^^^^
+  source.luau meta.function.luau keyword.control.luau
+          ^
+          source.luau meta.function.luau
+           ^^^^^
+           source.luau meta.function.luau entity.name.function.luau
+                ^
+                source.luau meta.function.luau
+                 ^
+                 source.luau meta.function.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>return function(origin, character, range, ignoreIf, blacklist)
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^^^^^
+        source.luau meta.function.luau keyword.control.luau
+                ^
+                source.luau meta.function.luau
+                 ^^^^^^
+                 source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                       ^^
+                       source.luau meta.function.luau meta.parameters.luau
+                         ^^^^^^^^^
+                         source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                  ^^
+                                  source.luau meta.function.luau meta.parameters.luau
+                                    ^^^^^
+                                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                         ^^
+                                         source.luau meta.function.luau meta.parameters.luau
+                                           ^^^^^^^^
+                                           source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                                   ^^
+                                                   source.luau meta.function.luau meta.parameters.luau
+                                                     ^^^^^^^^^
+                                                     source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                                              ^
+                                                              source.luau meta.function.luau
+>	if typeof(origin) == "Instance" then
+ ^
+ source.luau
+  ^^
+  source.luau keyword.control.luau
+    ^
+    source.luau
+     ^^^^^^
+     source.luau support.function.luau
+           ^
+           source.luau
+            ^^^^^^
+            source.luau variable.other.readwrite.luau
+                  ^^
+                  source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau keyword.operator.assignment.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau string.quoted.double.luau
+                        ^^^^^^^^
+                        source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau
+                                  ^^^^
+                                  source.luau keyword.control.luau
+>		if origin.Position:FuzzyEq(character.PrimaryPart.Position) then
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^^^^
+      source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau variable.other.property.luau
+                     ^
+                     source.luau
+                      ^^^^^^^
+                      source.luau entity.name.function.luau
+                             ^
+                             source.luau
+                              ^^^^^^^^^
+                              source.luau variable.other.readwrite.luau
+                                       ^
+                                       source.luau
+                                        ^^^^^^^^^^^
+                                        source.luau variable.other.property.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^^^^^
+                                                    source.luau variable.other.property.luau
+                                                            ^^
+                                                            source.luau
+                                                              ^^^^
+                                                              source.luau keyword.control.luau
+>			debug("ORIGIN WAS CHARACTER")
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau support.constant.luau
+         ^
+         source.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^^^^^^^^^^^^^^^^^^^^
+           source.luau string.quoted.double.luau
+                               ^
+                               source.luau string.quoted.double.luau
+                                ^^
+                                source.luau
+>			return origin, origin.Position
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau keyword.control.luau
+          ^
+          source.luau
+           ^^^^^^
+           source.luau variable.other.readwrite.luau
+                 ^^
+                 source.luau
+                   ^^^^^^
+                   source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau
+                          ^^^^^^^^
+                          source.luau variable.other.property.luau
+>		end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>		origin = origin.Position
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^^
+            source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^
+                   source.luau variable.other.property.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>	blacklist = blacklist or {}
+ ^
+ source.luau
+  ^^^^^^^^^
+  source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^^^^
+              source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau
+                        ^^
+                        source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                          ^^^^
+                          source.luau
+>
+ ^
+ source.luau
+>	local hit, point do
+ ^
+ source.luau
+  ^^^^^
+  source.luau storage.modifier.local.luau
+       ^
+       source.luau
+        ^^^
+        source.luau variable.other.luau
+           ^^
+           source.luau
+             ^^^^^
+             source.luau variable.other.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.control.luau
+>		while true do
+ ^^
+ source.luau
+   ^^^^^
+   source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^
+         source.luau constant.language.boolean.true.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.control.luau
+>			hit, point = Raycast(Ray.new(origin, (origin - character.PrimaryPart.Position).Unit * -range), blacklist)
+ ^^^
+ source.luau
+    ^^^
+    source.luau variable.other.readwrite.luau
+       ^^
+       source.luau
+         ^^^^^
+         source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^^^^^^
+                 source.luau entity.name.function.luau
+                        ^
+                        source.luau
+                         ^^^
+                         source.luau support.class.luau
+                            ^
+                            source.luau
+                             ^^^
+                             source.luau support.function.luau
+                                ^
+                                source.luau
+                                 ^^^^^^
+                                 source.luau variable.other.readwrite.luau
+                                       ^^^
+                                       source.luau
+                                          ^^^^^^
+                                          source.luau variable.other.readwrite.luau
+                                                ^
+                                                source.luau
+                                                 ^
+                                                 source.luau keyword.operator.arithmetic.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^^^^^^^^
+                                                   source.luau variable.other.readwrite.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^^^^^^^^^
+                                                             source.luau variable.other.property.luau
+                                                                        ^
+                                                                        source.luau
+                                                                         ^^^^^^^^
+                                                                         source.luau variable.other.property.luau
+                                                                                 ^^
+                                                                                 source.luau
+                                                                                   ^^^^
+                                                                                   source.luau variable.other.property.luau
+                                                                                       ^
+                                                                                       source.luau
+                                                                                        ^
+                                                                                        source.luau keyword.operator.arithmetic.luau
+                                                                                         ^
+                                                                                         source.luau
+                                                                                          ^
+                                                                                          source.luau keyword.operator.arithmetic.luau
+                                                                                           ^^^^^
+                                                                                           source.luau variable.other.readwrite.luau
+                                                                                                ^^^
+                                                                                                source.luau
+                                                                                                   ^^^^^^^^^
+                                                                                                   source.luau variable.other.readwrite.luau
+                                                                                                            ^^
+                                                                                                            source.luau
+>
+ ^
+ source.luau
+>			if hit and hit:IsDescendantOf(character) then
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.control.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^^
+           source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+              ^
+              source.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^^^^^^^
+                   source.luau entity.name.function.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^^^^
+                                  source.luau variable.other.readwrite.luau
+                                           ^^
+                                           source.luau
+                                             ^^^^
+                                             source.luau keyword.control.luau
+>				break
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau keyword.control.luau
+>			elseif hit and ignoreIf(hit) then
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau keyword.control.luau
+          ^
+          source.luau
+           ^^^
+           source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^
+               source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                  ^
+                  source.luau
+                   ^^^^^^^^
+                   source.luau entity.name.function.luau
+                           ^
+                           source.luau
+                            ^^^
+                            source.luau variable.other.readwrite.luau
+                               ^^
+                               source.luau
+                                 ^^^^
+                                 source.luau keyword.control.luau
+>				debug("IGNORING OFF IF", hit:GetFullName())
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau support.constant.luau
+          ^
+          source.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^^^^^^^^^^^^^^
+            source.luau string.quoted.double.luau
+                           ^
+                           source.luau string.quoted.double.luau
+                            ^^
+                            source.luau
+                              ^^^
+                              source.luau variable.other.readwrite.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^^^^^^
+                                  source.luau entity.name.function.luau
+                                             ^^^^
+                                             source.luau
+>				blacklist[#blacklist + 1] = hit
+ ^^^^
+ source.luau
+     ^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.other.luau
+                ^^^^^^^^^
+                source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau keyword.operator.arithmetic.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau constant.numeric.decimal.luau
+                             ^^
+                             source.luau
+                               ^
+                               source.luau keyword.operator.assignment.luau
+                                ^
+                                source.luau
+                                 ^^^
+                                 source.luau variable.other.readwrite.luau
+>			else
+ ^^^
+ source.luau
+    ^^^^
+    source.luau keyword.control.luau
+>				break
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau keyword.control.luau
+>			end
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+>		end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>	debug("LOS RESULT", hit and hit:GetFullName())
+ ^
+ source.luau
+  ^^^^^
+  source.luau support.constant.luau
+       ^
+       source.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^^^^^^^^^^
+         source.luau string.quoted.double.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^
+                    source.luau
+                      ^^^
+                      source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau
+                          ^^^
+                          source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                             ^
+                             source.luau
+                              ^^^
+                              source.luau variable.other.readwrite.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^^^^^^
+                                  source.luau entity.name.function.luau
+                                             ^^^^
+                                             source.luau
+>
+ ^
+ source.luau
+>	return hit and hit:IsDescendantOf(character), point
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^^
+             source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                ^
+                source.luau
+                 ^^^
+                 source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^^^^^
+                     source.luau entity.name.function.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^^^^^
+                                    source.luau variable.other.readwrite.luau
+                                             ^^^
+                                             source.luau
+                                                ^^^^^
+                                                source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

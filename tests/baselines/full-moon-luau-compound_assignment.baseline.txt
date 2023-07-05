@@ -1,0 +1,288 @@
+original file
+-----------------------------------
+local x = 1
+local y = 2
+
+x += 5
+x -= 5
+x *= 5
+x /= 5
+x %= 5
+x ^= 5
+
+x += y
+x -= y
+x *= y
+x /= y
+x %= y
+x ^= y
+
+local str1 = "Hello, "
+local str2 = "world!"
+
+str1 ..= "world!"
+str1 ..= str2
+-----------------------------------
+
+>local x = 1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+>local y = 2
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>x += 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>x -= 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>x *= 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>x /= 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>x %= 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>x ^= 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>x += y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+>x -= y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+>x *= y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+>x /= y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+>x %= y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+>x ^= y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>local str1 = "Hello, "
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^^^^^^
+               source.luau string.quoted.double.luau
+                      ^
+                      source.luau string.quoted.double.luau
+>local str2 = "world!"
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^^^^^
+               source.luau string.quoted.double.luau
+                     ^
+                     source.luau string.quoted.double.luau
+>
+ ^
+ source.luau
+>str1 ..= "world!"
+ ^^^^
+ source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^^^
+      source.luau keyword.operator.assignment.luau
+         ^
+         source.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^^^^^^
+           source.luau string.quoted.double.luau
+                 ^
+                 source.luau string.quoted.double.luau
+>str1 ..= str2
+ ^^^^
+ source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^^^
+      source.luau keyword.operator.assignment.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau variable.other.readwrite.luau

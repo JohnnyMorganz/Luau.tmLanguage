@@ -1,0 +1,100 @@
+original file
+-----------------------------------
+for index = 1, 10 do call(index) end
+for _ = start, final do end
+for _ = 1, 10, 2 do end
+-----------------------------------
+
+>for index = 1, 10 do call(index) end
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^^^^^
+     source.luau variable.parameter.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.control.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^^
+              source.luau
+                ^^
+                source.luau constant.numeric.decimal.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.control.luau
+                     ^
+                     source.luau
+                      ^^^^
+                      source.luau entity.name.function.luau
+                          ^
+                          source.luau
+                           ^^^^^
+                           source.luau variable.other.readwrite.luau
+                                ^^
+                                source.luau
+                                  ^^^
+                                  source.luau keyword.control.luau
+>for _ = start, final do end
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.control.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.readwrite.luau
+              ^^
+              source.luau
+                ^^^^^
+                source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau
+                      ^^
+                      source.luau keyword.control.luau
+                        ^
+                        source.luau
+                         ^^^
+                         source.luau keyword.control.luau
+>for _ = 1, 10, 2 do end
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.control.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^
+         source.luau constant.numeric.decimal.luau
+          ^^
+          source.luau
+            ^^
+            source.luau constant.numeric.decimal.luau
+              ^^
+              source.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+                 ^
+                 source.luau
+                  ^^
+                  source.luau keyword.control.luau
+                    ^
+                    source.luau
+                     ^^^
+                     source.luau keyword.control.luau

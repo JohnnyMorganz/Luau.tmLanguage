@@ -1,0 +1,20 @@
+original file
+-----------------------------------
+--[=[
+	never have i used these weird equals signs comments
+	but im sure someone does
+]=]
+-----------------------------------
+
+>--[=[
+ ^^^^^
+ source.luau comment.block.luau
+>	never have i used these weird equals signs comments
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>	but im sure someone does
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>]=]
+ ^^^
+ source.luau comment.block.luau

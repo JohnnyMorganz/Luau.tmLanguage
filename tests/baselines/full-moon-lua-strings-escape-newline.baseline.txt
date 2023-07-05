@@ -1,0 +1,26 @@
+original file
+-----------------------------------
+print("foo\
+	bar")
+
+-----------------------------------
+
+>print("foo\
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^^^^
+        source.luau string.quoted.double.luau
+>	bar")
+ ^^^^
+ source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^
+      source.luau
+>
+ ^
+ source.luau

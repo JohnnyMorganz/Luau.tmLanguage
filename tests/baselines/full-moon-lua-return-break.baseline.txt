@@ -1,0 +1,58 @@
+original file
+-----------------------------------
+do
+	return 1
+end
+
+do
+	break
+end
+
+return call()
+
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>	return 1
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^
+         source.luau constant.numeric.decimal.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>	break
+ ^
+ source.luau
+  ^^^^^
+  source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>return call()
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau entity.name.function.luau
+            ^^^
+            source.luau
+>
+ ^
+ source.luau

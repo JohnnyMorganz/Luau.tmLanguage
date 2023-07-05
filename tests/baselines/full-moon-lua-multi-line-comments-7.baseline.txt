@@ -1,0 +1,26 @@
+original file
+-----------------------------------
+--[=[ μέλλον ]=]
+
+-- some text here
+
+-----------------------------------
+
+>--[=[ μέλλον ]=]
+ ^^^^^
+ source.luau comment.block.luau
+      ^^^^^^^^
+      source.luau comment.block.luau
+              ^^^
+              source.luau comment.block.luau
+>
+ ^
+ source.luau
+>-- some text here
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau

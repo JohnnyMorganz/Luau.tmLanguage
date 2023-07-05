@@ -1,0 +1,28 @@
+original file
+-----------------------------------
+	-- Indented single line
+	--[[
+		Indented multi line
+	]]
+-----------------------------------
+
+>	-- Indented single line
+ ^
+ source.luau
+  ^^
+  source.luau comment.line.double-dash.luau
+    ^^^^^^^^^^^^^^^^^^^^^
+    source.luau comment.line.double-dash.luau
+>	--[[
+ ^
+ source.luau
+  ^^^^
+  source.luau comment.block.luau
+>		Indented multi line
+ ^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>	]]
+ ^
+ source.luau comment.block.luau
+  ^^
+  source.luau comment.block.luau

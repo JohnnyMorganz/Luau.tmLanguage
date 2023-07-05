@@ -1,0 +1,48 @@
+original file
+-----------------------------------
+#!/usr/bin/env lua
+
+print("Hello world");
+
+-----------------------------------
+
+>#!/usr/bin/env lua
+ ^
+ source.luau keyword.operator.other.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^^^
+    source.luau variable.other.readwrite.luau
+       ^
+       source.luau keyword.operator.arithmetic.luau
+        ^^^
+        source.luau variable.other.readwrite.luau
+           ^
+           source.luau keyword.operator.arithmetic.luau
+            ^^^
+            source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^
+                source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>print("Hello world");
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^^^^^^^^^^
+        source.luau string.quoted.double.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^^
+                    source.luau
+>
+ ^
+ source.luau

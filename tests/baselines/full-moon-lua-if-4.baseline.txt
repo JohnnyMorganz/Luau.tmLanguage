@@ -1,0 +1,60 @@
+original file
+-----------------------------------
+if x then
+	foo()
+elseif y then
+	bar()
+else
+	baz()
+end
+-----------------------------------
+
+>if x then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^
+    source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau keyword.control.luau
+>	foo()
+ ^
+ source.luau
+  ^^^
+  source.luau entity.name.function.luau
+     ^^^
+     source.luau
+>elseif y then
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau keyword.control.luau
+>	bar()
+ ^
+ source.luau
+  ^^^
+  source.luau entity.name.function.luau
+     ^^^
+     source.luau
+>else
+ ^^^^
+ source.luau keyword.control.luau
+>	baz()
+ ^
+ source.luau
+  ^^^
+  source.luau entity.name.function.luau
+     ^^^
+     source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

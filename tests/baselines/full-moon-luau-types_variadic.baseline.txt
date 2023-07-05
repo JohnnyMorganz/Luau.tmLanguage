@@ -1,0 +1,520 @@
+original file
+-----------------------------------
+--!strict
+type Foo = (...number) -> ()
+type Baz = (string, ...Foo) -> ...Foo
+type Bar = (...number) -> (string, ...number) -> ...any
+type Boom = (..."hit" | "miss") -> (string, ...("critical" | "weak" | "normal")) -> ...("dead" | "alive")
+
+function _bar(...: number): ...number | string end
+
+local f: Boom = function(...)
+	return function(x, ...)
+		return "alive", "dead"
+	end
+end
+
+f("hit")
+
+local Boo = {}
+function Boo:f(name: string, ...: number): () -> (string, ...Foo) -> ()
+	return function()
+		return function(_x: string, ...: Foo) end
+	end
+end
+
+-----------------------------------
+
+>--!strict
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type Foo = (...number) -> ()
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+             ^^^
+             source.luau
+                ^^^^^^
+                source.luau support.type.primitive.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+                        ^^
+                        source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau
+>type Baz = (string, ...Foo) -> ...Foo
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau support.type.primitive.luau
+                   ^^^^^
+                   source.luau
+                        ^^^
+                        source.luau entity.name.type.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau
+                             ^^
+                             source.luau keyword.operator.type.luau
+                               ^^^^
+                               source.luau
+                                   ^^^
+                                   source.luau entity.name.type.luau
+>type Bar = (...number) -> (string, ...number) -> ...any
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+             ^^^
+             source.luau
+                ^^^^^^
+                source.luau support.type.primitive.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+                        ^^
+                        source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau
+                            ^^^^^^
+                            source.luau support.type.primitive.luau
+                                  ^^^^^
+                                  source.luau
+                                       ^^^^^^
+                                       source.luau support.type.primitive.luau
+                                             ^
+                                             source.luau
+                                              ^
+                                              source.luau
+                                               ^^
+                                               source.luau keyword.operator.type.luau
+                                                 ^^^^
+                                                 source.luau
+                                                     ^^^
+                                                     source.luau support.type.primitive.luau
+>type Boom = (..."hit" | "miss") -> (string, ...("critical" | "weak" | "normal")) -> ...("dead" | "alive")
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau entity.name.type.alias.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau
+              ^^^
+              source.luau
+                 ^
+                 source.luau string.quoted.double.luau
+                  ^^^
+                  source.luau string.quoted.double.luau
+                     ^
+                     source.luau string.quoted.double.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^^^^
+                          source.luau string.quoted.double.luau
+                              ^
+                              source.luau string.quoted.double.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau
+                                 ^^
+                                 source.luau keyword.operator.type.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^^
+                                     source.luau support.type.primitive.luau
+                                           ^^^^^
+                                           source.luau
+                                                ^
+                                                source.luau
+                                                 ^
+                                                 source.luau string.quoted.double.luau
+                                                  ^^^^^^^^
+                                                  source.luau string.quoted.double.luau
+                                                          ^
+                                                          source.luau string.quoted.double.luau
+                                                           ^
+                                                           source.luau
+                                                            ^
+                                                            source.luau keyword.operator.type.luau
+                                                             ^
+                                                             source.luau
+                                                              ^
+                                                              source.luau string.quoted.double.luau
+                                                               ^^^^
+                                                               source.luau string.quoted.double.luau
+                                                                   ^
+                                                                   source.luau string.quoted.double.luau
+                                                                    ^
+                                                                    source.luau
+                                                                     ^
+                                                                     source.luau keyword.operator.type.luau
+                                                                      ^
+                                                                      source.luau
+                                                                       ^
+                                                                       source.luau string.quoted.double.luau
+                                                                        ^^^^^^
+                                                                        source.luau string.quoted.double.luau
+                                                                              ^
+                                                                              source.luau string.quoted.double.luau
+                                                                               ^
+                                                                               source.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^
+                                                                                 source.luau
+                                                                                  ^^
+                                                                                  source.luau keyword.operator.type.luau
+                                                                                    ^^^^
+                                                                                    source.luau
+                                                                                        ^
+                                                                                        source.luau
+                                                                                         ^
+                                                                                         source.luau string.quoted.double.luau
+                                                                                          ^^^^
+                                                                                          source.luau string.quoted.double.luau
+                                                                                              ^
+                                                                                              source.luau string.quoted.double.luau
+                                                                                               ^
+                                                                                               source.luau
+                                                                                                ^
+                                                                                                source.luau keyword.operator.type.luau
+                                                                                                 ^
+                                                                                                 source.luau
+                                                                                                  ^
+                                                                                                  source.luau string.quoted.double.luau
+                                                                                                   ^^^^^
+                                                                                                   source.luau string.quoted.double.luau
+                                                                                                        ^
+                                                                                                        source.luau string.quoted.double.luau
+                                                                                                         ^
+                                                                                                         source.luau
+>
+ ^
+ source.luau
+>function _bar(...: number): ...number | string end
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^
+          source.luau meta.function.luau entity.name.function.luau
+              ^
+              source.luau meta.function.luau
+               ^^^
+               source.luau meta.function.luau meta.parameters.luau
+                  ^
+                  source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                   ^
+                   source.luau meta.function.luau meta.parameters.luau
+                    ^^^^^^
+                    source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                          ^
+                          source.luau meta.function.luau
+                           ^
+                           source.luau meta.function.luau keyword.operator.type.luau
+                            ^
+                            source.luau meta.function.luau
+                             ^^^
+                             source.luau meta.function.luau
+                                ^^^^^^
+                                source.luau meta.function.luau support.type.primitive.luau
+                                      ^
+                                      source.luau meta.function.luau
+                                       ^
+                                       source.luau meta.function.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau meta.function.luau
+                                         ^^^^^^
+                                         source.luau meta.function.luau support.type.primitive.luau
+                                               ^
+                                               source.luau meta.function.luau
+                                                ^^^
+                                                source.luau meta.function.luau entity.name.type.luau
+>
+ ^
+ source.luau
+>local f: Boom = function(...)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau entity.name.type.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^^^^^^^
+                 source.luau meta.function.luau keyword.control.luau
+                         ^
+                         source.luau meta.function.luau
+                          ^^^
+                          source.luau meta.function.luau meta.parameters.luau
+                             ^
+                             source.luau meta.function.luau
+>	return function(x, ...)
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^^^^
+         source.luau meta.function.luau keyword.control.luau
+                 ^
+                 source.luau meta.function.luau
+                  ^
+                  source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                   ^^^^^
+                   source.luau meta.function.luau meta.parameters.luau
+                        ^
+                        source.luau meta.function.luau
+>		return "alive", "dead"
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^^^^^
+           source.luau string.quoted.double.luau
+                ^
+                source.luau string.quoted.double.luau
+                 ^^
+                 source.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^^^
+                    source.luau string.quoted.double.luau
+                        ^
+                        source.luau string.quoted.double.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>f("hit")
+ ^
+ source.luau entity.name.function.luau
+  ^
+  source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^
+    source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^
+        source.luau
+>
+ ^
+ source.luau
+>local Boo = {}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^^^^
+            source.luau
+>function Boo:f(name: string, ...: number): () -> (string, ...Foo) -> ()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^
+                source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameters.luau
+                      ^^^^^^
+                      source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                            ^^^^^
+                            source.luau meta.function.luau meta.parameters.luau
+                                 ^
+                                 source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameters.luau
+                                   ^^^^^^
+                                   source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                                         ^
+                                         source.luau meta.function.luau
+                                          ^
+                                          source.luau meta.function.luau keyword.operator.type.luau
+                                           ^
+                                           source.luau meta.function.luau
+                                            ^
+                                            source.luau meta.function.luau
+                                             ^
+                                             source.luau meta.function.luau
+                                              ^
+                                              source.luau meta.function.luau
+                                               ^^
+                                               source.luau meta.function.luau keyword.operator.type.luau
+                                                 ^
+                                                 source.luau meta.function.luau
+                                                  ^
+                                                  source.luau meta.function.luau
+                                                   ^^^^^^
+                                                   source.luau meta.function.luau support.type.primitive.luau
+                                                         ^^^^^
+                                                         source.luau meta.function.luau
+                                                              ^^^
+                                                              source.luau meta.function.luau entity.name.type.luau
+                                                                 ^
+                                                                 source.luau meta.function.luau
+                                                                  ^
+                                                                  source.luau meta.function.luau
+                                                                   ^^
+                                                                   source.luau meta.function.luau keyword.operator.type.luau
+                                                                     ^
+                                                                     source.luau meta.function.luau
+                                                                      ^
+                                                                      source.luau meta.function.luau
+                                                                       ^
+                                                                       source.luau meta.function.luau
+>	return function()
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^^^^
+         source.luau meta.function.luau keyword.control.luau
+                 ^
+                 source.luau meta.function.luau
+                  ^
+                  source.luau meta.function.luau
+>		return function(_x: string, ...: Foo) end
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau meta.function.luau keyword.control.luau
+                  ^
+                  source.luau meta.function.luau
+                   ^^
+                   source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                     ^
+                     source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                      ^
+                      source.luau meta.function.luau meta.parameters.luau
+                       ^^^^^^
+                       source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                             ^^^^^
+                             source.luau meta.function.luau meta.parameters.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameters.luau
+                                    ^^^
+                                    source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
+                                       ^
+                                       source.luau meta.function.luau
+                                        ^
+                                        source.luau
+                                         ^^^
+                                         source.luau keyword.control.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

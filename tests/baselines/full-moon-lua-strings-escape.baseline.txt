@@ -1,0 +1,56 @@
+original file
+-----------------------------------
+call('\\')
+call("\\")
+call({ ["\\"] = "" })
+-----------------------------------
+
+>call('\\')
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.single.luau
+       ^^
+       source.luau string.quoted.single.luau constant.character.escape.luau
+         ^
+         source.luau string.quoted.single.luau
+          ^^
+          source.luau
+>call("\\")
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^
+       source.luau string.quoted.double.luau constant.character.escape.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^
+          source.luau
+>call({ ["\\"] = "" })
+ ^^^^
+ source.luau entity.name.function.luau
+     ^^^^
+     source.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^
+          source.luau string.quoted.double.luau constant.character.escape.luau
+            ^
+            source.luau string.quoted.double.luau
+             ^^
+             source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau string.quoted.double.luau
+                  ^
+                  source.luau string.quoted.double.luau
+                   ^^^^
+                   source.luau

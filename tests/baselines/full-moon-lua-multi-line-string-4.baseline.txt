@@ -1,0 +1,18 @@
+original file
+-----------------------------------
+call([[doge]])
+-----------------------------------
+
+>call([[doge]])
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^^
+      source.luau string.other.multiline.luau
+        ^^^^
+        source.luau string.other.multiline.luau
+            ^^
+            source.luau string.other.multiline.luau
+              ^^
+              source.luau

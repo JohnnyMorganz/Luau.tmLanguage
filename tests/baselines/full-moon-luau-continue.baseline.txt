@@ -1,0 +1,62 @@
+original file
+-----------------------------------
+-- Very important loop here
+while true do
+	continue
+end
+
+continue()
+local continue = 4
+
+-----------------------------------
+
+>-- Very important loop here
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>while true do
+ ^^^^^
+ source.luau keyword.control.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau constant.language.boolean.true.luau
+           ^
+           source.luau
+            ^^
+            source.luau keyword.control.luau
+>	continue
+ ^
+ source.luau
+  ^^^^^^^^
+  source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>continue()
+ ^^^^^^^^
+ source.luau keyword.control.luau
+         ^^^
+         source.luau
+>local continue = 4
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^
+       source.luau keyword.control.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau

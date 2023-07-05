@@ -1,0 +1,94 @@
+original file
+-----------------------------------
+call(1 < 2)
+call(1 <= 2)
+call(2 > 1)
+call(2 >= 1)
+call(x >= y)
+-----------------------------------
+
+>call(1 < 2)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau
+        ^
+        source.luau keyword.operator.comparison.luau
+         ^
+         source.luau
+          ^
+          source.luau constant.numeric.decimal.luau
+           ^^
+           source.luau
+>call(1 <= 2)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau
+        ^^
+        source.luau keyword.operator.comparison.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+            ^^
+            source.luau
+>call(2 > 1)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau
+        ^
+        source.luau keyword.operator.comparison.luau
+         ^
+         source.luau
+          ^
+          source.luau constant.numeric.decimal.luau
+           ^^
+           source.luau
+>call(2 >= 1)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau
+        ^^
+        source.luau keyword.operator.comparison.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+            ^^
+            source.luau
+>call(x >= y)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^^
+        source.luau keyword.operator.comparison.luau
+          ^
+          source.luau
+           ^
+           source.luau variable.other.readwrite.luau
+            ^^
+            source.luau

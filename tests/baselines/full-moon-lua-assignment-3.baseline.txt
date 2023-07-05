@@ -1,0 +1,86 @@
+original file
+-----------------------------------
+-- Crazy assignment code from AmaranthineCodices
+a, b, c.d.e[f][g][1], h:i().j[k]:l()[m] = true, false, 1, 4
+-----------------------------------
+
+>-- Crazy assignment code from AmaranthineCodices
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>a, b, c.d.e[f][g][1], h:i().j[k]:l()[m] = true, false, 1, 4
+ ^
+ source.luau variable.other.readwrite.luau
+  ^^
+  source.luau
+    ^
+    source.luau variable.other.readwrite.luau
+     ^^
+     source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.other.property.luau
+          ^
+          source.luau
+           ^
+           source.luau variable.other.property.luau
+            ^
+            source.luau
+             ^
+             source.luau variable.other.readwrite.luau
+              ^^
+              source.luau
+                ^
+                source.luau variable.other.readwrite.luau
+                 ^^
+                 source.luau
+                   ^
+                   source.luau constant.numeric.decimal.luau
+                    ^^^
+                    source.luau
+                       ^
+                       source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau entity.name.function.luau
+                          ^^^
+                          source.luau
+                             ^
+                             source.luau variable.other.property.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau variable.other.readwrite.luau
+                                ^^
+                                source.luau
+                                  ^
+                                  source.luau entity.name.function.luau
+                                   ^^^
+                                   source.luau
+                                      ^
+                                      source.luau variable.other.readwrite.luau
+                                       ^^
+                                       source.luau
+                                         ^
+                                         source.luau keyword.operator.assignment.luau
+                                          ^
+                                          source.luau
+                                           ^^^^
+                                           source.luau constant.language.boolean.true.luau
+                                               ^^
+                                               source.luau
+                                                 ^^^^^
+                                                 source.luau constant.language.boolean.false.luau
+                                                      ^^
+                                                      source.luau
+                                                        ^
+                                                        source.luau constant.numeric.decimal.luau
+                                                         ^^
+                                                         source.luau
+                                                           ^
+                                                           source.luau constant.numeric.decimal.luau

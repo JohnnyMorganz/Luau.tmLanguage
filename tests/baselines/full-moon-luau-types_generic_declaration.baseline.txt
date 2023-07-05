@@ -1,0 +1,212 @@
+original file
+-----------------------------------
+--!strict
+type Foo<T..., U...> = (U...) -> T...
+type Bar<U, T...> = nil
+type Function<Args... = ...any, Return... = ()> = (Args...) -> Return...
+type Baz<U = string, T... = (string, number)> = nil
+type Indexed<T...> = module.Indexed<T...>
+
+-----------------------------------
+
+>--!strict
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type Foo<T..., U...> = (U...) -> T...
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.alias.luau
+           ^^^^^
+           source.luau
+                ^
+                source.luau entity.name.type.alias.luau
+                 ^^^
+                 source.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau entity.name.type.luau
+                          ^^^
+                          source.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau
+                               ^^
+                               source.luau keyword.operator.type.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau entity.name.type.luau
+                                   ^^^
+                                   source.luau
+>type Bar<U, T...> = nil
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.alias.luau
+           ^^
+           source.luau
+             ^
+             source.luau entity.name.type.alias.luau
+              ^^^
+              source.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^
+                     source.luau support.type.primitive.luau
+>type Function<Args... = ...any, Return... = ()> = (Args...) -> Return...
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^
+      source.luau entity.name.type.alias.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^^^^
+               source.luau entity.name.type.alias.luau
+                   ^^^^
+                   source.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+                        ^^^^
+                        source.luau
+                            ^^^
+                            source.luau support.type.primitive.luau
+                               ^^
+                               source.luau
+                                 ^^^^^^
+                                 source.luau entity.name.type.luau
+                                       ^^^^^^
+                                       source.luau
+                                             ^
+                                             source.luau
+                                              ^
+                                              source.luau
+                                               ^^^^
+                                               source.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^
+                                                    source.luau entity.name.type.luau
+                                                        ^^^
+                                                        source.luau
+                                                           ^
+                                                           source.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^
+                                                             source.luau keyword.operator.type.luau
+                                                               ^
+                                                               source.luau
+                                                                ^^^^^^
+                                                                source.luau entity.name.type.luau
+                                                                      ^^^
+                                                                      source.luau
+>type Baz<U = string, T... = (string, number)> = nil
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.alias.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.type.primitive.luau
+                    ^^
+                    source.luau
+                      ^
+                      source.luau entity.name.type.luau
+                       ^^^^^^
+                       source.luau
+                             ^
+                             source.luau
+                              ^^^^^^
+                              source.luau support.type.primitive.luau
+                                    ^^
+                                    source.luau
+                                      ^^^^^^
+                                      source.luau support.type.primitive.luau
+                                            ^
+                                            source.luau
+                                             ^^^^
+                                             source.luau
+                                                 ^^^
+                                                 source.luau support.type.primitive.luau
+>type Indexed<T...> = module.Indexed<T...>
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau entity.name.type.alias.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau entity.name.type.alias.luau
+               ^^^
+               source.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^^^^^^
+                      source.luau entity.name.type.luau
+                            ^
+                            source.luau
+                             ^^^^^^^
+                             source.luau entity.name.type.luau
+                                    ^
+                                    source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                      ^^^
+                                      source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                         ^
+                                         source.luau keyword.operator.type.luau
+>
+ ^
+ source.luau

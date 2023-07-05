@@ -1,0 +1,66 @@
+original file
+-----------------------------------
+local foo = x-1
+local foo = x -1
+print(1+-3)
+
+-----------------------------------
+
+>local foo = x-1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau variable.other.readwrite.luau
+              ^
+              source.luau keyword.operator.arithmetic.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+>local foo = x -1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+>print(1+-3)
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^
+        source.luau keyword.operator.arithmetic.luau
+         ^
+         source.luau keyword.operator.arithmetic.luau
+          ^
+          source.luau constant.numeric.decimal.luau
+           ^^
+           source.luau
+>
+ ^
+ source.luau

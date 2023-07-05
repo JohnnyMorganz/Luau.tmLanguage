@@ -1,0 +1,88 @@
+original file
+-----------------------------------
+local num = 0.5
+local num2 = 0.5e5
+local num3 = .5
+local num4 = .5e5
+local num5 = 1.
+
+-----------------------------------
+
+>local num = 0.5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau constant.numeric.decimal.luau
+>local num2 = 0.5e5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^
+              source.luau constant.numeric.decimal.luau
+>local num3 = .5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^
+              source.luau constant.numeric.decimal.luau
+>local num4 = .5e5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau constant.numeric.decimal.luau
+>local num5 = 1.
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^
+              source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau

@@ -1,0 +1,1158 @@
+original file
+-----------------------------------
+--!strict
+local _fn3
+type Identity<T> = T
+type Array<T> = { [number]: T }
+type Map<K, V> = { [K]: V }
+type Function<T> = (...any) -> ...T
+type Object = { x: number, y: number }
+type Typeof = typeof(2 + 2 + _fn3())
+type FetchResult = "alice" | "mallet"
+type Element = { ["$$typeof"]: number }
+
+type Callback1 = (string) -> number
+type Callback2 = (string, string) -> number
+type Callback3 = (string, string) -> (string, nil)
+type Callback3a = (string, "error" | "success") -> (string, "weasel" | "basilisk")
+type Callback4 = (string) -> (string) -> ()
+type NetworkError = { message: string? } & { handled: true }
+
+type Foo = {
+	bar: number,
+	baz: number,
+}
+
+local foo0: number = 3
+local _foo1: number?
+local _foo2: Array<string>
+local _foo3: Map<number, "allow" | "deny">
+local _bar0 = foo0 :: number
+local _foo4: string, _bar1: string
+
+local _union: number | string
+local _multiUnion: number | string | nil
+
+local _intersection: number & string
+local _multiIntersection: number & string & nil
+
+function _fn0(param: string): string
+	return param
+end
+
+function _fn2(a: string, b: string, ...) end
+
+local _fn3 = function(): number | nil
+	return 3
+end
+
+local function _concat<T, S>(source: Array<T>, ...: Array<S> | S): Array<T> & Array<S>
+    return (source :: any) :: Array<S> & Array<T>
+end
+-----------------------------------
+
+>--!strict
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local _fn3
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+>type Identity<T> = T
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^
+      source.luau entity.name.type.alias.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau entity.name.type.alias.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau entity.name.type.luau
+>type Array<T> = { [number]: T }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau entity.name.type.alias.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau entity.name.type.alias.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau entity.name.type.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau
+>type Map<K, V> = { [K]: V }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.alias.luau
+           ^^
+           source.luau
+             ^
+             source.luau entity.name.type.alias.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau entity.name.type.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau entity.name.type.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau
+>type Function<T> = (...any) -> ...T
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^
+      source.luau entity.name.type.alias.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau entity.name.type.alias.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau
+                     ^^^
+                     source.luau
+                        ^^^
+                        source.luau support.type.primitive.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau
+                             ^^
+                             source.luau keyword.operator.type.luau
+                               ^^^^
+                               source.luau
+                                   ^
+                                   source.luau entity.name.type.luau
+>type Object = { x: number, y: number }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^
+      source.luau entity.name.type.alias.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau
+                ^
+                source.luau
+                 ^
+                 source.luau variable.property.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+                          ^^
+                          source.luau
+                            ^
+                            source.luau variable.property.luau
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^
+                              source.luau
+                               ^^^^^^
+                               source.luau support.type.primitive.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau
+>type Typeof = typeof(2 + 2 + _fn3())
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^
+      source.luau entity.name.type.alias.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^
+               source.luau support.function.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau constant.numeric.decimal.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau keyword.operator.arithmetic.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau constant.numeric.decimal.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.arithmetic.luau
+                             ^
+                             source.luau
+                              ^^^^
+                              source.luau entity.name.function.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau
+>type FetchResult = "alice" | "mallet"
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau string.quoted.double.luau
+                     ^^^^^
+                     source.luau string.quoted.double.luau
+                          ^
+                          source.luau string.quoted.double.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.type.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau string.quoted.double.luau
+                               ^^^^^^
+                               source.luau string.quoted.double.luau
+                                     ^
+                                     source.luau string.quoted.double.luau
+>type Element = { ["$$typeof"]: number }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau entity.name.type.alias.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^^^^^^^
+                    source.luau string.quoted.double.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau keyword.operator.type.luau
+                               ^
+                               source.luau
+                                ^^^^^^
+                                source.luau support.type.primitive.luau
+                                      ^
+                                      source.luau
+                                       ^
+                                       source.luau
+>
+ ^
+ source.luau
+>type Callback1 = (string) -> number
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau support.type.primitive.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau keyword.operator.type.luau
+                             ^
+                             source.luau
+                              ^^^^^^
+                              source.luau support.type.primitive.luau
+>type Callback2 = (string, string) -> number
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau support.type.primitive.luau
+                         ^^
+                         source.luau
+                           ^^^^^^
+                           source.luau support.type.primitive.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^
+                                      source.luau support.type.primitive.luau
+>type Callback3 = (string, string) -> (string, nil)
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau support.type.primitive.luau
+                         ^^
+                         source.luau
+                           ^^^^^^
+                           source.luau support.type.primitive.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau
+                                       ^^^^^^
+                                       source.luau support.type.primitive.luau
+                                             ^^
+                                             source.luau
+                                               ^^^
+                                               source.luau support.type.primitive.luau
+                                                  ^
+                                                  source.luau
+>type Callback3a = (string, "error" | "success") -> (string, "weasel" | "basilisk")
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+                          ^^
+                          source.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^^^^
+                             source.luau string.quoted.double.luau
+                                  ^
+                                  source.luau string.quoted.double.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^^^^^^^
+                                       source.luau string.quoted.double.luau
+                                              ^
+                                              source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau
+                                                ^
+                                                source.luau
+                                                 ^^
+                                                 source.luau keyword.operator.type.luau
+                                                   ^
+                                                   source.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^^^
+                                                     source.luau support.type.primitive.luau
+                                                           ^^
+                                                           source.luau
+                                                             ^
+                                                             source.luau string.quoted.double.luau
+                                                              ^^^^^^
+                                                              source.luau string.quoted.double.luau
+                                                                    ^
+                                                                    source.luau string.quoted.double.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^
+                                                                      source.luau keyword.operator.type.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^
+                                                                        source.luau string.quoted.double.luau
+                                                                         ^^^^^^^^
+                                                                         source.luau string.quoted.double.luau
+                                                                                 ^
+                                                                                 source.luau string.quoted.double.luau
+                                                                                  ^
+                                                                                  source.luau
+>type Callback4 = (string) -> (string) -> ()
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau support.type.primitive.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau keyword.operator.type.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau
+                               ^^^^^^
+                               source.luau support.type.primitive.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau
+                                       ^^
+                                       source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau
+>type NetworkError = { message: string? } & { handled: true }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau
+                       ^^^^^^^
+                       source.luau variable.property.luau
+                              ^
+                              source.luau keyword.operator.type.luau
+                               ^
+                               source.luau
+                                ^^^^^^
+                                source.luau support.type.primitive.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau keyword.operator.type.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau
+                                             ^
+                                             source.luau
+                                              ^^^^^^^
+                                              source.luau variable.property.luau
+                                                     ^
+                                                     source.luau keyword.operator.type.luau
+                                                      ^
+                                                      source.luau
+                                                       ^^^^
+                                                       source.luau constant.language.boolean.true.luau
+                                                           ^
+                                                           source.luau
+                                                            ^
+                                                            source.luau
+>
+ ^
+ source.luau
+>type Foo = {
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+>	bar: number,
+ ^
+ source.luau
+  ^^^
+  source.luau variable.property.luau
+     ^
+     source.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau support.type.primitive.luau
+             ^^
+             source.luau
+>	baz: number,
+ ^
+ source.luau
+  ^^^
+  source.luau variable.property.luau
+     ^
+     source.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau support.type.primitive.luau
+             ^^
+             source.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>local foo0: number = 3
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau support.type.primitive.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau constant.numeric.decimal.luau
+>local _foo1: number?
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.type.primitive.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+>local _foo2: Array<string>
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^
+              source.luau entity.name.type.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^^^^^^
+                    source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                          ^
+                          source.luau keyword.operator.type.luau
+>local _foo3: Map<number, "allow" | "deny">
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^
+              source.luau entity.name.type.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^^^^^^
+                  source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                        ^^
+                        source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                          ^
+                          source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                           ^^^^^
+                           source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                ^
+                                source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                 ^
+                                 source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                  ^
+                                  source.luau meta.parameter.type.variable keyword.operator.type.luau INCORRECT_SCOPE_EXTENSION
+                                   ^
+                                   source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                    ^
+                                    source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                     ^^^^
+                                     source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                         ^
+                                         source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                          ^
+                                          source.luau keyword.operator.type.luau
+>local _bar0 = foo0 :: number
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau variable.other.readwrite.luau
+                   ^^^^
+                   source.luau
+                       ^^^^^^
+                       source.luau variable.other.readwrite.luau
+>local _foo4: string, _bar1: string
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.type.primitive.luau
+                    ^^
+                    source.luau
+                      ^^^^^
+                      source.luau variable.other.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^^^^^^
+                             source.luau support.type.primitive.luau
+>
+ ^
+ source.luau
+>local _union: number | string
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^^^^^^
+               source.luau support.type.primitive.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau
+                        ^^^^^^
+                        source.luau variable.other.luau
+>local _multiUnion: number | string | nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^^^^^^
+                             source.luau variable.other.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau
+                                      ^^^
+                                      source.luau variable.other.luau
+>
+ ^
+ source.luau
+>local _intersection: number & string
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^
+       source.luau variable.other.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^^^^
+                      source.luau support.type.primitive.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^
+                              source.luau
+                               ^^^^^^
+                               source.luau variable.other.luau
+>local _multiIntersection: number & string & nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^^^^^^
+                           source.luau support.type.primitive.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau keyword.operator.type.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^^
+                                    source.luau variable.other.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau keyword.operator.type.luau
+                                            ^
+                                            source.luau
+                                             ^^^
+                                             source.luau variable.other.luau
+>
+ ^
+ source.luau
+>function _fn0(param: string): string
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^
+          source.luau meta.function.luau entity.name.function.luau
+              ^
+              source.luau meta.function.luau
+               ^^^^^
+               source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameters.luau
+                      ^^^^^^
+                      source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                            ^
+                            source.luau meta.function.luau
+                             ^
+                             source.luau meta.function.luau keyword.operator.type.luau
+                              ^
+                              source.luau meta.function.luau
+                               ^^^^^^
+                               source.luau meta.function.luau support.type.primitive.luau
+>	return param
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function _fn2(a: string, b: string, ...) end
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^
+          source.luau meta.function.luau entity.name.function.luau
+              ^
+              source.luau meta.function.luau
+               ^
+               source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                ^
+                source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameters.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                        ^^
+                        source.luau meta.function.luau meta.parameters.luau
+                          ^
+                          source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                           ^
+                           source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                            ^
+                            source.luau meta.function.luau meta.parameters.luau
+                             ^^^^^^
+                             source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                                   ^^^^^
+                                   source.luau meta.function.luau meta.parameters.luau
+                                        ^
+                                        source.luau meta.function.luau
+                                         ^
+                                         source.luau
+                                          ^^^
+                                          source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local _fn3 = function(): number | nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^^^
+              source.luau meta.function.luau keyword.control.luau
+                      ^
+                      source.luau meta.function.luau
+                       ^
+                       source.luau meta.function.luau
+                        ^
+                        source.luau meta.function.luau keyword.operator.type.luau
+                         ^
+                         source.luau meta.function.luau
+                          ^^^^^^
+                          source.luau meta.function.luau support.type.primitive.luau
+                                ^
+                                source.luau meta.function.luau
+                                 ^
+                                 source.luau meta.function.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau meta.function.luau
+                                   ^^^
+                                   source.luau meta.function.luau support.type.primitive.luau
+>	return 3
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^
+         source.luau constant.numeric.decimal.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local function _concat<T, S>(source: Array<T>, ...: Array<S> | S): Array<T> & Array<S>
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                       ^
+                       source.luau meta.function.luau
+                        ^
+                        source.luau meta.function.luau entity.name.type.luau
+                         ^^
+                         source.luau meta.function.luau
+                           ^
+                           source.luau meta.function.luau entity.name.type.luau
+                            ^
+                            source.luau meta.function.luau
+                             ^
+                             source.luau meta.function.luau
+                              ^^^^^^
+                              source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameters.luau
+                                      ^^^^^
+                                      source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
+                                           ^
+                                           source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                            ^
+                                            source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                             ^
+                                             source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                              ^^^^^
+                                              source.luau meta.function.luau meta.parameters.luau
+                                                   ^
+                                                   source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                                    ^
+                                                    source.luau meta.function.luau meta.parameters.luau
+                                                     ^^^^^
+                                                     source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
+                                                          ^
+                                                          source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                                           ^
+                                                           source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                                            ^
+                                                            source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                                             ^
+                                                             source.luau meta.function.luau meta.parameters.luau
+                                                              ^
+                                                              source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                                               ^
+                                                               source.luau meta.function.luau meta.parameters.luau
+                                                                ^
+                                                                source.luau meta.function.luau meta.parameters.luau variable.other.constant.luau
+                                                                 ^
+                                                                 source.luau meta.function.luau
+                                                                  ^
+                                                                  source.luau meta.function.luau keyword.operator.type.luau
+                                                                   ^
+                                                                   source.luau meta.function.luau
+                                                                    ^^^^^
+                                                                    source.luau meta.function.luau entity.name.type.luau
+                                                                         ^
+                                                                         source.luau meta.function.luau keyword.operator.type.luau
+                                                                          ^
+                                                                          source.luau meta.function.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                                                           ^
+                                                                           source.luau meta.function.luau keyword.operator.type.luau
+                                                                            ^
+                                                                            source.luau meta.function.luau
+                                                                             ^
+                                                                             source.luau meta.function.luau keyword.operator.type.luau
+                                                                              ^
+                                                                              source.luau meta.function.luau
+                                                                               ^^^^^
+                                                                               source.luau meta.function.luau entity.name.type.luau
+                                                                                    ^
+                                                                                    source.luau meta.function.luau keyword.operator.type.luau
+                                                                                     ^
+                                                                                     source.luau meta.function.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                                                                      ^
+                                                                                      source.luau meta.function.luau keyword.operator.type.luau
+>    return (source :: any) :: Array<S> & Array<T>
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^^
+           source.luau
+             ^^^^^^
+             source.luau variable.other.readwrite.luau
+                   ^^^^
+                   source.luau
+                       ^^^
+                       source.luau variable.other.readwrite.luau
+                          ^^^^^
+                          source.luau
+                               ^^^^^
+                               source.luau variable.other.readwrite.luau
+                                    ^
+                                    source.luau keyword.operator.comparison.luau
+                                     ^
+                                     source.luau variable.other.constant.luau
+                                      ^
+                                      source.luau keyword.operator.comparison.luau
+                                       ^^^
+                                       source.luau
+                                          ^^^^^
+                                          source.luau variable.other.readwrite.luau
+                                               ^
+                                               source.luau keyword.operator.comparison.luau
+                                                ^
+                                                source.luau variable.other.constant.luau
+                                                 ^
+                                                 source.luau keyword.operator.comparison.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

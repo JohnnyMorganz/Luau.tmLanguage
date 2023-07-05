@@ -1,0 +1,34 @@
+original file
+-----------------------------------
+call()
+call(1)
+call(1, 2)
+-----------------------------------
+
+>call()
+ ^^^^
+ source.luau entity.name.function.luau
+     ^^^
+     source.luau
+>call(1)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^^
+       source.luau
+>call(1, 2)
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^^
+       source.luau
+         ^
+         source.luau constant.numeric.decimal.luau
+          ^^
+          source.luau

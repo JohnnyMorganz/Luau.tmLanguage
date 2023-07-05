@@ -1,0 +1,80 @@
+original file
+-----------------------------------
+type Foo = { { string } }
+type Foo = { {Name: string, Foo: number} }
+-----------------------------------
+
+>type Foo = { { string } }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+             ^
+             source.luau
+              ^
+              source.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau variable.property.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau
+>type Foo = { {Name: string, Foo: number} }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.alias.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+             ^
+             source.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau variable.property.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^^^^^^
+                     source.luau support.type.primitive.luau
+                           ^^
+                           source.luau
+                             ^^^
+                             source.luau variable.property.luau
+                                ^
+                                source.luau keyword.operator.type.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^
+                                  source.luau support.type.primitive.luau
+                                        ^
+                                        source.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau

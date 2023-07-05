@@ -1,0 +1,52 @@
+original file
+-----------------------------------
+local num = 1e5
+local num2 = 1e-5
+local num3 = 1e+5
+-----------------------------------
+
+>local num = 1e5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau constant.numeric.decimal.luau
+>local num2 = 1e-5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau constant.numeric.decimal.luau
+>local num3 = 1e+5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau constant.numeric.decimal.luau

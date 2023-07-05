@@ -1,0 +1,80 @@
+original file
+-----------------------------------
+local function foo(a, b) end
+local function bar(...) end
+local function baz(a, b, ...) end
+-----------------------------------
+
+>local function foo(a, b) end
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau
+                    ^
+                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                     ^^
+                     source.luau meta.function.luau meta.parameters.luau
+                       ^
+                       source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                        ^
+                        source.luau meta.function.luau
+                         ^
+                         source.luau
+                          ^^^
+                          source.luau keyword.control.luau
+>local function bar(...) end
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau
+                    ^^^
+                    source.luau meta.function.luau meta.parameters.luau
+                       ^
+                       source.luau meta.function.luau
+                        ^
+                        source.luau
+                         ^^^
+                         source.luau keyword.control.luau
+>local function baz(a, b, ...) end
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau
+                    ^
+                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                     ^^
+                     source.luau meta.function.luau meta.parameters.luau
+                       ^
+                       source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                        ^^^^^
+                        source.luau meta.function.luau meta.parameters.luau
+                             ^
+                             source.luau meta.function.luau
+                              ^
+                              source.luau
+                               ^^^
+                               source.luau keyword.control.luau

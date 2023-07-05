@@ -1,0 +1,30 @@
+original file
+-----------------------------------
+local a = 1
+
+--}}封装方便访问的接口==========================================
+-----------------------------------
+
+>local a = 1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>--}}封装方便访问的接口==========================================
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau

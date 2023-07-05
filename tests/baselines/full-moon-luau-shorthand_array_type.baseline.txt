@@ -1,0 +1,74 @@
+original file
+-----------------------------------
+type Array<T> = { T }
+type Array<T> = { [number]: T }
+-----------------------------------
+
+>type Array<T> = { T }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau entity.name.type.alias.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau entity.name.type.alias.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau variable.property.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau
+>type Array<T> = { [number]: T }
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau entity.name.type.alias.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau entity.name.type.alias.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau entity.name.type.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau

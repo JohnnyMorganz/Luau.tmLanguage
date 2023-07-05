@@ -1,0 +1,14 @@
+original file
+-----------------------------------
+--随便写点中文
+
+-----------------------------------
+
+>--随便写点中文
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau

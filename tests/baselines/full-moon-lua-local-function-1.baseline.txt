@@ -1,0 +1,40 @@
+original file
+-----------------------------------
+local function x()
+	call(1)
+end
+
+-----------------------------------
+
+>local function x()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^
+                source.luau meta.function.luau entity.name.function.luau
+                 ^
+                 source.luau meta.function.luau
+                  ^
+                  source.luau meta.function.luau
+>	call(1)
+ ^
+ source.luau
+  ^^^^
+  source.luau entity.name.function.luau
+      ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
+        ^^
+        source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

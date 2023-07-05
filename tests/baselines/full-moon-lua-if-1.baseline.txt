@@ -1,0 +1,28 @@
+original file
+-----------------------------------
+if x then
+	call()
+end
+-----------------------------------
+
+>if x then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^
+    source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau keyword.control.luau
+>	call()
+ ^
+ source.luau
+  ^^^^
+  source.luau entity.name.function.luau
+      ^^^
+      source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

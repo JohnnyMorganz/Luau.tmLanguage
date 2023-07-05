@@ -1,0 +1,76 @@
+original file
+-----------------------------------
+local a, b = 1, 2
+local c, d = 3, 4
+local e, f = 5, 6
+-----------------------------------
+
+>local a, b = 1, 2
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+               ^^
+               source.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau
+>local c, d = 3, 4
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+               ^^
+               source.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau
+>local e, f = 5, 6
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+               ^^
+               source.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau

@@ -1,0 +1,34 @@
+original file
+-----------------------------------
+call { x = 1 }
+call "hello"
+-----------------------------------
+
+>call { x = 1 }
+ ^^^^
+ source.luau variable.other.readwrite.luau
+     ^^^
+     source.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau constant.numeric.decimal.luau
+             ^^^
+             source.luau
+>call "hello"
+ ^^^^
+ source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^
+       source.luau string.quoted.double.luau
+            ^
+            source.luau string.quoted.double.luau

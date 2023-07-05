@@ -1,0 +1,40 @@
+original file
+-----------------------------------
+x.y("a")
+x:y("b")
+-----------------------------------
+
+>x.y("a")
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau entity.name.function.luau
+    ^
+    source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^
+        source.luau
+>x:y("b")
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau entity.name.function.luau
+    ^
+    source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^
+        source.luau

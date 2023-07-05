@@ -1,0 +1,20 @@
+original file
+-----------------------------------
+function x.y:z() end
+-----------------------------------
+
+>function x.y:z() end
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+               ^
+               source.luau meta.function.luau
+                ^
+                source.luau meta.function.luau
+                 ^
+                 source.luau
+                  ^^^
+                  source.luau keyword.control.luau

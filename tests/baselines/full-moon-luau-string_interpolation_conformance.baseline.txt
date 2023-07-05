@@ -1,0 +1,1170 @@
+original file
+-----------------------------------
+local function assertEq(left, right)
+	assert(typeof(left) == "string", "left is a " .. typeof(left))
+	assert(typeof(right) == "string", "right is a " .. typeof(right))
+
+	if left ~= right then
+		error(string.format("%q ~= %q", left, right))
+	end
+end
+
+assertEq(`hello {"world"}`, "hello world")
+assertEq(`Welcome {"to"} {"Luau"}!`, "Welcome to Luau!")
+
+assertEq(`2 + 2 = {2 + 2}`, "2 + 2 = 4")
+
+assertEq(`{1} {2} {3} {4} {5} {6} {7}`, "1 2 3 4 5 6 7")
+
+local combo = {5, 2, 8, 9}
+assertEq(`The lock combinations are: {table.concat(combo, ", ")}`, "The lock combinations are: 5, 2, 8, 9")
+
+assertEq(`true = {true}`, "true = true")
+
+local name = "Luau"
+assertEq(`Welcome to {
+	name
+}!`, "Welcome to Luau!")
+
+local nameNotConstantEvaluated = (function() return "Luau" end)()
+assertEq(`Welcome to {nameNotConstantEvaluated}!`, "Welcome to Luau!")
+
+assertEq(`This {localName} does not exist`, "This nil does not exist")
+
+assertEq(`Welcome to \
+{name}!`, "Welcome to \nLuau!")
+
+assertEq(`empty`, "empty")
+
+assertEq(`Escaped brace: \{}`, "Escaped brace: {}")
+assertEq(`Escaped brace \{} with {"expression"}`, "Escaped brace {} with expression")
+assertEq(`Backslash \ that escapes the space is not a part of the string...`, "Backslash  that escapes the space is not a part of the string...")
+assertEq(`Escaped backslash \\`, "Escaped backslash \\")
+assertEq(`Escaped backtick: \``, "Escaped backtick: `")
+
+assertEq(`Hello {`from inside {"a nested string"}`}`, "Hello from inside a nested string")
+
+assertEq(`1 {`2 {`3 {4}`}`}`, "1 2 3 4")
+
+local health = 50
+assert(`You have {health}% health` == "You have 50% health")
+
+local function shadowsString(string)
+	return `Value is {string}`
+end
+
+assertEq(shadowsString("hello"), "Value is hello")
+assertEq(shadowsString(1), "Value is 1")
+
+assertEq(`\u{0041}\t`, "A\t")
+
+return "OK"
+
+-----------------------------------
+
+>local function assertEq(left, right)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                        ^
+                        source.luau meta.function.luau
+                         ^^^^
+                         source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                             ^^
+                             source.luau meta.function.luau meta.parameters.luau
+                               ^^^^^
+                               source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                    ^
+                                    source.luau meta.function.luau
+>	assert(typeof(left) == "string", "left is a " .. typeof(left))
+ ^
+ source.luau
+  ^^^^^^
+  source.luau support.function.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau support.function.luau
+               ^
+               source.luau
+                ^^^^
+                source.luau variable.other.readwrite.luau
+                    ^^
+                    source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^^^^^^
+                          source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^^
+                                 source.luau
+                                   ^
+                                   source.luau string.quoted.double.luau
+                                    ^^^^^^^^^^
+                                    source.luau string.quoted.double.luau
+                                              ^
+                                              source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau
+                                                ^^
+                                                source.luau keyword.operator.other.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^^^^^
+                                                   source.luau support.function.luau
+                                                         ^
+                                                         source.luau
+                                                          ^^^^
+                                                          source.luau variable.other.readwrite.luau
+                                                              ^^^
+                                                              source.luau
+>	assert(typeof(right) == "string", "right is a " .. typeof(right))
+ ^
+ source.luau
+  ^^^^^^
+  source.luau support.function.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau support.function.luau
+               ^
+               source.luau
+                ^^^^^
+                source.luau variable.other.readwrite.luau
+                     ^^
+                     source.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau string.quoted.double.luau
+                           ^^^^^^
+                           source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau string.quoted.double.luau
+                                  ^^
+                                  source.luau
+                                    ^
+                                    source.luau string.quoted.double.luau
+                                     ^^^^^^^^^^^
+                                     source.luau string.quoted.double.luau
+                                                ^
+                                                source.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^
+                                                  source.luau keyword.operator.other.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^^^
+                                                     source.luau support.function.luau
+                                                           ^
+                                                           source.luau
+                                                            ^^^^^
+                                                            source.luau variable.other.readwrite.luau
+                                                                 ^^^
+                                                                 source.luau
+>
+ ^
+ source.luau
+>	if left ~= right then
+ ^
+ source.luau
+  ^^
+  source.luau keyword.control.luau
+    ^
+    source.luau
+     ^^^^
+     source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^
+          source.luau keyword.operator.comparison.luau
+            ^
+            source.luau
+             ^^^^^
+             source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^
+                   source.luau keyword.control.luau
+>		error(string.format("%q ~= %q", left, right))
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^
+         source.luau support.function.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau string.quoted.double.luau
+                        ^^^^^^^^
+                        source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^^
+                                 source.luau
+                                   ^^^^
+                                   source.luau variable.other.readwrite.luau
+                                       ^^
+                                       source.luau
+                                         ^^^^^
+                                         source.luau variable.other.readwrite.luau
+                                              ^^^
+                                              source.luau
+>	end
+ ^
+ source.luau
+  ^^^
+  source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>assertEq(`hello {"world"}`, "hello world")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^
+           source.luau string.interpolated.luau
+                 ^
+                 source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                  ^
+                  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                   ^^^^^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                        ^
+                        source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                         ^
+                         source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                          ^
+                          source.luau string.interpolated.luau
+                           ^^
+                           source.luau
+                             ^
+                             source.luau string.quoted.double.luau
+                              ^^^^^^^^^^^
+                              source.luau string.quoted.double.luau
+                                         ^
+                                         source.luau string.quoted.double.luau
+                                          ^^
+                                          source.luau
+>assertEq(`Welcome {"to"} {"Luau"}!`, "Welcome to Luau!")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^
+           source.luau string.interpolated.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                     ^^
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                       ^
+                       source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                        ^
+                        source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                         ^
+                         source.luau string.interpolated.luau
+                          ^
+                          source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                           ^
+                           source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                            ^^^^
+                            source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                ^
+                                source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                 ^
+                                 source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                  ^
+                                  source.luau string.interpolated.luau
+                                   ^
+                                   source.luau string.interpolated.luau
+                                    ^^
+                                    source.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^^^^^^^^^^^^^^^^
+                                       source.luau string.quoted.double.luau
+                                                       ^
+                                                       source.luau string.quoted.double.luau
+                                                        ^^
+                                                        source.luau
+>
+ ^
+ source.luau
+>assertEq(`2 + 2 = {2 + 2}`, "2 + 2 = 4")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^
+           source.luau string.interpolated.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                     ^
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                      ^
+                      source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau keyword.operator.arithmetic.luau
+                       ^
+                       source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                        ^
+                        source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                         ^
+                         source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                          ^
+                          source.luau string.interpolated.luau
+                           ^^
+                           source.luau
+                             ^
+                             source.luau string.quoted.double.luau
+                              ^^^^^^^^^
+                              source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^
+                                        source.luau
+>
+ ^
+ source.luau
+>assertEq(`{1} {2} {3} {4} {5} {6} {7}`, "1 2 3 4 5 6 7")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^
+           source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+            ^
+            source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+             ^
+             source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+              ^
+              source.luau string.interpolated.luau
+               ^
+               source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                ^
+                source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                 ^
+                 source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                  ^
+                  source.luau string.interpolated.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                     ^
+                     source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                      ^
+                      source.luau string.interpolated.luau
+                       ^
+                       source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                        ^
+                        source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                         ^
+                         source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                          ^
+                          source.luau string.interpolated.luau
+                           ^
+                           source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                            ^
+                            source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                             ^
+                             source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                              ^
+                              source.luau string.interpolated.luau
+                               ^
+                               source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                                ^
+                                source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                                 ^
+                                 source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                  ^
+                                  source.luau string.interpolated.luau
+                                   ^
+                                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                                    ^
+                                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                                     ^
+                                     source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                      ^
+                                      source.luau string.interpolated.luau
+                                       ^^
+                                       source.luau
+                                         ^
+                                         source.luau string.quoted.double.luau
+                                          ^^^^^^^^^^^^^
+                                          source.luau string.quoted.double.luau
+                                                       ^
+                                                       source.luau string.quoted.double.luau
+                                                        ^^
+                                                        source.luau
+>
+ ^
+ source.luau
+>local combo = {5, 2, 8, 9}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^^
+              source.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+                 ^^
+                 source.luau
+                   ^
+                   source.luau constant.numeric.decimal.luau
+                    ^^
+                    source.luau
+                      ^
+                      source.luau constant.numeric.decimal.luau
+                       ^^
+                       source.luau
+                         ^
+                         source.luau constant.numeric.decimal.luau
+                          ^^
+                          source.luau
+>assertEq(`The lock combinations are: {table.concat(combo, ", ")}`, "The lock combinations are: 5, 2, 8, 9")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                                      ^
+                                      source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                                       ^^^^^^^^^^^^
+                                       source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.function.luau
+                                                   ^
+                                                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                                                    ^^^^^
+                                                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+                                                         ^^
+                                                         source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                                                           ^
+                                                           source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                                            ^^
+                                                            source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                                              ^
+                                                              source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                                               ^
+                                                               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                                                                ^
+                                                                source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                                                 ^
+                                                                 source.luau string.interpolated.luau
+                                                                  ^^
+                                                                  source.luau
+                                                                    ^
+                                                                    source.luau string.quoted.double.luau
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                     source.luau string.quoted.double.luau
+                                                                                                          ^
+                                                                                                          source.luau string.quoted.double.luau
+                                                                                                           ^^
+                                                                                                           source.luau
+>
+ ^
+ source.luau
+>assertEq(`true = {true}`, "true = true")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^
+           source.luau string.interpolated.luau
+                  ^
+                  source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                   ^^^^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.language.boolean.true.luau
+                       ^
+                       source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                        ^
+                        source.luau string.interpolated.luau
+                         ^^
+                         source.luau
+                           ^
+                           source.luau string.quoted.double.luau
+                            ^^^^^^^^^^^
+                            source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^
+                                        source.luau
+>
+ ^
+ source.luau
+>local name = "Luau"
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^^^
+               source.luau string.quoted.double.luau
+                   ^
+                   source.luau string.quoted.double.luau
+>assertEq(`Welcome to {
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                      ^
+                      source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+>	name
+ ^
+ source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+  ^^^^
+  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+>}!`, "Welcome to Luau!")
+ ^
+ source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+  ^
+  source.luau string.interpolated.luau
+   ^
+   source.luau string.interpolated.luau
+    ^^
+    source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                       ^
+                       source.luau string.quoted.double.luau
+                        ^^
+                        source.luau
+>
+ ^
+ source.luau
+>local nameNotConstantEvaluated = (function() return "Luau" end)()
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau keyword.operator.assignment.luau
+                                 ^^
+                                 source.luau
+                                   ^^^^^^^^
+                                   source.luau meta.function.luau keyword.control.luau
+                                           ^
+                                           source.luau meta.function.luau
+                                            ^
+                                            source.luau meta.function.luau
+                                             ^
+                                             source.luau
+                                              ^^^^^^
+                                              source.luau keyword.control.luau
+                                                    ^
+                                                    source.luau
+                                                     ^
+                                                     source.luau string.quoted.double.luau
+                                                      ^^^^
+                                                      source.luau string.quoted.double.luau
+                                                          ^
+                                                          source.luau string.quoted.double.luau
+                                                           ^
+                                                           source.luau
+                                                            ^^^
+                                                            source.luau keyword.control.luau
+                                                               ^^^^
+                                                               source.luau
+>assertEq(`Welcome to {nameNotConstantEvaluated}!`, "Welcome to Luau!")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                      ^
+                      source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                       ^^^^^^^^^^^^^^^^^^^^^^^^
+                       source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+                                               ^
+                                               source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                                ^
+                                                source.luau string.interpolated.luau
+                                                 ^
+                                                 source.luau string.interpolated.luau
+                                                  ^^
+                                                  source.luau
+                                                    ^
+                                                    source.luau string.quoted.double.luau
+                                                     ^^^^^^^^^^^^^^^^
+                                                     source.luau string.quoted.double.luau
+                                                                     ^
+                                                                     source.luau string.quoted.double.luau
+                                                                      ^^
+                                                                      source.luau
+>
+ ^
+ source.luau
+>assertEq(`This {localName} does not exist`, "This nil does not exist")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^
+           source.luau string.interpolated.luau
+                ^
+                source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                 ^^^^^^^^^
+                 source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+                          ^
+                          source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                           ^^^^^^^^^^^^^^^
+                           source.luau string.interpolated.luau
+                                          ^
+                                          source.luau string.interpolated.luau
+                                           ^^
+                                           source.luau
+                                             ^
+                                             source.luau string.quoted.double.luau
+                                              ^^^^^^^^^^^^^^^^^^^^^^^
+                                              source.luau string.quoted.double.luau
+                                                                     ^
+                                                                     source.luau string.quoted.double.luau
+                                                                      ^^
+                                                                      source.luau
+>
+ ^
+ source.luau
+>assertEq(`Welcome to \
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+>{name}!`, "Welcome to \nLuau!")
+ ^
+ source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+  ^^^^
+  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+      ^
+      source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+       ^
+       source.luau string.interpolated.luau
+        ^
+        source.luau string.interpolated.luau
+         ^^
+         source.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^^^^^^^^^^
+            source.luau string.quoted.double.luau
+                       ^^
+                       source.luau string.quoted.double.luau constant.character.escape.luau
+                         ^^^^^
+                         source.luau string.quoted.double.luau
+                              ^
+                              source.luau string.quoted.double.luau
+                               ^^
+                               source.luau
+>
+ ^
+ source.luau
+>assertEq(`empty`, "empty")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^
+           source.luau string.interpolated.luau
+                ^
+                source.luau string.interpolated.luau
+                 ^^
+                 source.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^^^^
+                    source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^^
+                          source.luau
+>
+ ^
+ source.luau
+>assertEq(`Escaped brace: \{}`, "Escaped brace: {}")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                          ^^
+                          source.luau string.interpolated.luau constant.character.escape.luau
+                            ^
+                            source.luau string.interpolated.luau
+                             ^
+                             source.luau string.interpolated.luau
+                              ^^
+                              source.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^^^^^^^^^^^^^^^^^
+                                 source.luau string.quoted.double.luau
+                                                  ^
+                                                  source.luau string.quoted.double.luau
+                                                   ^^
+                                                   source.luau
+>assertEq(`Escaped brace \{} with {"expression"}`, "Escaped brace {} with expression")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                         ^^
+                         source.luau string.interpolated.luau constant.character.escape.luau
+                           ^^^^^^^
+                           source.luau string.interpolated.luau
+                                  ^
+                                  source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                                   ^
+                                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                    ^^^^^^^^^^
+                                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                              ^
+                                              source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                                ^
+                                                source.luau string.interpolated.luau
+                                                 ^^
+                                                 source.luau
+                                                   ^
+                                                   source.luau string.quoted.double.luau
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                    source.luau string.quoted.double.luau
+                                                                                    ^
+                                                                                    source.luau string.quoted.double.luau
+                                                                                     ^^
+                                                                                     source.luau
+>assertEq(`Backslash \ that escapes the space is not a part of the string...`, "Backslash  that escapes the space is not a part of the string...")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                                                                            ^
+                                                                            source.luau string.interpolated.luau
+                                                                             ^^
+                                                                             source.luau
+                                                                               ^
+                                                                               source.luau string.quoted.double.luau
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                source.luau string.quoted.double.luau
+                                                                                                                                                ^
+                                                                                                                                                source.luau string.quoted.double.luau
+                                                                                                                                                 ^^
+                                                                                                                                                 source.luau
+>assertEq(`Escaped backslash \\`, "Escaped backslash \\")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                             ^^
+                             source.luau string.interpolated.luau constant.character.escape.luau
+                               ^
+                               source.luau string.interpolated.luau
+                                ^^
+                                source.luau
+                                  ^
+                                  source.luau string.quoted.double.luau
+                                   ^^^^^^^^^^^^^^^^^^
+                                   source.luau string.quoted.double.luau
+                                                     ^^
+                                                     source.luau string.quoted.double.luau constant.character.escape.luau
+                                                       ^
+                                                       source.luau string.quoted.double.luau
+                                                        ^^
+                                                        source.luau
+>assertEq(`Escaped backtick: \``, "Escaped backtick: `")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^^^^^^^^^^^
+           source.luau string.interpolated.luau
+                             ^^
+                             source.luau string.interpolated.luau constant.character.escape.luau
+                               ^
+                               source.luau string.interpolated.luau
+                                ^^
+                                source.luau
+                                  ^
+                                  source.luau string.quoted.double.luau
+                                   ^^^^^^^^^^^^^^^^^^^
+                                   source.luau string.quoted.double.luau
+                                                      ^
+                                                      source.luau string.quoted.double.luau
+                                                       ^^
+                                                       source.luau
+>
+ ^
+ source.luau
+>assertEq(`Hello {`from inside {"a nested string"}`}`, "Hello from inside a nested string")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^
+           source.luau string.interpolated.luau
+                 ^
+                 source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                  ^
+                  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                   ^^^^^^^^^^^^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                               ^
+                               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                                ^
+                                source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                 ^^^^^^^^^^^^^^^
+                                 source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                                ^
+                                                source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                                  ^
+                                                  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                                                   ^
+                                                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                                                    ^
+                                                    source.luau string.interpolated.luau
+                                                     ^^
+                                                     source.luau
+                                                       ^
+                                                       source.luau string.quoted.double.luau
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        source.luau string.quoted.double.luau
+                                                                                         ^
+                                                                                         source.luau string.quoted.double.luau
+                                                                                          ^^
+                                                                                          source.luau
+>
+ ^
+ source.luau
+>assertEq(`1 {`2 {`3 {4}`}`}`, "1 2 3 4")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^
+           source.luau string.interpolated.luau
+             ^
+             source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+              ^
+              source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+               ^^
+               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                 ^
+                 source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                  ^
+                  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                   ^^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                     ^
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                      ^
+                      source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.numeric.decimal.luau
+                       ^
+                       source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                        ^
+                        source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                         ^
+                         source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                          ^
+                          source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.interpolated.luau
+                           ^
+                           source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                            ^
+                            source.luau string.interpolated.luau
+                             ^^
+                             source.luau
+                               ^
+                               source.luau string.quoted.double.luau
+                                ^^^^^^^
+                                source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^
+                                        source.luau
+>
+ ^
+ source.luau
+>local health = 50
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^^
+                source.luau constant.numeric.decimal.luau
+>assert(`You have {health}% health` == "You have 50% health")
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau
+        ^
+        source.luau string.interpolated.luau
+         ^^^^^^^^^
+         source.luau string.interpolated.luau
+                  ^
+                  source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                   ^^^^^^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+                         ^
+                         source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                          ^^^^^^^^
+                          source.luau string.interpolated.luau
+                                  ^
+                                  source.luau string.interpolated.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau keyword.operator.assignment.luau
+                                     ^
+                                     source.luau keyword.operator.assignment.luau
+                                      ^
+                                      source.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^^^^^^^^^^^^^^^^^^
+                                        source.luau string.quoted.double.luau
+                                                           ^
+                                                           source.luau string.quoted.double.luau
+                                                            ^^
+                                                            source.luau
+>
+ ^
+ source.luau
+>local function shadowsString(string)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                             ^
+                             source.luau meta.function.luau
+                              ^^^^^^
+                              source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                    ^
+                                    source.luau meta.function.luau
+>	return `Value is {string}`
+ ^
+ source.luau
+  ^^^^^^
+  source.luau keyword.control.luau
+        ^
+        source.luau
+         ^
+         source.luau string.interpolated.luau
+          ^^^^^^^^^
+          source.luau string.interpolated.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+                    ^^^^^^
+                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.constant.luau
+                          ^
+                          source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                           ^
+                           source.luau string.interpolated.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>assertEq(shadowsString("hello"), "Value is hello")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^
+          source.luau entity.name.function.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^^^^^
+                         source.luau string.quoted.double.luau
+                              ^
+                              source.luau string.quoted.double.luau
+                               ^^^
+                               source.luau
+                                  ^
+                                  source.luau string.quoted.double.luau
+                                   ^^^^^^^^^^^^^^
+                                   source.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau string.quoted.double.luau
+                                                  ^^
+                                                  source.luau
+>assertEq(shadowsString(1), "Value is 1")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^
+          source.luau entity.name.function.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau constant.numeric.decimal.luau
+                         ^^^
+                         source.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^^^^^^^^^
+                             source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^
+                                        source.luau
+>
+ ^
+ source.luau
+>assertEq(`\u{0041}\t`, "A\t")
+ ^^^^^^^^
+ source.luau entity.name.function.luau
+         ^
+         source.luau
+          ^
+          source.luau string.interpolated.luau
+           ^^^^^^^^
+           source.luau string.interpolated.luau constant.character.escape.luau
+                   ^^
+                   source.luau string.interpolated.luau constant.character.escape.luau
+                     ^
+                     source.luau string.interpolated.luau
+                      ^^
+                      source.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^^
+                          source.luau string.quoted.double.luau constant.character.escape.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^
+                             source.luau
+>
+ ^
+ source.luau
+>return "OK"
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^^
+         source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+>
+ ^
+ source.luau

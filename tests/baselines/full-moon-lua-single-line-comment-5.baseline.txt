@@ -1,0 +1,16 @@
+original file
+-----------------------------------
+--`signatures` the value defaults to zero or is ignored if `signatures.length
+--=== 0`. Whenever possible implementors should make an active decision about
+-----------------------------------
+
+>--`signatures` the value defaults to zero or is ignored if `signatures.length
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>--=== 0`. Whenever possible implementors should make an active decision about
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau

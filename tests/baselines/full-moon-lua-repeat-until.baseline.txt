@@ -1,0 +1,24 @@
+original file
+-----------------------------------
+repeat
+	call()
+until condition
+-----------------------------------
+
+>repeat
+ ^^^^^^
+ source.luau keyword.control.luau
+>	call()
+ ^
+ source.luau
+  ^^^^
+  source.luau entity.name.function.luau
+      ^^^
+      source.luau
+>until condition
+ ^^^^^
+ source.luau keyword.control.luau
+      ^
+      source.luau
+       ^^^^^^^^^
+       source.luau variable.other.readwrite.luau

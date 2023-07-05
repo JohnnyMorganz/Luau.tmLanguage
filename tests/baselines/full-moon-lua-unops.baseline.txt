@@ -1,0 +1,98 @@
+original file
+-----------------------------------
+local negativeLiteral = -3
+local negativeVariable = -x
+local notLiteral = not true
+local notVariable = not x
+local length = #x
+-----------------------------------
+
+>local negativeLiteral = -3
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^
+       source.luau variable.other.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau keyword.operator.arithmetic.luau
+                          ^
+                          source.luau constant.numeric.decimal.luau
+>local negativeVariable = -x
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^
+       source.luau variable.other.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau keyword.operator.arithmetic.luau
+                           ^
+                           source.luau variable.other.readwrite.luau
+>local notLiteral = not true
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^
+       source.luau variable.other.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                       ^
+                       source.luau
+                        ^^^^
+                        source.luau constant.language.boolean.true.luau
+>local notVariable = not x
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^
+                     source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                        ^
+                        source.luau
+                         ^
+                         source.luau variable.other.readwrite.luau
+>local length = #x
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.other.luau
+                 ^
+                 source.luau variable.other.readwrite.luau

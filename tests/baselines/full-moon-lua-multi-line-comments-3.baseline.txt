@@ -1,0 +1,16 @@
+original file
+-----------------------------------
+--[=[
+--[[
+]=]
+-----------------------------------
+
+>--[=[
+ ^^^^^
+ source.luau comment.block.luau
+>--[[
+ ^^^^^
+ source.luau comment.block.luau
+>]=]
+ ^^^
+ source.luau comment.block.luau

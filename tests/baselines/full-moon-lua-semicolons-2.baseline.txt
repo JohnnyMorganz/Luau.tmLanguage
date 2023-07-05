@@ -1,0 +1,30 @@
+original file
+-----------------------------------
+local x = 1
+return x;
+-----------------------------------
+
+>local x = 1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+>return x;
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^^
+         source.luau

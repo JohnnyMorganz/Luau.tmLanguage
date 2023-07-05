@@ -1,0 +1,14 @@
+original file
+-----------------------------------
+call() -- This calls
+-----------------------------------
+
+>call() -- This calls
+ ^^^^
+ source.luau entity.name.function.luau
+     ^^^
+     source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^^^^
+          source.luau comment.line.double-dash.luau
