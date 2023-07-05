@@ -15,11 +15,55 @@
     <array>
       <dict>
         <key>include</key>
-        <string>#statements</string>
+        <string>#shebang</string>
       </dict>
       <dict>
         <key>include</key>
-        <string>#shebang</string>
+        <string>#function-declaration</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#local-declaration</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#for-loop</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#type-alias-declaration</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#keywords</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#standard_library</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#operators</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#numbers</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#language_constants</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#strings</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#identifier</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#comments</string>
       </dict>
     </array>
     <key>repository</key>
@@ -39,76 +83,121 @@
           </dict>
         </dict>
       </dict>
-      <key>statements</key>
+      <key>function-declaration</key>
       <dict>
-        <key>patterns</key>
-        <array>
+        <key>name</key>
+        <string>meta.function.luau</string>
+        <key>contentName</key>
+        <string>meta.parameters.luau</string>
+        <key>begin</key>
+        <string>\b(?:(local)\s*)?(function)\s*([a-zA-Z_]\w*(?:[.:]([a-zA-Z_]\w*))*)?\s*(\&lt;[\w\s\,\.]*\&gt;)?\s*\(</string>
+        <key>end</key>
+        <string>\)(?:\s*(:)\s*(.+?)(?=\s*\b(?:([^\w.,&lt;])|\)&gt;)\s*\w|\s*)$)?</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>1</key>
           <dict>
-            <key>include</key>
-            <string>#declaration</string>
+            <key>name</key>
+            <string>storage.modifier.local.luau</string>
           </dict>
-          <dict>
-            <key>include</key>
-            <string>#control-statement</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#expression</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#punctuation-semicolon</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#string</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#comment</string>
-          </dict>
-        </array>
-      </dict>
-      <key>control-statement</key>
-      <dict>
-        <key>patterns</key>
-        <array>
+          <key>2</key>
           <dict>
             <key>name</key>
             <string>keyword.control.luau</string>
-            <key>match</key>
-            <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(break|continue|return|do|while|end|repeat|until|for|in)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
           </dict>
+          <key>3</key>
           <dict>
             <key>name</key>
-            <string>keyword.control.conditional.luau</string>
-            <key>match</key>
-            <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(else|elseif|if|then)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
+            <string>entity.name.function.luau</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>variable.language.metamethod.luau</string>
+                <key>match</key>
+                <string>\b(__add|__call|__concat|__div|__eq|__index|__le|__len|__lt|__metatable|__mod|__mode|__mul|__newindex|__pow|__sub|__tostring|__unm)\b</string>
+              </dict>
+            </array>
           </dict>
-        </array>
-      </dict>
-      <key>declaration</key>
-      <dict>
+          <key>5</key>
+          <dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>entity.name.type.luau</string>
+                <key>match</key>
+                <string>\b([a-zA-Z]\w*)\b</string>
+              </dict>
+            </array>
+          </dict>
+        </dict>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.type.luau</string>
+          </dict>
+          <key>2</key>
+          <dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+          </dict>
+          <key>3</key>
+          <dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+                <key>match</key>
+                <string>&gt;</string>
+              </dict>
+            </array>
+          </dict>
+        </dict>
         <key>patterns</key>
         <array>
           <dict>
-            <key>include</key>
-            <string>#function-declaration</string>
+            <key>name</key>
+            <string>keyword.operator.type.luau</string>
+            <key>match</key>
+            <string>:</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.parameter.luau</string>
+            <key>match</key>
+            <string>(?&lt;![:&gt;.]\s*)\b_\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.constant.luau</string>
+            <key>match</key>
+            <string>(?&lt;![:&gt;.]\s*)\b([A-Z_][A-Z0-9_]*)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.parameter.luau</string>
+            <key>match</key>
+            <string>(?&lt;![:&gt;.]\s*)\b([a-zA-Z_]\w*)\b</string>
           </dict>
           <dict>
             <key>include</key>
-            <string>#var-expr</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type-alias-declaration</string>
+            <string>#type_literal</string>
           </dict>
         </array>
       </dict>
-      <key>var-expr</key>
+      <key>local-declaration</key>
       <dict>
         <key>begin</key>
-        <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(local)\s+(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
+        <string>\b(?:(local)\s+\b)</string>
         <key>end</key>
         <string>(?=\s*do\b|\s*[=;]|\s*$)</string>
         <key>beginCaptures</key>
@@ -129,170 +218,412 @@
           </dict>
           <dict>
             <key>include</key>
-            <string>#identifiers</string>
+            <string>#keywords</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.parameter.luau</string>
+            <key>match</key>
+            <string>(?&lt;![:&gt;.]\s*)\b_\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.constant.luau</string>
+            <key>match</key>
+            <string>(?&lt;![:&gt;.]\s*)\b([A-Z_][A-Z0-9_]*)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.luau</string>
+            <key>match</key>
+            <string>(?&lt;![:&gt;.]\s*)\b([a-zA-Z_]\w*)\b</string>
           </dict>
           <dict>
             <key>include</key>
-            <string>#type</string>
+            <string>#type_literal</string>
           </dict>
         </array>
       </dict>
-      <key>identifiers</key>
-      <array>
-        <dict>
-          <key>name</key>
-          <string>variable.other.constant.ts</string>
-          <key>match</key>
-          <string>([[:upper:]][_$[:digit:][:upper:]]*)(?![_$[:alnum:]])</string>
-        </dict>
-        <dict>
-          <key>name</key>
-          <string>variable.other.readwrite.ts</string>
-          <key>match</key>
-          <string>[_$[:alpha:]][_$[:alnum:]]*</string>
-        </dict>
-      </array>
-      <key>function-declaration</key>
+      <key>for-loop</key>
       <dict>
-        <key>name</key>
-        <string>meta.function.luau</string>
+        <key>match</key>
+        <string>\b(for)\s+(.+?)(\bin\b|(=))</string>
+        <key>captures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.control.luau</string>
+          </dict>
+          <key>2</key>
+          <dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+                <key>match</key>
+                <string>:</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>variable.parameter.luau</string>
+                <key>match</key>
+                <string>(?&lt;![:&gt;.]\s*)\b_\b</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>variable.other.constant.luau</string>
+                <key>match</key>
+                <string>(?&lt;![:&gt;.]\s*)\b([A-Z_][A-Z0-9_]*)\b</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>variable.parameter.luau</string>
+                <key>match</key>
+                <string>(?&lt;![:&gt;.]\s*)\b([a-zA-Z_]\w*)\b</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+          </dict>
+          <key>3</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.control.luau</string>
+          </dict>
+          <key>4</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.assignment.luau</string>
+          </dict>
+        </dict>
+      </dict>
+      <key>type-alias-declaration</key>
+      <dict>
         <key>begin</key>
-        <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(?:(local)\s+)?(function\b)(?:(?:\s+|(?&lt;=\*))([_$[:alpha:]][_$[:alnum:]]*))?\s*</string>
+        <string>\b(?:(export)\s+)?(type)\s+([^=]+)\s*(=)</string>
+        <key>end</key>
+        <string>(?=\s*$)|(?=\s*;)</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
           <dict>
             <key>name</key>
-            <string>storage.modifier.local.luau</string>
+            <string>storage.modifier.visibility.luau</string>
           </dict>
           <key>2</key>
           <dict>
             <key>name</key>
-            <string>storage.type.function.luau</string>
+            <string>storage.type.luau</string>
           </dict>
           <key>3</key>
           <dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+                <key>match</key>
+                <string>[&lt;&gt;]</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>entity.name.type.alias.luau</string>
+                <key>match</key>
+                <string>\b[a-zA-Z_]\w*\b</string>
+              </dict>
+            </array>
+          </dict>
+          <key>4</key>
+          <dict>
             <key>name</key>
-            <string>meta.definition.function.luau entity.name.function.luau</string>
+            <string>keyword.operator.assignment.luau</string>
           </dict>
         </dict>
-        <key>end</key>
-        <string>(?={{endOfStatement}})|(?&lt;=\})</string>
         <key>patterns</key>
         <array>
           <dict>
             <key>include</key>
-            <string>#function-name</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#function-body</string>
+            <string>#type_literal</string>
           </dict>
         </array>
       </dict>
-      <key>function-body</key>
+      <key>keywords</key>
       <dict>
         <key>patterns</key>
         <array>
           <dict>
-            <key>include</key>
-            <string>#comment</string>
+            <key>name</key>
+            <string>storage.modifier.local.luau</string>
+            <key>match</key>
+            <string>\blocal\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#type-parameters</string>
+            <key>name</key>
+            <string>keyword.control.luau</string>
+            <key>match</key>
+            <string>\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|in|continue)\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#function-parameters</string>
+            <key>name</key>
+            <string>variable.language.metamethod.luau</string>
+            <key>match</key>
+            <string>\b(__add|__call|__concat|__div|__eq|__index|__le|__len|__lt|__metatable|__mod|__mode|__mul|__newindex|__pow|__sub|__tostring|__unm)\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#return-type</string>
+            <key>name</key>
+            <string>keyword.other.unit.luau</string>
+            <key>match</key>
+            <string>(\.\.\.)</string>
           </dict>
         </array>
       </dict>
-      <key>type</key>
+      <key>standard_library</key>
       <dict>
         <key>patterns</key>
         <array>
           <dict>
-            <key>include</key>
-            <string>#comment</string>
+            <key>name</key>
+            <string>support.function.luau</string>
+            <key>match</key>
+            <string>\b(assert|collectgarbage|error|getfenv|getmetatable|ipairs|loadstring|newproxy|next|pairs|pcall|print|rawequal|rawset|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall|require|typeof)\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#string</string>
+            <key>name</key>
+            <string>constant.language.luau</string>
+            <key>match</key>
+            <string>\b(_G|_VERSION)\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#type-primitive</string>
+            <key>name</key>
+            <string>support.function.luau</string>
+            <key>match</key>
+            <string>\b(bit32\.(?:arshift|band|bnot|bor|btest|bxor|extract|lrotate|lshift|replace|rrotate|rshift)|coroutine\.(?:create|isyieldable|resume|running|status|wrap|yield)|debug\.(?:loadmodule|profilebegin|profileend|traceback)|math\.(?:abs|acos|asin|atan|atan2|ceil|clamp|cos|cosh|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|noise|pow|rad|random|randomseed|round|sign|sin|sinh|sqrt|tan|tanh)|os\.(?:clock|date|difftime|time)|string\.(?:byte|char|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|split|sub|unpack|upper)|table\.(?:concat|create|find|foreach|foreachi|getn|insert|maxn|move|pack|remove|sort|unpack|clear)|task\.(?:spawn|synchronize|desynchronize|wait|defer|delay)|utf8\.(?:char|codepoint|codes|graphemes|len|nfcnormalize|nfdnormalize|offset))\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#type-builtin-literals</string>
+            <key>name</key>
+            <string>support.constant.luau</string>
+            <key>match</key>
+            <string>\b(bit32|coroutine|debug|math(\.(huge|pi))?|os|string|table|task|utf8(\.charpattern)?)\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#type-parameters</string>
+            <key>name</key>
+            <string>support.function.luau</string>
+            <key>match</key>
+            <string>\b(delay|DebuggerManager|elapsedTime|PluginManager|printidentity|settings|spawn|stats|tick|time|UserSettings|version|wait|warn)\b</string>
           </dict>
           <dict>
-            <key>include</key>
-            <string>#type-tuple</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type-table</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type-operators</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type-name</string>
+            <key>name</key>
+            <string>constant.language.luau</string>
+            <key>match</key>
+            <string>\b(game|plugin|shared|script|workspace|Enum(?:\.\w+){0,2})\b</string>
           </dict>
         </array>
       </dict>
-      <key>type-primitive</key>
+      <key>operators</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.arithmetic.luau</string>
+            <key>match</key>
+            <string>(\+|-(?!-)|/|\*|%|\^)</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.logical.luau keyword.operator.wordlike.luau</string>
+            <key>match</key>
+            <string>\b(and|or|not)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.assignment.luau</string>
+            <key>match</key>
+            <string>(\+=|-=|/=|\*=|%=|\^=|\.\.=|=)</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.other.luau</string>
+            <key>match</key>
+            <string>(\.\.|\#)</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.comparison.luau</string>
+            <key>match</key>
+            <string>(==|~=|&gt;=|&gt;|&lt;=|&lt;)</string>
+          </dict>
+        </array>
+      </dict>
+      <key>numbers</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.hex.luau</string>
+            <key>match</key>
+            <string>\b0_*[xX]_*[\da-fA-F_]*(?:[eE][\+\-]?_*\d[\d_]*(?:\.[\d_]*)?)?</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.binary.luau</string>
+            <key>match</key>
+            <string>\b0_*[bB][01_]+(?:[eE][\+\-]?_*\d[\d_]*(?:\.[\d_]*)?)?</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.decimal.luau</string>
+            <key>match</key>
+            <string>(?:\d[\d_]*(?:\.[\d_]*)?|\.\d[\d_]*)(?:[eE][\+\-]?_*\d[\d_]*(?:\.[\d_]*)?)?</string>
+          </dict>
+        </array>
+      </dict>
+      <key>language_constants</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.language.boolean.true.luau</string>
+            <key>match</key>
+            <string>\btrue\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.language.boolean.false.luau</string>
+            <key>match</key>
+            <string>\bfalse\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.language.nil.luau</string>
+            <key>match</key>
+            <string>\bnil\b</string>
+          </dict>
+        </array>
+      </dict>
+      <key>strings</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>string.quoted.double.luau</string>
+            <key>begin</key>
+            <string>"</string>
+            <key>end</key>
+            <string>"</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#string_escape</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>string.quoted.single.luau</string>
+            <key>begin</key>
+            <string>'</string>
+            <key>end</key>
+            <string>'</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#string_escape</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>string.other.multiline.luau</string>
+            <key>begin</key>
+            <string>\[(=*)\[</string>
+            <key>end</key>
+            <string>\]\1\]</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>string.interpolated.luau</string>
+            <key>begin</key>
+            <string>`</string>
+            <key>end</key>
+            <string>`</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#interpolated-string-expression</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#string_escape</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>string_escape</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.luau</string>
+            <key>match</key>
+            <string>\\[abfnrtvz'"`{\\]</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.luau</string>
+            <key>match</key>
+            <string>\\\d{1,3}</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.luau</string>
+            <key>match</key>
+            <string>\\x[0-9a-fA-F]{2}</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.luau</string>
+            <key>match</key>
+            <string>\\u\{[0-9a-fA-F]*\}</string>
+          </dict>
+        </array>
+      </dict>
+      <key>interpolated-string-expression</key>
       <dict>
         <key>name</key>
-        <string>support.type.primitive.luau</string>
-        <key>match</key>
-        <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(string|number|boolean|nil|any|never|unknown)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
-      </dict>
-      <key>type-builtin-literals</key>
-      <dict>
-        <key>name</key>
-        <string>support.type.builtin.luau</string>
-        <key>match</key>
-        <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(true|false)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
-      </dict>
-      <key>type-typeof</key>
-      <dict>
+        <string>meta.template.expression.luau</string>
+        <key>contentName</key>
+        <string>meta.embedded.line.luau</string>
         <key>begin</key>
-        <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))typeof(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))(\()</string>
+        <string>\{</string>
+        <key>end</key>
+        <string>\}</string>
         <key>beginCaptures</key>
         <dict>
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>keyword.operator.expression.typeof.luau</string>
-          </dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>meta.brace.round.luau</string>
+            <string>punctuation.definition.interpolated-string-expression.begin.luau</string>
           </dict>
         </dict>
-        <key>end</key>
-        <string>\)</string>
         <key>endCaptures</key>
         <dict>
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>meta.brace.round.luau</string>
+            <string>punctuation.definition.interpolated-string-expression.end.luau</string>
           </dict>
         </dict>
         <key>patterns</key>
@@ -303,482 +634,94 @@
           </dict>
         </array>
       </dict>
-      <key>type-operators</key>
+      <key>expression</key>
       <dict>
         <key>patterns</key>
         <array>
           <dict>
-            <key>begin</key>
-            <string>[&amp;|\?]</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>0</key>
-              <dict>
-                <key>name</key>
-                <string>keyword.operator.type.luau</string>
-              </dict>
-            </dict>
+            <key>include</key>
+            <string>#keywords</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#standard_library</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#operators</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#numbers</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#language_constants</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#strings</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#identifier</string>
           </dict>
         </array>
       </dict>
-      <key>type-name</key>
+      <key>identifier</key>
       <dict>
         <key>patterns</key>
         <array>
           <dict>
-            <key>begin</key>
-            <string>([_$[:alpha:]][_$[:alnum:]]*)\s*(?:(\.)|(\?\.(?!\s*[[:digit:]])))\s*(&lt;)</string>
+            <key>name</key>
+            <string>variable.other.constant.luau</string>
+            <key>match</key>
+            <string>\b([A-Z_][A-Z0-9_]*)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>entity.name.function.luau</string>
+            <key>match</key>
+            <string>\b[a-zA-Z_]\w*(?=\()</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.property.luau</string>
+            <key>match</key>
+            <string>(?&lt;=\.)([a-zA-Z_]\w*)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.language.self.luau</string>
+            <key>match</key>
+            <string>\b(self)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.readwrite.luau</string>
+            <key>match</key>
+            <string>\b([a-zA-Z_]\w*)\b</string>
+          </dict>
+          <dict>
+            <key>match</key>
+            <string>\b(Axes|BrickColor|CFrame|Color3|ColorSequence|ColorSequenceKeypoint|DateTime|DockWidgetPluginGuiInfo|Faces|Instance|NumberRange|NumberSequence|NumberSequenceKeypoint|OverlapParams|PathWaypoint|PhysicalProperties|Random|Ray|RaycastParams|Rect|Region3|Region3int16|TweenInfo|UDim|UDim2|Vector2|Vector2int16|Vector3|Vector3int16)\b\.?(\b[a-zA-Z_]\w*(?=\())?</string>
             <key>captures</key>
             <dict>
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.module.luau</string>
+                <string>support.class.luau</string>
               </dict>
               <key>2</key>
               <dict>
                 <key>name</key>
-                <string>punctuation.accessor.luau</string>
-              </dict>
-              <key>3</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.accessor.optional.luau</string>
-              </dict>
-              <key>4</key>
-              <dict>
-                <key>name</key>
-                <string>meta.type.parameters.luau punctuation.definition.typeparameters.begin.luau</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(&gt;)</string>
-            <key>endCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>meta.type.parameters.luau punctuation.definition.typeparameters.end.luau</string>
-              </dict>
-            </dict>
-            <key>contentName</key>
-            <string>meta.type.parameters.luau</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>include</key>
-                <string>#type-arguments-body</string>
-              </dict>
-            </array>
-          </dict>
-          <dict>
-            <key>begin</key>
-            <string>([_$[:alpha:]][_$[:alnum:]]*)\s*(&lt;)</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>entity.name.type.luau</string>
-              </dict>
-              <key>2</key>
-              <dict>
-                <key>name</key>
-                <string>meta.type.parameters.luau punctuation.definition.typeparameters.begin.luau</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(&gt;)</string>
-            <key>endCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>meta.type.parameters.luau punctuation.definition.typeparameters.end.luau</string>
-              </dict>
-            </dict>
-            <key>contentName</key>
-            <string>meta.type.parameters.luau</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>include</key>
-                <string>#type-arguments-body</string>
-              </dict>
-            </array>
-          </dict>
-          <dict>
-            <key>match</key>
-            <string>([_$[:alpha:]][_$[:alnum:]]*)\s*(?:(\.)|(\?\.(?!\s*[[:digit:]])))</string>
-            <key>captures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>entity.name.type.module.luau</string>
-              </dict>
-              <key>2</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.accessor.luau</string>
-              </dict>
-              <key>3</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.accessor.optional.luau</string>
+                <string>support.function.luau</string>
               </dict>
             </dict>
           </dict>
-          <dict>
-            <key>name</key>
-            <string>entity.name.type.luau</string>
-            <key>match</key>
-            <string>[_$[:alpha:]][_$[:alnum:]]*</string>
-          </dict>
         </array>
       </dict>
-      <key>type-tuple</key>
-      <dict>
-        <key>name</key>
-        <string>meta.type.tuple.luau</string>
-        <key>begin</key>
-        <string>\(</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.brace.round.luau</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\)</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.brace.round.luau</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>name</key>
-            <string>keyword.operator.rest.luau</string>
-            <key>match</key>
-            <string>\.\.\.</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#punctuation-comma</string>
-          </dict>
-        </array>
-      </dict>
-      <key>type-parameters</key>
-      <dict>
-        <key>name</key>
-        <string>meta.type.parameters.luau</string>
-        <key>begin</key>
-        <string>(&lt;)</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.typeparameters.begin.luau</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>(&gt;)</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.typeparameters.end.luau</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#comment</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#punctuation-comma</string>
-          </dict>
-          <dict>
-            <key>name</key>
-            <string>keyword.operator.assignment.luau</string>
-            <key>match</key>
-            <string>(=)(?!&gt;)</string>
-          </dict>
-        </array>
-      </dict>
-      <key>type-table</key>
-      <dict>
-        <key>name</key>
-        <string>meta.table.type.luau</string>
-        <key>begin</key>
-        <string>\{</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.table.luau</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\}</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.table.luau</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#comment</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#indexer-declaration</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type-field</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#punctuation-comma</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#punctuation-semicolon</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#type</string>
-          </dict>
-        </array>
-      </dict>
-      <key>indexer-declaration</key>
-      <dict>
-        <key>name</key>
-        <string>meta.indexer.declaration.luau</string>
-        <key>begin</key>
-        <string>\[</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.brace.square.luau</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\]</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.brace.square.luau</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#type-annotation</string>
-          </dict>
-        </array>
-      </dict>
-      <key>return-type</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>name</key>
-            <string>meta.return.type.luau</string>
-            <key>begin</key>
-            <string>(?&lt;=\))\s*(:)(?=\s*\S)</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>keyword.operator.type.annotation.luau</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(?&lt;![:|&amp;])(?=$|^|[{};,]|//)</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>include</key>
-                <string>#type</string>
-              </dict>
-            </array>
-          </dict>
-          <dict>
-            <key>name</key>
-            <string>meta.return.type.luau</string>
-            <key>begin</key>
-            <string>(?&lt;=\))\s*(:)</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>keyword.operator.type.annotation.luau</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(?&lt;![:|&amp;])((?=[{};,]|//|^\s*$)|((?&lt;=\S)(?=\s*$)))</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>include</key>
-                <string>#type</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
-      <key>string</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#string-singlequote</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#string-doublequote</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#string-brackets</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#string-interpolated</string>
-          </dict>
-        </array>
-      </dict>
-      <key>string-singlequote</key>
-      <dict>
-        <key>name</key>
-        <string>string.quoted.single.luau</string>
-        <key>begin</key>
-        <string>'</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.string.begin.luau</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>(\')|((?:[^\\\n])$)</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.string.end.luau</string>
-          </dict>
-          <key>2</key>
-          <dict>
-            <key>name</key>
-            <string>invalid.illegal.newline.luau</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#string-character-escape</string>
-          </dict>
-        </array>
-      </dict>
-      <key>string-doublequote</key>
-      <dict>
-        <key>name</key>
-        <string>string.quoted.double.luau</string>
-        <key>begin</key>
-        <string>"</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.string.begin.luau</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>(")|((?:[^\\\n])$)</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.definition.string.end.luau</string>
-          </dict>
-          <key>2</key>
-          <dict>
-            <key>name</key>
-            <string>invalid.illegal.newline.luau</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#string-character-escape</string>
-          </dict>
-        </array>
-      </dict>
-      <key>string-character-escape</key>
-      <dict>
-        <key>name</key>
-        <string>constant.character.escape.luau</string>
-        <key>match</key>
-        <string>\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|u\{[0-9A-Fa-f]+\}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)</string>
-      </dict>
-      <key>punctuation-comma</key>
-      <dict>
-        <key>name</key>
-        <string>punctuation.separator.comma.luau</string>
-        <key>match</key>
-        <string>,</string>
-      </dict>
-      <key>punctuation-semicolon</key>
-      <dict>
-        <key>name</key>
-        <string>punctuation.terminator.statement.luau</string>
-        <key>match</key>
-        <string>;</string>
-      </dict>
-      <key>comment</key>
+      <key>comments</key>
       <dict>
         <key>patterns</key>
         <array>
@@ -789,6 +732,59 @@
             <string>--\[(=*)\[</string>
             <key>end</key>
             <string>\]\1\]</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.other.luau</string>
+                <key>begin</key>
+                <string>(```lua)\s+</string>
+                <key>end</key>
+                <string>(```)</string>
+                <key>beginCaptures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>comment.luau</string>
+                  </dict>
+                </dict>
+                <key>endCaptures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>comment.luau</string>
+                  </dict>
+                </dict>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>include</key>
+                    <string>source.luau</string>
+                  </dict>
+                </array>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#doc_comment_tags</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>comment.line.double-dash.documentation.luau</string>
+            <key>begin</key>
+            <string>---</string>
+            <key>end</key>
+            <string>\n</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#doc_comment_tags</string>
+              </dict>
+            </array>
           </dict>
           <dict>
             <key>name</key>
@@ -797,6 +793,219 @@
             <string>--</string>
             <key>end</key>
             <string>\n</string>
+          </dict>
+        </array>
+      </dict>
+      <key>doc_comment_tags</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>storage.type.class.luadoc.luau</string>
+            <key>match</key>
+            <string>@\w+</string>
+          </dict>
+          <dict>
+            <key>match</key>
+            <string>((?&lt;=[\s*!\/])[\\@]param)(?:\s)+(\b\w+\b)</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.class.luadoc.luau</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>variable.parameter.luau</string>
+              </dict>
+            </dict>
+          </dict>
+        </array>
+      </dict>
+      <key>type_literal</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.type.luau</string>
+            <key>match</key>
+            <string>([\?|\||\&amp;])</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.type.luau</string>
+            <key>match</key>
+            <string>(-&gt;)</string>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>\b(typeof)\b\s*\(</string>
+            <key>end</key>
+            <string>(?=\))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.function.luau</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#expression</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>support.type.primitive.luau</string>
+            <key>match</key>
+            <string>\b(nil|string|number|boolean|thread|userdata|symbol|any)\b</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#language_constants</string>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>\b([a-zA-Z]\w*)\b(&lt;)</string>
+            <key>end</key>
+            <string>(&gt;)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>entity.name.type.luau</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+              </dict>
+            </dict>
+            <key>endCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+            <key>contentName</key>
+            <string>meta.parameter.type.variable</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>entity.name.type.luau</string>
+            <key>match</key>
+            <string>\b([a-zA-Z]\w*)\b</string>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>\{</string>
+            <key>end</key>
+            <string>\}</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+                <key>match</key>
+                <string>:</string>
+              </dict>
+              <dict>
+                <key>begin</key>
+                <string>\[</string>
+                <key>end</key>
+                <string>\]</string>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>include</key>
+                    <string>#type_literal</string>
+                  </dict>
+                </array>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>variable.property.luau</string>
+                <key>match</key>
+                <string>(?&lt;!:\s*|-&gt;\s*)\b([a-zA-Z_]\w*)\b</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>(\s*\&lt;[\w\s\,]*\&gt;\s*)?\(</string>
+            <key>end</key>
+            <string>\)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>name</key>
+                    <string>entity.name.type.luau</string>
+                    <key>match</key>
+                    <string>\b([a-zA-Z]\w*)\b</string>
+                  </dict>
+                </array>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>variable.parameter.luau</string>
+                <key>match</key>
+                <string>([a-zA-Z_]\w*)\s*(:)</string>
+                <key>captures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>variable.parameter.luau</string>
+                  </dict>
+                  <key>2</key>
+                  <dict>
+                    <key>name</key>
+                    <string>keyword.operator.type.luau</string>
+                  </dict>
+                </dict>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#strings</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#comments</string>
           </dict>
         </array>
       </dict>
