@@ -7,6 +7,8 @@ variables:
   startOfIdentifier: (?<![_$[:alnum:]])(?:(?<=\.\.\.)|(?<!\.))
   endOfIdentifier: (?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))
   identifier: "[_$[:alpha:]][_$[:alnum:]]*"
+  constantIdentifier: "[[:upper:]][_$[:digit:][:upper:]]*"
+  constantVar: ({{constantIdentifier}})(?![_$[:alnum:]])
   propertyAccess: (?:(\.)|(\?\.(?!\s*[[:digit:]])))
 
 patterns:
@@ -23,16 +25,45 @@ repository:
   statements:
     patterns:
       - include: "#declaration"
+      - include: "#control-statement"
+      - include: "#expression"
       - include: "#punctuation-semicolon"
       - include: "#string"
       - include: "#comment"
 
+  # control statement keywords
+  control-statement:
+    patterns:
+      - name: keyword.control.luau
+        match: "{{startOfIdentifier}}(break|continue|return|do|while|end|repeat|until|for|in){{endOfIdentifier}}"
+      - name: keyword.control.conditional.luau
+        match: "{{startOfIdentifier}}(else|elseif|if|then){{endOfIdentifier}}"
+
   # declarations
   declaration:
     patterns:
-      - include: "#var-expr"
       - include: "#function-declaration"
+      - include: "#var-expr"
       - include: "#type-alias-declaration"
+
+  var-expr:
+    begin: "{{startOfIdentifier}}(local)\\s+{{endOfIdentifier}}"
+    end: "(?=\\s*do\\b|\\s*[=;]|\\s*$)"
+    beginCaptures:
+      "1": { name: storage.modifier.local.luau }
+    patterns:
+      - name: keyword.operator.type.luau
+        match: ":"
+      - include: "#identifiers"
+      - include: "#type"
+
+  identifiers:
+    # const
+    - name: variable.other.constant.ts
+      match: "{{constantVar}}"
+    # vars
+    - name: variable.other.readwrite.ts
+      match: "{{identifier}}"
 
   function-declaration:
     name: meta.function.luau
@@ -54,6 +85,9 @@ repository:
       - include: "#return-type"
     # - include: '#type-function-return-type'
     # - include: '#decl-block'
+
+  # expressions
+  # expression:
 
   # types
   type:

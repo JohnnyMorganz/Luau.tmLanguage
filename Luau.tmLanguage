@@ -49,6 +49,14 @@
           </dict>
           <dict>
             <key>include</key>
+            <string>#control-statement</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#expression</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#punctuation-semicolon</string>
           </dict>
           <dict>
@@ -61,17 +69,35 @@
           </dict>
         </array>
       </dict>
+      <key>control-statement</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>keyword.control.luau</string>
+            <key>match</key>
+            <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(break|continue|return|do|while|end|repeat|until|for|in)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>keyword.control.conditional.luau</string>
+            <key>match</key>
+            <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(else|elseif|if|then)(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
+          </dict>
+        </array>
+      </dict>
       <key>declaration</key>
       <dict>
         <key>patterns</key>
         <array>
           <dict>
             <key>include</key>
-            <string>#var-expr</string>
+            <string>#function-declaration</string>
           </dict>
           <dict>
             <key>include</key>
-            <string>#function-declaration</string>
+            <string>#var-expr</string>
           </dict>
           <dict>
             <key>include</key>
@@ -79,6 +105,53 @@
           </dict>
         </array>
       </dict>
+      <key>var-expr</key>
+      <dict>
+        <key>begin</key>
+        <string>(?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(local)\s+(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.))</string>
+        <key>end</key>
+        <string>(?=\s*do\b|\s*[=;]|\s*$)</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.local.luau</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.type.luau</string>
+            <key>match</key>
+            <string>:</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#identifiers</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#type</string>
+          </dict>
+        </array>
+      </dict>
+      <key>identifiers</key>
+      <array>
+        <dict>
+          <key>name</key>
+          <string>variable.other.constant.ts</string>
+          <key>match</key>
+          <string>([[:upper:]][_$[:digit:][:upper:]]*)(?![_$[:alnum:]])</string>
+        </dict>
+        <dict>
+          <key>name</key>
+          <string>variable.other.readwrite.ts</string>
+          <key>match</key>
+          <string>[_$[:alpha:]][_$[:alnum:]]*</string>
+        </dict>
+      </array>
       <key>function-declaration</key>
       <dict>
         <key>name</key>
