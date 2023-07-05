@@ -3,6 +3,9 @@ name: Luau
 scopeName: source.luau
 fileTypes: [luau, lua]
 
+variables:
+  functionName: "[a-zA-Z_]\\w*(?:[.:]([a-zA-Z_]\\w*))*"
+
 patterns:
   - include: "#shebang"
   - include: "#function-declaration"
@@ -28,7 +31,7 @@ repository:
   function-declaration:
     name: meta.function.luau
     contentName: meta.parameters.luau
-    begin: "\\b(?:(local)\\s*)?(function)\\s*([a-zA-Z_]\\w*(?:[.:]([a-zA-Z_]\\w*))*)?\\s*(\\<[\\w\\s\\,\\.]*\\>)?\\s*\\("
+    begin: "\\b(?:(local)\\s*)?(function)\\s*({{functionName}})?\\s*(\\<[\\w\\s\\,\\.]*\\>)?\\s*\\("
     end: "\\)(?:\\s*(:)\\s*(.+?)(?=\\s*\\b(?:([^\\w.,<])|\\)>)\\s*\\w|\\s*)$)?"
     beginCaptures:
       "1": { name: storage.modifier.local.luau }
@@ -280,6 +283,15 @@ repository:
         captures:
           "1": { name: storage.type.class.luadoc.luau }
           "2": { name: variable.parameter.luau }
+
+  # type-annotation:
+  #   patterns:
+  #     - name: meta.type.annotation.luau
+  #       begin: (:)(?=\s*\S)
+  #       beginCaptures:
+  #         "1": { name: keyword.operator.type.annotation.luau }
+  #       patterns:
+  #         - include: "#type_literal"
 
   type_literal:
     patterns:
