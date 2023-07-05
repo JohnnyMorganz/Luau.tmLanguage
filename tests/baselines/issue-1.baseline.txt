@@ -1,0 +1,142 @@
+original file
+-----------------------------------
+local function returnsComplexType()
+  return {} :: { [string]: { number } }
+end
+
+-- Key and [1] both have incorrect highlighting
+type Inner = typeof(returnsComplexType().Key[1])
+
+-- This has correct highlighting
+local inner = returnsComplexType().Key[1]
+
+-----------------------------------
+
+>local function returnsComplexType()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                                  ^
+                                  source.luau meta.function.luau
+                                   ^
+                                   source.luau meta.function.luau
+>  return {} :: { [string]: { number } }
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^^^^
+         source.luau
+             ^^
+             source.luau keyword.operator.typeassertion.luau
+               ^
+               source.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau support.type.primitive.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau keyword.operator.type.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau
+                              ^^^^^^
+                              source.luau variable.property.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau
+                                       ^
+                                       source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>-- Key and [1] both have incorrect highlighting
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type Inner = typeof(returnsComplexType().Key[1])
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau entity.name.type.alias.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.function.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^^^^^^^^^
+                     source.luau entity.name.function.luau
+                                       ^
+                                       source.luau
+                                        ^^
+                                        source.luau
+                                          ^^^
+                                          source.luau entity.name.type.luau
+                                             ^^^^
+                                             source.luau
+>
+ ^
+ source.luau
+>-- This has correct highlighting
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local inner = returnsComplexType().Key[1]
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^^^^^^^^^^^^
+               source.luau entity.name.function.luau
+                                 ^^^
+                                 source.luau
+                                    ^^^
+                                    source.luau variable.other.property.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau constant.numeric.decimal.luau
+                                         ^^
+                                         source.luau
+>
+ ^
+ source.luau

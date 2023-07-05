@@ -22,25 +22,7 @@
       "include": "#type-alias-declaration"
     },
     {
-      "include": "#keywords"
-    },
-    {
-      "include": "#standard_library"
-    },
-    {
-      "include": "#operators"
-    },
-    {
-      "include": "#numbers"
-    },
-    {
-      "include": "#language_constants"
-    },
-    {
-      "include": "#strings"
-    },
-    {
-      "include": "#identifier"
+      "include": "#expression"
     },
     {
       "include": "#comments"
@@ -571,7 +553,7 @@
         },
         {
           "begin": "\\b(typeof)\\b\\s*\\(",
-          "end": "(?=\\))",
+          "end": "\\)(?![.,:\\)])",
           "beginCaptures": {
             "1": {
               "name": "support.function.luau"

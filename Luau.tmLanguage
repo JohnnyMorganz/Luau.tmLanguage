@@ -35,31 +35,7 @@
       </dict>
       <dict>
         <key>include</key>
-        <string>#keywords</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#standard_library</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#operators</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#numbers</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#language_constants</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#strings</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#identifier</string>
+        <string>#expression</string>
       </dict>
       <dict>
         <key>include</key>
@@ -866,7 +842,7 @@
             <key>begin</key>
             <string>\b(typeof)\b\s*\(</string>
             <key>end</key>
-            <string>(?=\))</string>
+            <string>\)(?![.,:\)])</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>

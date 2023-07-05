@@ -13,13 +13,7 @@ patterns:
   - include: "#local-declaration"
   - include: "#for-loop"
   - include: "#type-alias-declaration"
-  - include: "#keywords"
-  - include: "#standard_library"
-  - include: "#operators"
-  - include: "#numbers"
-  - include: "#language_constants"
-  - include: "#strings"
-  - include: "#identifier"
+  - include: "#expression"
   - include: "#comments"
 
 repository:
@@ -308,7 +302,7 @@ repository:
       - name: keyword.operator.type.luau
         match: "(->)"
       - begin: "\\b(typeof)\\b\\s*\\("
-        end: "(?=\\))"
+        end: "\\)(?![.,:\\)])" # we use a negative lookahead on symbols to try and not match closing `)` inside of the expression
         beginCaptures:
           "1": { name: support.function.luau }
         patterns:
