@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>information_for_contributors</key>
+    <array>
+      <string>The source of this file is https://github.com/JohnnyMorganz/Luau.tmLanguage/blob/main/Luau.YAML-tmLanguage</string>
+      <string>If you want to provide a fix or improvement, please create a pull request against the original repository.</string>
+      <string>Once accepted there, we are happy to receive an update request.</string>
+    </array>
     <key>name</key>
     <string>Luau</string>
     <key>scopeName</key>
