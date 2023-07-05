@@ -24,7 +24,7 @@ h = x ^ y ^ z
         ^
         source.luau
          ^^^
-         source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+         source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
             ^
             source.luau
              ^^^
@@ -43,7 +43,7 @@ h = x ^ y ^ z
         ^
         source.luau
          ^^^
-         source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+         source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
             ^
             source.luau
              ^^^
@@ -51,7 +51,7 @@ h = x ^ y ^ z
                 ^
                 source.luau
                  ^^
-                 source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                 source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                    ^
                    source.luau
                     ^^^
@@ -199,7 +199,7 @@ h = x ^ y ^ z
           ^
           source.luau
            ^^^
-           source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
               ^
               source.luau
                ^

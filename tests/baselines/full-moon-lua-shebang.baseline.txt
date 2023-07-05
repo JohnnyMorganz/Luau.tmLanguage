@@ -17,16 +17,16 @@ print("Hello world");
 >print("Hello world");
  ^^^^^
  source.luau support.function.luau
-      ^^
+      ^
       source.luau
-        ^^^^^
-        source.luau variable.other.readwrite.luau
-             ^
-             source.luau
-              ^^^^^
-              source.luau variable.other.readwrite.luau
-                   ^^^^
-                   source.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^^^^^^^^^^
+        source.luau string.quoted.double.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^^
+                    source.luau
 >
  ^
  source.luau

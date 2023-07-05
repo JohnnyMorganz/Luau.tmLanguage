@@ -55,7 +55,7 @@ local length = #x
                    ^
                    source.luau
                     ^^^
-                    source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                    source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                        ^
                        source.luau
                         ^^^^
@@ -74,7 +74,7 @@ local length = #x
                     ^
                     source.luau
                      ^^^
-                     source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                         ^
                         source.luau
                          ^
