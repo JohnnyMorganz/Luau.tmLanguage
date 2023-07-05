@@ -5,6 +5,7 @@ fileTypes: [luau, lua]
 
 variables:
   functionName: "[a-zA-Z_]\\w*(?:[.:]([a-zA-Z_]\\w*))*"
+  lookAheadEndOfType: '[;),}\]:?\-\+\>]|\|\||\&\&|\!\=\=|$'
 
 patterns:
   - include: "#shebang"
@@ -155,6 +156,13 @@ repository:
         match: "(\\.\\.|\\#)"
       - name: keyword.operator.comparison.luau
         match: "(==|~=|>=|>|<=|<)"
+      # typecast operation
+      - begin: '(::)\s+'
+        beginCaptures:
+          "1": { name: keyword.operator.typeassertion.luau }
+        end: (?=^|{{lookAheadEndOfType}}|(::\s+)|(\s+\<))
+        patterns:
+          - include: "#type_literal"
 
   numbers:
     patterns:

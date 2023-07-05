@@ -457,6 +457,27 @@
             <key>match</key>
             <string>(==|~=|&gt;=|&gt;|&lt;=|&lt;)</string>
           </dict>
+          <dict>
+            <key>begin</key>
+            <string>(::)\s+</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.typeassertion.luau</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=^|[;),}\]:?\-\+\&gt;]|\|\||\&amp;\&amp;|\!\=\=|$|(::\s+)|(\s+\&lt;))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+          </dict>
         </array>
       </dict>
       <key>numbers</key>
@@ -906,7 +927,7 @@
               </dict>
             </array>
             <key>contentName</key>
-            <string>meta.parameter.type.variable</string>
+            <string>meta.parameter.type.variable.luau</string>
           </dict>
           <dict>
             <key>name</key>

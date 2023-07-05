@@ -299,6 +299,20 @@
         {
           "name": "keyword.operator.comparison.luau",
           "match": "(==|~=|>=|>|<=|<)"
+        },
+        {
+          "begin": "(::)\\s+",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.operator.typeassertion.luau"
+            }
+          },
+          "end": "(?=^|[;),}\\]:?\\-\\+\\>]|\\|\\||\\&\\&|\\!\\=\\=|$|(::\\s+)|(\\s+\\<))",
+          "patterns": [
+            {
+              "include": "#type_literal"
+            }
+          ]
         }
       ]
     },
@@ -597,7 +611,7 @@
               "include": "#type_literal"
             }
           ],
-          "contentName": "meta.parameter.type.variable"
+          "contentName": "meta.parameter.type.variable.luau"
         },
         {
           "name": "entity.name.type.luau",

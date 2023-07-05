@@ -771,10 +771,14 @@ end
               source.luau
                ^^^^
                source.luau variable.other.readwrite.luau
-                   ^^^^
+                   ^
                    source.luau
+                    ^^
+                    source.luau keyword.operator.typeassertion.luau
+                      ^
+                      source.luau
                        ^^^^^^
-                       source.luau variable.other.readwrite.luau
+                       source.luau support.type.primitive.luau
 >local _foo4: string, _bar1: string
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -1129,30 +1133,42 @@ end
            source.luau
              ^^^^^^
              source.luau variable.other.readwrite.luau
-                   ^^^^
+                   ^
                    source.luau
+                    ^^
+                    source.luau keyword.operator.typeassertion.luau
+                      ^
+                      source.luau
                        ^^^
-                       source.luau variable.other.readwrite.luau
-                          ^^^^^
+                       source.luau support.type.primitive.luau
+                          ^^
                           source.luau
+                            ^^
+                            source.luau keyword.operator.typeassertion.luau
+                              ^
+                              source.luau
                                ^^^^^
-                               source.luau variable.other.readwrite.luau
+                               source.luau entity.name.type.luau
                                     ^
-                                    source.luau keyword.operator.comparison.luau
+                                    source.luau keyword.operator.type.luau
                                      ^
-                                     source.luau variable.other.constant.luau
+                                     source.luau meta.parameter.type.variable.luau entity.name.type.luau
                                       ^
-                                      source.luau keyword.operator.comparison.luau
-                                       ^^^
+                                      source.luau keyword.operator.type.luau
+                                       ^
                                        source.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau
                                           ^^^^^
-                                          source.luau variable.other.readwrite.luau
+                                          source.luau entity.name.type.luau
                                                ^
-                                               source.luau keyword.operator.comparison.luau
+                                               source.luau keyword.operator.type.luau
                                                 ^
-                                                source.luau variable.other.constant.luau
+                                                source.luau meta.parameter.type.variable.luau entity.name.type.luau
                                                  ^
-                                                 source.luau keyword.operator.comparison.luau
+                                                 source.luau keyword.operator.type.luau
 >end
  ^^^
  source.luau keyword.control.luau

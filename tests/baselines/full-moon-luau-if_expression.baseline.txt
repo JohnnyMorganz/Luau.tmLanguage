@@ -160,10 +160,14 @@ end
                                   source.luau
                                    ^
                                    source.luau constant.numeric.decimal.luau
-                                    ^^^^^
+                                    ^^
                                     source.luau
+                                      ^^
+                                      source.luau keyword.operator.typeassertion.luau
+                                        ^
+                                        source.luau
                                          ^^^^^^
-                                         source.luau variable.other.readwrite.luau
+                                         source.luau support.type.primitive.luau
 >
  ^
  source.luau
@@ -312,10 +316,14 @@ end
                            source.luau
                             ^
                             source.luau variable.other.property.luau
-                             ^^^^
+                             ^
                              source.luau
+                              ^^
+                              source.luau keyword.operator.typeassertion.luau
+                                ^
+                                source.luau
                                  ^^^^^^
-                                 source.luau variable.other.readwrite.luau
+                                 source.luau support.type.primitive.luau
                                        ^^
                                        source.luau
                                          ^^^^^^
@@ -379,10 +387,14 @@ end
                              source.luau
                               ^^^
                               source.luau variable.other.readwrite.luau
-                                 ^^^^
+                                 ^
                                  source.luau
+                                  ^^
+                                  source.luau keyword.operator.typeassertion.luau
+                                    ^
+                                    source.luau
                                      ^^^^^^
-                                     source.luau variable.other.readwrite.luau
+                                     source.luau support.type.primitive.luau
 >
  ^
  source.luau
