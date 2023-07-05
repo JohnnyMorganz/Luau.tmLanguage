@@ -54,11 +54,19 @@ function assertBaselinesMatch(file: string, generatedText: string) {
 
   const baselineFile = path.join(baselineFolder, file);
   if (fs.existsSync(baselineFile)) {
+    const baselineText = fs.readFileSync(baselineFile, "utf8");
+
     chai.assert.equal(
       generatedText,
-      fs.readFileSync(baselineFile, "utf8"),
+      baselineText,
       "Expected baselines to match: " + file
     );
+
+    // If they *are* equal, lets delete the baseline file to make it easier to notice
+    // failing cases
+    if (generatedText == baselineText) {
+      fs.unlinkSync(generatedFileName);
+    }
   } else {
     chai.assert(false, "New generated baseline");
   }
