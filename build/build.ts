@@ -8,6 +8,8 @@ enum Extension {
   TmTheme = "tmTheme",
   YamlTmLanguage = "YAML-tmLanguage",
   YamlTmTheme = "YAML-tmTheme",
+  JsonTmLanguage = "tmLanguage.json",
+  JsonTmTheme = "tmTheme.json",
 }
 
 function file(extension: Extension) {
@@ -16,6 +18,11 @@ function file(extension: Extension) {
 
 function writePlistFile(grammar: TmGrammar | TmTheme, fileName: string) {
   const text = plist.build(grammar);
+  fs.writeFileSync(fileName, text);
+}
+
+function writeJsonFile(grammar: TmGrammar | TmTheme, fileName: string) {
+  const text = JSON.stringify(grammar, null, "  ");
   fs.writeFileSync(fileName, text);
 }
 
@@ -104,6 +111,8 @@ function buildGrammar() {
 
   // Write Luau.tmLanguage
   writePlistFile(luauGrammar, file(Extension.TmLanguage));
+  // Write Luau.tmLanguage.json
+  writeJsonFile(luauGrammar, file(Extension.JsonTmLanguage));
 }
 
 function buildTheme() {
@@ -111,7 +120,9 @@ function buildTheme() {
 
   // Write Luau.tmTheme
   writePlistFile(luauTheme, file(Extension.TmTheme));
+  // Write Luau.tmTheme.json
+  writeJsonFile(luauTheme, file(Extension.JsonTmTheme));
 }
 
 buildGrammar();
-buildTheme();
+// buildTheme();
