@@ -947,7 +947,7 @@
                 <key>name</key>
                 <string>variable.property.luau</string>
                 <key>match</key>
-                <string>(?&lt;!:\s*|-&gt;\s*)\b([a-zA-Z_]\w*)\b</string>
+                <string>(?&lt;!:\s*|-&gt;\s*)\b([a-zA-Z_]\w*)\b(?=:)</string>
               </dict>
               <dict>
                 <key>include</key>

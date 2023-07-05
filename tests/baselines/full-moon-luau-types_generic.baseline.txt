@@ -29,7 +29,7 @@ local x: Array<Array<number>>
                   ^
                   source.luau
                    ^
-                   source.luau variable.property.luau
+                   source.luau entity.name.type.luau
                     ^
                     source.luau
                      ^

@@ -57,7 +57,7 @@ local inner = returnsComplexType().Key[1]
                              ^
                              source.luau
                               ^^^^^^
-                              source.luau variable.property.luau
+                              source.luau support.type.primitive.luau
                                     ^
                                     source.luau
                                      ^
@@ -96,14 +96,18 @@ local inner = returnsComplexType().Key[1]
                     source.luau
                      ^^^^^^^^^^^^^^^^^^
                      source.luau entity.name.function.luau
-                                       ^
+                                       ^^^
                                        source.luau
-                                        ^^
-                                        source.luau
                                           ^^^
-                                          source.luau entity.name.type.luau
-                                             ^^^^
+                                          source.luau variable.other.property.luau
+                                             ^
                                              source.luau
+                                              ^
+                                              source.luau constant.numeric.decimal.luau
+                                               ^
+                                               source.luau
+                                                ^
+                                                source.luau
 >
  ^
  source.luau

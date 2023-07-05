@@ -28,7 +28,7 @@ type Array<T> = { [number]: T }
                   ^
                   source.luau
                    ^
-                   source.luau variable.property.luau
+                   source.luau entity.name.type.luau
                     ^
                     source.luau
                      ^

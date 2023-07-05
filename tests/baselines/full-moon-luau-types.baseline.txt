@@ -275,10 +275,10 @@ end
                              source.luau
                               ^^^^
                               source.luau entity.name.function.luau
-                                  ^
+                                  ^^
                                   source.luau
-                                   ^^
-                                   source.luau
+                                    ^
+                                    source.luau
 >type FetchResult = "alice" | "mallet"
  ^^^^
  source.luau storage.type.luau
