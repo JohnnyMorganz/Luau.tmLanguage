@@ -85,14 +85,6 @@ function hasDiff<T>(
   return false;
 }
 
-function makeTsScope(scope: string) {
-  return scope.replace(/\.tsx/g, ".ts");
-}
-
-function hasDiffScope(first: string, second: string) {
-  return makeTsScope(first) !== makeTsScope(second);
-}
-
 function getBaseline(grammar: Grammar, outputLines: string[]) {
   return outputLines.join("\n");
 }
