@@ -181,7 +181,7 @@ end
               ^
               source.luau
                ^^^
-               source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                   ^
                   source.luau
                    ^^^^^^^^^^
@@ -456,7 +456,7 @@ end
                        ^
                        source.luau
                         ^^
-                        source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                        source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                           ^^^^
                           source.luau
 >
@@ -512,11 +512,11 @@ end
                         ^
                         source.luau
                          ^^^
-                         source.luau support.class.luau
+                         source.luau variable.other.readwrite.luau
                             ^
                             source.luau
                              ^^^
-                             source.luau support.function.luau
+                             source.luau entity.name.function.luau
                                 ^
                                 source.luau
                                  ^^^^^^
@@ -576,7 +576,7 @@ end
           ^
           source.luau
            ^^^
-           source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
               ^
               source.luau
                ^^^
@@ -610,7 +610,7 @@ end
               ^
               source.luau
                ^^^
-               source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                   ^
                   source.luau
                    ^^^^^^^^
@@ -721,7 +721,7 @@ end
                          ^
                          source.luau
                           ^^^
-                          source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+                          source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                              ^
                              source.luau
                               ^^^
@@ -747,7 +747,7 @@ end
             ^
             source.luau
              ^^^
-             source.luau keyword.operator.logical.lua keyword.operator.wordlike.luau INCORRECT_SCOPE_EXTENSION
+             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
                 ^
                 source.luau
                  ^^^
