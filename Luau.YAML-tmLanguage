@@ -265,3 +265,14 @@ repository:
   punctuation-semicolon:
     name: punctuation.terminator.statement.luau
     match: ";"
+
+  # comments
+  comment:
+    patterns:
+      - name: comment.block.luau
+        begin: "--\\[(=*)\\["
+        end: "\\]\\1\\]"
+        # TODO: highlight inline code within comment?
+      - name: comment.line.double-dash.luau
+        begin: "--"
+        end: "\\n"

@@ -705,6 +705,28 @@
         <key>match</key>
         <string>;</string>
       </dict>
+      <key>comment</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>comment.block.luau</string>
+            <key>begin</key>
+            <string>--\[(=*)\[</string>
+            <key>end</key>
+            <string>\]\1\]</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>comment.line.double-dash.luau</string>
+            <key>begin</key>
+            <string>--</string>
+            <key>end</key>
+            <string>\n</string>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </dict>
 </plist>
