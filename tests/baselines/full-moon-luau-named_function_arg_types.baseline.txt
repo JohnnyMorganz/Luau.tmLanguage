@@ -264,7 +264,7 @@ end
                                                                   ^
                                                                   source.luau meta.function.luau keyword.operator.type.luau
                                                                    ^^^^^^
-                                                                   source.luau meta.function.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                                                   source.luau meta.function.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                                                          ^
                                                                          source.luau meta.function.luau keyword.operator.type.luau
                                                                           ^

@@ -52,7 +52,7 @@ local x: module.Foo<...string> = nil
                       ^
                       source.luau keyword.operator.type.luau
                        ^^^^^^
-                       source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                       source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                              ^
                              source.luau keyword.operator.type.luau
                               ^
@@ -153,9 +153,9 @@ local x: module.Foo<...string> = nil
                     ^
                     source.luau keyword.operator.type.luau
                      ^^^
-                     source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                     source.luau meta.parameter.type.variable.luau
                         ^^^^^^
-                        source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                        source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                               ^
                               source.luau keyword.operator.type.luau
                                ^

@@ -195,13 +195,13 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                  ^
                  source.luau keyword.operator.type.luau
                   ^^^^^^
-                  source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                  source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                         ^^
-                        source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                        source.luau meta.parameter.type.variable.luau
                           ^
-                          source.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                          source.luau meta.parameter.type.variable.luau entity.name.type.luau
                            ^^^
-                           source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                           source.luau meta.parameter.type.variable.luau
                               ^
                               source.luau keyword.operator.type.luau
                                ^
@@ -228,11 +228,11 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
            ^
            source.luau keyword.operator.type.luau
             ^^^^^^
-            source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+            source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                   ^^^^^
-                  source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                  source.luau meta.parameter.type.variable.luau
                        ^^^^^^
-                       source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                       source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                              ^
                              source.luau keyword.operator.type.luau
                               ^
@@ -259,13 +259,13 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
            ^
            source.luau keyword.operator.type.luau
             ^^^^^^
-            source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+            source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                   ^^
-                  source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                  source.luau meta.parameter.type.variable.luau
                     ^
-                    source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                    source.luau meta.parameter.type.variable.luau
                      ^
-                     source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                     source.luau meta.parameter.type.variable.luau
                       ^
                       source.luau keyword.operator.type.luau
                        ^
@@ -341,13 +341,13 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                             ^
                             source.luau keyword.operator.type.luau
                              ^^^
-                             source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                             source.luau meta.parameter.type.variable.luau
                                 ^^^
-                                source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                    ^^^^^
-                                   source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                   source.luau meta.parameter.type.variable.luau
                                         ^^^
-                                        source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                        source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                            ^
                                            source.luau keyword.operator.type.luau
 >
@@ -369,31 +369,31 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                    ^
                    source.luau keyword.operator.type.luau
                     ^
-                    source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                    source.luau meta.parameter.type.variable.luau
                      ^^^^^^
-                     source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                     source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                            ^^
-                           source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                           source.luau meta.parameter.type.variable.luau
                              ^^^^^^
-                             source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                             source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                    ^^^^^
-                                   source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                   source.luau meta.parameter.type.variable.luau
                                         ^^^^^^
-                                        source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                        source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                               ^
-                                              source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                              source.luau meta.parameter.type.variable.luau
                                                ^^
-                                               source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                               source.luau meta.parameter.type.variable.luau
                                                  ^
-                                                 source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                                 source.luau meta.parameter.type.variable.luau
                                                   ^^^^^^
-                                                  source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                                  source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                                         ^^
-                                                        source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                                        source.luau meta.parameter.type.variable.luau
                                                           ^^^^^^
-                                                          source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                                                          source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                                                                 ^
-                                                                source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                                                source.luau meta.parameter.type.variable.luau
                                                                  ^
                                                                  source.luau keyword.operator.type.luau
                                                                   ^

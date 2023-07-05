@@ -202,9 +202,9 @@ type Indexed<T...> = module.Indexed<T...>
                                     ^
                                     source.luau keyword.operator.type.luau
                                      ^
-                                     source.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                     source.luau meta.parameter.type.variable.luau entity.name.type.luau
                                       ^^^
-                                      source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                      source.luau meta.parameter.type.variable.luau
                                          ^
                                          source.luau keyword.operator.type.luau
 >

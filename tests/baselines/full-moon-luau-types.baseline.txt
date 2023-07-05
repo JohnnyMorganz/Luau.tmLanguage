@@ -714,7 +714,7 @@ end
                    ^
                    source.luau keyword.operator.type.luau
                     ^^^^^^
-                    source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                    source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                           ^
                           source.luau keyword.operator.type.luau
 >local _foo3: Map<number, "allow" | "deny">
@@ -733,27 +733,27 @@ end
                  ^
                  source.luau keyword.operator.type.luau
                   ^^^^^^
-                  source.luau meta.parameter.type.variable support.type.primitive.luau INCORRECT_SCOPE_EXTENSION
+                  source.luau meta.parameter.type.variable.luau support.type.primitive.luau
                         ^^
-                        source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                        source.luau meta.parameter.type.variable.luau
                           ^
-                          source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                          source.luau meta.parameter.type.variable.luau string.quoted.double.luau
                            ^^^^^
-                           source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                           source.luau meta.parameter.type.variable.luau string.quoted.double.luau
                                 ^
-                                source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                source.luau meta.parameter.type.variable.luau string.quoted.double.luau
                                  ^
-                                 source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                 source.luau meta.parameter.type.variable.luau
                                   ^
-                                  source.luau meta.parameter.type.variable keyword.operator.type.luau INCORRECT_SCOPE_EXTENSION
+                                  source.luau meta.parameter.type.variable.luau keyword.operator.type.luau
                                    ^
-                                   source.luau meta.parameter.type.variable INCORRECT_SCOPE_EXTENSION
+                                   source.luau meta.parameter.type.variable.luau
                                     ^
-                                    source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                    source.luau meta.parameter.type.variable.luau string.quoted.double.luau
                                      ^^^^
-                                     source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                     source.luau meta.parameter.type.variable.luau string.quoted.double.luau
                                          ^
-                                         source.luau meta.parameter.type.variable string.quoted.double.luau INCORRECT_SCOPE_EXTENSION
+                                         source.luau meta.parameter.type.variable.luau string.quoted.double.luau
                                           ^
                                           source.luau keyword.operator.type.luau
 >local _bar0 = foo0 :: number
@@ -1067,7 +1067,7 @@ end
                                            ^
                                            source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                             ^
-                                            source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                            source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable.luau entity.name.type.luau
                                              ^
                                              source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                               ^^^^^
@@ -1081,7 +1081,7 @@ end
                                                           ^
                                                           source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                                            ^
-                                                           source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                                           source.luau meta.function.luau meta.parameters.luau meta.parameter.type.variable.luau entity.name.type.luau
                                                             ^
                                                             source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
                                                              ^
@@ -1103,7 +1103,7 @@ end
                                                                          ^
                                                                          source.luau meta.function.luau keyword.operator.type.luau
                                                                           ^
-                                                                          source.luau meta.function.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                                                          source.luau meta.function.luau meta.parameter.type.variable.luau entity.name.type.luau
                                                                            ^
                                                                            source.luau meta.function.luau keyword.operator.type.luau
                                                                             ^
@@ -1117,7 +1117,7 @@ end
                                                                                     ^
                                                                                     source.luau meta.function.luau keyword.operator.type.luau
                                                                                      ^
-                                                                                     source.luau meta.function.luau meta.parameter.type.variable entity.name.type.luau INCORRECT_SCOPE_EXTENSION
+                                                                                     source.luau meta.function.luau meta.parameter.type.variable.luau entity.name.type.luau
                                                                                       ^
                                                                                       source.luau meta.function.luau keyword.operator.type.luau
 >    return (source :: any) :: Array<S> & Array<T>

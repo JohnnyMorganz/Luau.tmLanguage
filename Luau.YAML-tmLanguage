@@ -317,7 +317,7 @@ repository:
           "1": { name: keyword.operator.type.luau }
         patterns:
           - include: "#type_literal"
-        contentName: meta.parameter.type.variable
+        contentName: meta.parameter.type.variable.luau
       - name: entity.name.type.luau
         match: "\\b([a-zA-Z]\\w*)\\b"
       - begin: "\\{"
