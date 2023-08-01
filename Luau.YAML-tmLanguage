@@ -307,7 +307,7 @@ repository:
       - name: keyword.operator.type.luau
         match: "(->)"
       - begin: "\\b(typeof)\\b\\s*\\("
-        end: "\\)(?![.,:\\)])" # we use a negative lookahead on symbols to try and not match closing `)` inside of the expression
+        end: "\\)(?![.:\\)])" # we use a negative lookahead on symbols to try and not match closing `)` inside of the expression
         beginCaptures:
           "1": { name: support.function.luau }
         patterns:
