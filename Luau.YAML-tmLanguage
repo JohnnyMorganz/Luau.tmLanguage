@@ -5,142 +5,142 @@ information_for_contributors:
   - "Once accepted there, we are happy to receive an update request."
 
 name: Luau
-scopeName: source.lua
+scopeName: source.luau
 fileTypes: [luau]
 
 patterns:
   - begin: "\\b(?:(local)\\s+)?(function)\\b(?![,:])"
     beginCaptures:
-      "1": { name: keyword.local.lua }
-      "2": { name: keyword.control.lua }
+      "1": { name: keyword.local.luau }
+      "2": { name: keyword.control.luau }
     end: "(?<=[\\)\\-{}\\[\\]\"'])"
-    name: meta.function.lua
+    name: meta.function.luau
     patterns:
       - include: "#comment"
       - begin: "(\\()"
         beginCaptures:
-          "1": { name: punctuation.definition.parameters.begin.lua }
+          "1": { name: punctuation.definition.parameters.begin.luau }
         end: "(\\))|(?=[\\-\\.{}\\[\\]\"'])"
         endCaptures:
-          "1": { name: punctuation.definition.parameters.end.lua }
-        name: meta.parameter.lua
+          "1": { name: punctuation.definition.parameters.end.luau }
+        name: meta.parameter.luau
         patterns:
           - include: "#comment"
           - match: "[a-zA-Z_][a-zA-Z0-9_]*"
-            name: variable.parameter.function.lua
+            name: variable.parameter.function.luau
           - match: ","
-            name: punctuation.separator.arguments.lua
+            name: punctuation.separator.arguments.luau
           - begin: ":"
             beginCaptures:
-              "0": { name: punctuation.separator.arguments.lua }
+              "0": { name: punctuation.separator.arguments.luau }
             end: "(?=[\\),])"
             # TODO:
             # patterns:
             #   - include: "#type"
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b\\s*(?=:)"
-        name: entity.name.class.lua
+        name: entity.name.class.luau
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
-        name: entity.name.function.lua
+        name: entity.name.function.luau
   # TODO:
   # - include: "#number"
   - match: "(?<![\\w\\d.])0[xX][0-9A-Fa-f]+(\\.[0-9A-Fa-f]*)?([eE]-?\\d*)?([pP][-+]\\d+)?"
-    name: "constant.numeric.float.hexadecimal.lua"
+    name: "constant.numeric.float.hexadecimal.luau"
   - match: "(?<![\\w\\d.])0[xX]\\.[0-9A-Fa-f]+([eE]-?\\d*)?([pP][-+]\\d+)?"
-    name: "constant.numeric.float.hexadecimal.lua"
+    name: "constant.numeric.float.hexadecimal.luau"
   - match: "(?<![\\w\\d.])0[xX][0-9A-Fa-f]+(?![pPeE.0-9])"
-    name: "constant.numeric.integer.hexadecimal.lua"
+    name: "constant.numeric.integer.hexadecimal.luau"
   - match: "(?<![\\w\\d.])\\d+(\\.\\d*)?([eE]-?\\d*)?"
-    name: "constant.numeric.float.lua"
+    name: "constant.numeric.float.luau"
   - match: "(?<![\\w\\d.])\\.\\d+([eE]-?\\d*)?"
-    name: "constant.numeric.float.lua"
+    name: "constant.numeric.float.luau"
   - match: "(?<![\\w\\d.])\\d+(?![pPeE.0-9])"
-    name: "constant.numeric.integer.lua"
+    name: "constant.numeric.integer.luau"
   - include: "#string"
   # TODO:
   # - include: "#shebang"
   - captures:
-      "1": { name: punctuation.definition.comment.lua }
+      "1": { name: punctuation.definition.comment.luau }
     match: "\\A(#!).*$\\n?"
-    name: comment.line.shebang.lua
+    name: comment.line.shebang.luau
   - include: "#comment"
   - match: "\\<[a-zA-Z_\\*][a-zA-Z0-9_\\.\\*\\-]*\\>"
-    name: storage.type.generic.lua
+    name: storage.type.generic.luau
   - match: "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\\b"
-    name: keyword.control.lua
+    name: keyword.control.luau
   - match: "\\b(local)\\b"
-    name: storage.modifier.local.lua
+    name: storage.modifier.local.luau
   - match: "\\b(function)\\b(?![,:])"
-    name: keyword.control.lua
+    name: keyword.control.luau
   - match: "(?<![^.]\\.|:)\\b(false|nil(?!:)|true|_ENV|_G|_VERSION|math\\.(pi|huge|maxinteger|mininteger)|utf8\\.charpattern|io\\.(stdin|stdout|stderr)|package\\.(config|cpath|loaded|loaders|path|preload|searchers))\\b|(?<![.])\\.{3}(?!\\.)"
-    name: constant.language.lua
+    name: constant.language.luau
   - match: "(?<![^.]\\.|:)\\b(self)\\b"
-    name: variable.language.self.lua
+    name: variable.language.self.luau
   - match: "(?<![^.]\\.|:)\\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|load|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawlen|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\\b(?!\\s*=(?!=))"
-    name: support.function.lua
+    name: support.function.luau
   # TODO: remove
   - match: "(?<![^.]\\.|:)\\b(async)\\b(?!\\s*=(?!=))"
-    name: entity.name.tag.lua
+    name: entity.name.tag.luau
   - match: "(?<![^.]\\.|:)\\b(coroutine\\.(create|isyieldable|close|resume|running|status|wrap|yield)|string\\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|sub|unpack|upper)|table\\.(concat|insert|maxn|move|pack|remove|sort|unpack)|math\\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?|tointeger|type)|io\\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\\.(loadlib|seeall|searchpath)|debug\\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|[gs]etuservalue|set[Cc]stacklimit|traceback|upvalueid|upvaluejoin)|bit32\\.(arshift|band|bnot|bor|btest|bxor|extract|replace|lrotate|lshift|rrotate|rshift)|utf8\\.(char|codes|codepoint|len|offset))\\b(?!\\s*=(?!=))"
-    name: support.function.library.lua
+    name: support.function.library.luau
   - match: "\\b(and|or|not|\\|\\||\\&\\&|\\!)\\b" # TODO: fix
-    name: keyword.operator.lua
+    name: keyword.operator.luau
   - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[))"
-    name: support.function.any-method.lua
+    name: support.function.any-method.luau
   - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*\\??:)"
-    name: entity.name.class.lua
+    name: entity.name.class.luau
   - match: "(?<=[^.]\\.|:)\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?!\\s*=\\s*\\b(function)\\b)"
-    name: entity.other.attribute.lua
+    name: entity.other.attribute.luau
   - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?!\\s*=\\s*\\b(function)\\b)"
-    name: variable.other.lua
+    name: variable.other.luau
   - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*=\\s*\\b(function)\\b)"
-    name: entity.name.function.lua
+    name: entity.name.function.luau
   - match: "\\+|-|%|#|\\*|\\/|\\^|==?|~=|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)" # TODO: fix
-    name: keyword.operator.lua
+    name: keyword.operator.luau
 
 repository:
   # TODO:
   # shebang:
-  #   name: comment.line.shebang.lua
+  #   name: comment.line.shebang.luau
   #   match: "\\A(#!).*(?=$)"
   #   captures:
-  #     "1": { name: punctuation.definition.comment.lua }
+  #     "1": { name: punctuation.definition.comment.luau }
   string_escape:
     patterns:
       # As it turns out, because backslashes have to be escaped in both JSON and Regex, a single backslash is represented as 4 here
-      - name: constant.character.escape.lua
+      - name: constant.character.escape.luau
         match: "\\\\[abfnrtvz'\"`{\\\\]"
-      - name: constant.character.escape.lua
+      - name: constant.character.escape.luau
         match: "\\\\\\d{1,3}"
-      - name: constant.character.escape.lua
+      - name: constant.character.escape.luau
         match: "\\\\x[0-9a-fA-F]{2}"
-      - name: constant.character.escape.lua
+      - name: constant.character.escape.luau
         match: "\\\\u\\{[0-9a-fA-F]*\\}"
   # TODO:
   # number:
   #   patterns:
-  #     - name: constant.numeric.hex.lua
+  #     - name: constant.numeric.hex.luau
   #       match: "\\b0_*[xX]_*[\\da-fA-F_]*(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
-  #     - name: constant.numeric.binary.lua
+  #     - name: constant.numeric.binary.luau
   #       match: "\\b0_*[bB][01_]+(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
-  #     - name: constant.numeric.decimal.lua
+  #     - name: constant.numeric.decimal.luau
   #       match: "(?:\\d[\\d_]*(?:\\.[\\d_]*)?|\\.\\d[\\d_]*)(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
   string:
     patterns:
-      - name: string.quoted.double.lua
+      - name: string.quoted.double.luau
         begin: '"'
         end: '"'
         patterns:
           - include: "#string_escape"
-      - name: string.quoted.single.lua
+      - name: string.quoted.single.luau
         begin: "'"
         end: "'"
         patterns:
           - include: "#string_escape"
-      - name: string.other.multiline.lua
+      - name: string.other.multiline.luau
         begin: "\\[(=*)\\["
         end: "\\]\\1\\]"
       # TODO:
-      # - name: string.interpolated.lua
+      # - name: string.interpolated.luau
       #   begin: "`"
       #   end: "`"
       #   patterns:
@@ -149,51 +149,51 @@ repository:
 
   # TODO:
   # interpolated-string-expression:
-  #   name: meta.template.expression.lua
-  #   contentName: meta.embedded.line.lua
+  #   name: meta.template.expression.luau
+  #   contentName: meta.embedded.line.luau
   #   begin: "\\{"
   #   end: "\\}"
   #   beginCaptures:
   #     "0":
-  #       name: punctuation.definition.interpolated-string-expression.begin.lua
+  #       name: punctuation.definition.interpolated-string-expression.begin.luau
   #   endCaptures:
   #     "0":
-  #       { name: punctuation.definition.interpolated-string-expression.end.lua }
+  #       { name: punctuation.definition.interpolated-string-expression.end.luau }
   #   patterns:
-  #     - include: "source.lua"
+  #     - include: "source.luau"
 
   comment:
     patterns:
-      - name: comment.block.lua
+      - name: comment.block.luau
         begin: "--\\[(=*)\\["
         end: "\\]\\1\\]"
         patterns:
-          - name: keyword.operator.other.lua
+          - name: keyword.operator.other.luau
             begin: "(```lua)\\s+"
             end: "(```)"
             beginCaptures:
-              "1": { name: comment.lua }
+              "1": { name: comment.luau }
             endCaptures:
-              "1": { name: comment.lua }
+              "1": { name: comment.luau }
             patterns:
-              - include: "source.lua"
+              - include: "source.luau"
           - include: "#doc_comment_tags"
-      - name: comment.line.double-dash.documentation.lua
+      - name: comment.line.double-dash.documentation.luau
         begin: "---"
         end: "\\n"
         patterns:
           - include: "#doc_comment_tags"
-      - name: comment.line.double-dash.lua
+      - name: comment.line.double-dash.luau
         begin: "--"
         end: "\\n"
 
   doc_comment_tags:
     patterns:
-      - name: storage.type.class.luadoc.lua
+      - name: storage.type.class.luadoc.luau
         match: "@\\w+"
       - match: "((?<=[\\s*!\\/])[\\\\@]param)(?:\\s)+(\\b\\w+\\b)"
         captures:
-          "1": { name: storage.type.class.luadoc.lua }
-          "2": { name: variable.parameter.lua }
+          "1": { name: storage.type.class.luadoc.luau }
+          "2": { name: variable.parameter.luau }
 
   # type:
