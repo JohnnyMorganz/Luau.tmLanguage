@@ -42,19 +42,7 @@ patterns:
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
         name: entity.name.function.luau
   # TODO:
-  # - include: "#number"
-  - match: "(?<![\\w\\d.])0[xX][0-9A-Fa-f]+(\\.[0-9A-Fa-f]*)?([eE]-?\\d*)?([pP][-+]\\d+)?"
-    name: "constant.numeric.float.hexadecimal.luau"
-  - match: "(?<![\\w\\d.])0[xX]\\.[0-9A-Fa-f]+([eE]-?\\d*)?([pP][-+]\\d+)?"
-    name: "constant.numeric.float.hexadecimal.luau"
-  - match: "(?<![\\w\\d.])0[xX][0-9A-Fa-f]+(?![pPeE.0-9])"
-    name: "constant.numeric.integer.hexadecimal.luau"
-  - match: "(?<![\\w\\d.])\\d+(\\.\\d*)?([eE]-?\\d*)?"
-    name: "constant.numeric.float.luau"
-  - match: "(?<![\\w\\d.])\\.\\d+([eE]-?\\d*)?"
-    name: "constant.numeric.float.luau"
-  - match: "(?<![\\w\\d.])\\d+(?![pPeE.0-9])"
-    name: "constant.numeric.integer.luau"
+  - include: "#number"
   - include: "#string"
   # TODO:
   # - include: "#shebang"
@@ -115,15 +103,14 @@ repository:
         match: "\\\\x[0-9a-fA-F]{2}"
       - name: constant.character.escape.luau
         match: "\\\\u\\{[0-9a-fA-F]*\\}"
-  # TODO:
-  # number:
-  #   patterns:
-  #     - name: constant.numeric.hex.luau
-  #       match: "\\b0_*[xX]_*[\\da-fA-F_]*(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
-  #     - name: constant.numeric.binary.luau
-  #       match: "\\b0_*[bB][01_]+(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
-  #     - name: constant.numeric.decimal.luau
-  #       match: "(?:\\d[\\d_]*(?:\\.[\\d_]*)?|\\.\\d[\\d_]*)(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
+  number:
+    patterns:
+      - name: constant.numeric.hex.luau
+        match: "\\b0_*[xX]_*[\\da-fA-F_]*(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
+      - name: constant.numeric.binary.luau
+        match: "\\b0_*[bB][01_]+(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
+      - name: constant.numeric.decimal.luau
+        match: "(?:\\d[\\d_]*(?:\\.[\\d_]*)?|\\.\\d[\\d_]*)(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
   string:
     patterns:
       - name: string.quoted.double.luau
