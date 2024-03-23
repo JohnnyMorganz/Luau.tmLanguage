@@ -12,7 +12,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau entity.name.function.luau
         ^
         source.luau
          ^
@@ -22,9 +22,9 @@ end
            ^^^^^^^^
            source.luau meta.function.luau keyword.control.luau
                    ^
-                   source.luau meta.function.luau
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                     ^
-                    source.luau meta.function.luau
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  call(1)
  ^^
  source.luau

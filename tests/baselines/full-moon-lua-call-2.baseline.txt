@@ -23,7 +23,7 @@ x:y("b")
         source.luau
 >x:y("b")
  ^
- source.luau variable.other.readwrite.luau
+ source.luau entity.name.class.luau
   ^
   source.luau
    ^

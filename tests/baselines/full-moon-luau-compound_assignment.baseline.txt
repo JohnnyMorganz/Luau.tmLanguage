@@ -30,7 +30,7 @@ str1 ..= str2
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -45,7 +45,7 @@ str1 ..= str2
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -225,7 +225,7 @@ str1 ..= str2
       ^
       source.luau
        ^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
            ^
            source.luau
             ^
@@ -244,7 +244,7 @@ str1 ..= str2
       ^
       source.luau
        ^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
            ^
            source.luau
             ^

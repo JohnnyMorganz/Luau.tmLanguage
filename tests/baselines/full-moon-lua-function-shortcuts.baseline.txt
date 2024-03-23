@@ -6,7 +6,7 @@ call "hello"
 
 >call { x = 1 }
  ^^^^
- source.luau variable.other.readwrite.luau
+ source.luau entity.name.function.luau
      ^^^
      source.luau
         ^
@@ -23,7 +23,7 @@ call "hello"
              source.luau
 >call "hello"
  ^^^^
- source.luau variable.other.readwrite.luau
+ source.luau entity.name.function.luau
      ^
      source.luau
       ^
