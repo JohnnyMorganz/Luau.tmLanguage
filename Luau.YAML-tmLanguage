@@ -73,14 +73,13 @@ patterns:
     name: entity.name.tag.luau
   - match: "(?<![^.]\\.|:)\\b(coroutine\\.(create|isyieldable|close|resume|running|status|wrap|yield)|string\\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|sub|unpack|upper)|table\\.(concat|insert|maxn|move|pack|remove|sort|unpack)|math\\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?|tointeger|type)|io\\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\\.(loadlib|seeall|searchpath)|debug\\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|[gs]etuservalue|set[Cc]stacklimit|traceback|upvalueid|upvaluejoin)|bit32\\.(arshift|band|bnot|bor|btest|bxor|extract|replace|lrotate|lshift|rrotate|rshift)|utf8\\.(char|codes|codepoint|len|offset))\\b(?!\\s*=(?!=))"
     name: support.function.library.luau
-  - match: "\\b(and|or|not|\\|\\||\\&\\&|\\!)\\b" # TODO: fix
-    name: keyword.operator.luau
-  - include: "#identifier"
+  - match: "\\b(and|or|not)\\b"
+    name: keyword.operator.logical.luau keyword.operator.wordlike.luau
   # TODO: do we want below? it highlights the `x` in `x = function`
   - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*=\\s*\\b(function)\\b)"
     name: entity.name.function.luau
-  - match: "\\+|-|%|#|\\*|\\/|\\^|==?|~=|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)" # TODO: fix
-    name: keyword.operator.luau
+  - include: "#identifier"
+  - include: "#operator"
 
 repository:
   # TODO:
@@ -158,6 +157,17 @@ repository:
         name: variable.other.constant.luau
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b{{lookAheadNotFunctionToken}}"
         name: variable.other.readwrite.luau # OLD: variable.other.luau
+
+  operator:
+    patterns:
+      - match: "\\+|-|%|\\*|\\/|\\^"
+        name: "keyword.operator.arithmetic.luau"
+      - match: "==|~=|!=|<=?|>=?"
+        name: keyword.operator.comparison.luau
+      - match: "\\+=|-=|/=|\\*=|%=|\\^=|\\.\\.=|="
+        name: keyword.operator.assignment.luau
+      - match: "#|(?<!\\.)\\.{2}(?!\\.)"
+        name: keyword.operator.other.luau
 
   comment:
     patterns:
