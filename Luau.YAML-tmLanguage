@@ -8,6 +8,9 @@ name: Luau
 scopeName: source.luau
 fileTypes: [luau]
 
+variables:
+  lookAheadNotFunctionToken: (?!\\s*=\\s*\\b(function)\\b)
+
 patterns:
   - begin: "\\b(?:(local)\\s+)?(function)\\b(?![,:])"
     beginCaptures:
@@ -72,14 +75,8 @@ patterns:
     name: support.function.library.luau
   - match: "\\b(and|or|not|\\|\\||\\&\\&|\\!)\\b" # TODO: fix
     name: keyword.operator.luau
-  - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[))"
-    name: support.function.any-method.luau
-  - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*\\??:)"
-    name: entity.name.class.luau
-  - match: "(?<=[^.]\\.|:)\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?!\\s*=\\s*\\b(function)\\b)"
-    name: entity.other.attribute.luau
-  - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?!\\s*=\\s*\\b(function)\\b)"
-    name: variable.other.luau
+  - include: "#identifier"
+  # TODO: do we want below? it highlights the `x` in `x = function`
   - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*=\\s*\\b(function)\\b)"
     name: entity.name.function.luau
   - match: "\\+|-|%|#|\\*|\\/|\\^|==?|~=|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)" # TODO: fix
@@ -148,6 +145,19 @@ repository:
   #       { name: punctuation.definition.interpolated-string-expression.end.luau }
   #   patterns:
   #     - include: "source.luau"
+
+  identifier:
+    patterns:
+      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[))"
+        name: entity.name.function.luau # OLD: support.function.any-method.luau
+      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*\\??:)"
+        name: entity.name.class.luau
+      - match: "(?<=[^.]\\.|:)\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b{{lookAheadNotFunctionToken}}"
+        name: variable.other.property.luau # OLD: entity.other.attribute.luau
+      - match: "\\b([A-Z_][A-Z0-9_]*)\\b{{lookAheadNotFunctionToken}}"
+        name: variable.other.constant.luau
+      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b{{lookAheadNotFunctionToken}}"
+        name: variable.other.readwrite.luau # OLD: variable.other.luau
 
   comment:
     patterns:
