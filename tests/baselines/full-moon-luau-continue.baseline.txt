@@ -48,7 +48,7 @@ local continue = 4
       ^
       source.luau
        ^^^^^^^^
-       source.luau keyword.control.luau
+       source.luau variable.other.readwrite.luau
                ^
                source.luau
                 ^

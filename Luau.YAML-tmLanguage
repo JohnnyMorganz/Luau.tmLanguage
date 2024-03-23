@@ -52,6 +52,8 @@ patterns:
   - include: "#comment"
   - match: "\\<[a-zA-Z_\\*][a-zA-Z0-9_\\.\\*\\-]*\\>"
     name: storage.type.generic.luau
+  - include: "#local-declaration"
+  - include: "#for-loop"
   - match: "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\\b"
     name: keyword.control.luau
   - match: "\\b(local)\\b"
@@ -67,13 +69,33 @@ patterns:
     name: support.function.library.luau
   - match: "\\b(and|or|not)\\b"
     name: keyword.operator.logical.luau keyword.operator.wordlike.luau
-  # TODO: do we want below? it highlights the `x` in `x = function`
-  - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*=\\s*\\b(function)\\b)"
-    name: entity.name.function.luau
   - include: "#identifier"
   - include: "#operator"
 
 repository:
+  local-declaration:
+    begin: "\\b(local)\\b"
+    end: "(?=\\s*do\\b|\\s*[=;]|\\s*$)"
+    beginCaptures:
+      "1": { name: storage.modifier.local.luau }
+    patterns:
+      - name: variable.other.constant.luau
+        match: "\\b([A-Z_][A-Z0-9_]*)\\b"
+      - name: variable.other.readwrite.luau # TODO: should this be something different? old was just variable.other.luau
+        match: "\\b([a-zA-Z_]\\w*)\\b"
+
+  for-loop:
+    begin: "\\b(for)\\b"
+    beginCaptures:
+      "1": { name: keyword.control.luau }
+    end: "\\b(in)\\b|(=)"
+    endCaptures:
+      "1": { name: keyword.control.luau }
+      "2": { name: keyword.operator.assignment.luau }
+    patterns:
+      - name: variable.parameter.luau
+        match: "\\b([a-zA-Z_]\\w*)\\b"
+
   # TODO:
   shebang:
     captures:
