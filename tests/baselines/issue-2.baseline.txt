@@ -65,7 +65,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau keyword.operator.type.luau
          ^
@@ -79,37 +79,37 @@ end
                       ^
                       source.luau keyword.operator.type.luau
                        ^
-                       source.luau meta.parameter.type.variable.luau
+                       source.luau
 >    transparency: typeof(React.createBinding(0))
  ^^^^
- source.luau meta.parameter.type.variable.luau
+ source.luau
      ^^^^^^^^^^^^
-     source.luau meta.parameter.type.variable.luau variable.property.luau
+     source.luau variable.property.luau
                  ^
-                 source.luau meta.parameter.type.variable.luau keyword.operator.type.luau
+                 source.luau keyword.operator.type.luau
                   ^
-                  source.luau meta.parameter.type.variable.luau
+                  source.luau
                    ^^^^^^
-                   source.luau meta.parameter.type.variable.luau support.function.luau
+                   source.luau support.function.luau
                          ^
-                         source.luau meta.parameter.type.variable.luau
+                         source.luau
                           ^^^^^
-                          source.luau meta.parameter.type.variable.luau variable.other.readwrite.luau
+                          source.luau variable.other.readwrite.luau
                                ^
-                               source.luau meta.parameter.type.variable.luau
+                               source.luau
                                 ^^^^^^^^^^^^^
-                                source.luau meta.parameter.type.variable.luau entity.name.function.luau
+                                source.luau entity.name.function.luau
                                              ^
-                                             source.luau meta.parameter.type.variable.luau
+                                             source.luau
                                               ^
-                                              source.luau meta.parameter.type.variable.luau constant.numeric.decimal.luau
+                                              source.luau constant.numeric.decimal.luau
                                                ^
-                                               source.luau meta.parameter.type.variable.luau
-                                                ^
-                                                source.luau meta.parameter.type.variable.luau
+                                               source.luau
+                                                ^^
+                                                source.luau
 >}> = function()
  ^
- source.luau meta.parameter.type.variable.luau
+ source.luau
   ^
   source.luau keyword.operator.type.luau
    ^
@@ -121,9 +121,9 @@ end
       ^^^^^^^^
       source.luau meta.function.luau keyword.control.luau
               ^
-              source.luau meta.function.luau
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                ^
-               source.luau meta.function.luau
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >
  ^
  source.luau

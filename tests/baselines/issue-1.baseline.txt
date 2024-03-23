@@ -24,9 +24,9 @@ local inner = returnsComplexType().Key[1]
                 ^^^^^^^^^^^^^^^^^^
                 source.luau meta.function.luau entity.name.function.luau
                                   ^
-                                  source.luau meta.function.luau
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                                    ^
-                                   source.luau meta.function.luau
+                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  return {} :: { [string]: { number } }
  ^^
  source.luau

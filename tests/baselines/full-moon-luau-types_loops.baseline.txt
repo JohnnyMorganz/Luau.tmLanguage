@@ -63,7 +63,7 @@ end
               ^
               source.luau
                ^
-               source.luau keyword.control.luau keyword.operator.assignment.luau
+               source.luau keyword.operator.assignment.luau
                 ^
                 source.luau
                  ^

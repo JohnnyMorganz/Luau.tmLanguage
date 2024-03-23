@@ -62,10 +62,8 @@ type Array<T> = { [number]: T }
                     source.luau support.type.primitive.luau
                           ^
                           source.luau
-                           ^
-                           source.luau keyword.operator.type.luau
-                            ^
-                            source.luau
+                           ^^
+                           source.luau
                              ^
                              source.luau entity.name.type.luau
                               ^

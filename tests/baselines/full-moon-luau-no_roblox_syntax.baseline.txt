@@ -65,7 +65,7 @@ end
       ^
       source.luau
        ^^^^^^^^^^^^^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
                         ^
                         source.luau
                          ^
@@ -94,7 +94,7 @@ end
       ^
       source.luau
        ^^^^^^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
                  ^
                  source.luau
                   ^
@@ -126,7 +126,7 @@ end
       ^
       source.luau
        ^^^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
               ^
               source.luau
                ^
@@ -185,7 +185,7 @@ end
                   ^
                   source.luau
                    ^^^^^^^^^^
-                   source.luau variable.other.readwrite.luau
+                   source.luau entity.name.class.luau
                              ^
                              source.luau
                               ^^^^^^^^
@@ -201,7 +201,7 @@ end
       ^
       source.luau
        ^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
 >
  ^
  source.luau
@@ -268,9 +268,9 @@ end
             ^^^^^
             source.luau meta.function.luau entity.name.function.luau
                  ^
-                 source.luau meta.function.luau
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                   ^
-                  source.luau meta.function.luau
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  end
  ^^
  source.luau
@@ -290,27 +290,35 @@ end
         ^^^^^^^^
         source.luau meta.function.luau keyword.control.luau
                 ^
-                source.luau meta.function.luau
+                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                  ^^^^^^
-                 source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                       ^^
-                       source.luau meta.function.luau meta.parameters.luau
+                 source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau
                          ^^^^^^^^^
-                         source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                                  ^^
-                                  source.luau meta.function.luau meta.parameters.luau
+                         source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau
                                     ^^^^^
-                                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                                         ^^
-                                         source.luau meta.function.luau meta.parameters.luau
+                                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                         ^
+                                         source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                          ^
+                                          source.luau meta.function.luau meta.parameter.luau
                                            ^^^^^^^^
-                                           source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                                                   ^^
-                                                   source.luau meta.function.luau meta.parameters.luau
+                                           source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                   ^
+                                                   source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                    ^
+                                                    source.luau meta.function.luau meta.parameter.luau
                                                      ^^^^^^^^^
-                                                     source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                                                     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
                                                               ^
-                                                              source.luau meta.function.luau
+                                                              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  if typeof(origin) == "Instance" then
  ^^
  source.luau
@@ -326,10 +334,8 @@ end
              source.luau variable.other.readwrite.luau
                    ^^
                    source.luau
-                     ^
-                     source.luau keyword.operator.assignment.luau
-                      ^
-                      source.luau keyword.operator.assignment.luau
+                     ^^
+                     source.luau keyword.operator.comparison.luau
                        ^
                        source.luau
                         ^
@@ -470,11 +476,11 @@ end
         ^
         source.luau
          ^^^
-         source.luau variable.other.luau
+         source.luau variable.other.readwrite.luau
             ^^
             source.luau
               ^^^^^
-              source.luau variable.other.luau
+              source.luau variable.other.readwrite.luau
                    ^
                    source.luau
                     ^^
