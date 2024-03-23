@@ -119,28 +119,28 @@ repository:
       - name: string.other.multiline.luau
         begin: "\\[(=*)\\["
         end: "\\]\\1\\]"
-      # TODO:
-      # - name: string.interpolated.luau
-      #   begin: "`"
-      #   end: "`"
-      #   patterns:
-      #     - include: "#interpolated-string-expression"
-      #     - include: "#string_escape"
+      - name: string.interpolated.luau
+        begin: "`"
+        end: "`"
+        patterns:
+          - include: "#interpolated_string_expression"
+          - include: "#string_escape"
 
-  # TODO:
-  # interpolated-string-expression:
-  #   name: meta.template.expression.luau
-  #   contentName: meta.embedded.line.luau
-  #   begin: "\\{"
-  #   end: "\\}"
-  #   beginCaptures:
-  #     "0":
-  #       name: punctuation.definition.interpolated-string-expression.begin.luau
-  #   endCaptures:
-  #     "0":
-  #       { name: punctuation.definition.interpolated-string-expression.end.luau }
-  #   patterns:
-  #     - include: "source.luau"
+  interpolated_string_expression:
+    name: meta.template.expression.luau
+    contentName: meta.embedded.line.luau
+    begin: "\\{"
+    end: "\\}"
+    beginCaptures:
+      "0":
+        {
+          name: punctuation.definition.interpolated-string-expression.begin.luau,
+        }
+    endCaptures:
+      "0":
+        { name: punctuation.definition.interpolated-string-expression.end.luau }
+    patterns:
+      - include: "source.luau"
 
   identifier:
     patterns:
