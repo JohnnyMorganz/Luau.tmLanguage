@@ -13,6 +13,7 @@ fileTypes: [luau]
 variables:
   matchingParentheses: (\(([^\(\)]|(\(([^\(\)]|\([^\(\)]*\))*\)))*\))
   lookAheadEndOfType: '[;),}\]:?\-\+\>](?!\s*[&\|])|$|\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\b'
+  identifier: "[a-zA-Z_][a-zA-Z0-9_]*"
 
 patterns:
   - include: "#function-definition"
@@ -55,7 +56,7 @@ repository:
           - include: "#comment"
           - match: "\\.\\.\\."
             name: variable.parameter.function.varargs.luau
-          - match: "[a-zA-Z_][a-zA-Z0-9_]*"
+          - match: "{{identifier}}"
             name: variable.parameter.function.luau
           - match: ","
             name: punctuation.separator.arguments.luau
@@ -67,7 +68,7 @@ repository:
               - include: "#type_literal"
       - match: "\\b(__add|__call|__concat|__div|__eq|__index|__le|__len|__lt|__metatable|__mod|__mode|__mul|__newindex|__pow|__sub|__tostring|__unm|__iter|__idiv)\\b"
         name: variable.language.metamethod.luau
-      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+      - match: "\\b({{identifier}})\\b"
         name: entity.name.function.luau
 
   local-declaration:
@@ -86,7 +87,7 @@ repository:
       - name: variable.other.constant.luau
         match: "\\b([A-Z_][A-Z0-9_]*)\\b"
       - name: variable.other.readwrite.luau # TODO: should this be something different? old was just variable.other.luau
-        match: "\\b([a-zA-Z_]\\w*)\\b"
+        match: "\\b({{identifier}})\\b"
 
   for-loop:
     begin: "\\b(for)\\b"
@@ -104,7 +105,7 @@ repository:
         patterns:
           - include: "#type_literal"
       - name: variable.parameter.luau
-        match: "\\b([a-zA-Z_]\\w*)\\b"
+        match: "\\b({{identifier}})\\b"
 
   shebang:
     captures:
@@ -207,13 +208,13 @@ repository:
 
   identifier:
     patterns:
-      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[))"
+      - match: "\\b({{identifier}})\\b(?=\\s*(?:[({\"']|\\[\\[))"
         name: entity.name.function.luau # OLD: support.function.any-method.luau
-      - match: "(?<=[^.]\\.|:)\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+      - match: "(?<=[^.]\\.|:)\\b({{identifier}})\\b"
         name: variable.other.property.luau # OLD: entity.other.attribute.luau
       - match: "\\b([A-Z_][A-Z0-9_]*)\\b"
         name: variable.other.constant.luau
-      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+      - match: "\\b({{identifier}})\\b"
         name: variable.other.readwrite.luau # OLD: variable.other.luau
 
   operator:
@@ -304,7 +305,7 @@ repository:
     #  "1": { name: punctuation.definition.generics.end.luau }
     # name: meta.generic.luau
     patterns:
-      - match: "[a-zA-Z_][a-zA-Z0-9_]*"
+      - match: "{{identifier}}"
         name: entity.name.type.luau
       - match: "="
         name: keyword.operator.assignment.luau
@@ -325,7 +326,7 @@ repository:
         name: keyword.operator.assignment.luau
 
   type_annotation: # Type annotations not matched by other rules (i.e., function return type)
-    begin: ":(?!\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[)))" # negative lookahead: the syntax should not be of a method-call form `:name(`
+    begin: ":(?!\\b({{identifier}})\\b(?=\\s*(?:[({\"']|\\[\\[)))" # negative lookahead: the syntax should not be of a method-call form `:name(`
     end: "(?<=\\))(?!\\s*->)|=|;|$|(?=\\breturn\\b)|(?=\\bend\\b)"
     patterns:
       - include: "#comment"
@@ -372,7 +373,7 @@ repository:
           - match: "=" # for generics declarations
             name: keyword.operator.assignment.luau
           - include: "#type_literal"
-      - match: "\\b([a-zA-Z_]\\w*)\\b"
+      - match: "\\b({{identifier}})\\b"
         name: entity.name.type.luau
       - begin: "\\{"
         end: "\\}"
@@ -381,7 +382,7 @@ repository:
             end: "\\]" # TODO: do we need to match the ':' afterwards?
             patterns:
               - include: "#type_literal"
-          - match: "\\b([a-zA-Z_]\\w*)\\b(:)"
+          - match: "\\b({{identifier}})\\b(:)"
             captures:
               "1": { name: variable.property.luau }
               "2": { name: keyword.operator.type.luau }
@@ -392,7 +393,7 @@ repository:
         end: "\\)"
         patterns:
           - name: variable.parameter.luau
-            match: "\\b([a-zA-Z_]\\w*)\\b(:)"
+            match: "\\b({{identifier}})\\b(:)"
             captures:
               "1": { name: variable.parameter.luau }
               "2": { name: keyword.operator.type.luau }
