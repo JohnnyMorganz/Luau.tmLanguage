@@ -74,15 +74,17 @@ return "OK"
                 ^^^^^^^^
                 source.luau meta.function.luau entity.name.function.luau
                         ^
-                        source.luau meta.function.luau
+                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                          ^^^^
-                         source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                             ^^
-                             source.luau meta.function.luau meta.parameters.luau
+                         source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                             ^
+                             source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                              ^
+                              source.luau meta.function.luau meta.parameter.luau
                                ^^^^^
-                               source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                               source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
                                     ^
-                                    source.luau meta.function.luau
+                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  assert(typeof(left) == "string", "left is a " .. typeof(left))
  ^^
  source.luau
@@ -98,10 +100,8 @@ return "OK"
                  source.luau variable.other.readwrite.luau
                      ^^
                      source.luau
-                       ^
-                       source.luau keyword.operator.assignment.luau
-                        ^
-                        source.luau keyword.operator.assignment.luau
+                       ^^
+                       source.luau keyword.operator.comparison.luau
                          ^
                          source.luau
                           ^
@@ -147,10 +147,8 @@ return "OK"
                  source.luau variable.other.readwrite.luau
                       ^^
                       source.luau
-                        ^
-                        source.luau keyword.operator.assignment.luau
-                         ^
-                         source.luau keyword.operator.assignment.luau
+                        ^^
+                        source.luau keyword.operator.comparison.luau
                           ^
                           source.luau
                            ^
@@ -442,7 +440,7 @@ return "OK"
       ^
       source.luau
        ^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
             ^
             source.luau
              ^
@@ -545,7 +543,7 @@ return "OK"
       ^
       source.luau
        ^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
            ^
            source.luau
             ^
@@ -600,7 +598,7 @@ return "OK"
       ^
       source.luau
        ^^^^^^^^^^^^^^^^^^^^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
                                ^
                                source.luau
                                 ^
@@ -610,9 +608,9 @@ return "OK"
                                    ^^^^^^^^
                                    source.luau meta.function.luau keyword.control.luau
                                            ^
-                                           source.luau meta.function.luau
+                                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                                             ^
-                                            source.luau meta.function.luau
+                                            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
                                              ^
                                              source.luau
                                               ^^^^^^
@@ -988,7 +986,7 @@ return "OK"
       ^
       source.luau
        ^^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
              ^
              source.luau
               ^
@@ -1018,10 +1016,8 @@ return "OK"
                                   source.luau string.interpolated.luau
                                    ^
                                    source.luau
-                                    ^
-                                    source.luau keyword.operator.assignment.luau
-                                     ^
-                                     source.luau keyword.operator.assignment.luau
+                                    ^^
+                                    source.luau keyword.operator.comparison.luau
                                       ^
                                       source.luau
                                        ^
@@ -1047,11 +1043,11 @@ return "OK"
                 ^^^^^^^^^^^^^
                 source.luau meta.function.luau entity.name.function.luau
                              ^
-                             source.luau meta.function.luau
+                             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                               ^^^^^^
-                              source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
                                     ^
-                                    source.luau meta.function.luau
+                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  return `Value is {string}`
  ^^
  source.luau
@@ -1066,7 +1062,7 @@ return "OK"
                     ^
                     source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
                      ^^^^^^
-                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.constant.luau
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
                            ^
                            source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                             ^

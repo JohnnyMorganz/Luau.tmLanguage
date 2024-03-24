@@ -16,17 +16,17 @@ end
                 ^
                 source.luau meta.function.luau entity.name.function.luau
                  ^
-                 source.luau meta.function.luau
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                   ^^^
-                  source.luau meta.function.luau meta.parameters.luau
+                  source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
                      ^^^^
-                     source.luau meta.function.luau meta.parameters.luau comment.block.luau
+                     source.luau meta.function.luau meta.parameter.luau comment.block.luau
                          ^^^^^^^^^^^^
-                         source.luau meta.function.luau meta.parameters.luau comment.block.luau
+                         source.luau meta.function.luau meta.parameter.luau comment.block.luau
                                      ^^
-                                     source.luau meta.function.luau meta.parameters.luau comment.block.luau
+                                     source.luau meta.function.luau meta.parameter.luau comment.block.luau
                                        ^
-                                       source.luau meta.function.luau
+                                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >end
  ^^^
  source.luau keyword.control.luau

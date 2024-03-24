@@ -120,22 +120,24 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
               source.luau meta.function.luau
                ^
                source.luau meta.function.luau entity.name.type.luau
-                ^^^^
+                ^^^
                 source.luau meta.function.luau
+                   ^
+                   source.luau meta.function.luau
                     ^
-                    source.luau meta.function.luau
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                      ^^^
-                     source.luau meta.function.luau meta.parameters.luau
+                     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
                         ^
-                        source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                        source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
                          ^
-                         source.luau meta.function.luau meta.parameters.luau
+                         source.luau meta.function.luau meta.parameter.luau
                           ^
-                          source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
+                          source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                            ^^^
-                           source.luau meta.function.luau meta.parameters.luau
+                           source.luau meta.function.luau meta.parameter.luau
                               ^
-                              source.luau meta.function.luau
+                              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >end
  ^^^
  source.luau keyword.control.luau
