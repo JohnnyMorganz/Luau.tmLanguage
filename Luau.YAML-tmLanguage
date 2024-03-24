@@ -8,16 +8,34 @@ name: Luau
 scopeName: source.luau
 fileTypes: [luau]
 
-# TODO: type assertions
 # TODO: check if we really need to assign 'keyword.operator.type.luau' for ':'
-# TODO: comment not matching appropriately in function args - ' ((any) -> () | PromiseLike<T>)? -- reject', seems to not pick up the comma
 
 variables:
   matchingParentheses: (\(([^\(\)]|(\(([^\(\)]|\([^\(\)]*\))*\)))*\))
   lookAheadEndOfType: '[;),}\]:?\-\+\>](?!\s*[&\|])|$|\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\b'
 
 patterns:
-  - begin: "\\b(?:(local)\\s+)?(function)\\b(?![,:])"
+  - include: "#function-definition"
+  - include: "#number"
+  - include: "#string"
+  - include: "#shebang"
+  - include: "#comment"
+  - include: "#local-declaration"
+  - include: "#for-loop"
+  - include: "#type-alias-declaration"
+  - include: "#keyword"
+  - include: "#language_constant"
+  - include: "#standard_library"
+  - include: "#identifier"
+  - include: "#operator"
+  - include: "#parentheses"
+  - include: "#table"
+  - include: "#type_cast"
+  - include: "#type_annotation"
+
+repository:
+  function-definition:
+    begin: "\\b(?:(local)\\s+)?(function)\\b(?![,:])"
     beginCaptures:
       "1": { name: storage.modifier.local.luau } # OLD: keyword.local.luau
       "2": { name: keyword.control.luau }
@@ -51,42 +69,7 @@ patterns:
         name: variable.language.metamethod.luau
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
         name: entity.name.function.luau
-  - include: "#number"
-  - include: "#string"
-  - include: "#shebang"
-  - include: "#comment"
-  - include: "#local-declaration"
-  - include: "#for-loop"
-  - include: "#type-alias-declaration"
-  - include: "#keyword"
-  - include: "#language_constant"
-  - include: "#standard_library"
-  - include: "#identifier"
-  - include: "#operator"
-  - begin: "(\\()"
-    beginCaptures:
-      "1": { name: punctuation.arguments.begin.luau }
-    end: "(\\))"
-    endCaptures:
-      "1": { name: punctuation.arguments.end.luau }
-    patterns:
-      - match: ","
-        name: punctuation.separator.arguments.luau
-      - include: "source.luau"
-  - begin: "(\\{)"
-    beginCaptures:
-      "1": { name: punctuation.table.begin.luau }
-    end: "(\\})"
-    endCaptures:
-      "1": { name: punctuation.table.end.luau }
-    patterns:
-      - match: "[,;]"
-        name: punctuation.separator.fields.luau
-      - include: "source.luau"
-  - include: "#type_cast"
-  - include: "#type_annotation"
 
-repository:
   local-declaration:
     begin: "\\b(local)\\b"
     end: "(?=\\s*do\\b|\\s*[=;]|\\s*$)"
@@ -240,6 +223,30 @@ repository:
         name: keyword.operator.assignment.luau
       - match: "#|(?<!\\.)\\.{2}(?!\\.)"
         name: keyword.operator.other.luau
+
+  parentheses:
+    begin: "(\\()"
+    beginCaptures:
+      "1": { name: punctuation.arguments.begin.luau }
+    end: "(\\))"
+    endCaptures:
+      "1": { name: punctuation.arguments.end.luau }
+    patterns:
+      - match: ","
+        name: punctuation.separator.arguments.luau
+      - include: "source.luau"
+
+  table:
+    begin: "(\\{)"
+    beginCaptures:
+      "1": { name: punctuation.table.begin.luau }
+    end: "(\\})"
+    endCaptures:
+      "1": { name: punctuation.table.end.luau }
+    patterns:
+      - match: "[,;]"
+        name: punctuation.separator.fields.luau
+      - include: "source.luau"
 
   language_constant:
     patterns:
