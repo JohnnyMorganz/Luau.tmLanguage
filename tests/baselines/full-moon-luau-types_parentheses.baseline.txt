@@ -259,7 +259,7 @@ type IProperties = {
                                            ^
                                            source.luau keyword.operator.type.luau
                                             ^
-                                            source.luau meta.parameter.type.variable.luau entity.name.type.luau
+                                            source.luau entity.name.type.luau
                                              ^
                                              source.luau keyword.operator.type.luau
                                               ^
@@ -304,7 +304,7 @@ type IProperties = {
                                            ^
                                            source.luau keyword.operator.type.luau
                                             ^
-                                            source.luau meta.parameter.type.variable.luau entity.name.type.luau
+                                            source.luau entity.name.type.luau
                                              ^
                                              source.luau keyword.operator.type.luau
                                               ^
@@ -403,8 +403,10 @@ type IProperties = {
                          source.luau support.type.primitive.luau
                                ^
                                source.luau keyword.operator.type.luau
-                                ^^
-                                source.luau
+                                ^
+                                source.luau punctuation.separator.fields.type.luau
+                                 ^
+                                 source.luau
                                   ^^^^^^^^^^
                                   source.luau variable.property.luau
                                             ^
@@ -434,56 +436,52 @@ type IProperties = {
                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
 >  originalError: (Error & { extensions: any? }) -- new syntax
  ^^
- source.luau meta.function.luau meta.parameters.luau
+ source.luau meta.function.luau meta.parameter.luau
    ^^^^^^^^^^^^^
-   source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
                 ^
-                source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
                  ^
-                 source.luau meta.function.luau meta.parameters.luau
+                 source.luau meta.function.luau meta.parameter.luau
                   ^
-                  source.luau meta.function.luau meta.parameters.luau
+                  source.luau meta.function.luau meta.parameter.luau
                    ^^^^^
-                   source.luau meta.function.luau meta.parameters.luau entity.name.type.luau
+                   source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                         ^
-                        source.luau meta.function.luau meta.parameters.luau
+                        source.luau meta.function.luau meta.parameter.luau
                          ^
-                         source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                         source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
                           ^
-                          source.luau meta.function.luau meta.parameters.luau
+                          source.luau meta.function.luau meta.parameter.luau
                            ^
-                           source.luau meta.function.luau meta.parameters.luau
+                           source.luau meta.function.luau meta.parameter.luau
                             ^
-                            source.luau meta.function.luau meta.parameters.luau
+                            source.luau meta.function.luau meta.parameter.luau
                              ^^^^^^^^^^
-                             source.luau meta.function.luau meta.parameters.luau variable.property.luau
+                             source.luau meta.function.luau meta.parameter.luau variable.property.luau
                                        ^
-                                       source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
                                         ^
-                                        source.luau meta.function.luau meta.parameters.luau
+                                        source.luau meta.function.luau meta.parameter.luau
                                          ^^^
-                                         source.luau meta.function.luau meta.parameters.luau support.type.primitive.luau
+                                         source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
                                             ^
-                                            source.luau meta.function.luau meta.parameters.luau keyword.operator.type.luau
+                                            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
                                              ^
-                                             source.luau meta.function.luau meta.parameters.luau
+                                             source.luau meta.function.luau meta.parameter.luau
                                               ^
-                                              source.luau meta.function.luau meta.parameters.luau
+                                              source.luau meta.function.luau meta.parameter.luau
                                                ^
-                                               source.luau meta.function.luau meta.parameters.luau
+                                               source.luau meta.function.luau meta.parameter.luau
                                                 ^
-                                                source.luau meta.function.luau meta.parameters.luau
+                                                source.luau meta.function.luau meta.parameter.luau
                                                  ^^
-                                                 source.luau meta.function.luau meta.parameters.luau comment.line.double-dash.luau
+                                                 source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
                                                    ^^^^^^^^^^^
-                                                   source.luau meta.function.luau meta.parameters.luau comment.line.double-dash.luau
+                                                   source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
 >): GError?
  ^
- source.luau meta.function.luau
-  ^
-  source.luau meta.function.luau keyword.operator.type.luau
-   ^
-   source.luau meta.function.luau
+ source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
     ^^^^^^
     source.luau meta.function.luau entity.name.type.luau
           ^
@@ -579,8 +577,8 @@ type IProperties = {
                                                                                                            source.luau
                                                                                                             ^
                                                                                                             source.luau keyword.operator.type.luau
-                                                                                                             ^^
-                                                                                                             source.luau
+                                                                                                             ^
+                                                                                                             source.luau punctuation.separator.fields.type.luau
 >}
  ^
  source.luau

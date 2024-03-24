@@ -222,8 +222,10 @@ end
                    source.luau
                     ^^^^^^
                     source.luau support.type.primitive.luau
-                          ^^
-                          source.luau
+                          ^
+                          source.luau punctuation.separator.fields.type.luau
+                           ^
+                           source.luau
                             ^
                             source.luau variable.property.luau
                              ^
@@ -635,8 +637,8 @@ end
        source.luau
         ^^^^^^
         source.luau support.type.primitive.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.separator.fields.type.luau
 >  baz: number,
  ^^
  source.luau
@@ -648,8 +650,8 @@ end
        source.luau
         ^^^^^^
         source.luau support.type.primitive.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.separator.fields.type.luau
 >}
  ^
  source.luau

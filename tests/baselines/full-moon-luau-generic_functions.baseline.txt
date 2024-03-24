@@ -111,12 +111,14 @@ end
    source.luau variable.property.luau
       ^
       source.luau keyword.operator.type.luau
-       ^^
+       ^
        source.luau
+        ^
+        source.luau keyword.operator.type.luau
          ^
          source.luau entity.name.type.luau
           ^
-          source.luau
+          source.luau keyword.operator.type.luau
            ^
            source.luau
 >  	a: T,
@@ -172,8 +174,8 @@ end
        source.luau
         ^
         source.luau entity.name.type.luau
-         ^^
-         source.luau
+         ^
+         source.luau punctuation.separator.fields.type.luau
 >}
  ^
  source.luau
@@ -210,12 +212,14 @@ end
    source.luau variable.property.luau
       ^
       source.luau keyword.operator.type.luau
-       ^^
+       ^
        source.luau
+        ^
+        source.luau keyword.operator.type.luau
          ^
          source.luau entity.name.type.luau
           ^
-          source.luau
+          source.luau keyword.operator.type.luau
            ^
            source.luau
 >  	a: T,
@@ -297,8 +301,8 @@ end
                         source.luau
                          ^
                          source.luau keyword.operator.type.luau
-                          ^^
-                          source.luau
+                          ^
+                          source.luau punctuation.separator.fields.type.luau
 >}
  ^
  source.luau
