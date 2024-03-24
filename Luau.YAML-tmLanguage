@@ -215,12 +215,12 @@ repository:
 
   operator:
     patterns:
-      - match: "\\+|-|%|\\*|\\/|\\^"
-        name: "keyword.operator.arithmetic.luau"
       - match: "==|~=|!=|<=?|>=?"
         name: keyword.operator.comparison.luau
-      - match: "\\+=|-=|/=|\\*=|%=|\\^=|\\.\\.=|="
+      - match: "\\+=|-=|/=|//=|\\*=|%=|\\^=|\\.\\.=|="
         name: keyword.operator.assignment.luau
+      - match: "\\+|-|%|\\*|\\/\\/|\\/|\\^"
+        name: "keyword.operator.arithmetic.luau"
       - match: "#|(?<!\\.)\\.{2}(?!\\.)"
         name: keyword.operator.other.luau
 

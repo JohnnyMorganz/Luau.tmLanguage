@@ -7,6 +7,7 @@ x += 5
 x -= 5
 x *= 5
 x /= 5
+x //= 5
 x %= 5
 x ^= 5
 
@@ -14,6 +15,7 @@ x += y
 x -= y
 x *= y
 x /= y
+x //= y
 x %= y
 x ^= y
 
@@ -62,10 +64,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -75,10 +75,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -88,10 +86,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -101,23 +97,30 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
       source.luau constant.numeric.decimal.luau
+>x //= 5
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^^^
+   source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^
+       source.luau constant.numeric.decimal.luau
 >x %= 5
  ^
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -127,10 +130,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -143,10 +144,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -156,10 +155,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -169,10 +166,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -182,23 +177,30 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
       source.luau variable.other.readwrite.luau
+>x //= y
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^^^
+   source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
 >x %= y
  ^
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^
@@ -208,10 +210,8 @@ str1 ..= str2
  source.luau variable.other.readwrite.luau
   ^
   source.luau
-   ^
-   source.luau keyword.operator.arithmetic.luau
-    ^
-    source.luau keyword.operator.assignment.luau
+   ^^
+   source.luau keyword.operator.assignment.luau
      ^
      source.luau
       ^

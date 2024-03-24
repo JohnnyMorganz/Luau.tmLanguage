@@ -1,0 +1,58 @@
+original file
+-----------------------------------
+gui.Label.Text = "LOADING DATA" .. ("."):rep(dotCount)
+
+-----------------------------------
+
+>gui.Label.Text = "LOADING DATA" .. ("."):rep(dotCount)
+ ^^^
+ source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^^^^^
+     source.luau variable.other.property.luau
+          ^
+          source.luau
+           ^^^^
+           source.luau variable.other.property.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau string.quoted.double.luau
+                   ^^^^^^^^^^^^
+                   source.luau string.quoted.double.luau
+                               ^
+                               source.luau string.quoted.double.luau
+                                ^
+                                source.luau
+                                 ^^
+                                 source.luau keyword.operator.other.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau punctuation.arguments.begin.luau
+                                     ^
+                                     source.luau string.quoted.double.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+                                         ^
+                                         source.luau
+                                          ^^^
+                                          source.luau entity.name.function.luau
+                                             ^
+                                             source.luau punctuation.arguments.begin.luau
+                                              ^^^^^^^^
+                                              source.luau variable.other.readwrite.luau
+                                                      ^
+                                                      source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau

@@ -1,0 +1,104 @@
+original file
+-----------------------------------
+type Config = {
+    option1: string??, -- you probably need it once in a while
+    option2: string???, -- once a year
+    option3: string?????? -- once in your life!
+}
+-----------------------------------
+
+>type Config = {
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^
+      source.luau entity.name.type.alias.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau
+>    option1: string??, -- you probably need it once in a while
+ ^^^^
+ source.luau
+     ^^^^^^^
+     source.luau variable.property.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.type.primitive.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau keyword.operator.type.luau
+                      ^
+                      source.luau punctuation.separator.fields.type.luau
+                       ^
+                       source.luau
+                        ^^
+                        source.luau comment.line.double-dash.luau
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          source.luau comment.line.double-dash.luau
+>    option2: string???, -- once a year
+ ^^^^
+ source.luau
+     ^^^^^^^
+     source.luau variable.property.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.type.primitive.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau keyword.operator.type.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau punctuation.separator.fields.type.luau
+                        ^
+                        source.luau
+                         ^^
+                         source.luau comment.line.double-dash.luau
+                           ^^^^^^^^^^^^
+                           source.luau comment.line.double-dash.luau
+>    option3: string?????? -- once in your life!
+ ^^^^
+ source.luau
+     ^^^^^^^
+     source.luau variable.property.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau support.type.primitive.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau keyword.operator.type.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^
+                        source.luau keyword.operator.type.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau comment.line.double-dash.luau
+                             ^^^^^^^^^^^^^^^^^^^
+                             source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau

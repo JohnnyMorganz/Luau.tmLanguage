@@ -1,0 +1,158 @@
+original file
+-----------------------------------
+local _ = `{ {}}`
+local _ = `{--[[]]{}}`
+local _ = `\{{true}`
+local _ = `{ {true}}`
+-- TODO: https://github.com/Roblox/luau/issues/1019
+-- local _ = `{ {hello}}`
+local _ = `\{{hello}}`
+-----------------------------------
+
+>local _ = `{ {}}`
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.constant.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau string.interpolated.luau
+            ^
+            source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+             ^
+             source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+              ^
+              source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.begin.luau
+               ^
+               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.end.luau
+                ^
+                source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                 ^
+                 source.luau string.interpolated.luau
+>local _ = `{--[[]]{}}`
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.constant.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau string.interpolated.luau
+            ^
+            source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+             ^^^^
+             source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau comment.block.luau
+                 ^^
+                 source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau comment.block.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.begin.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.end.luau
+                     ^
+                     source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                      ^
+                      source.luau string.interpolated.luau
+>local _ = `\{{true}`
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.constant.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau string.interpolated.luau
+            ^^
+            source.luau string.interpolated.luau constant.character.escape.luau
+              ^
+              source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+               ^^^^
+               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.language.boolean.true.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                    ^
+                    source.luau string.interpolated.luau
+>local _ = `{ {true}}`
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.constant.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau string.interpolated.luau
+            ^
+            source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+             ^
+             source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+              ^
+              source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.begin.luau
+               ^^^^
+               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau constant.language.boolean.true.luau
+                   ^
+                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.end.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                     ^
+                     source.luau string.interpolated.luau
+>-- TODO: https://github.com/Roblox/luau/issues/1019
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>-- local _ = `{ {hello}}`
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local _ = `\{{hello}}`
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.constant.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau string.interpolated.luau
+            ^^
+            source.luau string.interpolated.luau constant.character.escape.luau
+              ^
+              source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+               ^^^^^
+               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+                    ^
+                    source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                     ^
+                     source.luau string.interpolated.luau
+                      ^
+                      source.luau string.interpolated.luau
