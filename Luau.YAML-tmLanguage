@@ -44,9 +44,11 @@ patterns:
           - begin: ":"
             beginCaptures:
               "0": { name: keyword.operator.type.luau }
-            end: "(?=[\\),])" # TODO: potentially buggy
+            end: "(?=[\\),])"
             patterns:
               - include: "#type_literal"
+      - match: "\\b(__add|__call|__concat|__div|__eq|__index|__le|__len|__lt|__metatable|__mod|__mode|__mul|__newindex|__pow|__sub|__tostring|__unm|__iter|__idiv)\\b"
+        name: variable.language.metamethod.luau
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
         name: entity.name.function.luau
   - include: "#number"

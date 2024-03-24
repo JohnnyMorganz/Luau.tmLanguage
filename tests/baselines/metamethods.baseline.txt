@@ -1,0 +1,52 @@
+original file
+-----------------------------------
+function Foo:__index()
+end
+
+function Foo:__iter()
+  
+end
+-----------------------------------
+
+>function Foo:__index()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau
+              ^^^^^^^
+              source.luau meta.function.luau variable.language.metamethod.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function Foo:__iter()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau
+              ^^^^^^
+              source.luau meta.function.luau variable.language.metamethod.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  
+ ^^^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
