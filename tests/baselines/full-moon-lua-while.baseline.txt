@@ -22,8 +22,10 @@ end
  source.luau
    ^^^^
    source.luau entity.name.function.luau
-       ^^^
-       source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
 >  break
  ^^
  source.luau

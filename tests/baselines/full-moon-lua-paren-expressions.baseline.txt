@@ -22,8 +22,10 @@ local x = 1 + (2 - 3)
             source.luau
              ^
              source.luau keyword.operator.arithmetic.luau
-              ^^
+              ^
               source.luau
+               ^
+               source.luau punctuation.arguments.begin.luau
                 ^
                 source.luau constant.numeric.decimal.luau
                  ^
@@ -34,5 +36,5 @@ local x = 1 + (2 - 3)
                    source.luau
                     ^
                     source.luau constant.numeric.decimal.luau
-                     ^^
-                     source.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau

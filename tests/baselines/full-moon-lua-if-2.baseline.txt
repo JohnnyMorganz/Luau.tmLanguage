@@ -23,8 +23,10 @@ end
  source.luau
    ^^^
    source.luau entity.name.function.luau
-      ^^^
-      source.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.end.luau
 >else
  ^^^^
  source.luau keyword.control.luau
@@ -33,8 +35,10 @@ end
  source.luau
    ^^^
    source.luau entity.name.function.luau
-      ^^^
-      source.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.end.luau
 >end
  ^^^
  source.luau keyword.control.luau

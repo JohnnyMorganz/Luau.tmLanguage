@@ -91,11 +91,15 @@ local inner = returnsComplexType().Key[1]
               ^^^^^^
               source.luau support.function.luau
                     ^
-                    source.luau
+                    source.luau punctuation.arguments.begin.typeof.luau
                      ^^^^^^^^^^^^^^^^^^
                      source.luau entity.name.function.luau
-                                       ^^^
-                                       source.luau
+                                       ^
+                                       source.luau punctuation.arguments.begin.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+                                         ^
+                                         source.luau
                                           ^^^
                                           source.luau variable.other.property.luau
                                              ^
@@ -105,7 +109,7 @@ local inner = returnsComplexType().Key[1]
                                                ^
                                                source.luau
                                                 ^
-                                                source.luau
+                                                source.luau punctuation.arguments.end.typeof.luau
 >
  ^
  source.luau
@@ -129,8 +133,12 @@ local inner = returnsComplexType().Key[1]
               source.luau
                ^^^^^^^^^^^^^^^^^^
                source.luau entity.name.function.luau
-                                 ^^^
-                                 source.luau
+                                 ^
+                                 source.luau punctuation.arguments.begin.luau
+                                  ^
+                                  source.luau punctuation.arguments.end.luau
+                                   ^
+                                   source.luau
                                     ^^^
                                     source.luau variable.other.property.luau
                                        ^

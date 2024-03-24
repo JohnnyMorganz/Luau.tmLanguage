@@ -9,7 +9,7 @@ print("foo\
  ^^^^^
  source.luau support.function.luau
       ^
-      source.luau
+      source.luau punctuation.arguments.begin.luau
        ^
        source.luau string.quoted.double.luau
         ^^^^^
@@ -19,8 +19,8 @@ print("foo\
  source.luau string.quoted.double.luau
       ^
       source.luau string.quoted.double.luau
-       ^^
-       source.luau
+       ^
+       source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau

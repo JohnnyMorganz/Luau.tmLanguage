@@ -64,6 +64,16 @@ patterns:
   - include: "#standard_library"
   - include: "#identifier"
   - include: "#operator"
+  - begin: "(\\()"
+    beginCaptures:
+      "1": { name: punctuation.arguments.begin.luau }
+    end: "(\\))"
+    endCaptures:
+      "1": { name: punctuation.arguments.end.luau }
+    patterns:
+      - match: ","
+        name: punctuation.separator.arguments.luau
+      - include: "source.luau"
   - include: "#type_cast"
   - include: "#type_annotation"
 
@@ -328,10 +338,13 @@ repository:
         name: constant.language.boolean.true.luau
       - name: support.type.primitive.luau
         match: "\\b(nil|string|number|boolean|thread|userdata|symbol|any)\\b"
-      - begin: "\\b(typeof)\\b\\(" # TODO: assign scope to punctuation?
+      - begin: "\\b(typeof)\\b(\\()" # TODO: assign scope to punctuation?
         beginCaptures:
           "1": { name: support.function.luau }
-        end: "\\)"
+          "2": { name: punctuation.arguments.begin.typeof.luau }
+        end: "(\\))"
+        endCaptures:
+          "1": { name: punctuation.arguments.end.typeof.luau }
         patterns:
           - include: "source.luau"
       - begin: "(<)"

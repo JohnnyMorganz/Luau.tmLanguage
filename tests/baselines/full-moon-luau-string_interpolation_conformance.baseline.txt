@@ -91,15 +91,17 @@ return "OK"
    ^^^^^^
    source.luau support.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^^^^^^
           source.luau support.function.luau
                 ^
-                source.luau
+                source.luau punctuation.arguments.begin.luau
                  ^^^^
                  source.luau variable.other.readwrite.luau
-                     ^^
-                     source.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau
+                      ^
+                      source.luau
                        ^^
                        source.luau keyword.operator.comparison.luau
                          ^
@@ -110,8 +112,10 @@ return "OK"
                            source.luau string.quoted.double.luau
                                  ^
                                  source.luau string.quoted.double.luau
-                                  ^^
-                                  source.luau
+                                  ^
+                                  source.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau
                                     ^
                                     source.luau string.quoted.double.luau
                                      ^^^^^^^^^^
@@ -127,26 +131,30 @@ return "OK"
                                                     ^^^^^^
                                                     source.luau support.function.luau
                                                           ^
-                                                          source.luau
+                                                          source.luau punctuation.arguments.begin.luau
                                                            ^^^^
                                                            source.luau variable.other.readwrite.luau
-                                                               ^^^
-                                                               source.luau
+                                                               ^
+                                                               source.luau punctuation.arguments.end.luau
+                                                                ^
+                                                                source.luau punctuation.arguments.end.luau
 >  assert(typeof(right) == "string", "right is a " .. typeof(right))
  ^^
  source.luau
    ^^^^^^
    source.luau support.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^^^^^^
           source.luau support.function.luau
                 ^
-                source.luau
+                source.luau punctuation.arguments.begin.luau
                  ^^^^^
                  source.luau variable.other.readwrite.luau
-                      ^^
-                      source.luau
+                      ^
+                      source.luau punctuation.arguments.end.luau
+                       ^
+                       source.luau
                         ^^
                         source.luau keyword.operator.comparison.luau
                           ^
@@ -157,8 +165,10 @@ return "OK"
                             source.luau string.quoted.double.luau
                                   ^
                                   source.luau string.quoted.double.luau
-                                   ^^
-                                   source.luau
+                                   ^
+                                   source.luau punctuation.separator.arguments.luau
+                                    ^
+                                    source.luau
                                      ^
                                      source.luau string.quoted.double.luau
                                       ^^^^^^^^^^^
@@ -174,11 +184,13 @@ return "OK"
                                                       ^^^^^^
                                                       source.luau support.function.luau
                                                             ^
-                                                            source.luau
+                                                            source.luau punctuation.arguments.begin.luau
                                                              ^^^^^
                                                              source.luau variable.other.readwrite.luau
-                                                                  ^^^
-                                                                  source.luau
+                                                                  ^
+                                                                  source.luau punctuation.arguments.end.luau
+                                                                   ^
+                                                                   source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -209,27 +221,33 @@ return "OK"
     ^^^^^
     source.luau support.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^^^^^^^^^^^^^
           source.luau support.function.luau
                        ^
-                       source.luau
+                       source.luau punctuation.arguments.begin.luau
                         ^
                         source.luau string.quoted.double.luau
                          ^^^^^^^^
                          source.luau string.quoted.double.luau
                                  ^
                                  source.luau string.quoted.double.luau
-                                  ^^
-                                  source.luau
+                                  ^
+                                  source.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau
                                     ^^^^
                                     source.luau variable.other.readwrite.luau
-                                        ^^
-                                        source.luau
+                                        ^
+                                        source.luau punctuation.separator.arguments.luau
+                                         ^
+                                         source.luau
                                           ^^^^^
                                           source.luau variable.other.readwrite.luau
-                                               ^^^
-                                               source.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
 >  end
  ^^
  source.luau
@@ -245,7 +263,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^
@@ -262,21 +280,23 @@ return "OK"
                          source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                           ^
                           source.luau string.interpolated.luau
-                           ^^
-                           source.luau
+                           ^
+                           source.luau punctuation.separator.arguments.luau
+                            ^
+                            source.luau
                              ^
                              source.luau string.quoted.double.luau
                               ^^^^^^^^^^^
                               source.luau string.quoted.double.luau
                                          ^
                                          source.luau string.quoted.double.luau
-                                          ^^
-                                          source.luau
+                                          ^
+                                          source.luau punctuation.arguments.end.luau
 >assertEq(`Welcome {"to"} {"Luau"}!`, "Welcome to Luau!")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^
@@ -307,16 +327,18 @@ return "OK"
                                   source.luau string.interpolated.luau
                                    ^
                                    source.luau string.interpolated.luau
-                                    ^^
-                                    source.luau
+                                    ^
+                                    source.luau punctuation.separator.arguments.luau
+                                     ^
+                                     source.luau
                                       ^
                                       source.luau string.quoted.double.luau
                                        ^^^^^^^^^^^^^^^^
                                        source.luau string.quoted.double.luau
                                                        ^
                                                        source.luau string.quoted.double.luau
-                                                        ^^
-                                                        source.luau
+                                                        ^
+                                                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -324,7 +346,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^
@@ -345,16 +367,18 @@ return "OK"
                          source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                           ^
                           source.luau string.interpolated.luau
-                           ^^
-                           source.luau
+                           ^
+                           source.luau punctuation.separator.arguments.luau
+                            ^
+                            source.luau
                              ^
                              source.luau string.quoted.double.luau
                               ^^^^^^^^^
                               source.luau string.quoted.double.luau
                                        ^
                                        source.luau string.quoted.double.luau
-                                        ^^
-                                        source.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -362,7 +386,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^
@@ -421,16 +445,18 @@ return "OK"
                                      source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                                       ^
                                       source.luau string.interpolated.luau
-                                       ^^
-                                       source.luau
+                                       ^
+                                       source.luau punctuation.separator.arguments.luau
+                                        ^
+                                        source.luau
                                          ^
                                          source.luau string.quoted.double.luau
                                           ^^^^^^^^^^^^^
                                           source.luau string.quoted.double.luau
                                                        ^
                                                        source.luau string.quoted.double.luau
-                                                        ^^
-                                                        source.luau
+                                                        ^
+                                                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -467,7 +493,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -477,11 +503,13 @@ return "OK"
                                        ^^^^^^^^^^^^
                                        source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.function.luau
                                                    ^
-                                                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                                                   source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.arguments.begin.luau
                                                     ^^^^^
                                                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
-                                                         ^^
-                                                         source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                                                         ^
+                                                         source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.separator.arguments.luau
+                                                          ^
+                                                          source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
                                                            ^
                                                            source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
                                                             ^^
@@ -489,21 +517,23 @@ return "OK"
                                                               ^
                                                               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau string.quoted.double.luau
                                                                ^
-                                                               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                                                               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.arguments.end.luau
                                                                 ^
                                                                 source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                                                                  ^
                                                                  source.luau string.interpolated.luau
-                                                                  ^^
-                                                                  source.luau
+                                                                  ^
+                                                                  source.luau punctuation.separator.arguments.luau
+                                                                   ^
+                                                                   source.luau
                                                                     ^
                                                                     source.luau string.quoted.double.luau
                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                                                      source.luau string.quoted.double.luau
                                                                                                           ^
                                                                                                           source.luau string.quoted.double.luau
-                                                                                                           ^^
-                                                                                                           source.luau
+                                                                                                           ^
+                                                                                                           source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -511,7 +541,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^
@@ -524,16 +554,18 @@ return "OK"
                        source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                         ^
                         source.luau string.interpolated.luau
-                         ^^
-                         source.luau
+                         ^
+                         source.luau punctuation.separator.arguments.luau
+                          ^
+                          source.luau
                            ^
                            source.luau string.quoted.double.luau
                             ^^^^^^^^^^^
                             source.luau string.quoted.double.luau
                                        ^
                                        source.luau string.quoted.double.luau
-                                        ^^
-                                        source.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -560,7 +592,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^
@@ -579,16 +611,18 @@ return "OK"
   source.luau string.interpolated.luau
    ^
    source.luau string.interpolated.luau
-    ^^
-    source.luau
+    ^
+    source.luau punctuation.separator.arguments.luau
+     ^
+     source.luau
       ^
       source.luau string.quoted.double.luau
        ^^^^^^^^^^^^^^^^
        source.luau string.quoted.double.luau
                        ^
                        source.luau string.quoted.double.luau
-                        ^^
-                        source.luau
+                        ^
+                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -603,8 +637,10 @@ return "OK"
                                source.luau
                                 ^
                                 source.luau keyword.operator.assignment.luau
-                                 ^^
+                                 ^
                                  source.luau
+                                  ^
+                                  source.luau punctuation.arguments.begin.luau
                                    ^^^^^^^^
                                    source.luau meta.function.luau keyword.control.luau
                                            ^
@@ -627,13 +663,17 @@ return "OK"
                                                            source.luau
                                                             ^^^
                                                             source.luau keyword.control.luau
-                                                               ^^^^
-                                                               source.luau
+                                                               ^
+                                                               source.luau punctuation.arguments.end.luau
+                                                                ^
+                                                                source.luau punctuation.arguments.begin.luau
+                                                                 ^
+                                                                 source.luau punctuation.arguments.end.luau
 >assertEq(`Welcome to {nameNotConstantEvaluated}!`, "Welcome to Luau!")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^
@@ -648,16 +688,18 @@ return "OK"
                                                 source.luau string.interpolated.luau
                                                  ^
                                                  source.luau string.interpolated.luau
-                                                  ^^
-                                                  source.luau
+                                                  ^
+                                                  source.luau punctuation.separator.arguments.luau
+                                                   ^
+                                                   source.luau
                                                     ^
                                                     source.luau string.quoted.double.luau
                                                      ^^^^^^^^^^^^^^^^
                                                      source.luau string.quoted.double.luau
                                                                      ^
                                                                      source.luau string.quoted.double.luau
-                                                                      ^^
-                                                                      source.luau
+                                                                      ^
+                                                                      source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -665,7 +707,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^
@@ -680,16 +722,18 @@ return "OK"
                            source.luau string.interpolated.luau
                                           ^
                                           source.luau string.interpolated.luau
-                                           ^^
-                                           source.luau
+                                           ^
+                                           source.luau punctuation.separator.arguments.luau
+                                            ^
+                                            source.luau
                                              ^
                                              source.luau string.quoted.double.luau
                                               ^^^^^^^^^^^^^^^^^^^^^^^
                                               source.luau string.quoted.double.luau
                                                                      ^
                                                                      source.luau string.quoted.double.luau
-                                                                      ^^
-                                                                      source.luau
+                                                                      ^
+                                                                      source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -697,7 +741,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^
@@ -713,8 +757,10 @@ return "OK"
        source.luau string.interpolated.luau
         ^
         source.luau string.interpolated.luau
-         ^^
-         source.luau
+         ^
+         source.luau punctuation.separator.arguments.luau
+          ^
+          source.luau
            ^
            source.luau string.quoted.double.luau
             ^^^^^^^^^^^
@@ -725,8 +771,8 @@ return "OK"
                          source.luau string.quoted.double.luau
                               ^
                               source.luau string.quoted.double.luau
-                               ^^
-                               source.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -734,23 +780,25 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^
            source.luau string.interpolated.luau
                 ^
                 source.luau string.interpolated.luau
-                 ^^
-                 source.luau
+                 ^
+                 source.luau punctuation.separator.arguments.luau
+                  ^
+                  source.luau
                    ^
                    source.luau string.quoted.double.luau
                     ^^^^^
                     source.luau string.quoted.double.luau
                          ^
                          source.luau string.quoted.double.luau
-                          ^^
-                          source.luau
+                          ^
+                          source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -758,7 +806,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^^^
@@ -769,21 +817,23 @@ return "OK"
                             source.luau string.interpolated.luau
                              ^
                              source.luau string.interpolated.luau
-                              ^^
-                              source.luau
+                              ^
+                              source.luau punctuation.separator.arguments.luau
+                               ^
+                               source.luau
                                 ^
                                 source.luau string.quoted.double.luau
                                  ^^^^^^^^^^^^^^^^^
                                  source.luau string.quoted.double.luau
                                                   ^
                                                   source.luau string.quoted.double.luau
-                                                   ^^
-                                                   source.luau
+                                                   ^
+                                                   source.luau punctuation.arguments.end.luau
 >assertEq(`Escaped brace \{} with {"expression"}`, "Escaped brace {} with expression")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^^
@@ -804,42 +854,46 @@ return "OK"
                                                source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                                                 ^
                                                 source.luau string.interpolated.luau
-                                                 ^^
-                                                 source.luau
+                                                 ^
+                                                 source.luau punctuation.separator.arguments.luau
+                                                  ^
+                                                  source.luau
                                                    ^
                                                    source.luau string.quoted.double.luau
                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                                     source.luau string.quoted.double.luau
                                                                                     ^
                                                                                     source.luau string.quoted.double.luau
-                                                                                     ^^
-                                                                                     source.luau
+                                                                                     ^
+                                                                                     source.luau punctuation.arguments.end.luau
 >assertEq(`Backslash \ that escapes the space is not a part of the string...`, "Backslash  that escapes the space is not a part of the string...")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
            source.luau string.interpolated.luau
                                                                             ^
                                                                             source.luau string.interpolated.luau
-                                                                             ^^
-                                                                             source.luau
+                                                                             ^
+                                                                             source.luau punctuation.separator.arguments.luau
+                                                                              ^
+                                                                              source.luau
                                                                                ^
                                                                                source.luau string.quoted.double.luau
                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                                                                 source.luau string.quoted.double.luau
                                                                                                                                                 ^
                                                                                                                                                 source.luau string.quoted.double.luau
-                                                                                                                                                 ^^
-                                                                                                                                                 source.luau
+                                                                                                                                                 ^
+                                                                                                                                                 source.luau punctuation.arguments.end.luau
 >assertEq(`Escaped backslash \\`, "Escaped backslash \\")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^^^^^^
@@ -848,8 +902,10 @@ return "OK"
                              source.luau string.interpolated.luau constant.character.escape.luau
                                ^
                                source.luau string.interpolated.luau
-                                ^^
-                                source.luau
+                                ^
+                                source.luau punctuation.separator.arguments.luau
+                                 ^
+                                 source.luau
                                   ^
                                   source.luau string.quoted.double.luau
                                    ^^^^^^^^^^^^^^^^^^
@@ -858,13 +914,13 @@ return "OK"
                                                      source.luau string.quoted.double.luau constant.character.escape.luau
                                                        ^
                                                        source.luau string.quoted.double.luau
-                                                        ^^
-                                                        source.luau
+                                                        ^
+                                                        source.luau punctuation.arguments.end.luau
 >assertEq(`Escaped backtick: \``, "Escaped backtick: `")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^^^^^^^^^^^
@@ -873,16 +929,18 @@ return "OK"
                              source.luau string.interpolated.luau constant.character.escape.luau
                                ^
                                source.luau string.interpolated.luau
-                                ^^
-                                source.luau
+                                ^
+                                source.luau punctuation.separator.arguments.luau
+                                 ^
+                                 source.luau
                                   ^
                                   source.luau string.quoted.double.luau
                                    ^^^^^^^^^^^^^^^^^^^
                                    source.luau string.quoted.double.luau
                                                       ^
                                                       source.luau string.quoted.double.luau
-                                                       ^^
-                                                       source.luau
+                                                       ^
+                                                       source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -890,7 +948,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^
@@ -917,16 +975,18 @@ return "OK"
                                                    source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                                                     ^
                                                     source.luau string.interpolated.luau
-                                                     ^^
-                                                     source.luau
+                                                     ^
+                                                     source.luau punctuation.separator.arguments.luau
+                                                      ^
+                                                      source.luau
                                                        ^
                                                        source.luau string.quoted.double.luau
                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                                         source.luau string.quoted.double.luau
                                                                                          ^
                                                                                          source.luau string.quoted.double.luau
-                                                                                          ^^
-                                                                                          source.luau
+                                                                                          ^
+                                                                                          source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -934,7 +994,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^
@@ -967,16 +1027,18 @@ return "OK"
                            source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                             ^
                             source.luau string.interpolated.luau
-                             ^^
-                             source.luau
+                             ^
+                             source.luau punctuation.separator.arguments.luau
+                              ^
+                              source.luau
                                ^
                                source.luau string.quoted.double.luau
                                 ^^^^^^^
                                 source.luau string.quoted.double.luau
                                        ^
                                        source.luau string.quoted.double.luau
-                                        ^^
-                                        source.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -999,7 +1061,7 @@ return "OK"
  ^^^^^^
  source.luau support.function.luau
        ^
-       source.luau
+       source.luau punctuation.arguments.begin.luau
         ^
         source.luau string.interpolated.luau
          ^^^^^^^^^
@@ -1026,8 +1088,8 @@ return "OK"
                                         source.luau string.quoted.double.luau
                                                            ^
                                                            source.luau string.quoted.double.luau
-                                                            ^^
-                                                            source.luau
+                                                            ^
+                                                            source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -1077,48 +1139,56 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^^^^^^^^^^^^^
           source.luau entity.name.function.luau
                        ^
-                       source.luau
+                       source.luau punctuation.arguments.begin.luau
                         ^
                         source.luau string.quoted.double.luau
                          ^^^^^
                          source.luau string.quoted.double.luau
                               ^
                               source.luau string.quoted.double.luau
-                               ^^^
-                               source.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+                                ^
+                                source.luau punctuation.separator.arguments.luau
+                                 ^
+                                 source.luau
                                   ^
                                   source.luau string.quoted.double.luau
                                    ^^^^^^^^^^^^^^
                                    source.luau string.quoted.double.luau
                                                  ^
                                                  source.luau string.quoted.double.luau
-                                                  ^^
-                                                  source.luau
+                                                  ^
+                                                  source.luau punctuation.arguments.end.luau
 >assertEq(shadowsString(1), "Value is 1")
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^^^^^^^^^^^^^
           source.luau entity.name.function.luau
                        ^
-                       source.luau
+                       source.luau punctuation.arguments.begin.luau
                         ^
                         source.luau constant.numeric.decimal.luau
-                         ^^^
-                         source.luau
+                         ^
+                         source.luau punctuation.arguments.end.luau
+                          ^
+                          source.luau punctuation.separator.arguments.luau
+                           ^
+                           source.luau
                             ^
                             source.luau string.quoted.double.luau
                              ^^^^^^^^^^
                              source.luau string.quoted.double.luau
                                        ^
                                        source.luau string.quoted.double.luau
-                                        ^^
-                                        source.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -1126,7 +1196,7 @@ return "OK"
  ^^^^^^^^
  source.luau entity.name.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
            ^^^^^^^^
@@ -1135,8 +1205,10 @@ return "OK"
                    source.luau string.interpolated.luau constant.character.escape.luau
                      ^
                      source.luau string.interpolated.luau
-                      ^^
-                      source.luau
+                      ^
+                      source.luau punctuation.separator.arguments.luau
+                       ^
+                       source.luau
                         ^
                         source.luau string.quoted.double.luau
                          ^
@@ -1145,8 +1217,8 @@ return "OK"
                           source.luau string.quoted.double.luau constant.character.escape.luau
                             ^
                             source.luau string.quoted.double.luau
-                             ^^
-                             source.luau
+                             ^
+                             source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau

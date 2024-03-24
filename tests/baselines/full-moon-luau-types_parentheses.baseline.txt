@@ -371,11 +371,11 @@ type IProperties = {
                ^^^^^^
                source.luau support.function.luau
                      ^
-                     source.luau
+                     source.luau punctuation.arguments.begin.typeof.luau
                       ^^^^^^
                       source.luau variable.other.readwrite.luau
                             ^
-                            source.luau
+                            source.luau punctuation.arguments.end.typeof.luau
 >type Error = { message: string?, stacktrace: string? }
  ^^^^
  source.luau storage.type.luau

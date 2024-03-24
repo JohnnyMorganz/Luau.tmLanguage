@@ -7,12 +7,12 @@ call([[doge]])
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^^
       source.luau string.other.multiline.luau
         ^^^^
         source.luau string.other.multiline.luau
             ^^
             source.luau string.other.multiline.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.arguments.end.luau

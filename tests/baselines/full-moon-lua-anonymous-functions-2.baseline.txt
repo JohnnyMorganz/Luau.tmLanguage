@@ -9,7 +9,7 @@ end)
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^^^^^^^^
       source.luau meta.function.luau keyword.control.luau
               ^
@@ -22,17 +22,17 @@ end)
    ^^^
    source.luau entity.name.function.luau
       ^
-      source.luau
+      source.luau punctuation.arguments.begin.luau
        ^
        source.luau string.quoted.double.luau
         ^^^
         source.luau string.quoted.double.luau
            ^
            source.luau string.quoted.double.luau
-            ^^
-            source.luau
+            ^
+            source.luau punctuation.arguments.end.luau
 >end)
  ^^^
  source.luau keyword.control.luau
-    ^^
-    source.luau
+    ^
+    source.luau punctuation.arguments.end.luau

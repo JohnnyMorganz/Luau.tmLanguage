@@ -19,14 +19,16 @@ local x = call("a").b
            ^^^^
            source.luau entity.name.function.luau
                ^
-               source.luau
+               source.luau punctuation.arguments.begin.luau
                 ^
                 source.luau string.quoted.double.luau
                  ^
                  source.luau string.quoted.double.luau
                   ^
                   source.luau string.quoted.double.luau
-                   ^^
-                   source.luau
+                   ^
+                   source.luau punctuation.arguments.end.luau
+                    ^
+                    source.luau
                      ^
                      source.luau variable.other.property.luau
