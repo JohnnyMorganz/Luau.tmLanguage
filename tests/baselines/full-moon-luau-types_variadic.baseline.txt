@@ -400,8 +400,12 @@ end
           source.luau
            ^
            source.luau keyword.operator.assignment.luau
-            ^^^^
+            ^
             source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+              ^
+              source.luau punctuation.table.end.luau
 >function Boo:f(name: string, ...: number): () -> (string, ...Foo) -> ()
  ^^^^^^^^
  source.luau meta.function.luau keyword.control.luau

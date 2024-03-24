@@ -10,8 +10,10 @@ return {
 >return {
  ^^^^^^
  source.luau keyword.control.luau
-       ^^^
+       ^
        source.luau
+        ^
+        source.luau punctuation.table.begin.luau
 >  ["Noob Attack: Periastron"] = "Noob Attack - Periastron";
  ^^^
  source.luau
@@ -33,8 +35,8 @@ return {
                                   source.luau string.quoted.double.luau
                                                           ^
                                                           source.luau string.quoted.double.luau
-                                                           ^^
-                                                           source.luau
+                                                           ^
+                                                           source.luau punctuation.separator.fields.luau
 >  ["Noob Attack꞉ Periastron"] = "Noob Attack - Periastron";
  ^^^
  source.luau
@@ -56,11 +58,11 @@ return {
                                   source.luau string.quoted.double.luau
                                                           ^
                                                           source.luau string.quoted.double.luau
-                                                           ^^
-                                                           source.luau
+                                                           ^
+                                                           source.luau punctuation.separator.fields.luau
 >}
- ^^
- source.luau
+ ^
+ source.luau punctuation.table.end.luau
 >
  ^
  source.luau

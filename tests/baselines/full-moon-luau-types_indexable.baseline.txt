@@ -59,16 +59,22 @@ local x: module.Foo<...string> = nil
                               source.luau
                                ^
                                source.luau keyword.operator.assignment.luau
-                                ^^^
+                                ^
                                 source.luau
+                                 ^
+                                 source.luau punctuation.table.begin.luau
+                                  ^
+                                  source.luau
                                    ^
                                    source.luau string.quoted.double.luau
                                     ^^^
                                     source.luau string.quoted.double.luau
                                        ^
                                        source.luau string.quoted.double.luau
-                                        ^^^
+                                        ^
                                         source.luau
+                                         ^
+                                         source.luau punctuation.table.end.luau
 >local x: module.Foo | string = "bar"
  ^^^^^
  source.luau storage.modifier.local.luau

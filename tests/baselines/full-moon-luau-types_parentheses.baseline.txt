@@ -74,8 +74,12 @@ type IProperties = {
                source.luau
                 ^
                 source.luau keyword.operator.assignment.luau
-                 ^^^^
+                 ^
                  source.luau
+                  ^
+                  source.luau punctuation.table.begin.luau
+                   ^
+                   source.luau punctuation.table.end.luau
 >function TypeInfo.new(
  ^^^^^^^^
  source.luau meta.function.luau keyword.control.luau
@@ -353,8 +357,12 @@ type IProperties = {
              source.luau
               ^
               source.luau keyword.operator.assignment.luau
-               ^^^^
+               ^
                source.luau
+                ^
+                source.luau punctuation.table.begin.luau
+                 ^
+                 source.luau punctuation.table.end.luau
 >type GError = typeof(GError)
  ^^^^
  source.luau storage.type.luau

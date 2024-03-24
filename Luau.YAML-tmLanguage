@@ -74,6 +74,16 @@ patterns:
       - match: ","
         name: punctuation.separator.arguments.luau
       - include: "source.luau"
+  - begin: "(\\{)"
+    beginCaptures:
+      "1": { name: punctuation.table.begin.luau }
+    end: "(\\})"
+    endCaptures:
+      "1": { name: punctuation.table.end.luau }
+    patterns:
+      - match: "[,;]"
+        name: punctuation.separator.fields.luau
+      - include: "source.luau"
   - include: "#type_cast"
   - include: "#type_annotation"
 

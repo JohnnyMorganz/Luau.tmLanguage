@@ -471,24 +471,32 @@ return "OK"
             source.luau
              ^
              source.luau keyword.operator.assignment.luau
-              ^^
+              ^
               source.luau
+               ^
+               source.luau punctuation.table.begin.luau
                 ^
                 source.luau constant.numeric.decimal.luau
-                 ^^
-                 source.luau
+                 ^
+                 source.luau punctuation.separator.fields.luau
+                  ^
+                  source.luau
                    ^
                    source.luau constant.numeric.decimal.luau
-                    ^^
-                    source.luau
+                    ^
+                    source.luau punctuation.separator.fields.luau
+                     ^
+                     source.luau
                       ^
                       source.luau constant.numeric.decimal.luau
-                       ^^
-                       source.luau
+                       ^
+                       source.luau punctuation.separator.fields.luau
+                        ^
+                        source.luau
                          ^
                          source.luau constant.numeric.decimal.luau
-                          ^^
-                          source.luau
+                          ^
+                          source.luau punctuation.table.end.luau
 >assertEq(`The lock combinations are: {table.concat(combo, ", ")}`, "The lock combinations are: 5, 2, 8, 9")
  ^^^^^^^^
  source.luau entity.name.function.luau

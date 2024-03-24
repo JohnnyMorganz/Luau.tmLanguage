@@ -32,8 +32,14 @@ local inner = returnsComplexType().Key[1]
  source.luau
    ^^^^^^
    source.luau keyword.control.luau
-         ^^^^
+         ^
          source.luau
+          ^
+          source.luau punctuation.table.begin.luau
+           ^
+           source.luau punctuation.table.end.luau
+            ^
+            source.luau
              ^^
              source.luau keyword.operator.typecast.luau
                ^

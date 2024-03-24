@@ -17,8 +17,10 @@ local x = {
         source.luau
          ^
          source.luau keyword.operator.assignment.luau
-          ^^^
+          ^
           source.luau
+           ^
+           source.luau punctuation.table.begin.luau
 >  [call()] = 1,
  ^^^
  source.luau
@@ -36,15 +38,15 @@ local x = {
              source.luau
               ^
               source.luau constant.numeric.decimal.luau
-               ^^
-               source.luau
+               ^
+               source.luau punctuation.separator.fields.luau
 >  2,
  ^^
  source.luau
    ^
    source.luau constant.numeric.decimal.luau
-    ^^
-    source.luau
+    ^
+    source.luau punctuation.separator.fields.luau
 >}
- ^^
- source.luau
+ ^
+ source.luau punctuation.table.end.luau
