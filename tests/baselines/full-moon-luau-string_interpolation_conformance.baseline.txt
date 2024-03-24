@@ -1062,7 +1062,7 @@ return "OK"
                     ^
                     source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
                      ^^^^^^
-                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.readwrite.luau
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau support.constant.luau
                            ^
                            source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                             ^

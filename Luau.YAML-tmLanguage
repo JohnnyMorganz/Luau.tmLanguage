@@ -58,21 +58,9 @@ patterns:
   - include: "#local-declaration"
   - include: "#for-loop"
   - include: "#type-alias-declaration"
-  - match: "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\\b"
-    name: keyword.control.luau
-  - match: "\\b(local)\\b"
-    name: storage.modifier.local.luau
-  - match: "\\b(function)\\b(?![,:])"
-    name: keyword.control.luau
+  - include: "#keyword"
   - include: "#language_constant"
-  - match: "(?<![^.]\\.|:)\\b(self)\\b"
-    name: variable.language.self.luau
-  - match: "(?<![^.]\\.|:)\\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|load|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawlen|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\\b(?!\\s*=(?!=))"
-    name: support.function.luau
-  - match: "(?<![^.]\\.|:)\\b(coroutine\\.(create|isyieldable|close|resume|running|status|wrap|yield)|string\\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|sub|unpack|upper)|table\\.(concat|insert|maxn|move|pack|remove|sort|unpack)|math\\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?|tointeger|type)|io\\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\\.(loadlib|seeall|searchpath)|debug\\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|[gs]etuservalue|set[Cc]stacklimit|traceback|upvalueid|upvaluejoin)|bit32\\.(arshift|band|bnot|bor|btest|bxor|extract|replace|lrotate|lshift|rrotate|rshift)|utf8\\.(char|codes|codepoint|len|offset))\\b(?!\\s*=(?!=))"
-    name: support.function.library.luau
-  - match: "\\b(and|or|not)\\b"
-    name: keyword.operator.logical.luau keyword.operator.wordlike.luau
+  - include: "#standard_library"
   - include: "#identifier"
   - include: "#operator"
   - include: "#type_annotation"
@@ -138,6 +126,7 @@ repository:
         match: "\\b0_*[bB][01_]+(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
       - name: constant.numeric.decimal.luau
         match: "(?:\\d[\\d_]*(?:\\.[\\d_]*)?|\\.\\d[\\d_]*)(?:[eE][\\+\\-]?_*\\d[\\d_]*(?:\\.[\\d_]*)?)?"
+
   string:
     patterns:
       - name: string.quoted.double.luau
@@ -176,6 +165,39 @@ repository:
     patterns:
       - include: "source.luau"
 
+  standard_library:
+    patterns:
+      - name: support.function.luau
+        match: "(?<![^.]\\.|:)\\b(assert|collectgarbage|error|gcinfo|getfenv|getmetatable|ipairs|loadstring|newproxy|next|pairs|pcall|print|rawequal|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|typeof|unpack|xpcall)\\b"
+      - name: constant.language.luau
+        match: "(?<![^.]\\.|:)\\b(_G|_VERSION)\\b"
+      - name: support.function.luau
+        match: "(?<![^.]\\.|:)\\b(bit32\\.(?:arshift|band|bnot|bor|btest|bxor|extract|lrotate|lshift|replace|rrotate|rshift|countlz|countrz|byteswap)|coroutine\\.(?:create|isyieldable|resume|running|status|wrap|yield|close)|debug\\.(?:info|loadmodule|profilebegin|profileend|traceback)|math\\.(?:abs|acos|asin|atan|atan2|ceil|clamp|cos|cosh|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|noise|pow|rad|random|randomseed|round|sign|sin|sinh|sqrt|tan|tanh)|os\\.(?:clock|date|difftime|time)|string\\.(?:byte|char|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|split|sub|unpack|upper)|table\\.(?:concat|create|find|foreach|foreachi|getn|insert|maxn|move|pack|remove|sort|unpack|clear|freeze|isfrozen|clone)|task\\.(?:spawn|synchronize|desynchronize|wait|defer|delay)|utf8\\.(?:char|codepoint|codes|graphemes|len|nfcnormalize|nfdnormalize|offset)|buffer\\.(?:create|fromstring|tostring|len|readi8|readu8|readi16|readu16|readi32|readu32|readf32|readf64|writei8|writeu8|writei16|writeu16|writei32|writeu32|writef32|writef64|readstring|writestring|copy|fill))\\b"
+      - name: support.constant.luau
+        match: "(?<![^.]\\.|:)\\b(bit32|buffer|coroutine|debug|math(\\.(huge|pi))?|os|string|table|task|utf8(\\.charpattern)?)\\b"
+      # TODO: These are Roblox-specific patterns. Maybe they should not be part of the Luau syntax
+      - name: support.function.luau
+        match: "(?<![^.]\\.|:)\\b(delay|DebuggerManager|elapsedTime|PluginManager|printidentity|settings|spawn|stats|tick|time|UserSettings|version|wait|warn)\\b"
+      - name: constant.language.luau
+        match: "(?<![^.]\\.|:)\\b(game|plugin|shared|script|workspace|Enum(?:\\.\\w+){0,2})\\b"
+
+  keyword:
+    patterns:
+      - match: "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\\b"
+        name: keyword.control.luau
+      - match: "\\b(local)\\b"
+        name: storage.modifier.local.luau
+      - match: "\\b(function)\\b(?![,:])"
+        name: keyword.control.luau
+      - match: "(?<![^.]\\.|:)\\b(self)\\b"
+        name: variable.language.self.luau
+      - match: "\\b(and|or|not)\\b"
+        name: keyword.operator.logical.luau keyword.operator.wordlike.luau
+      - name: variable.language.metamethod.luau
+        match: "(?<=[^.]\\.|:)\\b(__add|__call|__concat|__div|__eq|__index|__le|__len|__lt|__metatable|__mod|__mode|__mul|__newindex|__pow|__sub|__tostring|__unm)\\b"
+      - name: keyword.other.unit.luau
+        match: "(?<![.])\\.{3}(?!\\.)"
+
   identifier:
     patterns:
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[))"
@@ -208,8 +230,6 @@ repository:
         name: constant.language.boolean.true.luau
       - match: "(?<![^.]\\.|:)\\b(nil(?!:))\\b"
         name: constant.language.nil.luau
-      - match: "(?<![^.]\\.|:)\\b(_ENV|_G|_VERSION|math\\.(pi|huge|maxinteger|mininteger)|utf8\\.charpattern|io\\.(stdin|stdout|stderr)|package\\.(config|cpath|loaded|loaders|path|preload|searchers))\\b|(?<![.])\\.{3}(?!\\.)"
-        name: constant.language.luau
 
   comment:
     patterns:
