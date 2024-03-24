@@ -9,7 +9,7 @@ print("Hello world");
 >#!/usr/bin/env lua
  ^^
  source.luau comment.line.shebang.luau punctuation.definition.comment.luau
-   ^^^^^^^^^^^^^^^^
+   ^^^^^^^^^^^^^^^^^
    source.luau comment.line.shebang.luau
 >
  ^
