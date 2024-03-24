@@ -306,25 +306,23 @@ repository:
     patterns:
       - match: "[a-zA-Z_][a-zA-Z0-9_]*"
         name: entity.name.type.luau
+      - match: "="
+        name: keyword.operator.assignment.luau
+      - include: "#type_literal"
       # - match: ","
       # name: punctuation.separator.generics.luau
 
   type-alias-declaration:
-    begin: "\\b(?:(export)\\s+)?(type)\\s+([^=]+)\\s*(=)"
+    # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
+    begin: "^\\b(?:(export)\\s+)?(type)\\b"
     end: "(?=\\s*$)|(?=\\s*;)"
     beginCaptures:
       "1": { name: storage.modifier.visibility.luau }
       "2": { name: storage.type.luau }
-      "3":
-        patterns:
-          # TODO: generics-declaration
-          - name: keyword.operator.type.luau
-            match: "[<>]"
-          - name: entity.name.type.alias.luau
-            match: "\\b[a-zA-Z_]\\w*\\b"
-      "4": { name: keyword.operator.assignment.luau }
     patterns:
-      - include: "#type_literal"
+      - include: "#type_literal" # handles generics declaration
+      - match: "="
+        name: keyword.operator.assignment.luau
 
   type_annotation: # Type annotations not matched by other rules (i.e., function return type)
     begin: ":(?!\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[)))" # negative lookahead: the syntax should not be of a method-call form `:name(`
@@ -371,8 +369,10 @@ repository:
         endCaptures:
           "1": { name: keyword.operator.type.luau }
         patterns:
+          - match: "=" # for generics declarations
+            name: keyword.operator.assignment.luau
           - include: "#type_literal"
-      - match: "\\b([a-zA-Z]\\w*)\\b"
+      - match: "\\b([a-zA-Z_]\\w*)\\b"
         name: entity.name.type.luau
       - begin: "\\{"
         end: "\\}"

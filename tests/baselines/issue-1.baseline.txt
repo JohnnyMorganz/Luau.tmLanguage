@@ -87,7 +87,7 @@ local inner = returnsComplexType().Key[1]
      ^
      source.luau
       ^^^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
            ^
            source.luau
             ^

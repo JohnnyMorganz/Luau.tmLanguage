@@ -77,11 +77,11 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
          ^
          source.luau keyword.operator.type.luau
           ^
-          source.luau entity.name.type.alias.luau
+          source.luau entity.name.type.luau
            ^^^
            source.luau
               ^
@@ -150,15 +150,15 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
        ^
        source.luau keyword.operator.type.luau
         ^
-        source.luau entity.name.type.alias.luau
+        source.luau entity.name.type.luau
          ^^
          source.luau
            ^
-           source.luau entity.name.type.alias.luau
+           source.luau entity.name.type.luau
             ^^^
             source.luau
                ^
@@ -179,11 +179,11 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
        ^
        source.luau keyword.operator.type.luau
         ^
-        source.luau entity.name.type.alias.luau
+        source.luau entity.name.type.luau
          ^^^
          source.luau
             ^
@@ -220,7 +220,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
        ^
        source.luau
         ^
@@ -251,7 +251,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
        ^
        source.luau
         ^
@@ -287,15 +287,15 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^^^^^^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
               ^
               source.luau keyword.operator.type.luau
                ^^^^
-               source.luau entity.name.type.alias.luau
+               source.luau entity.name.type.luau
                    ^^^^^
                    source.luau
                         ^^^^^^
-                        source.luau entity.name.type.alias.luau
+                        source.luau entity.name.type.luau
                               ^^^
                               source.luau
                                  ^
@@ -333,7 +333,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
      ^
      source.luau
       ^^^^^^^^^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
                  ^
                  source.luau
                   ^

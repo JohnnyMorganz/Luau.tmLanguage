@@ -10,11 +10,11 @@ type Array<T> = { [number]: T }
      ^
      source.luau
       ^^^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
            ^
            source.luau keyword.operator.type.luau
             ^
-            source.luau entity.name.type.alias.luau
+            source.luau entity.name.type.luau
              ^
              source.luau keyword.operator.type.luau
               ^
@@ -39,11 +39,11 @@ type Array<T> = { [number]: T }
      ^
      source.luau
       ^^^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
            ^
            source.luau keyword.operator.type.luau
             ^
-            source.luau entity.name.type.alias.luau
+            source.luau entity.name.type.luau
              ^
              source.luau keyword.operator.type.luau
               ^

@@ -95,7 +95,7 @@ end
             ^
             source.luau
              ^^^^
-             source.luau entity.name.type.alias.luau
+             source.luau entity.name.type.luau
                  ^
                  source.luau
                   ^
@@ -196,7 +196,7 @@ end
             ^
             source.luau
              ^^^^
-             source.luau entity.name.type.alias.luau
+             source.luau entity.name.type.luau
                  ^
                  source.luau
                   ^
