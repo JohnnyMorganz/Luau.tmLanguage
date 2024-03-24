@@ -51,13 +51,10 @@ patterns:
         name: entity.name.class.luau
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
         name: entity.name.function.luau
-  # TODO:
   - include: "#number"
   - include: "#string"
   - include: "#shebang"
   - include: "#comment"
-  - match: "\\<[a-zA-Z_\\*][a-zA-Z0-9_\\.\\*\\-]*\\>"
-    name: storage.type.generic.luau
   - include: "#local-declaration"
   - include: "#for-loop"
   - include: "#type-alias-declaration"
@@ -116,16 +113,11 @@ repository:
       - name: variable.parameter.luau
         match: "\\b([a-zA-Z_]\\w*)\\b"
 
-  # TODO:
   shebang:
     captures:
       "1": { name: punctuation.definition.comment.luau }
     match: "\\A(#!).*$\\n?"
     name: comment.line.shebang.luau
-    # name: comment.line.shebang.luau
-    # match: "\\A(#!).*(?=$)"
-    # captures:
-    #   "1": { name: punctuation.definition.comment.luau }
 
   string_escape:
     patterns:
