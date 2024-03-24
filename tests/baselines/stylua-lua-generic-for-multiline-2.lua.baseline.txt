@@ -1,0 +1,156 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/579
+for _, item in
+  -- comment
+  call()
+do
+end
+
+
+for _, item in -- comment
+  call()
+do
+end
+
+
+for _, item in           -- comment
+
+  call()
+do
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/579
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>for _, item in
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^^
+      source.luau
+        ^^^^
+        source.luau variable.parameter.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.control.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  call()
+ ^^
+ source.luau
+   ^^^^
+   source.luau entity.name.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>for _, item in -- comment
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^^
+      source.luau
+        ^^^^
+        source.luau variable.parameter.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.control.luau
+               ^
+               source.luau
+                ^^
+                source.luau comment.line.double-dash.luau
+                  ^^^^^^^^
+                  source.luau comment.line.double-dash.luau
+>  call()
+ ^^
+ source.luau
+   ^^^^
+   source.luau entity.name.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>for _, item in           -- comment
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^^
+      source.luau
+        ^^^^
+        source.luau variable.parameter.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.control.luau
+               ^^^^^^^^^^^
+               source.luau
+                          ^^
+                          source.luau comment.line.double-dash.luau
+                            ^^^^^^^^
+                            source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>  call()
+ ^^
+ source.luau
+   ^^^^
+   source.luau entity.name.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

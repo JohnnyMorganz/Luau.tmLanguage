@@ -1,0 +1,268 @@
+original file
+-----------------------------------
+local val = 1 + 2+ 1 -- add
+foo = bar or #baz -- test
+local foo = bar or (baz and foo) -- test
+
+-- Stop Movement
+if
+  -- Moved for at least 0.1 seconds
+  ((tick() - Player.PlayerDataLocal.IsRunningTimeStamp.Value) > 0.1) and     -- Speed is less than threshold
+  (Utility.Vec3XZLengthSquared(Player.Character.PrimaryPart.Velocity) <= RunThresholdSpeedSqr)
+then --0.01
+  Player.PlayerDataLocal.IsRunning.Value = false
+end
+-----------------------------------
+
+>local val = 1 + 2+ 1 -- add
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^
+                source.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau
+                  ^
+                  source.luau keyword.operator.arithmetic.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau constant.numeric.decimal.luau
+                     ^
+                     source.luau
+                      ^^
+                      source.luau comment.line.double-dash.luau
+                        ^^^^
+                        source.luau comment.line.double-dash.luau
+>foo = bar or #baz -- test
+ ^^^
+ source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^
+     source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.other.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau comment.line.double-dash.luau
+                     ^^^^^
+                     source.luau comment.line.double-dash.luau
+>local foo = bar or (baz and foo) -- test
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^^^
+                     source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^^^
+                         source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                            ^
+                            source.luau
+                             ^^^
+                             source.luau variable.other.readwrite.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+                                 ^
+                                 source.luau
+                                  ^^
+                                  source.luau comment.line.double-dash.luau
+                                    ^^^^^
+                                    source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>-- Stop Movement
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>if
+ ^^
+ source.luau keyword.control.luau
+>  -- Moved for at least 0.1 seconds
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  ((tick() - Player.PlayerDataLocal.IsRunningTimeStamp.Value) > 0.1) and     -- Speed is less than threshold
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^
+    source.luau punctuation.arguments.begin.luau
+     ^^^^
+     source.luau support.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.arguments.end.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.arithmetic.luau
+             ^
+             source.luau
+              ^^^^^^
+              source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^^^^^^
+                     source.luau variable.other.property.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^^^^^^^^^^^^^^
+                                     source.luau variable.other.property.luau
+                                                       ^
+                                                       source.luau
+                                                        ^^^^^
+                                                        source.luau variable.other.property.luau
+                                                             ^
+                                                             source.luau punctuation.arguments.end.luau
+                                                              ^
+                                                              source.luau
+                                                               ^
+                                                               source.luau keyword.operator.comparison.luau
+                                                                ^
+                                                                source.luau
+                                                                 ^^^
+                                                                 source.luau constant.numeric.decimal.luau
+                                                                    ^
+                                                                    source.luau punctuation.arguments.end.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^^^
+                                                                      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                         ^^^^^
+                                                                         source.luau
+                                                                              ^^
+                                                                              source.luau comment.line.double-dash.luau
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                source.luau comment.line.double-dash.luau
+>  (Utility.Vec3XZLengthSquared(Player.Character.PrimaryPart.Velocity) <= RunThresholdSpeedSqr)
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^^^^^^^
+    source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^^^^^^^^^^^^^^^^^^
+            source.luau entity.name.function.luau
+                               ^
+                               source.luau punctuation.arguments.begin.luau
+                                ^^^^^^
+                                source.luau variable.other.readwrite.luau
+                                      ^
+                                      source.luau
+                                       ^^^^^^^^^
+                                       source.luau variable.other.property.luau
+                                                ^
+                                                source.luau
+                                                 ^^^^^^^^^^^
+                                                 source.luau variable.other.property.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^^^^^^
+                                                             source.luau variable.other.property.luau
+                                                                     ^
+                                                                     source.luau punctuation.arguments.end.luau
+                                                                      ^
+                                                                      source.luau
+                                                                       ^^
+                                                                       source.luau keyword.operator.comparison.luau
+                                                                         ^
+                                                                         source.luau
+                                                                          ^^^^^^^^^^^^^^^^^^^^
+                                                                          source.luau variable.other.readwrite.luau
+                                                                                              ^
+                                                                                              source.luau punctuation.arguments.end.luau
+>then --0.01
+ ^^^^
+ source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^
+        source.luau comment.line.double-dash.luau
+>  Player.PlayerDataLocal.IsRunning.Value = false
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^
+          source.luau variable.other.property.luau
+                         ^
+                         source.luau
+                          ^^^^^^^^^
+                          source.luau variable.other.property.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^
+                                    source.luau variable.other.property.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau keyword.operator.assignment.luau
+                                           ^
+                                           source.luau
+                                            ^^^^^
+                                            source.luau constant.language.boolean.false.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

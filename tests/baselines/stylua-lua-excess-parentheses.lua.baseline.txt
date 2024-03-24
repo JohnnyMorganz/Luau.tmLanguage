@@ -1,0 +1,570 @@
+original file
+-----------------------------------
+local x
+something((x))
+
+local x = (1 + 2) * 3
+local y = ((1) * 3)
+local z = (...) == nil and foo or bar
+local foo = not (bar and baz)
+local bar = (#bar) and baz
+local cond = condition and (not object or object.Value == y)
+local baz = (-4 + 3) * 2
+
+({}):foo();
+("hello"):format()
+
+function x()
+  return 1, 2
+end
+
+print(x())
+print((x()))
+print(((x())))
+
+path = (function()
+  return true
+end)()
+
+-- The following should have parentheses removed, but if they were a Prefix, they wouldn't be removed
+local x = ({})
+local y = ("hello")
+local z = (function()
+  return true
+end)
+
+-----------------------------------
+
+>local x
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+>something((x))
+ ^^^^^^^^^
+ source.luau entity.name.function.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^
+             source.luau punctuation.arguments.end.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>local x = (1 + 2) * 3
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau constant.numeric.decimal.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.arithmetic.luau
+               ^
+               source.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+                 ^
+                 source.luau punctuation.arguments.end.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.arithmetic.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau constant.numeric.decimal.luau
+>local y = ((1) * 3)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau punctuation.arguments.begin.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.arithmetic.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau constant.numeric.decimal.luau
+                   ^
+                   source.luau punctuation.arguments.end.luau
+>local z = (...) == nil and foo or bar
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^^^
+            source.luau keyword.other.unit.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.operator.comparison.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau constant.language.nil.luau
+                       ^
+                       source.luau
+                        ^^^
+                        source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                           ^
+                           source.luau
+                            ^^^
+                            source.luau variable.other.readwrite.luau
+                               ^
+                               source.luau
+                                ^^
+                                source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                  ^
+                                  source.luau
+                                   ^^^
+                                   source.luau variable.other.readwrite.luau
+>local foo = not (bar and baz)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                ^
+                source.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^^^
+                  source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau
+                      ^^^
+                      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                         ^
+                         source.luau
+                          ^^^
+                          source.luau variable.other.readwrite.luau
+                             ^
+                             source.luau punctuation.arguments.end.luau
+>local bar = (#bar) and baz
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau keyword.operator.other.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau punctuation.arguments.end.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                       ^
+                       source.luau
+                        ^^^
+                        source.luau variable.other.readwrite.luau
+>local cond = condition and (not object or object.Value == y)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^^^^
+              source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau
+                        ^^^
+                        source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau punctuation.arguments.begin.luau
+                             ^^^
+                             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                ^
+                                source.luau
+                                 ^^^^^^
+                                 source.luau variable.other.readwrite.luau
+                                       ^
+                                       source.luau
+                                        ^^
+                                        source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                          ^
+                                          source.luau
+                                           ^^^^^^
+                                           source.luau variable.other.readwrite.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^^^^
+                                                  source.luau variable.other.property.luau
+                                                       ^
+                                                       source.luau
+                                                        ^^
+                                                        source.luau keyword.operator.comparison.luau
+                                                          ^
+                                                          source.luau
+                                                           ^
+                                                           source.luau variable.other.readwrite.luau
+                                                            ^
+                                                            source.luau punctuation.arguments.end.luau
+>local baz = (-4 + 3) * 2
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau keyword.operator.arithmetic.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.arithmetic.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau constant.numeric.decimal.luau
+                    ^
+                    source.luau punctuation.arguments.end.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.arithmetic.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>({}):foo();
+ ^
+ source.luau punctuation.arguments.begin.luau
+  ^
+  source.luau punctuation.table.begin.luau
+   ^
+   source.luau punctuation.table.end.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.arguments.end.luau
+           ^^
+           source.luau
+>("hello"):format()
+ ^
+ source.luau punctuation.arguments.begin.luau
+  ^
+  source.luau string.quoted.double.luau
+   ^^^^^
+   source.luau string.quoted.double.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^
+         source.luau punctuation.arguments.end.luau
+          ^
+          source.luau
+           ^^^^^^
+           source.luau entity.name.function.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^
+                  source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>function x()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^
+          source.luau meta.function.luau entity.name.function.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return 1, 2
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau constant.numeric.decimal.luau
+           ^^
+           source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>print(x())
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau entity.name.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau punctuation.arguments.end.luau
+          ^
+          source.luau punctuation.arguments.end.luau
+>print((x()))
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau entity.name.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.arguments.end.luau
+           ^
+           source.luau punctuation.arguments.end.luau
+            ^
+            source.luau punctuation.arguments.end.luau
+>print(((x())))
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau entity.name.function.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^
+           source.luau punctuation.arguments.end.luau
+            ^
+            source.luau punctuation.arguments.end.luau
+             ^
+             source.luau punctuation.arguments.end.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>path = (function()
+ ^^^^
+ source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^
+      source.luau keyword.operator.assignment.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^^^^^^^^
+         source.luau meta.function.luau keyword.control.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return true
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau constant.language.boolean.true.luau
+>end)()
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+     ^
+     source.luau punctuation.arguments.begin.luau
+      ^
+      source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>-- The following should have parentheses removed, but if they were a Prefix, they wouldn't be removed
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local x = ({})
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau punctuation.table.begin.luau
+             ^
+             source.luau punctuation.table.end.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+>local y = ("hello")
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau string.quoted.double.luau
+             ^^^^^
+             source.luau string.quoted.double.luau
+                  ^
+                  source.luau string.quoted.double.luau
+                   ^
+                   source.luau punctuation.arguments.end.luau
+>local z = (function()
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^^^^^^^^
+            source.luau meta.function.luau keyword.control.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return true
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau constant.language.boolean.true.luau
+>end)
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau

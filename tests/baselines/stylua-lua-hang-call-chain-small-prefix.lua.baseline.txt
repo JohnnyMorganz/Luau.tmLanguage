@@ -1,0 +1,662 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/514
+local function escape(str)
+  return (str:gsub("\\", "\\\\"):gsub("(%c)%f[0-9]", longControlCharEscapesssssssssssssssssssss):gsub("%c", shortControlCharEscapes))
+end
+
+do
+  function dec(data)
+  	data = string.gsub(data, '[^' .. chars .. '=]', '')
+  	return (data:gsub('.', function(x)
+  		if (x == '=') then return '' end
+  		local r, f = '', (chars:find(x) - 1)
+  		for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end
+  		return r;
+  	end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x)
+  		if (#x ~= 8) then return '' end
+  		local c=0
+  		for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end
+  		return string.char(c)
+  	end))
+  end
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/514
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local function escape(str)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                       ^^^
+                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return (str:gsub("\\", "\\\\"):gsub("(%c)%f[0-9]", longControlCharEscapesssssssssssssssssssss):gsub("%c", shortControlCharEscapes))
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^^^
+           source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau entity.name.function.luau
+                   ^
+                   source.luau punctuation.arguments.begin.luau
+                    ^
+                    source.luau string.quoted.double.luau
+                     ^^
+                     source.luau string.quoted.double.luau constant.character.escape.luau
+                       ^
+                       source.luau string.quoted.double.luau
+                        ^
+                        source.luau punctuation.separator.arguments.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau string.quoted.double.luau
+                           ^^
+                           source.luau string.quoted.double.luau constant.character.escape.luau
+                             ^^
+                             source.luau string.quoted.double.luau constant.character.escape.luau
+                               ^
+                               source.luau string.quoted.double.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+                                 ^
+                                 source.luau
+                                  ^^^^
+                                  source.luau entity.name.function.luau
+                                      ^
+                                      source.luau punctuation.arguments.begin.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^^^^^^^^^^^
+                                        source.luau string.quoted.double.luau
+                                                   ^
+                                                   source.luau string.quoted.double.luau
+                                                    ^
+                                                    source.luau punctuation.separator.arguments.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                      source.luau variable.other.readwrite.luau
+                                                                                                ^
+                                                                                                source.luau punctuation.arguments.end.luau
+                                                                                                 ^
+                                                                                                 source.luau
+                                                                                                  ^^^^
+                                                                                                  source.luau entity.name.function.luau
+                                                                                                      ^
+                                                                                                      source.luau punctuation.arguments.begin.luau
+                                                                                                       ^
+                                                                                                       source.luau string.quoted.double.luau
+                                                                                                        ^^
+                                                                                                        source.luau string.quoted.double.luau
+                                                                                                          ^
+                                                                                                          source.luau string.quoted.double.luau
+                                                                                                           ^
+                                                                                                           source.luau punctuation.separator.arguments.luau
+                                                                                                            ^
+                                                                                                            source.luau
+                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                             source.luau variable.other.readwrite.luau
+                                                                                                                                    ^
+                                                                                                                                    source.luau punctuation.arguments.end.luau
+                                                                                                                                     ^
+                                                                                                                                     source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>  function dec(data)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau
+            ^^^
+            source.luau meta.function.luau entity.name.function.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                ^^^^
+                source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	data = string.gsub(data, '[^' .. chars .. '=]', '')
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^^^^^^^
+           source.luau support.function.luau
+                      ^
+                      source.luau punctuation.arguments.begin.luau
+                       ^^^^
+                       source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau punctuation.separator.arguments.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau string.quoted.single.luau
+                              ^^
+                              source.luau string.quoted.single.luau
+                                ^
+                                source.luau string.quoted.single.luau
+                                 ^
+                                 source.luau
+                                  ^^
+                                  source.luau keyword.operator.other.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^
+                                     source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau
+                                           ^^
+                                           source.luau keyword.operator.other.luau
+                                             ^
+                                             source.luau
+                                              ^
+                                              source.luau string.quoted.single.luau
+                                               ^^
+                                               source.luau string.quoted.single.luau
+                                                 ^
+                                                 source.luau string.quoted.single.luau
+                                                  ^
+                                                  source.luau punctuation.separator.arguments.luau
+                                                   ^
+                                                   source.luau
+                                                    ^
+                                                    source.luau string.quoted.single.luau
+                                                     ^
+                                                     source.luau string.quoted.single.luau
+                                                      ^
+                                                      source.luau punctuation.arguments.end.luau
+>  	return (data:gsub('.', function(x)
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau keyword.control.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^^^^
+            source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^^^^
+                 source.luau entity.name.function.luau
+                     ^
+                     source.luau punctuation.arguments.begin.luau
+                      ^
+                      source.luau string.quoted.single.luau
+                       ^
+                       source.luau string.quoted.single.luau
+                        ^
+                        source.luau string.quoted.single.luau
+                         ^
+                         source.luau punctuation.separator.arguments.luau
+                          ^
+                          source.luau
+                           ^^^^^^^^
+                           source.luau meta.function.luau keyword.control.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  		if (x == '=') then return '' end
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.operator.comparison.luau
+             ^
+             source.luau
+              ^
+              source.luau string.quoted.single.luau
+               ^
+               source.luau string.quoted.single.luau
+                ^
+                source.luau string.quoted.single.luau
+                 ^
+                 source.luau punctuation.arguments.end.luau
+                  ^
+                  source.luau
+                   ^^^^
+                   source.luau keyword.control.luau
+                       ^
+                       source.luau
+                        ^^^^^^
+                        source.luau keyword.control.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau string.quoted.single.luau
+                                ^
+                                source.luau string.quoted.single.luau
+                                 ^
+                                 source.luau
+                                  ^^^
+                                  source.luau keyword.control.luau
+>  		local r, f = '', (chars:find(x) - 1)
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau storage.modifier.local.luau
+          ^
+          source.luau
+           ^
+           source.luau variable.other.readwrite.luau
+            ^^
+            source.luau
+              ^
+              source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau string.quoted.single.luau
+                   ^
+                   source.luau string.quoted.single.luau
+                    ^
+                    source.luau punctuation.separator.arguments.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau punctuation.arguments.begin.luau
+                       ^^^^^
+                       source.luau variable.other.readwrite.luau
+                            ^
+                            source.luau
+                             ^^^^
+                             source.luau entity.name.function.luau
+                                 ^
+                                 source.luau punctuation.arguments.begin.luau
+                                  ^
+                                  source.luau variable.other.readwrite.luau
+                                   ^
+                                   source.luau punctuation.arguments.end.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau keyword.operator.arithmetic.luau
+                                      ^
+                                      source.luau
+                                       ^
+                                       source.luau constant.numeric.decimal.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+>  		for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end
+ ^^^^
+ source.luau
+     ^^^
+     source.luau keyword.control.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.parameter.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+            ^
+            source.luau punctuation.separator.arguments.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau punctuation.separator.arguments.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+                 ^
+                 source.luau
+                  ^^
+                  source.luau keyword.control.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau variable.other.readwrite.luau
+                        ^^
+                        source.luau keyword.operator.other.luau
+                          ^
+                          source.luau punctuation.arguments.begin.luau
+                           ^
+                           source.luau variable.other.readwrite.luau
+                            ^
+                            source.luau keyword.operator.arithmetic.luau
+                             ^
+                             source.luau constant.numeric.decimal.luau
+                              ^
+                              source.luau keyword.operator.arithmetic.luau
+                               ^
+                               source.luau variable.other.readwrite.luau
+                                ^
+                                source.luau keyword.operator.arithmetic.luau
+                                 ^
+                                 source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau keyword.operator.arithmetic.luau
+                                   ^
+                                   source.luau constant.numeric.decimal.luau
+                                    ^
+                                    source.luau keyword.operator.arithmetic.luau
+                                     ^
+                                     source.luau punctuation.arguments.begin.luau
+                                      ^
+                                      source.luau variable.other.readwrite.luau
+                                       ^
+                                       source.luau keyword.operator.arithmetic.luau
+                                        ^
+                                        source.luau constant.numeric.decimal.luau
+                                         ^
+                                         source.luau punctuation.arguments.end.luau
+                                          ^
+                                          source.luau keyword.operator.comparison.luau
+                                           ^
+                                           source.luau constant.numeric.decimal.luau
+                                            ^
+                                            source.luau
+                                             ^^^
+                                             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                ^
+                                                source.luau
+                                                 ^
+                                                 source.luau string.quoted.single.luau
+                                                  ^
+                                                  source.luau string.quoted.single.luau
+                                                   ^
+                                                   source.luau string.quoted.single.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^
+                                                     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                       ^
+                                                       source.luau
+                                                        ^
+                                                        source.luau string.quoted.single.luau
+                                                         ^
+                                                         source.luau string.quoted.single.luau
+                                                          ^
+                                                          source.luau string.quoted.single.luau
+                                                           ^
+                                                           source.luau punctuation.arguments.end.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^
+                                                             source.luau keyword.control.luau
+>  		return r;
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^^
+             source.luau
+>  	end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x)
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+        ^
+        source.luau
+         ^^^^
+         source.luau entity.name.function.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau string.quoted.single.luau
+               ^^^^^^^^^^^^^^^^^^^^^^
+               source.luau string.quoted.single.luau
+                                     ^
+                                     source.luau string.quoted.single.luau
+                                      ^
+                                      source.luau punctuation.separator.arguments.luau
+                                       ^
+                                       source.luau
+                                        ^^^^^^^^
+                                        source.luau meta.function.luau keyword.control.luau
+                                                ^
+                                                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                                 ^
+                                                 source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                  ^
+                                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  		if (#x ~= 8) then return '' end
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau keyword.operator.other.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^
+            source.luau keyword.operator.comparison.luau
+              ^
+              source.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+                 ^
+                 source.luau
+                  ^^^^
+                  source.luau keyword.control.luau
+                      ^
+                      source.luau
+                       ^^^^^^
+                       source.luau keyword.control.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau string.quoted.single.luau
+                               ^
+                               source.luau string.quoted.single.luau
+                                ^
+                                source.luau
+                                 ^^^
+                                 source.luau keyword.control.luau
+>  		local c=0
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau storage.modifier.local.luau
+          ^
+          source.luau
+           ^
+           source.luau variable.other.readwrite.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+>  		for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end
+ ^^^^
+ source.luau
+     ^^^
+     source.luau keyword.control.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.parameter.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+            ^
+            source.luau punctuation.separator.arguments.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau
+               ^^
+               source.luau keyword.control.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau keyword.operator.arithmetic.luau
+                      ^
+                      source.luau punctuation.arguments.begin.luau
+                       ^
+                       source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^^^
+                         source.luau entity.name.function.luau
+                            ^
+                            source.luau punctuation.arguments.begin.luau
+                             ^
+                             source.luau variable.other.readwrite.luau
+                              ^
+                              source.luau punctuation.separator.arguments.luau
+                               ^
+                               source.luau variable.other.readwrite.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+                                 ^^
+                                 source.luau keyword.operator.comparison.luau
+                                   ^
+                                   source.luau string.quoted.single.luau
+                                    ^
+                                    source.luau string.quoted.single.luau
+                                     ^
+                                     source.luau string.quoted.single.luau
+                                      ^
+                                      source.luau
+                                       ^^^
+                                       source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau constant.numeric.decimal.luau
+                                            ^
+                                            source.luau keyword.operator.arithmetic.luau
+                                             ^
+                                             source.luau punctuation.arguments.begin.luau
+                                              ^
+                                              source.luau constant.numeric.decimal.luau
+                                               ^
+                                               source.luau keyword.operator.arithmetic.luau
+                                                ^
+                                                source.luau variable.other.readwrite.luau
+                                                 ^
+                                                 source.luau punctuation.arguments.end.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^
+                                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                     ^
+                                                     source.luau
+                                                      ^
+                                                      source.luau constant.numeric.decimal.luau
+                                                       ^
+                                                       source.luau punctuation.arguments.end.luau
+                                                        ^
+                                                        source.luau
+                                                         ^^^
+                                                         source.luau keyword.control.luau
+>  		return string.char(c)
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^^^^^^^^
+            source.luau support.function.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
+                        ^
+                        source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau punctuation.arguments.end.luau
+>  	end))
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

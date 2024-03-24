@@ -1,0 +1,74 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/389
+repeat
+  x = x + 1
+until (x + y < 2) -- comment
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/389
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>repeat
+ ^^^^^^
+ source.luau keyword.control.luau
+>  x = x + 1
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^
+     source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.arithmetic.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+>until (x + y < 2) -- comment
+ ^^^^^
+ source.luau keyword.control.luau
+      ^
+      source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.arithmetic.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.comparison.luau
+               ^
+               source.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+                 ^
+                 source.luau punctuation.arguments.end.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau comment.line.double-dash.luau
+                     ^^^^^^^^
+                     source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau

@@ -1,0 +1,126 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/648
+function foo(f, g, a, b, c)
+  return f(a)
+  	or g(b and c
+  		-- a somewhat strange location to describe something
+  		or false
+  		-- yes, this newline might not have been intended
+  	)
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/648
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>function foo(f, g, a, b, c)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return f(a)
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau entity.name.function.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^
+             source.luau punctuation.arguments.end.luau
+>  	or g(b and c
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+      ^
+      source.luau
+       ^
+       source.luau entity.name.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^^
+           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+              ^
+              source.luau
+               ^
+               source.luau variable.other.readwrite.luau
+>  		-- a somewhat strange location to describe something
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  		or false
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau constant.language.boolean.false.luau
+>  		-- yes, this newline might not have been intended
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  	)
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

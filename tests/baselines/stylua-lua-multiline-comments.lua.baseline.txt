@@ -1,0 +1,118 @@
+original file
+-----------------------------------
+checkVisitorFnArgs(
+  expect,
+  ast,
+  { ... },
+  true --[[ isEdited ]]
+)
+
+local test   --[[foo]] = true
+
+   --[[test]]
+local x = true
+-----------------------------------
+
+>checkVisitorFnArgs(
+ ^^^^^^^^^^^^^^^^^^
+ source.luau entity.name.function.luau
+                   ^
+                   source.luau punctuation.arguments.begin.luau
+>  expect,
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.other.readwrite.luau
+         ^
+         source.luau punctuation.separator.arguments.luau
+>  ast,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau punctuation.separator.arguments.luau
+>  { ... },
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.table.begin.luau
+    ^
+    source.luau
+     ^^^
+     source.luau keyword.other.unit.luau
+        ^
+        source.luau
+         ^
+         source.luau punctuation.table.end.luau
+          ^
+          source.luau punctuation.separator.arguments.luau
+>  true --[[ isEdited ]]
+ ^^
+ source.luau
+   ^^^^
+   source.luau constant.language.boolean.true.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau comment.block.luau
+            ^^^^^^^^^^
+            source.luau comment.block.luau
+                      ^^
+                      source.luau comment.block.luau
+>)
+ ^
+ source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>local test   --[[foo]] = true
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+           ^^^
+           source.luau
+              ^^^^
+              source.luau comment.block.luau
+                  ^^^
+                  source.luau comment.block.luau
+                     ^^
+                     source.luau comment.block.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau
+                          ^^^^
+                          source.luau constant.language.boolean.true.luau
+>
+ ^
+ source.luau
+>   --[[test]]
+ ^^^
+ source.luau
+    ^^^^
+    source.luau comment.block.luau
+        ^^^^
+        source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>local x = true
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^
+           source.luau constant.language.boolean.true.luau

@@ -1,0 +1,54 @@
+original file
+-----------------------------------
+assert(StringToHex(HexToString("05 e0 81 91 24 cb b2 2c 49 e2 0f 2e 8b 9a" .. " 47 56 9f fb fe ec d2 ff 1f")) == "05 e0 81 91 24 cb b2 2c 49 e2 0f 2e 8b 9a 47 56 9f fb fe ec d2 ff 1f")
+-----------------------------------
+
+>assert(StringToHex(HexToString("05 e0 81 91 24 cb b2 2c 49 e2 0f 2e 8b 9a" .. " 47 56 9f fb fe ec d2 ff 1f")) == "05 e0 81 91 24 cb b2 2c 49 e2 0f 2e 8b 9a 47 56 9f fb fe ec d2 ff 1f")
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^^^^^^^^^^
+        source.luau entity.name.function.luau
+                   ^
+                   source.luau punctuation.arguments.begin.luau
+                    ^^^^^^^^^^^
+                    source.luau entity.name.function.luau
+                               ^
+                               source.luau punctuation.arguments.begin.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 source.luau string.quoted.double.luau
+                                                                          ^
+                                                                          source.luau string.quoted.double.luau
+                                                                           ^
+                                                                           source.luau
+                                                                            ^^
+                                                                            source.luau keyword.operator.other.luau
+                                                                              ^
+                                                                              source.luau
+                                                                               ^
+                                                                               source.luau string.quoted.double.luau
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                source.luau string.quoted.double.luau
+                                                                                                           ^
+                                                                                                           source.luau string.quoted.double.luau
+                                                                                                            ^
+                                                                                                            source.luau punctuation.arguments.end.luau
+                                                                                                             ^
+                                                                                                             source.luau punctuation.arguments.end.luau
+                                                                                                              ^
+                                                                                                              source.luau
+                                                                                                               ^^
+                                                                                                               source.luau keyword.operator.comparison.luau
+                                                                                                                 ^
+                                                                                                                 source.luau
+                                                                                                                  ^
+                                                                                                                  source.luau string.quoted.double.luau
+                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                   source.luau string.quoted.double.luau
+                                                                                                                                                                                       ^
+                                                                                                                                                                                       source.luau string.quoted.double.luau
+                                                                                                                                                                                        ^
+                                                                                                                                                                                        source.luau punctuation.arguments.end.luau

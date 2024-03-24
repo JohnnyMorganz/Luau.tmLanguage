@@ -1,0 +1,438 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/637
+function foo()
+  return function()
+  	local x = 1
+  end,
+  -- comment
+  function(newScan)
+  	scan = newScan
+  end
+end
+
+function foo()
+  local x = function()
+  	local x = 1
+  end,
+  -- comment
+  function(newScan)
+  	scan = newScan
+  end
+end
+
+function foo()
+  return function()
+  	local x = 1
+  end,
+
+  -- comment
+  function(newScan)
+  	scan = newScan
+  end
+end
+
+function foo()
+  local x = function()
+  	local x = 1
+  end,
+
+  -- comment
+  function(newScan)
+  	scan = newScan
+  end
+end
+
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/637
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>function foo()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return function()
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau meta.function.luau keyword.control.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	local x = 1
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau storage.modifier.local.luau
+         ^
+         source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+>  end,
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^^
+      source.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  function(newScan)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^^^^^^^
+            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	scan = newScan
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau variable.other.readwrite.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  local x = function()
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau meta.function.luau keyword.control.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	local x = 1
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau storage.modifier.local.luau
+         ^
+         source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+>  end,
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^^
+      source.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  function(newScan)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^^^^^^^
+            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	scan = newScan
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau variable.other.readwrite.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return function()
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau meta.function.luau keyword.control.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	local x = 1
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau storage.modifier.local.luau
+         ^
+         source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+>  end,
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^^
+      source.luau
+>
+ ^
+ source.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  function(newScan)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^^^^^^^
+            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	scan = newScan
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau variable.other.readwrite.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  local x = function()
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau meta.function.luau keyword.control.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	local x = 1
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau storage.modifier.local.luau
+         ^
+         source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau constant.numeric.decimal.luau
+>  end,
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^^
+      source.luau
+>
+ ^
+ source.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  function(newScan)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^^^^^^^
+            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	scan = newScan
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau variable.other.readwrite.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau

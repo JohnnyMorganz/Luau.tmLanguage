@@ -1,0 +1,72 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/292
+local musicId, musicTime, responseTick, responseOffset = remotes.Server.GetSpectatorInfo:InvokeServer(player, sendTick, anotherArgument)
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/292
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local musicId, musicTime, responseTick, responseOffset = remotes.Server.GetSpectatorInfo:InvokeServer(player, sendTick, anotherArgument)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^^
+              source.luau
+                ^^^^^^^^^
+                source.luau variable.other.readwrite.luau
+                         ^^
+                         source.luau
+                           ^^^^^^^^^^^^
+                           source.luau variable.other.readwrite.luau
+                                       ^^
+                                       source.luau
+                                         ^^^^^^^^^^^^^^
+                                         source.luau variable.other.readwrite.luau
+                                                       ^
+                                                       source.luau
+                                                        ^
+                                                        source.luau keyword.operator.assignment.luau
+                                                         ^
+                                                         source.luau
+                                                          ^^^^^^^
+                                                          source.luau variable.other.readwrite.luau
+                                                                 ^
+                                                                 source.luau
+                                                                  ^^^^^^
+                                                                  source.luau variable.other.property.luau
+                                                                        ^
+                                                                        source.luau
+                                                                         ^^^^^^^^^^^^^^^^
+                                                                         source.luau variable.other.property.luau
+                                                                                         ^
+                                                                                         source.luau
+                                                                                          ^^^^^^^^^^^^
+                                                                                          source.luau entity.name.function.luau
+                                                                                                      ^
+                                                                                                      source.luau punctuation.arguments.begin.luau
+                                                                                                       ^^^^^^
+                                                                                                       source.luau variable.other.readwrite.luau
+                                                                                                             ^
+                                                                                                             source.luau punctuation.separator.arguments.luau
+                                                                                                              ^
+                                                                                                              source.luau
+                                                                                                               ^^^^^^^^
+                                                                                                               source.luau variable.other.readwrite.luau
+                                                                                                                       ^
+                                                                                                                       source.luau punctuation.separator.arguments.luau
+                                                                                                                        ^
+                                                                                                                        source.luau
+                                                                                                                         ^^^^^^^^^^^^^^^
+                                                                                                                         source.luau variable.other.readwrite.luau
+                                                                                                                                        ^
+                                                                                                                                        source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau

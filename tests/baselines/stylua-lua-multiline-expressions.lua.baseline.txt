@@ -1,0 +1,532 @@
+original file
+-----------------------------------
+if someReallyLongCondition and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse then
+    print("foo")
+end
+
+foo = someReallyLongCondition * someOtherReallyLongCondition * somethingElse * someReallyLongCondition * someOtherReallyLongCondition * somethingElse
+
+local foo = someReallyLongCondition and someOtherReallyLongCondition == foo and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse
+
+repeat print("foo") until someReallyLongCondition and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse
+
+while someReallyLongCondition and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse do
+    print("foo")
+end
+
+if foo(aVeryLongValue, anotherVeryLongValue, someEvenMoreLongValues, evenMoreLongValues, whenWillTheseLongValuesEverEnd) and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse then
+    print("foo")
+end
+
+baz(first_arg___ooooooooooooooooooooooooooooooooooooooooooo, second_arg___qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq, function() if
+  		multiline_if___aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  		and multiline_if___bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  then
+  		foo()
+  	end
+  end
+)
+-----------------------------------
+
+>if someReallyLongCondition and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^^^^^^^^^^^^^^^^^^^^^^^
+    source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^^
+                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                               ^
+                               source.luau
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                source.luau variable.other.readwrite.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^
+                                                             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                ^
+                                                                source.luau
+                                                                 ^^^^^^^^^^^^^
+                                                                 source.luau variable.other.readwrite.luau
+                                                                              ^
+                                                                              source.luau
+                                                                               ^^^
+                                                                               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                  ^
+                                                                                  source.luau
+                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                   source.luau variable.other.readwrite.luau
+                                                                                                          ^
+                                                                                                          source.luau
+                                                                                                           ^^^
+                                                                                                           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                              ^
+                                                                                                              source.luau
+                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                               source.luau variable.other.readwrite.luau
+                                                                                                                                           ^
+                                                                                                                                           source.luau
+                                                                                                                                            ^^^
+                                                                                                                                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                               ^
+                                                                                                                                               source.luau
+                                                                                                                                                ^^^^^^^^^^^^^
+                                                                                                                                                source.luau variable.other.readwrite.luau
+                                                                                                                                                             ^
+                                                                                                                                                             source.luau
+                                                                                                                                                              ^^^^
+                                                                                                                                                              source.luau keyword.control.luau
+>    print("foo")
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau support.function.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^^
+            source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>foo = someReallyLongCondition * someOtherReallyLongCondition * somethingElse * someReallyLongCondition * someOtherReallyLongCondition * somethingElse
+ ^^^
+ source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^
+     source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau keyword.operator.arithmetic.luau
+                                ^
+                                source.luau
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 source.luau variable.other.readwrite.luau
+                                                             ^
+                                                             source.luau
+                                                              ^
+                                                              source.luau keyword.operator.arithmetic.luau
+                                                               ^
+                                                               source.luau
+                                                                ^^^^^^^^^^^^^
+                                                                source.luau variable.other.readwrite.luau
+                                                                             ^
+                                                                             source.luau
+                                                                              ^
+                                                                              source.luau keyword.operator.arithmetic.luau
+                                                                               ^
+                                                                               source.luau
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                source.luau variable.other.readwrite.luau
+                                                                                                       ^
+                                                                                                       source.luau
+                                                                                                        ^
+                                                                                                        source.luau keyword.operator.arithmetic.luau
+                                                                                                         ^
+                                                                                                         source.luau
+                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                          source.luau variable.other.readwrite.luau
+                                                                                                                                      ^
+                                                                                                                                      source.luau
+                                                                                                                                       ^
+                                                                                                                                       source.luau keyword.operator.arithmetic.luau
+                                                                                                                                        ^
+                                                                                                                                        source.luau
+                                                                                                                                         ^^^^^^^^^^^^^
+                                                                                                                                         source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>local foo = someReallyLongCondition and someOtherReallyLongCondition == foo and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau variable.other.readwrite.luau
+                                    ^
+                                    source.luau
+                                     ^^^
+                                     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                        ^
+                                        source.luau
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                         source.luau variable.other.readwrite.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^^
+                                                                      source.luau keyword.operator.comparison.luau
+                                                                        ^
+                                                                        source.luau
+                                                                         ^^^
+                                                                         source.luau variable.other.readwrite.luau
+                                                                            ^
+                                                                            source.luau
+                                                                             ^^^
+                                                                             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^^^^^^^^^^^^^
+                                                                                 source.luau variable.other.readwrite.luau
+                                                                                              ^
+                                                                                              source.luau
+                                                                                               ^^^
+                                                                                               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                  ^
+                                                                                                  source.luau
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                   source.luau variable.other.readwrite.luau
+                                                                                                                          ^
+                                                                                                                          source.luau
+                                                                                                                           ^^^
+                                                                                                                           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                              ^
+                                                                                                                              source.luau
+                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                               source.luau variable.other.readwrite.luau
+                                                                                                                                                           ^
+                                                                                                                                                           source.luau
+                                                                                                                                                            ^^^
+                                                                                                                                                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                               ^
+                                                                                                                                                               source.luau
+                                                                                                                                                                ^^^^^^^^^^^^^
+                                                                                                                                                                source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>repeat print("foo") until someReallyLongCondition and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau support.function.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^^
+               source.luau string.quoted.double.luau
+                  ^
+                  source.luau string.quoted.double.luau
+                   ^
+                   source.luau punctuation.arguments.end.luau
+                    ^
+                    source.luau
+                     ^^^^^
+                     source.luau keyword.control.luau
+                          ^
+                          source.luau
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+                           source.luau variable.other.readwrite.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^^
+                                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                      ^
+                                                      source.luau
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                       source.luau variable.other.readwrite.luau
+                                                                                   ^
+                                                                                   source.luau
+                                                                                    ^^^
+                                                                                    source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                       ^
+                                                                                       source.luau
+                                                                                        ^^^^^^^^^^^^^
+                                                                                        source.luau variable.other.readwrite.luau
+                                                                                                     ^
+                                                                                                     source.luau
+                                                                                                      ^^^
+                                                                                                      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                         ^
+                                                                                                         source.luau
+                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                          source.luau variable.other.readwrite.luau
+                                                                                                                                 ^
+                                                                                                                                 source.luau
+                                                                                                                                  ^^^
+                                                                                                                                  source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                     ^
+                                                                                                                                     source.luau
+                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                                      source.luau variable.other.readwrite.luau
+                                                                                                                                                                  ^
+                                                                                                                                                                  source.luau
+                                                                                                                                                                   ^^^
+                                                                                                                                                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                                      ^
+                                                                                                                                                                      source.luau
+                                                                                                                                                                       ^^^^^^^^^^^^^
+                                                                                                                                                                       source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>while someReallyLongCondition and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse do
+ ^^^^^
+ source.luau keyword.control.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                              ^
+                              source.luau
+                               ^^^
+                               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   source.luau variable.other.readwrite.luau
+                                                               ^
+                                                               source.luau
+                                                                ^^^
+                                                                source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                   ^
+                                                                   source.luau
+                                                                    ^^^^^^^^^^^^^
+                                                                    source.luau variable.other.readwrite.luau
+                                                                                 ^
+                                                                                 source.luau
+                                                                                  ^^^
+                                                                                  source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                     ^
+                                                                                     source.luau
+                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                      source.luau variable.other.readwrite.luau
+                                                                                                             ^
+                                                                                                             source.luau
+                                                                                                              ^^^
+                                                                                                              source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                 ^
+                                                                                                                 source.luau
+                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                  source.luau variable.other.readwrite.luau
+                                                                                                                                              ^
+                                                                                                                                              source.luau
+                                                                                                                                               ^^^
+                                                                                                                                               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                  ^
+                                                                                                                                                  source.luau
+                                                                                                                                                   ^^^^^^^^^^^^^
+                                                                                                                                                   source.luau variable.other.readwrite.luau
+                                                                                                                                                                ^
+                                                                                                                                                                source.luau
+                                                                                                                                                                 ^^
+                                                                                                                                                                 source.luau keyword.control.luau
+>    print("foo")
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau support.function.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^^
+            source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>if foo(aVeryLongValue, anotherVeryLongValue, someEvenMoreLongValues, evenMoreLongValues, whenWillTheseLongValuesEverEnd) and someOtherReallyLongCondition and somethingElse and someReallyLongCondition and someOtherReallyLongCondition and somethingElse then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^^^
+    source.luau entity.name.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^^^^^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau punctuation.separator.arguments.luau
+                       ^
+                       source.luau
+                        ^^^^^^^^^^^^^^^^^^^^
+                        source.luau variable.other.readwrite.luau
+                                            ^
+                                            source.luau punctuation.separator.arguments.luau
+                                             ^
+                                             source.luau
+                                              ^^^^^^^^^^^^^^^^^^^^^^
+                                              source.luau variable.other.readwrite.luau
+                                                                    ^
+                                                                    source.luau punctuation.separator.arguments.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^^^^^^^^^^^^^^^^^^
+                                                                      source.luau variable.other.readwrite.luau
+                                                                                        ^
+                                                                                        source.luau punctuation.separator.arguments.luau
+                                                                                         ^
+                                                                                         source.luau
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                          source.luau variable.other.readwrite.luau
+                                                                                                                        ^
+                                                                                                                        source.luau punctuation.arguments.end.luau
+                                                                                                                         ^
+                                                                                                                         source.luau
+                                                                                                                          ^^^
+                                                                                                                          source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                             ^
+                                                                                                                             source.luau
+                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                              source.luau variable.other.readwrite.luau
+                                                                                                                                                          ^
+                                                                                                                                                          source.luau
+                                                                                                                                                           ^^^
+                                                                                                                                                           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                              ^
+                                                                                                                                                              source.luau
+                                                                                                                                                               ^^^^^^^^^^^^^
+                                                                                                                                                               source.luau variable.other.readwrite.luau
+                                                                                                                                                                            ^
+                                                                                                                                                                            source.luau
+                                                                                                                                                                             ^^^
+                                                                                                                                                                             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                                                ^
+                                                                                                                                                                                source.luau
+                                                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                                                                                 source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                        ^
+                                                                                                                                                                                                        source.luau
+                                                                                                                                                                                                         ^^^
+                                                                                                                                                                                                         source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                                                                            ^
+                                                                                                                                                                                                            source.luau
+                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                                                                                                             source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                         ^
+                                                                                                                                                                                                                                         source.luau
+                                                                                                                                                                                                                                          ^^^
+                                                                                                                                                                                                                                          source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                                                                                                                                             ^
+                                                                                                                                                                                                                                             source.luau
+                                                                                                                                                                                                                                              ^^^^^^^^^^^^^
+                                                                                                                                                                                                                                              source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                                           ^
+                                                                                                                                                                                                                                                           source.luau
+                                                                                                                                                                                                                                                            ^^^^
+                                                                                                                                                                                                                                                            source.luau keyword.control.luau
+>    print("foo")
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau support.function.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^^
+            source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>baz(first_arg___ooooooooooooooooooooooooooooooooooooooooooo, second_arg___qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq, function() if
+ ^^^
+ source.luau entity.name.function.luau
+    ^
+    source.luau punctuation.arguments.begin.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+                                                            ^
+                                                            source.luau punctuation.separator.arguments.luau
+                                                             ^
+                                                             source.luau
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                              source.luau variable.other.readwrite.luau
+                                                                                                                      ^
+                                                                                                                      source.luau punctuation.separator.arguments.luau
+                                                                                                                       ^
+                                                                                                                       source.luau
+                                                                                                                        ^^^^^^^^
+                                                                                                                        source.luau meta.function.luau keyword.control.luau
+                                                                                                                                ^
+                                                                                                                                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                                                                                                                 ^
+                                                                                                                                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                                                                                                                  ^
+                                                                                                                                  source.luau
+                                                                                                                                   ^^
+                                                                                                                                   source.luau keyword.control.luau
+>  		multiline_if___aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+>  		and multiline_if___bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+ ^^^^
+ source.luau
+     ^^^
+     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.luau variable.other.readwrite.luau
+>  then
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+>  		foo()
+ ^^^^
+ source.luau
+     ^^^
+     source.luau entity.name.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau punctuation.arguments.end.luau
+>  	end
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>)
+ ^
+ source.luau punctuation.arguments.end.luau

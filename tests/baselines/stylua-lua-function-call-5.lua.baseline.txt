@@ -1,0 +1,226 @@
+original file
+-----------------------------------
+function GamepadModule.gamepadLinearToCurve(thumbstickPosition)
+  return Vector2.new(
+  	math.clamp(
+  		math.sign(thumbstickPosition.X)
+  			* fromSCurveSpace(SCurveTransform(toSCurveSpace(math.abs(thumbstickPosition.X)))),
+  		-1,
+  		1
+  	),
+  	math.clamp(
+  		math.sign(thumbstickPosition.Y)
+  			* fromSCurveSpace(SCurveTransform(toSCurveSpace(math.abs(thumbstickPosition.Y)))),
+  		-1,
+  		1
+  	)
+  )
+end
+
+-----------------------------------
+
+>function GamepadModule.gamepadLinearToCurve(thumbstickPosition)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^^^^^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+                       ^
+                       source.luau meta.function.luau
+                        ^^^^^^^^^^^^^^^^^^^^
+                        source.luau meta.function.luau entity.name.function.luau
+                                            ^
+                                            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                             ^^^^^^^^^^^^^^^^^^
+                                             source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                               ^
+                                                               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return Vector2.new(
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^
+          source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^
+                  source.luau entity.name.function.luau
+                     ^
+                     source.luau punctuation.arguments.begin.luau
+>  	math.clamp(
+ ^^^
+ source.luau
+    ^^^^^^^^^^
+    source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+>  		math.sign(thumbstickPosition.X)
+ ^^^^
+ source.luau
+     ^^^^^^^^^
+     source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+               ^^^^^^^^^^^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau variable.other.property.luau
+                                   ^
+                                   source.luau punctuation.arguments.end.luau
+>  			* fromSCurveSpace(SCurveTransform(toSCurveSpace(math.abs(thumbstickPosition.X)))),
+ ^^^^^
+ source.luau
+      ^
+      source.luau keyword.operator.arithmetic.luau
+       ^
+       source.luau
+        ^^^^^^^^^^^^^^^
+        source.luau entity.name.function.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
+                        ^^^^^^^^^^^^^^^
+                        source.luau entity.name.function.luau
+                                       ^
+                                       source.luau punctuation.arguments.begin.luau
+                                        ^^^^^^^^^^^^^
+                                        source.luau entity.name.function.luau
+                                                     ^
+                                                     source.luau punctuation.arguments.begin.luau
+                                                      ^^^^^^^^
+                                                      source.luau support.function.luau
+                                                              ^
+                                                              source.luau punctuation.arguments.begin.luau
+                                                               ^^^^^^^^^^^^^^^^^^
+                                                               source.luau variable.other.readwrite.luau
+                                                                                 ^
+                                                                                 source.luau
+                                                                                  ^
+                                                                                  source.luau variable.other.property.luau
+                                                                                   ^
+                                                                                   source.luau punctuation.arguments.end.luau
+                                                                                    ^
+                                                                                    source.luau punctuation.arguments.end.luau
+                                                                                     ^
+                                                                                     source.luau punctuation.arguments.end.luau
+                                                                                      ^
+                                                                                      source.luau punctuation.arguments.end.luau
+                                                                                       ^
+                                                                                       source.luau punctuation.separator.arguments.luau
+>  		-1,
+ ^^^^
+ source.luau
+     ^
+     source.luau keyword.operator.arithmetic.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau punctuation.separator.arguments.luau
+>  		1
+ ^^^^
+ source.luau
+     ^
+     source.luau constant.numeric.decimal.luau
+>  	),
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+     ^
+     source.luau punctuation.separator.arguments.luau
+>  	math.clamp(
+ ^^^
+ source.luau
+    ^^^^^^^^^^
+    source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+>  		math.sign(thumbstickPosition.Y)
+ ^^^^
+ source.luau
+     ^^^^^^^^^
+     source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+               ^^^^^^^^^^^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau variable.other.property.luau
+                                   ^
+                                   source.luau punctuation.arguments.end.luau
+>  			* fromSCurveSpace(SCurveTransform(toSCurveSpace(math.abs(thumbstickPosition.Y)))),
+ ^^^^^
+ source.luau
+      ^
+      source.luau keyword.operator.arithmetic.luau
+       ^
+       source.luau
+        ^^^^^^^^^^^^^^^
+        source.luau entity.name.function.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
+                        ^^^^^^^^^^^^^^^
+                        source.luau entity.name.function.luau
+                                       ^
+                                       source.luau punctuation.arguments.begin.luau
+                                        ^^^^^^^^^^^^^
+                                        source.luau entity.name.function.luau
+                                                     ^
+                                                     source.luau punctuation.arguments.begin.luau
+                                                      ^^^^^^^^
+                                                      source.luau support.function.luau
+                                                              ^
+                                                              source.luau punctuation.arguments.begin.luau
+                                                               ^^^^^^^^^^^^^^^^^^
+                                                               source.luau variable.other.readwrite.luau
+                                                                                 ^
+                                                                                 source.luau
+                                                                                  ^
+                                                                                  source.luau variable.other.property.luau
+                                                                                   ^
+                                                                                   source.luau punctuation.arguments.end.luau
+                                                                                    ^
+                                                                                    source.luau punctuation.arguments.end.luau
+                                                                                     ^
+                                                                                     source.luau punctuation.arguments.end.luau
+                                                                                      ^
+                                                                                      source.luau punctuation.arguments.end.luau
+                                                                                       ^
+                                                                                       source.luau punctuation.separator.arguments.luau
+>  		-1,
+ ^^^^
+ source.luau
+     ^
+     source.luau keyword.operator.arithmetic.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau punctuation.separator.arguments.luau
+>  		1
+ ^^^^
+ source.luau
+     ^
+     source.luau constant.numeric.decimal.luau
+>  	)
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>  )
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

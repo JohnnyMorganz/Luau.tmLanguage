@@ -1,0 +1,92 @@
+original file
+-----------------------------------
+do
+  local HitPart, HitPoint, HitNormal, HitMaterial = nil, Ray.Origin + Ray.Direction, Vector3.new(0, 1, 0), Enum.Material.Air
+end
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>  local HitPart, HitPoint, HitNormal, HitMaterial = nil, Ray.Origin + Ray.Direction, Vector3.new(0, 1, 0), Enum.Material.Air
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^^^
+         source.luau variable.other.readwrite.luau
+                ^^
+                source.luau
+                  ^^^^^^^^
+                  source.luau variable.other.readwrite.luau
+                          ^^
+                          source.luau
+                            ^^^^^^^^^
+                            source.luau variable.other.readwrite.luau
+                                     ^^
+                                     source.luau
+                                       ^^^^^^^^^^^
+                                       source.luau variable.other.readwrite.luau
+                                                  ^
+                                                  source.luau
+                                                   ^
+                                                   source.luau keyword.operator.assignment.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^
+                                                     source.luau constant.language.nil.luau
+                                                        ^^
+                                                        source.luau
+                                                          ^^^
+                                                          source.luau variable.other.readwrite.luau
+                                                             ^
+                                                             source.luau
+                                                              ^^^^^^
+                                                              source.luau variable.other.property.luau
+                                                                    ^
+                                                                    source.luau
+                                                                     ^
+                                                                     source.luau keyword.operator.arithmetic.luau
+                                                                      ^
+                                                                      source.luau
+                                                                       ^^^
+                                                                       source.luau variable.other.readwrite.luau
+                                                                          ^
+                                                                          source.luau
+                                                                           ^^^^^^^^^
+                                                                           source.luau variable.other.property.luau
+                                                                                    ^^
+                                                                                    source.luau
+                                                                                      ^^^^^^^
+                                                                                      source.luau variable.other.readwrite.luau
+                                                                                             ^
+                                                                                             source.luau
+                                                                                              ^^^
+                                                                                              source.luau entity.name.function.luau
+                                                                                                 ^
+                                                                                                 source.luau punctuation.arguments.begin.luau
+                                                                                                  ^
+                                                                                                  source.luau constant.numeric.decimal.luau
+                                                                                                   ^
+                                                                                                   source.luau punctuation.separator.arguments.luau
+                                                                                                    ^
+                                                                                                    source.luau
+                                                                                                     ^
+                                                                                                     source.luau constant.numeric.decimal.luau
+                                                                                                      ^
+                                                                                                      source.luau punctuation.separator.arguments.luau
+                                                                                                       ^
+                                                                                                       source.luau
+                                                                                                        ^
+                                                                                                        source.luau constant.numeric.decimal.luau
+                                                                                                         ^
+                                                                                                         source.luau punctuation.arguments.end.luau
+                                                                                                          ^^
+                                                                                                          source.luau
+                                                                                                            ^^^^^^^^^^^^^^^^^
+                                                                                                            source.luau constant.language.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

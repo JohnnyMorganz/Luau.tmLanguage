@@ -1,0 +1,434 @@
+original file
+-----------------------------------
+local x = {
+  "foo", -- comment
+  "bar", -- test
+  "baz" -- test
+}
+
+local foo = {
+  MinSize = call(0, 0),
+  MaxSize = call(math.huge, 500) -- TODO: Set this up
+}
+
+local x = { -- comment
+    hello = "world",
+    foo = "bar",
+}
+
+local foo = { -- bar
+}
+
+local bar = { baz -- bar
+}
+
+local baz = {
+  -- foo
+}
+
+local foobar = {
+  "string"
+} -- trailing comment
+
+
+local tbl = Roact.createElement({
+  -- comment
+  a = test
+  -- comment
+})
+-----------------------------------
+
+>local x = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+>  "foo", -- comment
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^
+    source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^
+        source.luau punctuation.separator.fields.luau
+         ^
+         source.luau
+          ^^
+          source.luau comment.line.double-dash.luau
+            ^^^^^^^^
+            source.luau comment.line.double-dash.luau
+>  "bar", -- test
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^
+    source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^
+        source.luau punctuation.separator.fields.luau
+         ^
+         source.luau
+          ^^
+          source.luau comment.line.double-dash.luau
+            ^^^^^
+            source.luau comment.line.double-dash.luau
+>  "baz" -- test
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^
+    source.luau string.quoted.double.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^
+        source.luau
+         ^^
+         source.luau comment.line.double-dash.luau
+           ^^^^^
+           source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local foo = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+>  MinSize = call(0, 0),
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^
+             source.luau entity.name.function.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^
+                  source.luau constant.numeric.decimal.luau
+                   ^
+                   source.luau punctuation.separator.arguments.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau constant.numeric.decimal.luau
+                      ^
+                      source.luau punctuation.arguments.end.luau
+                       ^
+                       source.luau punctuation.separator.fields.luau
+>  MaxSize = call(math.huge, 500) -- TODO: Set this up
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^
+             source.luau entity.name.function.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^^^^^^^^^
+                  source.luau support.constant.luau
+                           ^
+                           source.luau punctuation.separator.arguments.luau
+                            ^
+                            source.luau
+                             ^^^
+                             source.luau constant.numeric.decimal.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+                                 ^
+                                 source.luau
+                                  ^^
+                                  source.luau comment.line.double-dash.luau
+                                    ^^^^^^^^^^^^^^^^^^
+                                    source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local x = { -- comment
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+            ^
+            source.luau
+             ^^
+             source.luau comment.line.double-dash.luau
+               ^^^^^^^^
+               source.luau comment.line.double-dash.luau
+>    hello = "world",
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^^^^^
+              source.luau string.quoted.double.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^
+                    source.luau punctuation.separator.fields.luau
+>    foo = "bar",
+ ^^^^
+ source.luau
+     ^^^
+     source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^^^
+            source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local foo = { -- bar
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+              ^
+              source.luau
+               ^^
+               source.luau comment.line.double-dash.luau
+                 ^^^^
+                 source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local bar = { baz -- bar
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+              ^
+              source.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau comment.line.double-dash.luau
+                     ^^^^
+                     source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local baz = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+>  -- foo
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^
+     source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local foobar = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^
+                source.luau punctuation.table.begin.luau
+>  "string"
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^^^^
+    source.luau string.quoted.double.luau
+          ^
+          source.luau string.quoted.double.luau
+>} -- trailing comment
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>local tbl = Roact.createElement({
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^^
+             source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^^^^^^
+                   source.luau entity.name.function.luau
+                                ^
+                                source.luau punctuation.arguments.begin.luau
+                                 ^
+                                 source.luau punctuation.table.begin.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  a = test
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^
+     source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>})
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.arguments.end.luau

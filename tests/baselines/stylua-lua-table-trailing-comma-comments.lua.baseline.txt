@@ -1,0 +1,60 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/547
+local too = {
+  x,		-- string
+  y		-- string
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/547
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local too = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+>  x,		-- string
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau punctuation.separator.fields.luau
+     ^^
+     source.luau
+       ^^
+       source.luau comment.line.double-dash.luau
+         ^^^^^^^
+         source.luau comment.line.double-dash.luau
+>  y		-- string
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^^
+    source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^
+        source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

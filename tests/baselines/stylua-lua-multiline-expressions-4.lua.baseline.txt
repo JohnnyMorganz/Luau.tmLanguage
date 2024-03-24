@@ -1,0 +1,164 @@
+original file
+-----------------------------------
+function SetCallsign(Player, Callsign)
+  if Settings.PolicingSetup.Radio or (table.find(Settings.PolicingSetup.CallsignPrefix, string.sub(Callsign, 1, 2)) and tonumber(string.sub(Callsign, 3, 4))) then
+  	Player:SetAttribute("Callsign", Callsign)
+  end
+end
+-----------------------------------
+
+>function SetCallsign(Player, Callsign)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^^^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^^^^^^
+                      source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                            ^
+                            source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                             ^
+                             source.luau meta.function.luau meta.parameter.luau
+                              ^^^^^^^^
+                              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  if Settings.PolicingSetup.Radio or (table.find(Settings.PolicingSetup.CallsignPrefix, string.sub(Callsign, 1, 2)) and tonumber(string.sub(Callsign, 3, 4))) then
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^^^^^^
+      source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^^^^^^^^^^^
+               source.luau variable.other.property.luau
+                            ^
+                            source.luau
+                             ^^^^^
+                             source.luau variable.other.property.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau punctuation.arguments.begin.luau
+                                       ^^^^^^^^^^
+                                       source.luau support.function.luau
+                                                 ^
+                                                 source.luau punctuation.arguments.begin.luau
+                                                  ^^^^^^^^
+                                                  source.luau variable.other.readwrite.luau
+                                                          ^
+                                                          source.luau
+                                                           ^^^^^^^^^^^^^
+                                                           source.luau variable.other.property.luau
+                                                                        ^
+                                                                        source.luau
+                                                                         ^^^^^^^^^^^^^^
+                                                                         source.luau variable.other.property.luau
+                                                                                       ^
+                                                                                       source.luau punctuation.separator.arguments.luau
+                                                                                        ^
+                                                                                        source.luau
+                                                                                         ^^^^^^^^^^
+                                                                                         source.luau support.function.luau
+                                                                                                   ^
+                                                                                                   source.luau punctuation.arguments.begin.luau
+                                                                                                    ^^^^^^^^
+                                                                                                    source.luau variable.other.readwrite.luau
+                                                                                                            ^
+                                                                                                            source.luau punctuation.separator.arguments.luau
+                                                                                                             ^
+                                                                                                             source.luau
+                                                                                                              ^
+                                                                                                              source.luau constant.numeric.decimal.luau
+                                                                                                               ^
+                                                                                                               source.luau punctuation.separator.arguments.luau
+                                                                                                                ^
+                                                                                                                source.luau
+                                                                                                                 ^
+                                                                                                                 source.luau constant.numeric.decimal.luau
+                                                                                                                  ^
+                                                                                                                  source.luau punctuation.arguments.end.luau
+                                                                                                                   ^
+                                                                                                                   source.luau punctuation.arguments.end.luau
+                                                                                                                    ^
+                                                                                                                    source.luau
+                                                                                                                     ^^^
+                                                                                                                     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                                        ^
+                                                                                                                        source.luau
+                                                                                                                         ^^^^^^^^
+                                                                                                                         source.luau support.function.luau
+                                                                                                                                 ^
+                                                                                                                                 source.luau punctuation.arguments.begin.luau
+                                                                                                                                  ^^^^^^^^^^
+                                                                                                                                  source.luau support.function.luau
+                                                                                                                                            ^
+                                                                                                                                            source.luau punctuation.arguments.begin.luau
+                                                                                                                                             ^^^^^^^^
+                                                                                                                                             source.luau variable.other.readwrite.luau
+                                                                                                                                                     ^
+                                                                                                                                                     source.luau punctuation.separator.arguments.luau
+                                                                                                                                                      ^
+                                                                                                                                                      source.luau
+                                                                                                                                                       ^
+                                                                                                                                                       source.luau constant.numeric.decimal.luau
+                                                                                                                                                        ^
+                                                                                                                                                        source.luau punctuation.separator.arguments.luau
+                                                                                                                                                         ^
+                                                                                                                                                         source.luau
+                                                                                                                                                          ^
+                                                                                                                                                          source.luau constant.numeric.decimal.luau
+                                                                                                                                                           ^
+                                                                                                                                                           source.luau punctuation.arguments.end.luau
+                                                                                                                                                            ^
+                                                                                                                                                            source.luau punctuation.arguments.end.luau
+                                                                                                                                                             ^
+                                                                                                                                                             source.luau punctuation.arguments.end.luau
+                                                                                                                                                              ^
+                                                                                                                                                              source.luau
+                                                                                                                                                               ^^^^
+                                                                                                                                                               source.luau keyword.control.luau
+>  	Player:SetAttribute("Callsign", Callsign)
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^^^^^^^^^^^
+           source.luau entity.name.function.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^^^^^^^^
+                         source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau string.quoted.double.luau
+                                  ^
+                                  source.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^^^^
+                                    source.luau variable.other.readwrite.luau
+                                            ^
+                                            source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

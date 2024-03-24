@@ -1,0 +1,160 @@
+original file
+-----------------------------------
+Roact.createElement("ImageLabel", {
+  Size = UDim2.new(
+  	0,
+  	TextService:GetTextSize(self.props.PhysicalTool.Name, 16, Enum.Font.SourceSansBold, Vector2.new(100000, 100000)).X
+  		+ 10,
+  	0,
+  	20
+  ),
+})
+-----------------------------------
+
+>Roact.createElement("ImageLabel", {
+ ^^^^^
+ source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^
+       source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^
+                     source.luau string.quoted.double.luau
+                      ^^^^^^^^^^
+                      source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau punctuation.separator.arguments.luau
+                                  ^
+                                  source.luau
+                                   ^
+                                   source.luau punctuation.table.begin.luau
+>  Size = UDim2.new(
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^
+        source.luau keyword.operator.assignment.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^
+                source.luau entity.name.function.luau
+                   ^
+                   source.luau punctuation.arguments.begin.luau
+>  	0,
+ ^^^
+ source.luau
+    ^
+    source.luau constant.numeric.decimal.luau
+     ^
+     source.luau punctuation.separator.arguments.luau
+>  	TextService:GetTextSize(self.props.PhysicalTool.Name, 16, Enum.Font.SourceSansBold, Vector2.new(100000, 100000)).X
+ ^^^
+ source.luau
+    ^^^^^^^^^^^
+    source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^^^^^^
+                source.luau entity.name.function.luau
+                           ^
+                           source.luau punctuation.arguments.begin.luau
+                            ^^^^
+                            source.luau variable.language.self.luau
+                                ^
+                                source.luau
+                                 ^^^^^
+                                 source.luau variable.other.property.luau
+                                      ^
+                                      source.luau
+                                       ^^^^^^^^^^^^
+                                       source.luau variable.other.property.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^
+                                                    source.luau variable.other.property.luau
+                                                        ^
+                                                        source.luau punctuation.separator.arguments.luau
+                                                         ^
+                                                         source.luau
+                                                          ^^
+                                                          source.luau constant.numeric.decimal.luau
+                                                            ^
+                                                            source.luau punctuation.separator.arguments.luau
+                                                             ^
+                                                             source.luau
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+                                                              source.luau constant.language.luau
+                                                                                      ^
+                                                                                      source.luau punctuation.separator.arguments.luau
+                                                                                       ^
+                                                                                       source.luau
+                                                                                        ^^^^^^^
+                                                                                        source.luau variable.other.readwrite.luau
+                                                                                               ^
+                                                                                               source.luau
+                                                                                                ^^^
+                                                                                                source.luau entity.name.function.luau
+                                                                                                   ^
+                                                                                                   source.luau punctuation.arguments.begin.luau
+                                                                                                    ^^^^^^
+                                                                                                    source.luau constant.numeric.decimal.luau
+                                                                                                          ^
+                                                                                                          source.luau punctuation.separator.arguments.luau
+                                                                                                           ^
+                                                                                                           source.luau
+                                                                                                            ^^^^^^
+                                                                                                            source.luau constant.numeric.decimal.luau
+                                                                                                                  ^
+                                                                                                                  source.luau punctuation.arguments.end.luau
+                                                                                                                   ^
+                                                                                                                   source.luau punctuation.arguments.end.luau
+                                                                                                                    ^
+                                                                                                                    source.luau
+                                                                                                                     ^
+                                                                                                                     source.luau variable.other.property.luau
+>  		+ 10,
+ ^^^^
+ source.luau
+     ^
+     source.luau keyword.operator.arithmetic.luau
+      ^
+      source.luau
+       ^^
+       source.luau constant.numeric.decimal.luau
+         ^
+         source.luau punctuation.separator.arguments.luau
+>  	0,
+ ^^^
+ source.luau
+    ^
+    source.luau constant.numeric.decimal.luau
+     ^
+     source.luau punctuation.separator.arguments.luau
+>  	20
+ ^^^
+ source.luau
+    ^^
+    source.luau constant.numeric.decimal.luau
+>  ),
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.end.luau
+    ^
+    source.luau punctuation.separator.fields.luau
+>})
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.arguments.end.luau

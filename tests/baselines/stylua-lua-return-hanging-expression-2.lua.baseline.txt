@@ -1,0 +1,172 @@
+original file
+-----------------------------------
+return cframe
+  -- Clamp & transform into world space
+  * Vector3.new(
+  	math.clamp(transform.X, -halfSize.X, halfSize.X),
+  	math.clamp(transform.Y, -halfSize.Y, halfSize.Y),
+  	math.clamp(transform.Z, -halfSize.Z, halfSize.Z)
+  ), cframe.Position
+
+-----------------------------------
+
+>return cframe
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau variable.other.readwrite.luau
+>  -- Clamp & transform into world space
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  * Vector3.new(
+ ^^
+ source.luau
+   ^
+   source.luau keyword.operator.arithmetic.luau
+    ^
+    source.luau
+     ^^^^^^^
+     source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^^
+             source.luau entity.name.function.luau
+                ^
+                source.luau punctuation.arguments.begin.luau
+>  	math.clamp(transform.X, -halfSize.X, halfSize.X),
+ ^^^
+ source.luau
+    ^^^^^^^^^^
+    source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+               ^^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau variable.other.property.luau
+                          ^
+                          source.luau punctuation.separator.arguments.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.arithmetic.luau
+                             ^^^^^^^^
+                             source.luau variable.other.readwrite.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau variable.other.property.luau
+                                       ^
+                                       source.luau punctuation.separator.arguments.luau
+                                        ^
+                                        source.luau
+                                         ^^^^^^^^
+                                         source.luau variable.other.readwrite.luau
+                                                 ^
+                                                 source.luau
+                                                  ^
+                                                  source.luau variable.other.property.luau
+                                                   ^
+                                                   source.luau punctuation.arguments.end.luau
+                                                    ^
+                                                    source.luau punctuation.separator.arguments.luau
+>  	math.clamp(transform.Y, -halfSize.Y, halfSize.Y),
+ ^^^
+ source.luau
+    ^^^^^^^^^^
+    source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+               ^^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau variable.other.property.luau
+                          ^
+                          source.luau punctuation.separator.arguments.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.arithmetic.luau
+                             ^^^^^^^^
+                             source.luau variable.other.readwrite.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau variable.other.property.luau
+                                       ^
+                                       source.luau punctuation.separator.arguments.luau
+                                        ^
+                                        source.luau
+                                         ^^^^^^^^
+                                         source.luau variable.other.readwrite.luau
+                                                 ^
+                                                 source.luau
+                                                  ^
+                                                  source.luau variable.other.property.luau
+                                                   ^
+                                                   source.luau punctuation.arguments.end.luau
+                                                    ^
+                                                    source.luau punctuation.separator.arguments.luau
+>  	math.clamp(transform.Z, -halfSize.Z, halfSize.Z)
+ ^^^
+ source.luau
+    ^^^^^^^^^^
+    source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+               ^^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau variable.other.property.luau
+                          ^
+                          source.luau punctuation.separator.arguments.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.arithmetic.luau
+                             ^^^^^^^^
+                             source.luau variable.other.readwrite.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau variable.other.property.luau
+                                       ^
+                                       source.luau punctuation.separator.arguments.luau
+                                        ^
+                                        source.luau
+                                         ^^^^^^^^
+                                         source.luau variable.other.readwrite.luau
+                                                 ^
+                                                 source.luau
+                                                  ^
+                                                  source.luau variable.other.property.luau
+                                                   ^
+                                                   source.luau punctuation.arguments.end.luau
+>  ), cframe.Position
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.end.luau
+    ^^
+    source.luau
+      ^^^^^^
+      source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau variable.other.property.luau
+>
+ ^
+ source.luau

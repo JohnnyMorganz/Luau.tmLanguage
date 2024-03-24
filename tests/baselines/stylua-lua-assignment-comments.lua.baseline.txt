@@ -1,0 +1,366 @@
+original file
+-----------------------------------
+local isValid =
+  -- Allow nil for conditional declaration
+  contextType == nil or
+  (contextType["$$typeof"] == REACT_CONTEXT_TYPE and
+  	contextType._context == nil) -- Not a <Context.Consumer>
+
+local isValid = -- Allow nil for conditional declaration
+  foo
+
+local isValid = -- test comment
+  -- Allow nil for conditional declaration
+  contextType == nil or
+  (contextType["$$typeof"] == REACT_CONTEXT_TYPE and
+  	contextType._context == nil) -- Not a <Context.Consumer>
+
+-- https://github.com/JohnnyMorganz/StyLua/issues/340
+local useDisposableConcast =
+  -- * Refetching uses a disposable Concast to allow refetches using different
+  -- options/variables, without permanently altering the options of the
+  -- original ObservableQuery.
+  newNetworkStatus == NetworkStatus.refetch or
+  -- * The fetchMore method does not actually call the reobserve method, but,
+  -- if it did, it would definitely use a disposable Concast.
+  newNetworkStatus == NetworkStatus.fetchMore or
+  -- * Polling uses a disposable Concast so the polling options (which force
+  -- fetchPolicy to be "network-only") won't override the original options.
+  newNetworkStatus == NetworkSt
+
+-----------------------------------
+
+>local isValid =
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+>  -- Allow nil for conditional declaration
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  contextType == nil or
+ ^^
+ source.luau
+   ^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^
+               source.luau keyword.operator.comparison.luau
+                 ^
+                 source.luau
+                  ^^^
+                  source.luau constant.language.nil.luau
+                     ^
+                     source.luau
+                      ^^
+                      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+>  (contextType["$$typeof"] == REACT_CONTEXT_TYPE and
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^^^^^^^^^^^
+    source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^
+                source.luau string.quoted.double.luau
+                 ^^^^^^^^
+                 source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^^
+                          source.luau
+                            ^^
+                            source.luau keyword.operator.comparison.luau
+                              ^
+                              source.luau
+                               ^^^^^^^^^^^^^^^^^^
+                               source.luau variable.other.constant.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^^
+                                                  source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+>  	contextType._context == nil) -- Not a <Context.Consumer>
+ ^^^
+ source.luau
+    ^^^^^^^^^^^
+    source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^^^
+                source.luau variable.other.property.luau
+                        ^
+                        source.luau
+                         ^^
+                         source.luau keyword.operator.comparison.luau
+                           ^
+                           source.luau
+                            ^^^
+                            source.luau constant.language.nil.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+                                ^
+                                source.luau
+                                 ^^
+                                 source.luau comment.line.double-dash.luau
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>local isValid = -- Allow nil for conditional declaration
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau comment.line.double-dash.luau
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   source.luau comment.line.double-dash.luau
+>  foo
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>local isValid = -- test comment
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau comment.line.double-dash.luau
+                   ^^^^^^^^^^^^^
+                   source.luau comment.line.double-dash.luau
+>  -- Allow nil for conditional declaration
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  contextType == nil or
+ ^^
+ source.luau
+   ^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^
+               source.luau keyword.operator.comparison.luau
+                 ^
+                 source.luau
+                  ^^^
+                  source.luau constant.language.nil.luau
+                     ^
+                     source.luau
+                      ^^
+                      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+>  (contextType["$$typeof"] == REACT_CONTEXT_TYPE and
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^^^^^^^^^^^
+    source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^
+                source.luau string.quoted.double.luau
+                 ^^^^^^^^
+                 source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^^
+                          source.luau
+                            ^^
+                            source.luau keyword.operator.comparison.luau
+                              ^
+                              source.luau
+                               ^^^^^^^^^^^^^^^^^^
+                               source.luau variable.other.constant.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^^
+                                                  source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+>  	contextType._context == nil) -- Not a <Context.Consumer>
+ ^^^
+ source.luau
+    ^^^^^^^^^^^
+    source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^^^
+                source.luau variable.other.property.luau
+                        ^
+                        source.luau
+                         ^^
+                         source.luau keyword.operator.comparison.luau
+                           ^
+                           source.luau
+                            ^^^
+                            source.luau constant.language.nil.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+                                ^
+                                source.luau
+                                 ^^
+                                 source.luau comment.line.double-dash.luau
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>-- https://github.com/JohnnyMorganz/StyLua/issues/340
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local useDisposableConcast =
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.assignment.luau
+>  -- * Refetching uses a disposable Concast to allow refetches using different
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  -- options/variables, without permanently altering the options of the
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  -- original ObservableQuery.
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  newNetworkStatus == NetworkStatus.refetch or
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^^^^^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^^^
+                                     source.luau variable.other.property.luau
+                                            ^
+                                            source.luau
+                                             ^^
+                                             source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+>  -- * The fetchMore method does not actually call the reobserve method, but,
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  -- if it did, it would definitely use a disposable Concast.
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  newNetworkStatus == NetworkStatus.fetchMore or
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^^^^^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^^^^^
+                                     source.luau variable.other.property.luau
+                                              ^
+                                              source.luau
+                                               ^^
+                                               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+>  -- * Polling uses a disposable Concast so the polling options (which force
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  -- fetchPolicy to be "network-only") won't override the original options.
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  newNetworkStatus == NetworkSt
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau

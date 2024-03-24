@@ -1,0 +1,316 @@
+original file
+-----------------------------------
+function foo(foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr) end
+
+function foo(foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr)
+end
+
+function foobar(fooooo, barrrrrrrrrr, bazzzzzzzzzzzzzzz, fooooooooooo, bazzzzzzzzzzzzzzzzzzz, barrrrrrrrrrrrrrrrrrrrrrrr)
+  print("test")
+end
+
+do
+  function foo(fooooo, barr -- test
+  )
+  	print("test")
+  end
+end
+
+do
+  function bar(foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr)
+  end
+end
+
+local x = {
+  func = function (fooooo, bar --test
+  )
+  	print("test")
+  end,
+}
+-----------------------------------
+
+>function foo(foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr) end
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                 ^
+                                                                                 source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                  ^
+                                                                                  source.luau meta.function.luau meta.parameter.luau
+                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                    ^
+                                                                                                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                                                                                                     ^
+                                                                                                                     source.luau
+                                                                                                                      ^^^
+                                                                                                                      source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo(foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                 ^
+                                                                                 source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                  ^
+                                                                                  source.luau meta.function.luau meta.parameter.luau
+                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                       ^
+                                                                                                                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foobar(fooooo, barrrrrrrrrr, bazzzzzzzzzzzzzzz, fooooooooooo, bazzzzzzzzzzzzzzzzzzz, barrrrrrrrrrrrrrrrrrrrrrrr)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                 ^^^^^^
+                 source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau
+                         ^^^^^^^^^^^^
+                         source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau
+                                       ^^^^^^^^^^^^^^^^^
+                                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                        ^
+                                                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                         ^
+                                                         source.luau meta.function.luau meta.parameter.luau
+                                                          ^^^^^^^^^^^^
+                                                          source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                      ^
+                                                                      source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                       ^
+                                                                       source.luau meta.function.luau meta.parameter.luau
+                                                                        ^^^^^^^^^^^^^^^^^^^^^
+                                                                        source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                             ^
+                                                                                             source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                              ^
+                                                                                              source.luau meta.function.luau meta.parameter.luau
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                               source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                         ^
+                                                                                                                         source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  print("test")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^
+          source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>  function foo(fooooo, barr -- test
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau
+            ^^^
+            source.luau meta.function.luau entity.name.function.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                ^^^^^^
+                source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau
+                        ^^^^
+                        source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                            ^
+                            source.luau meta.function.luau meta.parameter.luau
+                             ^^
+                             source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+                               ^^^^^
+                               source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+>  )
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	print("test")
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau support.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^^^^
+           source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>  function bar(foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau
+            ^^^
+            source.luau meta.function.luau entity.name.function.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                   ^
+                                                                                   source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                    ^
+                                                                                    source.luau meta.function.luau meta.parameter.luau
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                         ^
+                                                                                                                         source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local x = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+>  func = function (fooooo, bar --test
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^
+        source.luau keyword.operator.assignment.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau meta.function.luau keyword.control.luau
+                  ^
+                  source.luau meta.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                    ^^^^^^
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau
+                            ^^^
+                            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                               ^
+                               source.luau meta.function.luau meta.parameter.luau
+                                ^^
+                                source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+                                  ^^^^
+                                  source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+>  )
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	print("test")
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau support.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^^^^
+           source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>  end,
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^
+      source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau

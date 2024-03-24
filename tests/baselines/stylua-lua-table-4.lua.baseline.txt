@@ -1,0 +1,112 @@
+original file
+-----------------------------------
+local thisisathing = {this_is_one = "one", this_is_two = "two", this_is_three = "three", this_is_four = "four", f = "b"}
+
+-----------------------------------
+
+>local thisisathing = {this_is_one = "one", this_is_two = "two", this_is_three = "three", this_is_four = "four", f = "b"}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau punctuation.table.begin.luau
+                       ^^^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau
+                                   ^
+                                   source.luau keyword.operator.assignment.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau string.quoted.double.luau
+                                      ^^^
+                                      source.luau string.quoted.double.luau
+                                         ^
+                                         source.luau string.quoted.double.luau
+                                          ^
+                                          source.luau punctuation.separator.fields.luau
+                                           ^
+                                           source.luau
+                                            ^^^^^^^^^^^
+                                            source.luau variable.other.readwrite.luau
+                                                       ^
+                                                       source.luau
+                                                        ^
+                                                        source.luau keyword.operator.assignment.luau
+                                                         ^
+                                                         source.luau
+                                                          ^
+                                                          source.luau string.quoted.double.luau
+                                                           ^^^
+                                                           source.luau string.quoted.double.luau
+                                                              ^
+                                                              source.luau string.quoted.double.luau
+                                                               ^
+                                                               source.luau punctuation.separator.fields.luau
+                                                                ^
+                                                                source.luau
+                                                                 ^^^^^^^^^^^^^
+                                                                 source.luau variable.other.readwrite.luau
+                                                                              ^
+                                                                              source.luau
+                                                                               ^
+                                                                               source.luau keyword.operator.assignment.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^
+                                                                                 source.luau string.quoted.double.luau
+                                                                                  ^^^^^
+                                                                                  source.luau string.quoted.double.luau
+                                                                                       ^
+                                                                                       source.luau string.quoted.double.luau
+                                                                                        ^
+                                                                                        source.luau punctuation.separator.fields.luau
+                                                                                         ^
+                                                                                         source.luau
+                                                                                          ^^^^^^^^^^^^
+                                                                                          source.luau variable.other.readwrite.luau
+                                                                                                      ^
+                                                                                                      source.luau
+                                                                                                       ^
+                                                                                                       source.luau keyword.operator.assignment.luau
+                                                                                                        ^
+                                                                                                        source.luau
+                                                                                                         ^
+                                                                                                         source.luau string.quoted.double.luau
+                                                                                                          ^^^^
+                                                                                                          source.luau string.quoted.double.luau
+                                                                                                              ^
+                                                                                                              source.luau string.quoted.double.luau
+                                                                                                               ^
+                                                                                                               source.luau punctuation.separator.fields.luau
+                                                                                                                ^
+                                                                                                                source.luau
+                                                                                                                 ^
+                                                                                                                 source.luau variable.other.readwrite.luau
+                                                                                                                  ^
+                                                                                                                  source.luau
+                                                                                                                   ^
+                                                                                                                   source.luau keyword.operator.assignment.luau
+                                                                                                                    ^
+                                                                                                                    source.luau
+                                                                                                                     ^
+                                                                                                                     source.luau string.quoted.double.luau
+                                                                                                                      ^
+                                                                                                                      source.luau string.quoted.double.luau
+                                                                                                                       ^
+                                                                                                                       source.luau string.quoted.double.luau
+                                                                                                                        ^
+                                                                                                                        source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

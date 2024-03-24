@@ -1,0 +1,268 @@
+original file
+-----------------------------------
+setmetatable({
+  _words = words,
+  _morewords = words,
+  _evenmorewords = words,
+  _words = words,
+  _morewords = words,
+  _evenmorewords = words,
+}, Class)
+
+foo({
+  foo = bar,
+}, baz, {
+  bar = baz,
+})
+
+Roact.createElement("Frame", {
+  foo = bar, bar = baz,
+}, self.props[Roact.Children])
+-----------------------------------
+
+>setmetatable({
+ ^^^^^^^^^^^^
+ source.luau support.function.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau punctuation.table.begin.luau
+>  _words = words,
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau punctuation.separator.fields.luau
+>  _morewords = words,
+ ^^
+ source.luau
+   ^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^^^^^
+                source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau punctuation.separator.fields.luau
+>  _evenmorewords = words,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^^^^
+                    source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau punctuation.separator.fields.luau
+>  _words = words,
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau punctuation.separator.fields.luau
+>  _morewords = words,
+ ^^
+ source.luau
+   ^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^^^^^
+                source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau punctuation.separator.fields.luau
+>  _evenmorewords = words,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^^^^
+                    source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau punctuation.separator.fields.luau
+>}, Class)
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.separator.arguments.luau
+   ^
+   source.luau
+    ^^^^^
+    source.luau variable.other.readwrite.luau
+         ^
+         source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>foo({
+ ^^^
+ source.luau entity.name.function.luau
+    ^
+    source.luau punctuation.arguments.begin.luau
+     ^
+     source.luau punctuation.table.begin.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>}, baz, {
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.separator.arguments.luau
+   ^
+   source.luau
+    ^^^
+    source.luau variable.other.readwrite.luau
+       ^
+       source.luau punctuation.separator.arguments.luau
+        ^
+        source.luau
+         ^
+         source.luau punctuation.table.begin.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>})
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>Roact.createElement("Frame", {
+ ^^^^^
+ source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^
+       source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^
+                     source.luau string.quoted.double.luau
+                      ^^^^^
+                      source.luau string.quoted.double.luau
+                           ^
+                           source.luau string.quoted.double.luau
+                            ^
+                            source.luau punctuation.separator.arguments.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau punctuation.table.begin.luau
+>  foo = bar, bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+             ^
+             source.luau
+              ^^^
+              source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau punctuation.separator.fields.luau
+>}, self.props[Roact.Children])
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.separator.arguments.luau
+   ^
+   source.luau
+    ^^^^
+    source.luau variable.language.self.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.property.luau
+              ^
+              source.luau
+               ^^^^^
+               source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^
+                     source.luau variable.other.property.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau punctuation.arguments.end.luau

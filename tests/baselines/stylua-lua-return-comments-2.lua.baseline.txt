@@ -1,0 +1,58 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/662
+function f()
+  return a -- adoc
+  	, b -- bdoc
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/662
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>function f()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^
+          source.luau meta.function.luau entity.name.function.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return a -- adoc
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^
+            source.luau comment.line.double-dash.luau
+              ^^^^^
+              source.luau comment.line.double-dash.luau
+>  	, b -- bdoc
+ ^^^^^
+ source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^
+          source.luau comment.line.double-dash.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

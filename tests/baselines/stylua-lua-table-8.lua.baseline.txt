@@ -1,0 +1,74 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/551
+local test = {
+  { "http://example.com/b//c//d;p?q#blarg", "http://u:p@h.com/p/a/t/h?s#hash2", "http://u:p@h.com/p/a/t/h?s#hash2" },
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/551
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local test = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau punctuation.table.begin.luau
+>  { "http://example.com/b//c//d;p?q#blarg", "http://u:p@h.com/p/a/t/h?s#hash2", "http://u:p@h.com/p/a/t/h?s#hash2" },
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.table.begin.luau
+    ^
+    source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                                          ^
+                                          source.luau string.quoted.double.luau
+                                           ^
+                                           source.luau punctuation.separator.fields.luau
+                                            ^
+                                            source.luau
+                                             ^
+                                             source.luau string.quoted.double.luau
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                              source.luau string.quoted.double.luau
+                                                                              ^
+                                                                              source.luau string.quoted.double.luau
+                                                                               ^
+                                                                               source.luau punctuation.separator.fields.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^
+                                                                                 source.luau string.quoted.double.luau
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                  source.luau string.quoted.double.luau
+                                                                                                                  ^
+                                                                                                                  source.luau string.quoted.double.luau
+                                                                                                                   ^
+                                                                                                                   source.luau
+                                                                                                                    ^
+                                                                                                                    source.luau punctuation.table.end.luau
+                                                                                                                     ^
+                                                                                                                     source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

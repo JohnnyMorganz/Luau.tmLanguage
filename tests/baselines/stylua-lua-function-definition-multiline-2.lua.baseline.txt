@@ -1,0 +1,54 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/830
+local a_very_long_variable_name_given_that_is_bigger_than_width_upper_limit_but_unfortunately_can_not_be_made_shorter = function()
+  print("Hello")
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/830
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local a_very_long_variable_name_given_that_is_bigger_than_width_upper_limit_but_unfortunately_can_not_be_made_shorter = function()
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                                                                                                                      ^
+                                                                                                                      source.luau
+                                                                                                                       ^
+                                                                                                                       source.luau keyword.operator.assignment.luau
+                                                                                                                        ^
+                                                                                                                        source.luau
+                                                                                                                         ^^^^^^^^
+                                                                                                                         source.luau meta.function.luau keyword.control.luau
+                                                                                                                                 ^
+                                                                                                                                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                                                                                                                  ^
+                                                                                                                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  print("Hello")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^
+          source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

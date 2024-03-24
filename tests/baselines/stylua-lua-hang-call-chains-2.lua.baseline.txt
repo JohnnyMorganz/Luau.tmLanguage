@@ -1,0 +1,146 @@
+original file
+-----------------------------------
+local output = Job
+    :new({
+    command = "stylua",
+    args = { "-" },
+    writer = api.nvim_buf_get_lines(bufnr, 0, -1, false),
+  })
+    :sync()
+
+-----------------------------------
+
+>local output = Job
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^^^
+                source.luau variable.other.readwrite.luau
+>    :new({
+ ^^^^^
+ source.luau
+      ^^^
+      source.luau entity.name.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.table.begin.luau
+>    command = "stylua",
+ ^^^^
+ source.luau
+     ^^^^^^^
+     source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^^^^^^
+                source.luau string.quoted.double.luau
+                      ^
+                      source.luau string.quoted.double.luau
+                       ^
+                       source.luau punctuation.separator.fields.luau
+>    args = { "-" },
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau punctuation.table.begin.luau
+             ^
+             source.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau string.quoted.double.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau punctuation.table.end.luau
+                   ^
+                   source.luau punctuation.separator.fields.luau
+>    writer = api.nvim_buf_get_lines(bufnr, 0, -1, false),
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^
+              source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^^^^^^^^^
+                  source.luau entity.name.function.luau
+                                    ^
+                                    source.luau punctuation.arguments.begin.luau
+                                     ^^^^^
+                                     source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau punctuation.separator.arguments.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau constant.numeric.decimal.luau
+                                             ^
+                                             source.luau punctuation.separator.arguments.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau keyword.operator.arithmetic.luau
+                                                ^
+                                                source.luau constant.numeric.decimal.luau
+                                                 ^
+                                                 source.luau punctuation.separator.arguments.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^^^^
+                                                   source.luau constant.language.boolean.false.luau
+                                                        ^
+                                                        source.luau punctuation.arguments.end.luau
+                                                         ^
+                                                         source.luau punctuation.separator.fields.luau
+>  })
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.table.end.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>    :sync()
+ ^^^^^
+ source.luau
+      ^^^^
+      source.luau entity.name.function.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^
+           source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
