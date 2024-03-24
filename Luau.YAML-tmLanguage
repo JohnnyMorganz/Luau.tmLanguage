@@ -15,6 +15,7 @@ fileTypes: [luau]
 variables:
   lookAheadNotFunctionToken: (?!\\s*=\\s*\\b(function)\\b)
   matchingParentheses: (\(([^\(\)]|(\(([^\(\)]|\([^\(\)]*\))*\)))*\))
+  lookAheadEndOfType: '[;),}\]:?\-\+\>](?!\s*[&\|])|$'
 
 patterns:
   - begin: "\\b(?:(local)\\s+)?(function)\\b(?![,:])"
@@ -63,6 +64,7 @@ patterns:
   - include: "#standard_library"
   - include: "#identifier"
   - include: "#operator"
+  - include: "#type_cast"
   - include: "#type_annotation"
 
 repository:
@@ -202,7 +204,7 @@ repository:
     patterns:
       - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\[\\[))"
         name: entity.name.function.luau # OLD: support.function.any-method.luau
-      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*\\??:)"
+      - match: "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*:(?!:))"
         name: entity.name.class.luau
       - match: "(?<=[^.]\\.|:)\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b{{lookAheadNotFunctionToken}}"
         name: variable.other.property.luau # OLD: entity.other.attribute.luau
@@ -302,6 +304,14 @@ repository:
     end: "(?<=\\))(?!\\s*->)|=|;|$|(?=\\breturn\\b)|(?=\\bend\\b)"
     patterns:
       - include: "#comment"
+      - include: "#type_literal"
+
+  type_cast:
+    begin: "(::)"
+    beginCaptures:
+      "1": { name: keyword.operator.typecast.luau }
+    end: (?=^|{{lookAheadEndOfType}})
+    patterns:
       - include: "#type_literal"
 
   type_literal:

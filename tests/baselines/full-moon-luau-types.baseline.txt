@@ -770,7 +770,7 @@ end
                    ^
                    source.luau
                     ^^
-                    source.luau keyword.operator.typeassertion.luau
+                    source.luau keyword.operator.typecast.luau
                       ^
                       source.luau
                        ^^^^^^
@@ -1142,7 +1142,7 @@ end
                    ^
                    source.luau
                     ^^
-                    source.luau keyword.operator.typeassertion.luau
+                    source.luau keyword.operator.typecast.luau
                       ^
                       source.luau
                        ^^^
@@ -1150,7 +1150,7 @@ end
                           ^^
                           source.luau
                             ^^
-                            source.luau keyword.operator.typeassertion.luau
+                            source.luau keyword.operator.typecast.luau
                               ^
                               source.luau
                                ^^^^^
@@ -1158,7 +1158,7 @@ end
                                     ^
                                     source.luau keyword.operator.type.luau
                                      ^
-                                     source.luau meta.parameter.type.variable.luau entity.name.type.luau
+                                     source.luau entity.name.type.luau
                                       ^
                                       source.luau keyword.operator.type.luau
                                        ^
@@ -1172,7 +1172,7 @@ end
                                                ^
                                                source.luau keyword.operator.type.luau
                                                 ^
-                                                source.luau meta.parameter.type.variable.luau entity.name.type.luau
+                                                source.luau entity.name.type.luau
                                                  ^
                                                  source.luau keyword.operator.type.luau
 >end

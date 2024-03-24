@@ -163,7 +163,7 @@ end
                                     ^^
                                     source.luau
                                       ^^
-                                      source.luau keyword.operator.typeassertion.luau
+                                      source.luau keyword.operator.typecast.luau
                                         ^
                                         source.luau
                                          ^^^^^^
@@ -319,7 +319,7 @@ end
                              ^
                              source.luau
                               ^^
-                              source.luau keyword.operator.typeassertion.luau
+                              source.luau keyword.operator.typecast.luau
                                 ^
                                 source.luau
                                  ^^^^^^
@@ -390,7 +390,7 @@ end
                                  ^
                                  source.luau
                                   ^^
-                                  source.luau keyword.operator.typeassertion.luau
+                                  source.luau keyword.operator.typecast.luau
                                     ^
                                     source.luau
                                      ^^^^^^

@@ -35,7 +35,7 @@ local inner = returnsComplexType().Key[1]
          ^^^^
          source.luau
              ^^
-             source.luau keyword.operator.typeassertion.luau
+             source.luau keyword.operator.typecast.luau
                ^
                source.luau
                 ^
@@ -48,10 +48,8 @@ local inner = returnsComplexType().Key[1]
                    source.luau support.type.primitive.luau
                          ^
                          source.luau
-                          ^
-                          source.luau keyword.operator.type.luau
-                           ^
-                           source.luau
+                          ^^
+                          source.luau
                             ^
                             source.luau
                              ^
@@ -122,7 +120,7 @@ local inner = returnsComplexType().Key[1]
       ^
       source.luau
        ^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
             ^
             source.luau
              ^
