@@ -366,14 +366,20 @@ end
                                                 source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
                                                    ^
                                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
-                                                    ^^
+                                                    ^
                                                     source.luau
+                                                     ^
+                                                     source.luau
                                                       ^^^
-                                                      source.luau constant.language.nil.luau
-                                                         ^^^
+                                                      source.luau support.type.primitive.luau
+                                                         ^
                                                          source.luau
+                                                          ^
+                                                          source.luau keyword.operator.type.luau
+                                                           ^
+                                                           source.luau
                                                             ^
-                                                            source.luau variable.other.constant.luau
+                                                            source.luau entity.name.type.luau
 >    return nil
  ^^^^
  source.luau

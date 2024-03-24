@@ -482,10 +482,14 @@ type IProperties = {
 >): GError?
  ^
  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+  ^
+  source.luau
+   ^
+   source.luau
     ^^^^^^
-    source.luau meta.function.luau entity.name.type.luau
+    source.luau entity.name.type.luau
           ^
-          source.luau meta.function.luau keyword.operator.type.luau
+          source.luau keyword.operator.type.luau
 >  return nil
  ^^
  source.luau
