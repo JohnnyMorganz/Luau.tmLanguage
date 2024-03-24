@@ -1,0 +1,204 @@
+original file
+-----------------------------------
+type PromptSettings = {
+    object: string,
+    action: string,
+    holdDuration: number,
+    keyboardKey: KeyCode,
+    gamepadKey: KeyCode,
+    distance: number,
+    lineOfSight: boolean,
+    offset: Vector2,
+}
+
+export type Sprite = {
+  Image: string, ImageRectOffset: Vector2, ImageRectSize: Vector2 }
+
+-----------------------------------
+
+>type PromptSettings = {
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^^^
+      source.luau entity.name.type.alias.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.assignment.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+>    object: string,
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau variable.property.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau support.type.primitive.luau
+                   ^
+                   source.luau punctuation.separator.fields.type.luau
+>    action: string,
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau variable.property.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau support.type.primitive.luau
+                   ^
+                   source.luau punctuation.separator.fields.type.luau
+>    holdDuration: number,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^
+     source.luau variable.property.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau support.type.primitive.luau
+                         ^
+                         source.luau punctuation.separator.fields.type.luau
+>    keyboardKey: KeyCode,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^^
+                  source.luau entity.name.type.luau
+                         ^
+                         source.luau punctuation.separator.fields.type.luau
+>    gamepadKey: KeyCode,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^
+     source.luau variable.property.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^^^^^^^
+                 source.luau entity.name.type.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>    distance: number,
+ ^^^^
+ source.luau
+     ^^^^^^^^
+     source.luau variable.property.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^^^^^^
+               source.luau support.type.primitive.luau
+                     ^
+                     source.luau punctuation.separator.fields.type.luau
+>    lineOfSight: boolean,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^^
+                  source.luau support.type.primitive.luau
+                         ^
+                         source.luau punctuation.separator.fields.type.luau
+>    offset: Vector2,
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau variable.property.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^^^^^^^
+             source.luau entity.name.type.luau
+                    ^
+                    source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>export type Sprite = {
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^
+             source.luau entity.name.type.alias.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau
+>  Image: string, ImageRectOffset: Vector2, ImageRectSize: Vector2 }
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.property.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau support.type.primitive.luau
+                ^
+                source.luau punctuation.separator.fields.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^^^^^^
+                  source.luau variable.property.luau
+                                 ^
+                                 source.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^
+                                   source.luau entity.name.type.luau
+                                          ^
+                                          source.luau punctuation.separator.fields.type.luau
+                                           ^
+                                           source.luau
+                                            ^^^^^^^^^^^^^
+                                            source.luau variable.property.luau
+                                                         ^
+                                                         source.luau keyword.operator.type.luau
+                                                          ^
+                                                          source.luau
+                                                           ^^^^^^^
+                                                           source.luau entity.name.type.luau
+                                                                  ^
+                                                                  source.luau
+                                                                   ^
+                                                                   source.luau
+>
+ ^
+ source.luau

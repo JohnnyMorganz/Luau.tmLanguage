@@ -1,0 +1,90 @@
+original file
+-----------------------------------
+function sayHello(
+  name,    -- YourName
+  foo,--baz
+  greeting -- Message
+)
+  return greeting .. ", " .. name
+end
+-----------------------------------
+
+>function sayHello(
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  name,    -- YourName
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+       ^
+       source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+        ^^^^
+        source.luau meta.function.luau meta.parameter.luau
+            ^^
+            source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+              ^^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+>  foo,--baz
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+      ^
+      source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+       ^^
+       source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+         ^^^
+         source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+>  greeting -- Message
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau
+            ^^
+            source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+              ^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+>)
+ ^
+ source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return greeting .. ", " .. name
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.operator.other.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau string.quoted.double.luau
+                       ^^
+                       source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau keyword.operator.other.luau
+                             ^
+                             source.luau
+                              ^^^^
+                              source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

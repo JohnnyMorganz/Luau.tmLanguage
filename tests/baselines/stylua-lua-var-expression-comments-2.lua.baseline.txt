@@ -1,0 +1,48 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/509
+local foo = bar -- comment after bar
+        .fizz -- comment after fizz
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/509
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local foo = bar -- comment after bar
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau comment.line.double-dash.luau
+                   ^^^^^^^^^^^^^^^^^^
+                   source.luau comment.line.double-dash.luau
+>        .fizz -- comment after fizz
+ ^^^^^^^^^
+ source.luau
+          ^^^^
+          source.luau variable.other.property.luau
+              ^
+              source.luau
+               ^^
+               source.luau comment.line.double-dash.luau
+                 ^^^^^^^^^^^^^^^^^^^
+                 source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau

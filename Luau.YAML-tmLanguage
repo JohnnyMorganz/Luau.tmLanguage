@@ -76,6 +76,7 @@ repository:
     beginCaptures:
       "1": { name: storage.modifier.local.luau }
     patterns:
+      - include: "#comment"
       - begin: "(:)"
         beginCaptures:
           "1": { name: keyword.operator.type.luau }

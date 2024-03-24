@@ -1,0 +1,32 @@
+original file
+-----------------------------------
+if    x == true  then return end
+-----------------------------------
+
+>if    x == true  then return end
+ ^^
+ source.luau keyword.control.luau
+   ^^^^
+   source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^
+         source.luau keyword.operator.comparison.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau constant.language.boolean.true.luau
+                ^^
+                source.luau
+                  ^^^^
+                  source.luau keyword.control.luau
+                      ^
+                      source.luau
+                       ^^^^^^
+                       source.luau keyword.control.luau
+                             ^
+                             source.luau
+                              ^^^
+                              source.luau keyword.control.luau

@@ -1,0 +1,94 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/662
+local a, b
+= 1 -- adoc
+, 2 -- bdoc
+
+local a -- adoc
+, b -- bdoc
+= 1, 2
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/662
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local a, b
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+>= 1 -- adoc
+ ^
+ source.luau keyword.operator.assignment.luau
+  ^
+  source.luau
+   ^
+   source.luau constant.numeric.decimal.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^
+       source.luau comment.line.double-dash.luau
+>, 2 -- bdoc
+ ^^
+ source.luau
+   ^
+   source.luau constant.numeric.decimal.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^
+       source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>local a -- adoc
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^
+         source.luau comment.line.double-dash.luau
+           ^^^^^
+           source.luau comment.line.double-dash.luau
+>, b -- bdoc
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^
+       source.luau comment.line.double-dash.luau
+>= 1, 2
+ ^
+ source.luau keyword.operator.assignment.luau
+  ^
+  source.luau
+   ^
+   source.luau constant.numeric.decimal.luau
+    ^^
+    source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau

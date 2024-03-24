@@ -1,0 +1,60 @@
+original file
+-----------------------------------
+if true then
+  -- foo
+elseif bar then
+  -- bar
+else
+  -- baz
+end
+-----------------------------------
+
+>if true then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^^^^
+    source.luau constant.language.boolean.true.luau
+        ^
+        source.luau
+         ^^^^
+         source.luau keyword.control.luau
+>  -- foo
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^
+     source.luau comment.line.double-dash.luau
+>elseif bar then
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^
+        source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau keyword.control.luau
+>  -- bar
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^
+     source.luau comment.line.double-dash.luau
+>else
+ ^^^^
+ source.luau keyword.control.luau
+>  -- baz
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^
+     source.luau comment.line.double-dash.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
