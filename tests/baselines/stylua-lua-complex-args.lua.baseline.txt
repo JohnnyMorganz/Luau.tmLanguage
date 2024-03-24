@@ -1,0 +1,156 @@
+original file
+-----------------------------------
+React.createElement("span", { key = id }, React.createElement(Consumer, nil, function()
+  return React.createElement("span", nil, "inner")
+end), React.createElement("span", nil, "outer"))
+-----------------------------------
+
+>React.createElement("span", { key = id }, React.createElement(Consumer, nil, function()
+ ^^^^^
+ source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^
+       source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^
+                     source.luau string.quoted.double.luau
+                      ^^^^
+                      source.luau string.quoted.double.luau
+                          ^
+                          source.luau string.quoted.double.luau
+                           ^
+                           source.luau punctuation.separator.arguments.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau punctuation.table.begin.luau
+                              ^
+                              source.luau
+                               ^^^
+                               source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau
+                                   ^
+                                   source.luau keyword.operator.assignment.luau
+                                    ^
+                                    source.luau
+                                     ^^
+                                     source.luau variable.other.readwrite.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau punctuation.table.end.luau
+                                         ^
+                                         source.luau punctuation.separator.arguments.luau
+                                          ^
+                                          source.luau
+                                           ^^^^^
+                                           source.luau variable.other.readwrite.luau
+                                                ^
+                                                source.luau
+                                                 ^^^^^^^^^^^^^
+                                                 source.luau entity.name.function.luau
+                                                              ^
+                                                              source.luau punctuation.arguments.begin.luau
+                                                               ^^^^^^^^
+                                                               source.luau variable.other.readwrite.luau
+                                                                       ^
+                                                                       source.luau punctuation.separator.arguments.luau
+                                                                        ^
+                                                                        source.luau
+                                                                         ^^^
+                                                                         source.luau constant.language.nil.luau
+                                                                            ^
+                                                                            source.luau punctuation.separator.arguments.luau
+                                                                             ^
+                                                                             source.luau
+                                                                              ^^^^^^^^
+                                                                              source.luau meta.function.luau keyword.control.luau
+                                                                                      ^
+                                                                                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                                                                       ^
+                                                                                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return React.createElement("span", nil, "inner")
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^^^^^^^^
+                source.luau entity.name.function.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+                              ^
+                              source.luau string.quoted.double.luau
+                               ^^^^
+                               source.luau string.quoted.double.luau
+                                   ^
+                                   source.luau string.quoted.double.luau
+                                    ^
+                                    source.luau punctuation.separator.arguments.luau
+                                     ^
+                                     source.luau
+                                      ^^^
+                                      source.luau constant.language.nil.luau
+                                         ^
+                                         source.luau punctuation.separator.arguments.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau string.quoted.double.luau
+                                            ^^^^^
+                                            source.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau string.quoted.double.luau
+                                                  ^
+                                                  source.luau punctuation.arguments.end.luau
+>end), React.createElement("span", nil, "outer"))
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+     ^
+     source.luau punctuation.separator.arguments.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^
+             source.luau entity.name.function.luau
+                          ^
+                          source.luau punctuation.arguments.begin.luau
+                           ^
+                           source.luau string.quoted.double.luau
+                            ^^^^
+                            source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau punctuation.separator.arguments.luau
+                                  ^
+                                  source.luau
+                                   ^^^
+                                   source.luau constant.language.nil.luau
+                                      ^
+                                      source.luau punctuation.separator.arguments.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau string.quoted.double.luau
+                                         ^^^^^
+                                         source.luau string.quoted.double.luau
+                                              ^
+                                              source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
