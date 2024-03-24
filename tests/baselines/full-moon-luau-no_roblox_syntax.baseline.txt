@@ -79,15 +79,15 @@ end
                                 ^^^^^^^^^^
                                 source.luau entity.name.function.luau
                                           ^
-                                          source.luau
+                                          source.luau punctuation.arguments.begin.luau
                                            ^
                                            source.luau string.quoted.double.luau
                                             ^^^^^^^^^^^^^^^^^
                                             source.luau string.quoted.double.luau
                                                              ^
                                                              source.luau string.quoted.double.luau
-                                                              ^^
-                                                              source.luau
+                                                              ^
+                                                              source.luau punctuation.arguments.end.luau
 >local RunService = game:GetService("RunService")
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -108,15 +108,15 @@ end
                          ^^^^^^^^^^
                          source.luau entity.name.function.luau
                                    ^
-                                   source.luau
+                                   source.luau punctuation.arguments.begin.luau
                                     ^
                                     source.luau string.quoted.double.luau
                                      ^^^^^^^^^^
                                      source.luau string.quoted.double.luau
                                                ^
                                                source.luau string.quoted.double.luau
-                                                ^^
-                                                source.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -136,7 +136,7 @@ end
                  ^^^^^^^
                  source.luau support.function.luau
                         ^
-                        source.luau
+                        source.luau punctuation.arguments.begin.luau
                          ^^^^^^^^^^^^^^^^^
                          source.luau variable.other.readwrite.luau
                                           ^
@@ -147,8 +147,8 @@ end
                                                   source.luau
                                                    ^^^^^^^
                                                    source.luau variable.other.property.luau
-                                                          ^^
-                                                          source.luau
+                                                          ^
+                                                          source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -185,13 +185,15 @@ end
                   ^
                   source.luau
                    ^^^^^^^^^^
-                   source.luau entity.name.class.luau
+                   source.luau variable.other.readwrite.luau
                              ^
                              source.luau
                               ^^^^^^^^
                               source.luau entity.name.function.luau
-                                      ^^^
-                                      source.luau
+                                      ^
+                                      source.luau punctuation.arguments.begin.luau
+                                       ^
+                                       source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -237,19 +239,21 @@ end
     ^^^^^
     source.luau support.function.luau
          ^
-         source.luau
+         source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.quoted.double.luau
            ^^^^^^^^^^^^^
            source.luau string.quoted.double.luau
                         ^
                         source.luau string.quoted.double.luau
-                         ^^
-                         source.luau
+                         ^
+                         source.luau punctuation.separator.arguments.luau
+                          ^
+                          source.luau
                            ^^^
                            source.luau keyword.other.unit.luau
-                              ^^
-                              source.luau
+                              ^
+                              source.luau punctuation.arguments.end.luau
 >  end
  ^^
  source.luau
@@ -329,11 +333,13 @@ end
       ^^^^^^
       source.luau support.function.luau
             ^
-            source.luau
+            source.luau punctuation.arguments.begin.luau
              ^^^^^^
              source.luau variable.other.readwrite.luau
-                   ^^
-                   source.luau
+                   ^
+                   source.luau punctuation.arguments.end.luau
+                    ^
+                    source.luau
                      ^^
                      source.luau keyword.operator.comparison.luau
                        ^
@@ -366,7 +372,7 @@ end
                        ^^^^^^^
                        source.luau entity.name.function.luau
                               ^
-                              source.luau
+                              source.luau punctuation.arguments.begin.luau
                                ^^^^^^^^^
                                source.luau variable.other.readwrite.luau
                                         ^
@@ -377,8 +383,10 @@ end
                                                     source.luau
                                                      ^^^^^^^^
                                                      source.luau variable.other.property.luau
-                                                             ^^
-                                                             source.luau
+                                                             ^
+                                                             source.luau punctuation.arguments.end.luau
+                                                              ^
+                                                              source.luau
                                                                ^^^^
                                                                source.luau keyword.control.luau
 >  		debug("ORIGIN WAS CHARACTER")
@@ -387,15 +395,15 @@ end
      ^^^^^
      source.luau support.constant.luau
           ^
-          source.luau
+          source.luau punctuation.arguments.begin.luau
            ^
            source.luau string.quoted.double.luau
             ^^^^^^^^^^^^^^^^^^^^
             source.luau string.quoted.double.luau
                                 ^
                                 source.luau string.quoted.double.luau
-                                 ^^
-                                 source.luau
+                                 ^
+                                 source.luau punctuation.arguments.end.luau
 >  		return origin, origin.Position
  ^^^^
  source.luau
@@ -463,8 +471,12 @@ end
                         source.luau
                          ^^
                          source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
-                           ^^^^
+                           ^
                            source.luau
+                            ^
+                            source.luau punctuation.table.begin.luau
+                             ^
+                             source.luau punctuation.table.end.luau
 >
  ^
  source.luau
@@ -516,7 +528,7 @@ end
                   ^^^^^^^
                   source.luau entity.name.function.luau
                          ^
-                         source.luau
+                         source.luau punctuation.arguments.begin.luau
                           ^^^
                           source.luau variable.other.readwrite.luau
                              ^
@@ -524,11 +536,15 @@ end
                               ^^^
                               source.luau entity.name.function.luau
                                  ^
-                                 source.luau
+                                 source.luau punctuation.arguments.begin.luau
                                   ^^^^^^
                                   source.luau variable.other.readwrite.luau
-                                        ^^^
-                                        source.luau
+                                        ^
+                                        source.luau punctuation.separator.arguments.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau punctuation.arguments.begin.luau
                                            ^^^^^^
                                            source.luau variable.other.readwrite.luau
                                                  ^
@@ -547,8 +563,10 @@ end
                                                                          source.luau
                                                                           ^^^^^^^^
                                                                           source.luau variable.other.property.luau
-                                                                                  ^^
-                                                                                  source.luau
+                                                                                  ^
+                                                                                  source.luau punctuation.arguments.end.luau
+                                                                                   ^
+                                                                                   source.luau
                                                                                     ^^^^
                                                                                     source.luau variable.other.property.luau
                                                                                         ^
@@ -561,12 +579,16 @@ end
                                                                                            source.luau keyword.operator.arithmetic.luau
                                                                                             ^^^^^
                                                                                             source.luau variable.other.readwrite.luau
-                                                                                                 ^^^
-                                                                                                 source.luau
+                                                                                                 ^
+                                                                                                 source.luau punctuation.arguments.end.luau
+                                                                                                  ^
+                                                                                                  source.luau punctuation.separator.arguments.luau
+                                                                                                   ^
+                                                                                                   source.luau
                                                                                                     ^^^^^^^^^
                                                                                                     source.luau variable.other.readwrite.luau
-                                                                                                             ^^
-                                                                                                             source.luau
+                                                                                                             ^
+                                                                                                             source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -592,11 +614,13 @@ end
                     ^^^^^^^^^^^^^^
                     source.luau entity.name.function.luau
                                   ^
-                                  source.luau
+                                  source.luau punctuation.arguments.begin.luau
                                    ^^^^^^^^^
                                    source.luau variable.other.readwrite.luau
-                                            ^^
-                                            source.luau
+                                            ^
+                                            source.luau punctuation.arguments.end.luau
+                                             ^
+                                             source.luau
                                               ^^^^
                                               source.luau keyword.control.luau
 >  			break
@@ -622,11 +646,13 @@ end
                     ^^^^^^^^
                     source.luau entity.name.function.luau
                             ^
-                            source.luau
+                            source.luau punctuation.arguments.begin.luau
                              ^^^
                              source.luau variable.other.readwrite.luau
-                                ^^
-                                source.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+                                 ^
+                                 source.luau
                                   ^^^^
                                   source.luau keyword.control.luau
 >  			debug("IGNORING OFF IF", hit:GetFullName())
@@ -635,23 +661,29 @@ end
       ^^^^^
       source.luau support.constant.luau
            ^
-           source.luau
+           source.luau punctuation.arguments.begin.luau
             ^
             source.luau string.quoted.double.luau
              ^^^^^^^^^^^^^^^
              source.luau string.quoted.double.luau
                             ^
                             source.luau string.quoted.double.luau
-                             ^^
-                             source.luau
+                             ^
+                             source.luau punctuation.separator.arguments.luau
+                              ^
+                              source.luau
                                ^^^
                                source.luau variable.other.readwrite.luau
                                   ^
                                   source.luau
                                    ^^^^^^^^^^^
                                    source.luau entity.name.function.luau
-                                              ^^^^
-                                              source.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
 >  			blacklist[#blacklist + 1] = hit
  ^^^^^
  source.luau
@@ -713,15 +745,17 @@ end
    ^^^^^
    source.luau support.constant.luau
         ^
-        source.luau
+        source.luau punctuation.arguments.begin.luau
          ^
          source.luau string.quoted.double.luau
           ^^^^^^^^^^
           source.luau string.quoted.double.luau
                     ^
                     source.luau string.quoted.double.luau
-                     ^^
-                     source.luau
+                     ^
+                     source.luau punctuation.separator.arguments.luau
+                      ^
+                      source.luau
                        ^^^
                        source.luau variable.other.readwrite.luau
                           ^
@@ -736,8 +770,12 @@ end
                                   source.luau
                                    ^^^^^^^^^^^
                                    source.luau entity.name.function.luau
-                                              ^^^^
-                                              source.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
@@ -763,11 +801,13 @@ end
                       ^^^^^^^^^^^^^^
                       source.luau entity.name.function.luau
                                     ^
-                                    source.luau
+                                    source.luau punctuation.arguments.begin.luau
                                      ^^^^^^^^^
                                      source.luau variable.other.readwrite.luau
-                                              ^^^
-                                              source.luau
+                                              ^
+                                              source.luau punctuation.arguments.end.luau
+                                               ^^
+                                               source.luau
                                                  ^^^^^
                                                  source.luau variable.other.readwrite.luau
 >end

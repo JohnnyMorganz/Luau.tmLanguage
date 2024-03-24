@@ -412,7 +412,7 @@ end
          ^
          source.luau meta.function.luau
           ^^^
-          source.luau meta.function.luau entity.name.class.luau
+          source.luau meta.function.luau entity.name.function.luau
              ^
              source.luau meta.function.luau
               ^
