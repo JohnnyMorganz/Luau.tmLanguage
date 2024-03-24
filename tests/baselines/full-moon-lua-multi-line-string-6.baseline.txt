@@ -20,8 +20,10 @@ baz"
             source.luau
              ^
              source.luau string.quoted.double.luau
-              ^^^^^
+              ^^^
               source.luau string.quoted.double.luau
+                 ^
+                 source.luau string.quoted.double.luau constant.character.escape.luau
 >baz"
  ^^^
  source.luau string.quoted.double.luau

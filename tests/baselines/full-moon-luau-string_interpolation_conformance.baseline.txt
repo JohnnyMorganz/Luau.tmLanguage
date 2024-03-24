@@ -752,8 +752,10 @@ return "OK"
          source.luau punctuation.arguments.begin.luau
           ^
           source.luau string.interpolated.luau
-           ^^^^^^^^^^^^^
+           ^^^^^^^^^^^
            source.luau string.interpolated.luau
+                      ^
+                      source.luau string.interpolated.luau constant.character.escape.luau
 >{name}!`, "Welcome to \nLuau!")
  ^
  source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau

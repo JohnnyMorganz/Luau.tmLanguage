@@ -1,0 +1,52 @@
+original file
+-----------------------------------
+print("testing \z
+     twelve")
+
+print("Hello \
+  World")
+
+-----------------------------------
+
+>print("testing \z
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^^^^^^^
+        source.luau string.quoted.double.luau
+                ^^
+                source.luau string.quoted.double.luau constant.character.escape.luau
+>     twelve")
+ ^^^^^^^^^^^
+ source.luau string.quoted.double.luau
+            ^
+            source.luau string.quoted.double.luau
+             ^
+             source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>print("Hello \
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^^^^^^
+        source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau constant.character.escape.luau
+>  World")
+ ^^^^^^^
+ source.luau string.quoted.double.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^
+         source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau

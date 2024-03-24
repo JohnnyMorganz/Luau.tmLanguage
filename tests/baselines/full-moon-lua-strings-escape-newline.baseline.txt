@@ -12,8 +12,10 @@ print("foo\
       source.luau punctuation.arguments.begin.luau
        ^
        source.luau string.quoted.double.luau
-        ^^^^^
+        ^^^
         source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau constant.character.escape.luau
 >  bar")
  ^^^^^
  source.luau string.quoted.double.luau
