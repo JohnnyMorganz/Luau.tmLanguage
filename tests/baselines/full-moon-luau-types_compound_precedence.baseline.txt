@@ -1,0 +1,110 @@
+original file
+-----------------------------------
+-- https://github.com/Kampfkarren/full-moon/issues/286
+
+-- should be parsed as a function returning a variable amount of values of type "string & T"
+type FnA = () -> ...string & T
+
+-- should be parsed as an intersection of a function returning U... values, and a value of type T
+type FnB<U...> = () -> U... & T
+
+-----------------------------------
+
+>-- https://github.com/Kampfkarren/full-moon/issues/286
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>-- should be parsed as a function returning a variable amount of values of type "string & T"
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type FnA = () -> ...string & T
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^
+            source.luau
+             ^
+             source.luau
+              ^
+              source.luau
+               ^^
+               source.luau keyword.operator.type.luau
+                 ^^^^
+                 source.luau
+                     ^^^^^^
+                     source.luau support.type.primitive.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.type.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau entity.name.type.luau
+>
+ ^
+ source.luau
+>-- should be parsed as an intersection of a function returning U... values, and a value of type T
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type FnB<U...> = () -> U... & T
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.luau
+           ^^^
+           source.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau
+                     ^^
+                     source.luau keyword.operator.type.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau entity.name.type.luau
+                         ^^^^
+                         source.luau
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau entity.name.type.luau
+>
+ ^
+ source.luau

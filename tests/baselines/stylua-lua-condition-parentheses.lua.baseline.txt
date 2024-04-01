@@ -1,0 +1,148 @@
+original file
+-----------------------------------
+if (foo) then
+  print("true")
+elseif (bar) then
+  print("false")
+end
+
+while (foo) do
+  print("true")
+end
+
+repeat
+  print("yes")
+until (foo)
+-----------------------------------
+
+>if (foo) then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^
+    source.luau punctuation.arguments.begin.luau
+     ^^^
+     source.luau variable.other.readwrite.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau keyword.control.luau
+>  print("true")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^
+          source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>elseif (bar) then
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.arguments.end.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau keyword.control.luau
+>  print("false")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^
+          source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>while (foo) do
+ ^^^^^
+ source.luau keyword.control.luau
+      ^
+      source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^^
+        source.luau variable.other.readwrite.luau
+           ^
+           source.luau punctuation.arguments.end.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.control.luau
+>  print("true")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^
+          source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>repeat
+ ^^^^^^
+ source.luau keyword.control.luau
+>  print("yes")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^
+          source.luau string.quoted.double.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+>until (foo)
+ ^^^^^
+ source.luau keyword.control.luau
+      ^
+      source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^^
+        source.luau variable.other.readwrite.luau
+           ^
+           source.luau punctuation.arguments.end.luau

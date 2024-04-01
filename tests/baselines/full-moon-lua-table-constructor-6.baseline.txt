@@ -9,14 +9,20 @@ local foo = { bar }
       ^
       source.luau
        ^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
           ^
           source.luau
            ^
            source.luau keyword.operator.assignment.luau
-            ^^^
+            ^
             source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+              ^
+              source.luau
                ^^^
                source.luau variable.other.readwrite.luau
-                  ^^^
+                  ^
                   source.luau
+                   ^
+                   source.luau punctuation.table.end.luau

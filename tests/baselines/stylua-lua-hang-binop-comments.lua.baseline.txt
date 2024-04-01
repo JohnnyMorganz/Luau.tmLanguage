@@ -1,0 +1,300 @@
+original file
+-----------------------------------
+function foo(defaultExport)
+  if defaultExport == nil then
+  	print(
+  		"lazy: Expected the result of a dynamic import() call. "
+  			.. "Instead received: %s\n\nYour code should look like: \n  "
+  			-- Break up imports to avoid accidentally parsing them as dependencies.
+  			-- ROBLOX deviation: Lua syntax in message
+  			.. "local MyComponent = lazy(function() => req"
+  			.. "quire('script.Parent.MyComponent') end)",
+  		moduleObject
+  	)
+  end
+end
+
+function bar(defaultExport)
+  if defaultExport == nil then
+  	print(
+  		"lazy: Expected the result of a dynamic import() call. " ..
+  			"Instead received: %s\n\nYour code should look like: \n  " ..
+  			-- Break up imports to avoid accidentally parsing them as dependencies.
+  			-- ROBLOX deviation: Lua syntax in message
+        "local MyComponent = lazy(function() => req" ..
+  			"quire('script.Parent.MyComponent') end)",
+  		moduleObject
+  	)
+  end
+end
+-----------------------------------
+
+>function foo(defaultExport)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^^^^^^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  if defaultExport == nil then
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^^
+      source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^^^
+                       source.luau constant.language.nil.luau
+                          ^
+                          source.luau
+                           ^^^^
+                           source.luau keyword.control.luau
+>  	print(
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau support.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+>  		"lazy: Expected the result of a dynamic import() call. "
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                                                            ^
+                                                            source.luau string.quoted.double.luau
+>  			.. "Instead received: %s\n\nYour code should look like: \n  "
+ ^^^^^
+ source.luau
+      ^^
+      source.luau keyword.operator.other.luau
+        ^
+        source.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^^^^^^^^^^^^^^^^
+          source.luau string.quoted.double.luau
+                              ^^
+                              source.luau string.quoted.double.luau constant.character.escape.luau
+                                ^^
+                                source.luau string.quoted.double.luau constant.character.escape.luau
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                  source.luau string.quoted.double.luau
+                                                              ^^
+                                                              source.luau string.quoted.double.luau constant.character.escape.luau
+                                                                ^^
+                                                                source.luau string.quoted.double.luau
+                                                                  ^
+                                                                  source.luau string.quoted.double.luau
+>  			-- Break up imports to avoid accidentally parsing them as dependencies.
+ ^^^^^
+ source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.luau comment.line.double-dash.luau
+>  			-- ROBLOX deviation: Lua syntax in message
+ ^^^^^
+ source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.luau comment.line.double-dash.luau
+>  			.. "local MyComponent = lazy(function() => req"
+ ^^^^^
+ source.luau
+      ^^
+      source.luau keyword.operator.other.luau
+        ^
+        source.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          source.luau string.quoted.double.luau
+                                                    ^
+                                                    source.luau string.quoted.double.luau
+>  			.. "quire('script.Parent.MyComponent') end)",
+ ^^^^^
+ source.luau
+      ^^
+      source.luau keyword.operator.other.luau
+        ^
+        source.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          source.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau string.quoted.double.luau
+                                                  ^
+                                                  source.luau punctuation.separator.arguments.luau
+>  		moduleObject
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+>  	)
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function bar(defaultExport)
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^^^^^^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  if defaultExport == nil then
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^^
+      source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^^^
+                       source.luau constant.language.nil.luau
+                          ^
+                          source.luau
+                           ^^^^
+                           source.luau keyword.control.luau
+>  	print(
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau support.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+>  		"lazy: Expected the result of a dynamic import() call. " ..
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                                                            ^
+                                                            source.luau string.quoted.double.luau
+                                                             ^
+                                                             source.luau
+                                                              ^^
+                                                              source.luau keyword.operator.other.luau
+>  			"Instead received: %s\n\nYour code should look like: \n  " ..
+ ^^^^^
+ source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                           ^^
+                           source.luau string.quoted.double.luau constant.character.escape.luau
+                             ^^
+                             source.luau string.quoted.double.luau constant.character.escape.luau
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               source.luau string.quoted.double.luau
+                                                           ^^
+                                                           source.luau string.quoted.double.luau constant.character.escape.luau
+                                                             ^^
+                                                             source.luau string.quoted.double.luau
+                                                               ^
+                                                               source.luau string.quoted.double.luau
+                                                                ^
+                                                                source.luau
+                                                                 ^^
+                                                                 source.luau keyword.operator.other.luau
+>  			-- Break up imports to avoid accidentally parsing them as dependencies.
+ ^^^^^
+ source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.luau comment.line.double-dash.luau
+>  			-- ROBLOX deviation: Lua syntax in message
+ ^^^^^
+ source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.luau comment.line.double-dash.luau
+>        "local MyComponent = lazy(function() => req" ..
+ ^^^^^^^^
+ source.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          source.luau string.quoted.double.luau
+                                                    ^
+                                                    source.luau string.quoted.double.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^
+                                                      source.luau keyword.operator.other.luau
+>  			"quire('script.Parent.MyComponent') end)",
+ ^^^^^
+ source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                                              ^
+                                              source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau punctuation.separator.arguments.luau
+>  		moduleObject
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+>  	)
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

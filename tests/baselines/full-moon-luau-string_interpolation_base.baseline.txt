@@ -11,20 +11,20 @@ x(`1{`2{"3"}`}`)
  ^
  source.luau entity.name.function.luau
   ^
-  source.luau
+  source.luau punctuation.arguments.begin.luau
    ^
    source.luau string.interpolated.luau
     ^^^^^^
     source.luau string.interpolated.luau
           ^
           source.luau string.interpolated.luau
-           ^^
-           source.luau
+           ^
+           source.luau punctuation.arguments.end.luau
 >x(`hello {"world"}`)
  ^
  source.luau entity.name.function.luau
   ^
-  source.luau
+  source.luau punctuation.arguments.begin.luau
    ^
    source.luau string.interpolated.luau
     ^^^^^^
@@ -41,13 +41,13 @@ x(`1{`2{"3"}`}`)
                   source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                    ^
                    source.luau string.interpolated.luau
-                    ^^
-                    source.luau
+                    ^
+                    source.luau punctuation.arguments.end.luau
 >x(`1{2}3{"4"}5`)
  ^
  source.luau entity.name.function.luau
   ^
-  source.luau
+  source.luau punctuation.arguments.begin.luau
    ^
    source.luau string.interpolated.luau
     ^
@@ -74,13 +74,13 @@ x(`1{`2{"3"}`}`)
               source.luau string.interpolated.luau
                ^
                source.luau string.interpolated.luau
-                ^^
-                source.luau
+                ^
+                source.luau punctuation.arguments.end.luau
 >x(`1{`2{"3"}`}`)
  ^
  source.luau entity.name.function.luau
   ^
-  source.luau
+  source.luau punctuation.arguments.begin.luau
    ^
    source.luau string.interpolated.luau
     ^
@@ -107,8 +107,8 @@ x(`1{`2{"3"}`}`)
               source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
                ^
                source.luau string.interpolated.luau
-                ^^
-                source.luau
+                ^
+                source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau

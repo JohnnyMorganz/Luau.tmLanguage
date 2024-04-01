@@ -1,0 +1,218 @@
+original file
+-----------------------------------
+do
+  do
+  	local CreatedDirection = (
+  		DirectionalCF * CFrame.fromOrientation(0, 0, RNG:NextNumber(0, TAU)) * CFrame.fromOrientation(
+  			math.rad(RNG:NextNumber(
+  				GunMainConfiguration.BulletMinSpreadAngle or GlobalConfiguration.DEFAULT_MIN_SPREAD_ANGLE,
+  				GunMainConfiguration.BulletMaxSpreadAngle or GlobalConfiguration.DEFAULT_MAX_SPREAD_ANGLE
+  			)),
+  			0,
+  			0
+  		)
+  	).LookVector
+  end
+end
+
+  	
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>  do
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+>  	local CreatedDirection = (
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau storage.modifier.local.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^^
+          source.luau variable.other.readwrite.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.assignment.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+>  		DirectionalCF * CFrame.fromOrientation(0, 0, RNG:NextNumber(0, TAU)) * CFrame.fromOrientation(
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.arithmetic.luau
+                    ^
+                    source.luau
+                     ^^^^^^
+                     source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^^^^^^^^^^^^^^
+                            source.luau entity.name.function.luau
+                                           ^
+                                           source.luau punctuation.arguments.begin.luau
+                                            ^
+                                            source.luau constant.numeric.decimal.luau
+                                             ^
+                                             source.luau punctuation.separator.arguments.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau constant.numeric.decimal.luau
+                                                ^
+                                                source.luau punctuation.separator.arguments.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^^
+                                                  source.luau variable.other.constant.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^^^^^^^^^
+                                                      source.luau entity.name.function.luau
+                                                                ^
+                                                                source.luau punctuation.arguments.begin.luau
+                                                                 ^
+                                                                 source.luau constant.numeric.decimal.luau
+                                                                  ^
+                                                                  source.luau punctuation.separator.arguments.luau
+                                                                   ^
+                                                                   source.luau
+                                                                    ^^^
+                                                                    source.luau variable.other.constant.luau
+                                                                       ^
+                                                                       source.luau punctuation.arguments.end.luau
+                                                                        ^
+                                                                        source.luau punctuation.arguments.end.luau
+                                                                         ^
+                                                                         source.luau
+                                                                          ^
+                                                                          source.luau keyword.operator.arithmetic.luau
+                                                                           ^
+                                                                           source.luau
+                                                                            ^^^^^^
+                                                                            source.luau variable.other.readwrite.luau
+                                                                                  ^
+                                                                                  source.luau
+                                                                                   ^^^^^^^^^^^^^^^
+                                                                                   source.luau entity.name.function.luau
+                                                                                                  ^
+                                                                                                  source.luau punctuation.arguments.begin.luau
+>  			math.rad(RNG:NextNumber(
+ ^^^^^
+ source.luau
+      ^^^^^^^^
+      source.luau support.function.luau
+              ^
+              source.luau punctuation.arguments.begin.luau
+               ^^^
+               source.luau variable.other.constant.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^^^
+                   source.luau entity.name.function.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+>  				GunMainConfiguration.BulletMinSpreadAngle or GlobalConfiguration.DEFAULT_MIN_SPREAD_ANGLE,
+ ^^^^^^
+ source.luau
+       ^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^^^^^^^^^^^^^^^^^^^
+                            source.luau variable.other.property.luau
+                                                ^
+                                                source.luau
+                                                 ^^
+                                                 source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^^^^^^^^^^^^^^^^
+                                                    source.luau variable.other.readwrite.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                        source.luau variable.other.property.luau
+                                                                                                ^
+                                                                                                source.luau punctuation.separator.arguments.luau
+>  				GunMainConfiguration.BulletMaxSpreadAngle or GlobalConfiguration.DEFAULT_MAX_SPREAD_ANGLE
+ ^^^^^^
+ source.luau
+       ^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^^^^^^^^^^^^^^^^^^^
+                            source.luau variable.other.property.luau
+                                                ^
+                                                source.luau
+                                                 ^^
+                                                 source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^^^^^^^^^^^^^^^^
+                                                    source.luau variable.other.readwrite.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                        source.luau variable.other.property.luau
+>  			)),
+ ^^^^^
+ source.luau
+      ^
+      source.luau punctuation.arguments.end.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+        ^
+        source.luau punctuation.separator.arguments.luau
+>  			0,
+ ^^^^^
+ source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+       ^
+       source.luau punctuation.separator.arguments.luau
+>  			0
+ ^^^^^
+ source.luau
+      ^
+      source.luau constant.numeric.decimal.luau
+>  		)
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.arguments.end.luau
+>  	).LookVector
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+     ^
+     source.luau
+      ^^^^^^^^^^
+      source.luau variable.other.property.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>  	
+ ^^^^
+ source.luau

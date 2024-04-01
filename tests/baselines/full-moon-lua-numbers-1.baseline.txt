@@ -1,0 +1,20 @@
+original file
+-----------------------------------
+_ = 0x02
+
+-----------------------------------
+
+>_ = 0x02
+ ^
+ source.luau variable.other.constant.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^^^^
+     source.luau constant.numeric.hex.luau
+>
+ ^
+ source.luau

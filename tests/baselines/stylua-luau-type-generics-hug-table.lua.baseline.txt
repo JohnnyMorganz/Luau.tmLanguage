@@ -1,0 +1,230 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/442
+export type Store = EventEmitter<{
+  collapseNodesByDefault: Array<any>,
+  componentFilters: Array<any>,
+  mutated: Array<any>, -- ROBLOX deviation: can't express jagged array types in Luau
+  recordChangeDescriptions: Array<any>,
+  roots: Array<any>,
+  supportsNativeStyleEditor: Array<any>,
+  supportsProfiling: Array<any>,
+  supportsReloadAndProfile: Array<any>,
+  unsupportedRendererVersionDetected: Array<any>,
+}>
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/442
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>export type Store = EventEmitter<{
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^
+             source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^^^
+                     source.luau entity.name.type.luau
+                                 ^
+                                 source.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau
+>  collapseNodesByDefault: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^^^^^
+                           source.luau entity.name.type.luau
+                                ^
+                                source.luau keyword.operator.type.luau
+                                 ^^^
+                                 source.luau support.type.primitive.luau
+                                    ^
+                                    source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau punctuation.separator.fields.type.luau
+>  componentFilters: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^^^^^
+                     source.luau entity.name.type.luau
+                          ^
+                          source.luau keyword.operator.type.luau
+                           ^^^
+                           source.luau support.type.primitive.luau
+                              ^
+                              source.luau keyword.operator.type.luau
+                               ^
+                               source.luau punctuation.separator.fields.type.luau
+>  mutated: Array<any>, -- ROBLOX deviation: can't express jagged array types in Luau
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.property.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau entity.name.type.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^^^
+                  source.luau support.type.primitive.luau
+                     ^
+                     source.luau keyword.operator.type.luau
+                      ^
+                      source.luau punctuation.separator.fields.type.luau
+                       ^
+                       source.luau
+                        ^^
+                        source.luau comment.line.double-dash.luau
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          source.luau comment.line.double-dash.luau
+>  recordChangeDescriptions: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^^^^^
+                             source.luau entity.name.type.luau
+                                  ^
+                                  source.luau keyword.operator.type.luau
+                                   ^^^
+                                   source.luau support.type.primitive.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau punctuation.separator.fields.type.luau
+>  roots: Array<any>,
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.property.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau entity.name.type.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^^^
+                source.luau support.type.primitive.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau punctuation.separator.fields.type.luau
+>  supportsNativeStyleEditor: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                            ^
+                            source.luau keyword.operator.type.luau
+                             ^
+                             source.luau
+                              ^^^^^
+                              source.luau entity.name.type.luau
+                                   ^
+                                   source.luau keyword.operator.type.luau
+                                    ^^^
+                                    source.luau support.type.primitive.luau
+                                       ^
+                                       source.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau punctuation.separator.fields.type.luau
+>  supportsProfiling: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^^^
+                      source.luau entity.name.type.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^^^
+                            source.luau support.type.primitive.luau
+                               ^
+                               source.luau keyword.operator.type.luau
+                                ^
+                                source.luau punctuation.separator.fields.type.luau
+>  supportsReloadAndProfile: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^^^^^
+                             source.luau entity.name.type.luau
+                                  ^
+                                  source.luau keyword.operator.type.luau
+                                   ^^^
+                                   source.luau support.type.primitive.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau punctuation.separator.fields.type.luau
+>  unsupportedRendererVersionDetected: Array<any>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                                     ^
+                                     source.luau keyword.operator.type.luau
+                                      ^
+                                      source.luau
+                                       ^^^^^
+                                       source.luau entity.name.type.luau
+                                            ^
+                                            source.luau keyword.operator.type.luau
+                                             ^^^
+                                             source.luau support.type.primitive.luau
+                                                ^
+                                                source.luau keyword.operator.type.luau
+                                                 ^
+                                                 source.luau punctuation.separator.fields.type.luau
+>}>
+ ^
+ source.luau
+  ^
+  source.luau keyword.operator.type.luau
+>
+ ^
+ source.luau

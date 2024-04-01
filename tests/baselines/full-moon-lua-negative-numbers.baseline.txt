@@ -12,7 +12,7 @@ print(1+-3)
       ^
       source.luau
        ^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
           ^
           source.luau
            ^
@@ -31,7 +31,7 @@ print(1+-3)
       ^
       source.luau
        ^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
           ^
           source.luau
            ^
@@ -50,7 +50,7 @@ print(1+-3)
  ^^^^^
  source.luau support.function.luau
       ^
-      source.luau
+      source.luau punctuation.arguments.begin.luau
        ^
        source.luau constant.numeric.decimal.luau
         ^
@@ -59,8 +59,8 @@ print(1+-3)
          source.luau keyword.operator.arithmetic.luau
           ^
           source.luau constant.numeric.decimal.luau
-           ^^
-           source.luau
+           ^
+           source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau

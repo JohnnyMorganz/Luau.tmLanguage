@@ -11,7 +11,7 @@ export type Baz = { foo: any }
      ^
      source.luau
       ^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
          ^
          source.luau
           ^
@@ -44,7 +44,7 @@ export type Baz = { foo: any }
             ^
             source.luau
              ^^^
-             source.luau entity.name.type.alias.luau
+             source.luau entity.name.type.luau
                 ^
                 source.luau
                  ^

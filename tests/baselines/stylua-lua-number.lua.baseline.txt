@@ -1,0 +1,136 @@
+original file
+-----------------------------------
+local a = 0.5
+local b = .5
+local c = 100
+local d = 5e-5
+local e = -.5
+local f = .2e-5
+local g = -.1e+5
+local h = 0x12
+-----------------------------------
+
+>local a = 0.5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^
+           source.luau constant.numeric.decimal.luau
+>local b = .5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^
+           source.luau constant.numeric.decimal.luau
+>local c = 100
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^
+           source.luau constant.numeric.decimal.luau
+>local d = 5e-5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^
+           source.luau constant.numeric.decimal.luau
+>local e = -.5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.arithmetic.luau
+            ^^
+            source.luau constant.numeric.decimal.luau
+>local f = .2e-5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^^
+           source.luau constant.numeric.decimal.luau
+>local g = -.1e+5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.arithmetic.luau
+            ^^^^^
+            source.luau constant.numeric.decimal.luau
+>local h = 0x12
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^^
+           source.luau constant.numeric.hex.luau

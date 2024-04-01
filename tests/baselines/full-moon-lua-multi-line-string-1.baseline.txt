@@ -12,7 +12,7 @@ Lua parser]]
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^

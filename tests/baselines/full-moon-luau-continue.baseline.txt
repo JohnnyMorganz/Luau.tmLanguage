@@ -40,15 +40,17 @@ local continue = 4
 >continue()
  ^^^^^^^^
  source.luau keyword.control.luau
-         ^^^
-         source.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.arguments.end.luau
 >local continue = 4
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
       source.luau
        ^^^^^^^^
-       source.luau keyword.control.luau
+       source.luau variable.other.readwrite.luau
                ^
                source.luau
                 ^

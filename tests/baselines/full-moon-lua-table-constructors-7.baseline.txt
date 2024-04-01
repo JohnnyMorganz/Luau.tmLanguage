@@ -13,13 +13,15 @@ local blacklist = {
       ^
       source.luau
        ^^^^^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
                 ^
                 source.luau
                  ^
                  source.luau keyword.operator.assignment.luau
-                  ^^^
+                  ^
                   source.luau
+                   ^
+                   source.luau punctuation.table.begin.luau
 >  ["Audio file failed to load (18)."] = true;
  ^^^
  source.luau
@@ -37,8 +39,8 @@ local blacklist = {
                                         source.luau
                                          ^^^^
                                          source.luau constant.language.boolean.true.luau
-                                             ^^
-                                             source.luau
+                                             ^
+                                             source.luau punctuation.separator.fields.luau
 >  ["HTTP 0 (HTTP 429 (HTTP/1.1 429 ProvisionedThroughputExceeded))"] = true;
  ^^^
  source.luau
@@ -56,8 +58,8 @@ local blacklist = {
                                                                        source.luau
                                                                         ^^^^
                                                                         source.luau constant.language.boolean.true.luau
-                                                                            ^^
-                                                                            source.luau
+                                                                            ^
+                                                                            source.luau punctuation.separator.fields.luau
 >  ["LoadCharacter can only be called when Player is in the world"] = true;
  ^^^
  source.luau
@@ -75,8 +77,8 @@ local blacklist = {
                                                                      source.luau
                                                                       ^^^^
                                                                       source.luau constant.language.boolean.true.luau
-                                                                          ^^
-                                                                          source.luau
+                                                                          ^
+                                                                          source.luau punctuation.separator.fields.luau
 >}
- ^^
- source.luau
+ ^
+ source.luau punctuation.table.end.luau

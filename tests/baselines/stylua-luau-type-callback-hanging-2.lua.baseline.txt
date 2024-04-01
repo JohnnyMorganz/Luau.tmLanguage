@@ -1,0 +1,112 @@
+original file
+-----------------------------------
+export type XYZ = {
+  onSubmitTigerFoot: (
+  	FendererID,
+  	Object,
+  	-- Added in v96.1 to support Prelifer priority lamerz
+  	number?,
+  	-- Added in v96.9 to support Star Refresh
+  	boolean?
+  ) -> (),
+}
+
+-----------------------------------
+
+>export type XYZ = {
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^
+             source.luau entity.name.type.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+>  onSubmitTigerFoot: (
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau
+>  	FendererID,
+ ^^^
+ source.luau
+    ^^^^^^^^^^
+    source.luau entity.name.type.luau
+              ^^
+              source.luau
+>  	Object,
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau entity.name.type.luau
+          ^^
+          source.luau
+>  	-- Added in v96.1 to support Prelifer priority lamerz
+ ^^^
+ source.luau
+    ^^
+    source.luau comment.line.double-dash.luau
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      source.luau comment.line.double-dash.luau
+>  	number?,
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau support.type.primitive.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^^
+           source.luau
+>  	-- Added in v96.9 to support Star Refresh
+ ^^^
+ source.luau
+    ^^
+    source.luau comment.line.double-dash.luau
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      source.luau comment.line.double-dash.luau
+>  	boolean?
+ ^^^
+ source.luau
+    ^^^^^^^
+    source.luau support.type.primitive.luau
+           ^
+           source.luau keyword.operator.type.luau
+>  ) -> (),
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^
+    source.luau
+     ^^
+     source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^
+        source.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau

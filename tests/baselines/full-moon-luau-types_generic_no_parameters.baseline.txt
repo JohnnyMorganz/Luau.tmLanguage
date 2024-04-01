@@ -1,6 +1,7 @@
 original file
 -----------------------------------
 type Bar = Foo<>
+type Baz = module.Foo<>
 -----------------------------------
 
 >type Bar = Foo<>
@@ -9,7 +10,7 @@ type Bar = Foo<>
      ^
      source.luau
       ^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
          ^
          source.luau
           ^
@@ -22,3 +23,26 @@ type Bar = Foo<>
                source.luau keyword.operator.type.luau
                 ^
                 source.luau keyword.operator.type.luau
+>type Baz = module.Foo<>
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^^
+            source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^^^
+                   source.luau entity.name.type.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau keyword.operator.type.luau

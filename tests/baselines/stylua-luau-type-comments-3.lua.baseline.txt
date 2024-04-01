@@ -1,0 +1,90 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/617
+type Table = {
+  {
+  	Key -- [1]: Key
+  	| Translations -- [2]: Translations
+  	| Tags -- [3]: Tags
+  }
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/617
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type Table = {
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau entity.name.type.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau
+>  {
+ ^^
+ source.luau
+   ^
+   source.luau
+>  	Key -- [1]: Key
+ ^^^
+ source.luau
+    ^^^
+    source.luau entity.name.type.luau
+       ^
+       source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  	| Translations -- [2]: Translations
+ ^^^
+ source.luau
+    ^
+    source.luau keyword.operator.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^
+      source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau comment.line.double-dash.luau
+                     ^^^^^^^^^^^^^^^^^^
+                     source.luau comment.line.double-dash.luau
+>  	| Tags -- [3]: Tags
+ ^^^
+ source.luau
+    ^
+    source.luau keyword.operator.type.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau entity.name.type.luau
+          ^
+          source.luau
+           ^^
+           source.luau comment.line.double-dash.luau
+             ^^^^^^^^^^
+             source.luau comment.line.double-dash.luau
+>  }
+ ^^
+ source.luau
+   ^
+   source.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau

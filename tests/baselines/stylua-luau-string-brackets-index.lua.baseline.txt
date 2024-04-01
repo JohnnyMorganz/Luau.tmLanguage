@@ -1,0 +1,92 @@
+original file
+-----------------------------------
+local foo = {
+  [ [[test]] :: test ] = true,
+}
+
+foo[ [[test]] :: test ] = false
+
+-----------------------------------
+
+>local foo = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+>  [ [[test]] :: test ] = true,
+ ^^^^
+ source.luau
+     ^^
+     source.luau string.other.multiline.luau
+       ^^^^
+       source.luau string.other.multiline.luau
+           ^^
+           source.luau string.other.multiline.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.operator.typecast.luau
+                ^
+                source.luau
+                 ^^^^
+                 source.luau entity.name.type.luau
+                     ^
+                     source.luau
+                      ^^
+                      source.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau
+                          ^^^^
+                          source.luau constant.language.boolean.true.luau
+                              ^
+                              source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>foo[ [[test]] :: test ] = false
+ ^^^
+ source.luau variable.other.readwrite.luau
+    ^^
+    source.luau
+      ^^
+      source.luau string.other.multiline.luau
+        ^^^^
+        source.luau string.other.multiline.luau
+            ^^
+            source.luau string.other.multiline.luau
+              ^
+              source.luau
+               ^^
+               source.luau keyword.operator.typecast.luau
+                 ^
+                 source.luau
+                  ^^^^
+                  source.luau entity.name.type.luau
+                      ^
+                      source.luau
+                       ^^
+                       source.luau
+                         ^
+                         source.luau keyword.operator.assignment.luau
+                          ^
+                          source.luau
+                           ^^^^^
+                           source.luau constant.language.boolean.false.luau
+>
+ ^
+ source.luau

@@ -1,0 +1,218 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/436
+local OffsetEnum = {aValue = 10, anotherValue = 11, yetAnotherValue = 12, reset = 0, postReset = 1, aaaaaaaaaaa = true}
+
+local OffsetEnum = { aValue = 10, anotherValue = 11, yetAnotherValue = 12, reset = 0, postReset = 1, aaaaaaaaa = true }
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/436
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local OffsetEnum = {aValue = 10, anotherValue = 11, yetAnotherValue = 12, reset = 0, postReset = 1, aaaaaaaaaaa = true}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau punctuation.table.begin.luau
+                     ^^^^^^
+                     source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.assignment.luau
+                             ^
+                             source.luau
+                              ^^
+                              source.luau constant.numeric.decimal.luau
+                                ^
+                                source.luau punctuation.separator.fields.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^^^^^^^
+                                  source.luau variable.other.readwrite.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau keyword.operator.assignment.luau
+                                                ^
+                                                source.luau
+                                                 ^^
+                                                 source.luau constant.numeric.decimal.luau
+                                                   ^
+                                                   source.luau punctuation.separator.fields.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^^^^^^^^^^^^
+                                                     source.luau variable.other.readwrite.luau
+                                                                    ^
+                                                                    source.luau
+                                                                     ^
+                                                                     source.luau keyword.operator.assignment.luau
+                                                                      ^
+                                                                      source.luau
+                                                                       ^^
+                                                                       source.luau constant.numeric.decimal.luau
+                                                                         ^
+                                                                         source.luau punctuation.separator.fields.luau
+                                                                          ^
+                                                                          source.luau
+                                                                           ^^^^^
+                                                                           source.luau variable.other.readwrite.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^
+                                                                                 source.luau keyword.operator.assignment.luau
+                                                                                  ^
+                                                                                  source.luau
+                                                                                   ^
+                                                                                   source.luau constant.numeric.decimal.luau
+                                                                                    ^
+                                                                                    source.luau punctuation.separator.fields.luau
+                                                                                     ^
+                                                                                     source.luau
+                                                                                      ^^^^^^^^^
+                                                                                      source.luau variable.other.readwrite.luau
+                                                                                               ^
+                                                                                               source.luau
+                                                                                                ^
+                                                                                                source.luau keyword.operator.assignment.luau
+                                                                                                 ^
+                                                                                                 source.luau
+                                                                                                  ^
+                                                                                                  source.luau constant.numeric.decimal.luau
+                                                                                                   ^
+                                                                                                   source.luau punctuation.separator.fields.luau
+                                                                                                    ^
+                                                                                                    source.luau
+                                                                                                     ^^^^^^^^^^^
+                                                                                                     source.luau variable.other.readwrite.luau
+                                                                                                                ^
+                                                                                                                source.luau
+                                                                                                                 ^
+                                                                                                                 source.luau keyword.operator.assignment.luau
+                                                                                                                  ^
+                                                                                                                  source.luau
+                                                                                                                   ^^^^
+                                                                                                                   source.luau constant.language.boolean.true.luau
+                                                                                                                       ^
+                                                                                                                       source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local OffsetEnum = { aValue = 10, anotherValue = 11, yetAnotherValue = 12, reset = 0, postReset = 1, aaaaaaaaa = true }
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau punctuation.table.begin.luau
+                     ^
+                     source.luau
+                      ^^^^^^
+                      source.luau variable.other.readwrite.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau keyword.operator.assignment.luau
+                              ^
+                              source.luau
+                               ^^
+                               source.luau constant.numeric.decimal.luau
+                                 ^
+                                 source.luau punctuation.separator.fields.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^^^^^^
+                                   source.luau variable.other.readwrite.luau
+                                               ^
+                                               source.luau
+                                                ^
+                                                source.luau keyword.operator.assignment.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^
+                                                  source.luau constant.numeric.decimal.luau
+                                                    ^
+                                                    source.luau punctuation.separator.fields.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^^^^^^^^^^^^^^
+                                                      source.luau variable.other.readwrite.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^
+                                                                      source.luau keyword.operator.assignment.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^^
+                                                                        source.luau constant.numeric.decimal.luau
+                                                                          ^
+                                                                          source.luau punctuation.separator.fields.luau
+                                                                           ^
+                                                                           source.luau
+                                                                            ^^^^^
+                                                                            source.luau variable.other.readwrite.luau
+                                                                                 ^
+                                                                                 source.luau
+                                                                                  ^
+                                                                                  source.luau keyword.operator.assignment.luau
+                                                                                   ^
+                                                                                   source.luau
+                                                                                    ^
+                                                                                    source.luau constant.numeric.decimal.luau
+                                                                                     ^
+                                                                                     source.luau punctuation.separator.fields.luau
+                                                                                      ^
+                                                                                      source.luau
+                                                                                       ^^^^^^^^^
+                                                                                       source.luau variable.other.readwrite.luau
+                                                                                                ^
+                                                                                                source.luau
+                                                                                                 ^
+                                                                                                 source.luau keyword.operator.assignment.luau
+                                                                                                  ^
+                                                                                                  source.luau
+                                                                                                   ^
+                                                                                                   source.luau constant.numeric.decimal.luau
+                                                                                                    ^
+                                                                                                    source.luau punctuation.separator.fields.luau
+                                                                                                     ^
+                                                                                                     source.luau
+                                                                                                      ^^^^^^^^^
+                                                                                                      source.luau variable.other.readwrite.luau
+                                                                                                               ^
+                                                                                                               source.luau
+                                                                                                                ^
+                                                                                                                source.luau keyword.operator.assignment.luau
+                                                                                                                 ^
+                                                                                                                 source.luau
+                                                                                                                  ^^^^
+                                                                                                                  source.luau constant.language.boolean.true.luau
+                                                                                                                      ^
+                                                                                                                      source.luau
+                                                                                                                       ^
+                                                                                                                       source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

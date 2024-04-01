@@ -1,0 +1,16 @@
+original file
+-----------------------------------
+do
+    
+end
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>    
+ ^^^^^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

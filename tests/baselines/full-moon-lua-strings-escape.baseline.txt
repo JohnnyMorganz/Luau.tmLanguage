@@ -9,33 +9,37 @@ call({ ["\\"] = "" })
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau string.quoted.single.luau
        ^^
        source.luau string.quoted.single.luau constant.character.escape.luau
          ^
          source.luau string.quoted.single.luau
-          ^^
-          source.luau
+          ^
+          source.luau punctuation.arguments.end.luau
 >call("\\")
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau string.quoted.double.luau
        ^^
        source.luau string.quoted.double.luau constant.character.escape.luau
          ^
          source.luau string.quoted.double.luau
-          ^^
-          source.luau
+          ^
+          source.luau punctuation.arguments.end.luau
 >call({ ["\\"] = "" })
  ^^^^
  source.luau entity.name.function.luau
-     ^^^^
-     source.luau
+     ^
+     source.luau punctuation.arguments.begin.luau
+      ^
+      source.luau punctuation.table.begin.luau
+       ^^
+       source.luau
          ^
          source.luau string.quoted.double.luau
           ^^
@@ -52,5 +56,9 @@ call({ ["\\"] = "" })
                  source.luau string.quoted.double.luau
                   ^
                   source.luau string.quoted.double.luau
-                   ^^^^
+                   ^
                    source.luau
+                    ^
+                    source.luau punctuation.table.end.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau

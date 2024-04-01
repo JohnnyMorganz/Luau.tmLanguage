@@ -1,0 +1,48 @@
+original file
+-----------------------------------
+local expr = first_______________________________________________________________________________________________________
+  and function()
+  foo()
+end
+-----------------------------------
+
+>local expr = first_______________________________________________________________________________________________________
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              source.luau variable.other.readwrite.luau
+>  and function()
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+      ^
+      source.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  foo()
+ ^^
+ source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

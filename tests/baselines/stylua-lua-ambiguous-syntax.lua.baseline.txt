@@ -1,0 +1,140 @@
+original file
+-----------------------------------
+local baz = foo(bar);
+(foo and x or y)(bar)
+
+function foobar()
+  local baz = foo(bar);
+  (baz and x or y)(bar)
+end
+
+-----------------------------------
+
+>local baz = foo(bar);
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^
+             source.luau entity.name.function.luau
+                ^
+                source.luau punctuation.arguments.begin.luau
+                 ^^^
+                 source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau punctuation.arguments.end.luau
+                     ^^
+                     source.luau
+>(foo and x or y)(bar)
+ ^
+ source.luau punctuation.arguments.begin.luau
+  ^^^
+  source.luau variable.other.readwrite.luau
+     ^
+     source.luau
+      ^^^
+      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+         ^
+         source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^
+            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+              ^
+              source.luau
+               ^
+               source.luau variable.other.readwrite.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^^^
+                  source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>function foobar()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^^^
+          source.luau meta.function.luau entity.name.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  local baz = foo(bar);
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau entity.name.function.luau
+                  ^
+                  source.luau punctuation.arguments.begin.luau
+                   ^^^
+                   source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau punctuation.arguments.end.luau
+                       ^^
+                       source.luau
+>  (baz and x or y)(bar)
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^^^
+    source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^^^
+        source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                ^
+                source.luau
+                 ^
+                 source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau punctuation.arguments.end.luau
+                   ^
+                   source.luau punctuation.arguments.begin.luau
+                    ^^^
+                    source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

@@ -12,7 +12,7 @@ type Foo = {
      ^
      source.luau
       ^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
          ^
          source.luau
           ^
@@ -32,8 +32,8 @@ type Foo = {
        source.luau
         ^^^^^^
         source.luau support.type.primitive.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.separator.fields.type.luau
 >  baz: number;
  ^^
  source.luau
@@ -45,8 +45,8 @@ type Foo = {
        source.luau
         ^^^^^^
         source.luau support.type.primitive.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.separator.fields.type.luau
 >}
  ^
  source.luau

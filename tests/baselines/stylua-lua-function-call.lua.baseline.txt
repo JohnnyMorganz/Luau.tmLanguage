@@ -1,0 +1,72 @@
+original file
+-----------------------------------
+call "string" 
+call {foo='bar',baz=1}  
+call  (x,y, z)   
+-----------------------------------
+
+>call "string" 
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^
+       source.luau string.quoted.double.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^^
+              source.luau
+>call {foo='bar',baz=1}  
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau
+      ^
+      source.luau punctuation.table.begin.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau string.quoted.single.luau
+            ^^^
+            source.luau string.quoted.single.luau
+               ^
+               source.luau string.quoted.single.luau
+                ^
+                source.luau punctuation.separator.fields.luau
+                 ^^^
+                 source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau constant.numeric.decimal.luau
+                      ^
+                      source.luau punctuation.table.end.luau
+                       ^^^
+                       source.luau
+>call  (x,y, z)   
+ ^^^^
+ source.luau entity.name.function.luau
+     ^^
+     source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau punctuation.separator.arguments.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau punctuation.separator.arguments.luau
+            ^
+            source.luau
+             ^
+             source.luau variable.other.readwrite.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+               ^^^^
+               source.luau

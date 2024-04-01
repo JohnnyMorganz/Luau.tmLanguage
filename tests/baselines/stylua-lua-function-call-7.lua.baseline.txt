@@ -1,0 +1,104 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/298
+do
+  return Roact.createElement(StyleContext.Provider, {
+  	value = styleObject,
+  }, Roact.oneChild(self.props[Roact.Children]))
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/298
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>  return Roact.createElement(StyleContext.Provider, {
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^^^^^^^^
+                source.luau entity.name.function.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+                              ^^^^^^^^^^^^
+                              source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau
+                                           ^^^^^^^^
+                                           source.luau variable.other.property.luau
+                                                   ^
+                                                   source.luau punctuation.separator.arguments.luau
+                                                    ^
+                                                    source.luau
+                                                     ^
+                                                     source.luau punctuation.table.begin.luau
+>  	value = styleObject,
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^^^^^^^
+            source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau punctuation.separator.fields.luau
+>  }, Roact.oneChild(self.props[Roact.Children]))
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.table.end.luau
+    ^
+    source.luau punctuation.separator.arguments.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^^^^^^^
+            source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^^^^
+                     source.luau variable.language.self.luau
+                         ^
+                         source.luau
+                          ^^^^^
+                          source.luau variable.other.property.luau
+                               ^
+                               source.luau
+                                ^^^^^
+                                source.luau variable.other.readwrite.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^^^
+                                      source.luau variable.other.property.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

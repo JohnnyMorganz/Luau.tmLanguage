@@ -1,0 +1,190 @@
+original file
+-----------------------------------
+function foo()
+
+  local x = 1
+
+
+  return true
+
+end
+
+function bar()
+
+
+  return
+
+
+end
+
+do
+
+  -- comment
+  local x = 1
+
+
+  local foo = bar
+
+  -- comment
+
+end
+-----------------------------------
+
+>function foo()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>
+ ^
+ source.luau
+>  local x = 1
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>  return true
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau constant.language.boolean.true.luau
+>
+ ^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function bar()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>  return
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  local x = 1
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>  local foo = bar
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

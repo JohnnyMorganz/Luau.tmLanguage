@@ -1,0 +1,76 @@
+original file
+-----------------------------------
+local numbers = {}
+for k, v in numbers :: any do
+  print(k, v)
+end
+-----------------------------------
+
+>local numbers = {}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau punctuation.table.begin.luau
+                  ^
+                  source.luau punctuation.table.end.luau
+>for k, v in numbers :: any do
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau
+     ^
+     source.luau variable.parameter.luau
+      ^^
+      source.luau
+        ^
+        source.luau variable.parameter.luau
+         ^
+         source.luau
+          ^^
+          source.luau keyword.control.luau
+            ^
+            source.luau
+             ^^^^^^^
+             source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^
+                     source.luau keyword.operator.typecast.luau
+                       ^
+                       source.luau
+                        ^^^
+                        source.luau support.type.primitive.luau
+                           ^
+                           source.luau
+                            ^^
+                            source.luau keyword.control.luau
+>  print(k, v)
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau punctuation.separator.arguments.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^
+             source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

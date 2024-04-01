@@ -1,0 +1,438 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/318
+local a = {
+  b = -- equals trailing comment
+  	foo(),
+  c -- key trailing comment
+  	= bar(),
+  -- expression leading comment
+  "d",
+  -- key leading comment
+  e -- key trailing comment
+  -- equals leading comment
+  = -- equals trailing comment
+  baz(),
+
+
+  ["f"] = -- equals trailing comment
+  	foo(),
+  ["g"] -- key trailing comment
+  	= bar(),
+  -- key leading comment
+  ["h"] -- key trailing comment
+  -- equals leading comment
+  = -- equals trailing comment
+  baz(),
+}
+
+local b = {
+    b =  -- a comment breaks it
+    {
+        c = "d",
+    },
+}
+
+local c = {
+  -- comment group 1
+  -- part of this group
+
+  -- another comment group
+  -- dont group with the above comment group
+  x = y
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/318
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local a = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+>  b = -- equals trailing comment
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^
+     source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^^
+       source.luau comment.line.double-dash.luau
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+         source.luau comment.line.double-dash.luau
+>  	foo(),
+ ^^^
+ source.luau
+    ^^^
+    source.luau entity.name.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+         ^
+         source.luau punctuation.separator.fields.luau
+>  c -- key trailing comment
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  	= bar(),
+ ^^^
+ source.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.arguments.end.luau
+           ^
+           source.luau punctuation.separator.fields.luau
+>  -- expression leading comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  "d",
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau punctuation.separator.fields.luau
+>  -- key leading comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  e -- key trailing comment
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  -- equals leading comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  = -- equals trailing comment
+ ^^
+ source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  baz(),
+ ^^
+ source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+        ^
+        source.luau punctuation.separator.fields.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>  ["f"] = -- equals trailing comment
+ ^^^
+ source.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^
+       source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^
+           source.luau comment.line.double-dash.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau comment.line.double-dash.luau
+>  	foo(),
+ ^^^
+ source.luau
+    ^^^
+    source.luau entity.name.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
+         ^
+         source.luau punctuation.separator.fields.luau
+>  ["g"] -- key trailing comment
+ ^^^
+ source.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^
+       source.luau
+         ^^
+         source.luau comment.line.double-dash.luau
+           ^^^^^^^^^^^^^^^^^^^^^
+           source.luau comment.line.double-dash.luau
+>  	= bar(),
+ ^^^
+ source.luau
+    ^
+    source.luau keyword.operator.assignment.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau punctuation.arguments.end.luau
+           ^
+           source.luau punctuation.separator.fields.luau
+>  -- key leading comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  ["h"] -- key trailing comment
+ ^^^
+ source.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^
+       source.luau
+         ^^
+         source.luau comment.line.double-dash.luau
+           ^^^^^^^^^^^^^^^^^^^^^
+           source.luau comment.line.double-dash.luau
+>  -- equals leading comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  = -- equals trailing comment
+ ^^
+ source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  baz(),
+ ^^
+ source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+        ^
+        source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local b = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+>    b =  -- a comment breaks it
+ ^^^^
+ source.luau
+     ^
+     source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^^
+        source.luau
+          ^^
+          source.luau comment.line.double-dash.luau
+            ^^^^^^^^^^^^^^^^^^^^
+            source.luau comment.line.double-dash.luau
+>    {
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.table.begin.luau
+>        c = "d",
+ ^^^^^^^^
+ source.luau
+         ^
+         source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.separator.fields.luau
+>    },
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.table.end.luau
+      ^
+      source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau
+>local c = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+>  -- comment group 1
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  -- part of this group
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>  -- another comment group
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  -- dont group with the above comment group
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  x = y
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^
+     source.luau keyword.operator.assignment.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

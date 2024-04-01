@@ -25,11 +25,13 @@ end
                      ^^^^^
                      source.luau support.function.luau
                           ^
-                          source.luau
+                          source.luau punctuation.arguments.begin.luau
                            ^^^^
                            source.luau variable.other.readwrite.luau
-                               ^^
-                               source.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+                                ^
+                                source.luau
                                  ^^
                                  source.luau keyword.control.luau
 >  call(index, value)
@@ -38,15 +40,17 @@ end
    ^^^^
    source.luau entity.name.function.luau
        ^
-       source.luau
+       source.luau punctuation.arguments.begin.luau
         ^^^^^
         source.luau variable.other.readwrite.luau
-             ^^
-             source.luau
+             ^
+             source.luau punctuation.separator.arguments.luau
+              ^
+              source.luau
                ^^^^^
                source.luau variable.other.readwrite.luau
-                    ^^
-                    source.luau
+                    ^
+                    source.luau punctuation.arguments.end.luau
 >end
  ^^^
  source.luau keyword.control.luau

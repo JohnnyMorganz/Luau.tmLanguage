@@ -19,7 +19,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -58,13 +58,15 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
          source.luau keyword.operator.assignment.luau
-          ^^
+          ^
           source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
             ^^
             source.luau keyword.control.luau
               ^
@@ -91,12 +93,18 @@ end
                                     source.luau
                                      ^^^^^^
                                      source.luau entity.name.function.luau
-                                           ^^^^
-                                           source.luau
+                                           ^
+                                           source.luau punctuation.arguments.begin.luau
+                                            ^
+                                            source.luau punctuation.arguments.end.luau
+                                             ^
+                                             source.luau punctuation.arguments.end.luau
+                                              ^
+                                              source.luau
                                                ^^^^^^
                                                source.luau entity.name.function.luau
                                                      ^
-                                                     source.luau
+                                                     source.luau punctuation.arguments.begin.luau
                                                       ^^
                                                       source.luau keyword.control.luau
                                                         ^
@@ -119,21 +127,23 @@ end
                                                                                            source.luau
                                                                                             ^^^^^^^^
                                                                                             source.luau variable.other.readwrite.luau
-                                                                                                    ^^
-                                                                                                    source.luau
+                                                                                                    ^
+                                                                                                    source.luau punctuation.arguments.end.luau
 >local z = (if bar then foo.y else 5) :: number
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
          source.luau keyword.operator.assignment.luau
-          ^^
+          ^
           source.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
             ^^
             source.luau keyword.control.luau
               ^
@@ -160,10 +170,12 @@ end
                                   source.luau
                                    ^
                                    source.luau constant.numeric.decimal.luau
-                                    ^^
-                                    source.luau
+                                    ^
+                                    source.luau punctuation.arguments.end.luau
+                                     ^
+                                     source.luau
                                       ^^
-                                      source.luau keyword.operator.typeassertion.luau
+                                      source.luau keyword.operator.typecast.luau
                                         ^
                                         source.luau
                                          ^^^^^^
@@ -177,7 +189,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -236,7 +248,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -291,7 +303,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -308,8 +320,10 @@ end
                  source.luau
                   ^^^^
                   source.luau keyword.control.luau
-                      ^^
+                      ^
                       source.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
                         ^^^
                         source.luau variable.other.readwrite.luau
                            ^
@@ -319,13 +333,15 @@ end
                              ^
                              source.luau
                               ^^
-                              source.luau keyword.operator.typeassertion.luau
+                              source.luau keyword.operator.typecast.luau
                                 ^
                                 source.luau
                                  ^^^^^^
                                  source.luau support.type.primitive.luau
-                                       ^^
-                                       source.luau
+                                       ^
+                                       source.luau punctuation.arguments.end.luau
+                                        ^
+                                        source.luau
                                          ^^^^^^
                                          source.luau keyword.control.luau
                                                ^
@@ -344,8 +360,16 @@ end
                                                             source.luau
                                                              ^
                                                              source.luau entity.name.function.luau
-                                                              ^^^^^
-                                                              source.luau
+                                                              ^
+                                                              source.luau punctuation.arguments.begin.luau
+                                                               ^
+                                                               source.luau punctuation.arguments.end.luau
+                                                                ^
+                                                                source.luau punctuation.arguments.begin.luau
+                                                                 ^
+                                                                 source.luau punctuation.arguments.end.luau
+                                                                  ^
+                                                                  source.luau
                                                                    ^^^^
                                                                    source.luau keyword.control.luau
                                                                        ^
@@ -358,7 +382,7 @@ end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -390,7 +414,7 @@ end
                                  ^
                                  source.luau
                                   ^^
-                                  source.luau keyword.operator.typeassertion.luau
+                                  source.luau keyword.operator.typecast.luau
                                     ^
                                     source.luau
                                      ^^^^^^

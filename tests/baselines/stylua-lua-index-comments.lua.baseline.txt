@@ -1,0 +1,170 @@
+original file
+-----------------------------------
+local x = foo[
+  index -- test
+]
+
+foo[
+  var -- string
+] = baz
+
+local x = foo[
+  x -- string
+][y][z][p
+-- string
+]
+
+
+local x = foo[index --[[comment]]]
+
+-----------------------------------
+
+>local x = foo[
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^
+           source.luau variable.other.readwrite.luau
+              ^^
+              source.luau
+>  index -- test
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^
+         source.luau comment.line.double-dash.luau
+           ^^^^^
+           source.luau comment.line.double-dash.luau
+>]
+ ^^
+ source.luau
+>
+ ^
+ source.luau
+>foo[
+ ^^^
+ source.luau variable.other.readwrite.luau
+    ^^
+    source.luau
+>  var -- string
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^^
+       source.luau comment.line.double-dash.luau
+         ^^^^^^^
+         source.luau comment.line.double-dash.luau
+>] = baz
+ ^^
+ source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^^^
+     source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>local x = foo[
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^
+           source.luau variable.other.readwrite.luau
+              ^^
+              source.luau
+>  x -- string
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^
+       source.luau comment.line.double-dash.luau
+>][y][z][p
+ ^^
+ source.luau
+   ^
+   source.luau variable.other.readwrite.luau
+    ^^
+    source.luau
+      ^
+      source.luau variable.other.readwrite.luau
+       ^^
+       source.luau
+         ^
+         source.luau variable.other.readwrite.luau
+>-- string
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^
+   source.luau comment.line.double-dash.luau
+>]
+ ^^
+ source.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>local x = foo[index --[[comment]]]
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^^
+           source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^^^
+               source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^^^
+                     source.luau comment.block.luau
+                         ^^^^^^^
+                         source.luau comment.block.luau
+                                ^^
+                                source.luau comment.block.luau
+                                  ^^
+                                  source.luau
+>
+ ^
+ source.luau

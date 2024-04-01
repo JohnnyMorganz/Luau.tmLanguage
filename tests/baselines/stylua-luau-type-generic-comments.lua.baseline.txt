@@ -1,0 +1,54 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/446
+export type IntrospectionNamedTypeRef<
+  T -- XYZ ABC
+> = {}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/446
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>export type IntrospectionNamedTypeRef<
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+>  T -- XYZ ABC
+ ^^
+ source.luau
+   ^
+   source.luau entity.name.type.luau
+    ^
+    source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>> = {}
+ ^
+ source.luau keyword.operator.type.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^
+     source.luau
+      ^
+      source.luau
+>
+ ^
+ source.luau

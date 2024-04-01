@@ -1,0 +1,312 @@
+original file
+-----------------------------------
+do
+  do
+  	do
+  		do
+  			local text = "Players: " .. #Server_Container.ARandomVariableWhichIsVeryLongSoThatThisGetsOverTheColumnLimit.Players_F:GetChildren() - 1 .. "/20"
+  			local ratio = (minAxis - minAxisSize) / delta * (self.props.maxScaleRatio - self.props.minScaleRatio) + self.props.minScaleRatio
+  			local ratio2 = (minAxis - minAxisSize) / delta * (self.props.maxScaleRatio - self.props.minScaleRatio) * self.props.aRandomVariableWhichIsVeryLong + self.props.minScaleRatio
+  		end
+  	end
+  end
+end
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>  do
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+>  	do
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.control.luau
+>  		do
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.control.luau
+>  			local text = "Players: " .. #Server_Container.ARandomVariableWhichIsVeryLongSoThatThisGetsOverTheColumnLimit.Players_F:GetChildren() - 1 .. "/20"
+ ^^^^^
+ source.luau
+      ^^^^^
+      source.luau storage.modifier.local.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau string.quoted.double.luau
+                    ^^^^^^^^^
+                    source.luau string.quoted.double.luau
+                             ^
+                             source.luau string.quoted.double.luau
+                              ^
+                              source.luau
+                               ^^
+                               source.luau keyword.operator.other.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau keyword.operator.other.luau
+                                   ^^^^^^^^^^^^^^^^
+                                   source.luau variable.other.readwrite.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                    source.luau variable.other.property.luau
+                                                                                                                  ^
+                                                                                                                  source.luau
+                                                                                                                   ^^^^^^^^^
+                                                                                                                   source.luau variable.other.property.luau
+                                                                                                                            ^
+                                                                                                                            source.luau
+                                                                                                                             ^^^^^^^^^^^
+                                                                                                                             source.luau entity.name.function.luau
+                                                                                                                                        ^
+                                                                                                                                        source.luau punctuation.arguments.begin.luau
+                                                                                                                                         ^
+                                                                                                                                         source.luau punctuation.arguments.end.luau
+                                                                                                                                          ^
+                                                                                                                                          source.luau
+                                                                                                                                           ^
+                                                                                                                                           source.luau keyword.operator.arithmetic.luau
+                                                                                                                                            ^
+                                                                                                                                            source.luau
+                                                                                                                                             ^
+                                                                                                                                             source.luau constant.numeric.decimal.luau
+                                                                                                                                              ^
+                                                                                                                                              source.luau
+                                                                                                                                               ^^
+                                                                                                                                               source.luau keyword.operator.other.luau
+                                                                                                                                                 ^
+                                                                                                                                                 source.luau
+                                                                                                                                                  ^
+                                                                                                                                                  source.luau string.quoted.double.luau
+                                                                                                                                                   ^^^
+                                                                                                                                                   source.luau string.quoted.double.luau
+                                                                                                                                                      ^
+                                                                                                                                                      source.luau string.quoted.double.luau
+>  			local ratio = (minAxis - minAxisSize) / delta * (self.props.maxScaleRatio - self.props.minScaleRatio) + self.props.minScaleRatio
+ ^^^^^
+ source.luau
+      ^^^^^
+      source.luau storage.modifier.local.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^^^^^^^
+                     source.luau variable.other.readwrite.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau keyword.operator.arithmetic.luau
+                              ^
+                              source.luau
+                               ^^^^^^^^^^^
+                               source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau punctuation.arguments.end.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau keyword.operator.arithmetic.luau
+                                             ^
+                                             source.luau
+                                              ^^^^^
+                                              source.luau variable.other.readwrite.luau
+                                                   ^
+                                                   source.luau
+                                                    ^
+                                                    source.luau keyword.operator.arithmetic.luau
+                                                     ^
+                                                     source.luau
+                                                      ^
+                                                      source.luau punctuation.arguments.begin.luau
+                                                       ^^^^
+                                                       source.luau variable.language.self.luau
+                                                           ^
+                                                           source.luau
+                                                            ^^^^^
+                                                            source.luau variable.other.property.luau
+                                                                 ^
+                                                                 source.luau
+                                                                  ^^^^^^^^^^^^^
+                                                                  source.luau variable.other.property.luau
+                                                                               ^
+                                                                               source.luau
+                                                                                ^
+                                                                                source.luau keyword.operator.arithmetic.luau
+                                                                                 ^
+                                                                                 source.luau
+                                                                                  ^^^^
+                                                                                  source.luau variable.language.self.luau
+                                                                                      ^
+                                                                                      source.luau
+                                                                                       ^^^^^
+                                                                                       source.luau variable.other.property.luau
+                                                                                            ^
+                                                                                            source.luau
+                                                                                             ^^^^^^^^^^^^^
+                                                                                             source.luau variable.other.property.luau
+                                                                                                          ^
+                                                                                                          source.luau punctuation.arguments.end.luau
+                                                                                                           ^
+                                                                                                           source.luau
+                                                                                                            ^
+                                                                                                            source.luau keyword.operator.arithmetic.luau
+                                                                                                             ^
+                                                                                                             source.luau
+                                                                                                              ^^^^
+                                                                                                              source.luau variable.language.self.luau
+                                                                                                                  ^
+                                                                                                                  source.luau
+                                                                                                                   ^^^^^
+                                                                                                                   source.luau variable.other.property.luau
+                                                                                                                        ^
+                                                                                                                        source.luau
+                                                                                                                         ^^^^^^^^^^^^^
+                                                                                                                         source.luau variable.other.property.luau
+>  			local ratio2 = (minAxis - minAxisSize) / delta * (self.props.maxScaleRatio - self.props.minScaleRatio) * self.props.aRandomVariableWhichIsVeryLong + self.props.minScaleRatio
+ ^^^^^
+ source.luau
+      ^^^^^
+      source.luau storage.modifier.local.luau
+           ^
+           source.luau
+            ^^^^^^
+            source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau punctuation.arguments.begin.luau
+                      ^^^^^^^
+                      source.luau variable.other.readwrite.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau keyword.operator.arithmetic.luau
+                               ^
+                               source.luau
+                                ^^^^^^^^^^^
+                                source.luau variable.other.readwrite.luau
+                                           ^
+                                           source.luau punctuation.arguments.end.luau
+                                            ^
+                                            source.luau
+                                             ^
+                                             source.luau keyword.operator.arithmetic.luau
+                                              ^
+                                              source.luau
+                                               ^^^^^
+                                               source.luau variable.other.readwrite.luau
+                                                    ^
+                                                    source.luau
+                                                     ^
+                                                     source.luau keyword.operator.arithmetic.luau
+                                                      ^
+                                                      source.luau
+                                                       ^
+                                                       source.luau punctuation.arguments.begin.luau
+                                                        ^^^^
+                                                        source.luau variable.language.self.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^^^
+                                                             source.luau variable.other.property.luau
+                                                                  ^
+                                                                  source.luau
+                                                                   ^^^^^^^^^^^^^
+                                                                   source.luau variable.other.property.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^
+                                                                                 source.luau keyword.operator.arithmetic.luau
+                                                                                  ^
+                                                                                  source.luau
+                                                                                   ^^^^
+                                                                                   source.luau variable.language.self.luau
+                                                                                       ^
+                                                                                       source.luau
+                                                                                        ^^^^^
+                                                                                        source.luau variable.other.property.luau
+                                                                                             ^
+                                                                                             source.luau
+                                                                                              ^^^^^^^^^^^^^
+                                                                                              source.luau variable.other.property.luau
+                                                                                                           ^
+                                                                                                           source.luau punctuation.arguments.end.luau
+                                                                                                            ^
+                                                                                                            source.luau
+                                                                                                             ^
+                                                                                                             source.luau keyword.operator.arithmetic.luau
+                                                                                                              ^
+                                                                                                              source.luau
+                                                                                                               ^^^^
+                                                                                                               source.luau variable.language.self.luau
+                                                                                                                   ^
+                                                                                                                   source.luau
+                                                                                                                    ^^^^^
+                                                                                                                    source.luau variable.other.property.luau
+                                                                                                                         ^
+                                                                                                                         source.luau
+                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                          source.luau variable.other.property.luau
+                                                                                                                                                        ^
+                                                                                                                                                        source.luau
+                                                                                                                                                         ^
+                                                                                                                                                         source.luau keyword.operator.arithmetic.luau
+                                                                                                                                                          ^
+                                                                                                                                                          source.luau
+                                                                                                                                                           ^^^^
+                                                                                                                                                           source.luau variable.language.self.luau
+                                                                                                                                                               ^
+                                                                                                                                                               source.luau
+                                                                                                                                                                ^^^^^
+                                                                                                                                                                source.luau variable.other.property.luau
+                                                                                                                                                                     ^
+                                                                                                                                                                     source.luau
+                                                                                                                                                                      ^^^^^^^^^^^^^
+                                                                                                                                                                      source.luau variable.other.property.luau
+>  		end
+ ^^^^
+ source.luau
+     ^^^
+     source.luau keyword.control.luau
+>  	end
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

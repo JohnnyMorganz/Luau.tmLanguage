@@ -1,0 +1,126 @@
+original file
+-----------------------------------
+local foo = {
+    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"},
+    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"},
+    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"},
+    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"}
+}
+-----------------------------------
+
+>local foo = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau punctuation.table.begin.luau
+>    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"},
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.table.begin.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau punctuation.separator.fields.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^^^^^^^^^^^^^^^^^
+                             source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
+                                                ^
+                                                source.luau punctuation.table.end.luau
+                                                 ^
+                                                 source.luau punctuation.separator.fields.luau
+>    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"},
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.table.begin.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau punctuation.separator.fields.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^^^^^^^^^^^^^^^^^
+                             source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
+                                                ^
+                                                source.luau punctuation.table.end.luau
+                                                 ^
+                                                 source.luau punctuation.separator.fields.luau
+>    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"},
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.table.begin.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau punctuation.separator.fields.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^^^^^^^^^^^^^^^^^
+                             source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
+                                                ^
+                                                source.luau punctuation.table.end.luau
+                                                 ^
+                                                 source.luau punctuation.separator.fields.luau
+>    {"foobarbazfoobarbaz", "foobarbazfoobarbaz"}
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.table.begin.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^^^^^^^^^^^^^^^^^^
+       source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau punctuation.separator.fields.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau string.quoted.double.luau
+                             ^^^^^^^^^^^^^^^^^^
+                             source.luau string.quoted.double.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
+                                                ^
+                                                source.luau punctuation.table.end.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau

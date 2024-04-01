@@ -1,0 +1,92 @@
+original file
+-----------------------------------
+local function noop() -- comment
+end
+
+function noop()
+  -- comment
+end
+
+call(function()
+  -- comment
+
+end)
+-----------------------------------
+
+>local function noop() -- comment
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                      ^
+                      source.luau
+                       ^^
+                       source.luau comment.line.double-dash.luau
+                         ^^^^^^^^
+                         source.luau comment.line.double-dash.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function noop()
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^
+          source.luau meta.function.luau entity.name.function.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>call(function()
+ ^^^^
+ source.luau entity.name.function.luau
+     ^
+     source.luau punctuation.arguments.begin.luau
+      ^^^^^^^^
+      source.luau meta.function.luau keyword.control.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>end)
+ ^^^
+ source.luau keyword.control.luau
+    ^
+    source.luau punctuation.arguments.end.luau

@@ -1,0 +1,124 @@
+original file
+-----------------------------------
+local Object = {ClassName = "Object"}
+Object.__tostring = function(self) return self.ClassName end
+
+Object.__tostring = function(self): string
+    return self.ClassName
+end
+-----------------------------------
+
+>local Object = {ClassName = "Object"}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^
+                source.luau punctuation.table.begin.luau
+                 ^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.assignment.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau string.quoted.double.luau
+                              ^^^^^^
+                              source.luau string.quoted.double.luau
+                                    ^
+                                    source.luau string.quoted.double.luau
+                                     ^
+                                     source.luau punctuation.table.end.luau
+>Object.__tostring = function(self) return self.ClassName end
+ ^^^^^^
+ source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^^^^^^^^^^
+        source.luau variable.language.metamethod.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^
+                     source.luau meta.function.luau keyword.control.luau
+                             ^
+                             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                              ^^^^
+                              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^^
+                                    source.luau keyword.control.luau
+                                          ^
+                                          source.luau
+                                           ^^^^
+                                           source.luau variable.language.self.luau
+                                               ^
+                                               source.luau
+                                                ^^^^^^^^^
+                                                source.luau variable.other.property.luau
+                                                         ^
+                                                         source.luau
+                                                          ^^^
+                                                          source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>Object.__tostring = function(self): string
+ ^^^^^^
+ source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^^^^^^^^^^
+        source.luau variable.language.metamethod.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^
+                     source.luau meta.function.luau keyword.control.luau
+                             ^
+                             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                              ^^^^
+                              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^^
+                                     source.luau support.type.primitive.luau
+>    return self.ClassName
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau variable.language.self.luau
+                ^
+                source.luau
+                 ^^^^^^^^^
+                 source.luau variable.other.property.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

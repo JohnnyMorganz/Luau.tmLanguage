@@ -10,33 +10,33 @@ call("")
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau string.quoted.double.luau
        ^^^^^^
        source.luau string.quoted.double.luau
              ^
              source.luau string.quoted.double.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.arguments.end.luau
 >call('single')
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau string.quoted.single.luau
        ^^^^^^
        source.luau string.quoted.single.luau
              ^
              source.luau string.quoted.single.luau
-              ^^
-              source.luau
+              ^
+              source.luau punctuation.arguments.end.luau
 >call("foo\nbar")
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau string.quoted.double.luau
        ^^^
@@ -47,16 +47,16 @@ call("")
             source.luau string.quoted.double.luau
                ^
                source.luau string.quoted.double.luau
-                ^^
-                source.luau
+                ^
+                source.luau punctuation.arguments.end.luau
 >call("")
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau string.quoted.double.luau
        ^
        source.luau string.quoted.double.luau
-        ^^
-        source.luau
+        ^
+        source.luau punctuation.arguments.end.luau

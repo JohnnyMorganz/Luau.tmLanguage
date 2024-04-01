@@ -56,24 +56,24 @@ original file
             ^^^^
             source.luau comment.block.luau keyword.operator.other.luau meta.function.luau entity.name.function.luau
                 ^
-                source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
+                source.luau comment.block.luau keyword.operator.other.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                  ^
-                 source.luau comment.block.luau keyword.operator.other.luau meta.function.luau
+                 source.luau comment.block.luau keyword.operator.other.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  	print("indentation")
  ^^^
  source.luau comment.block.luau keyword.operator.other.luau
     ^^^^^
     source.luau comment.block.luau keyword.operator.other.luau support.function.luau
          ^
-         source.luau comment.block.luau keyword.operator.other.luau
+         source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.begin.luau
           ^
           source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
            ^^^^^^^^^^^
            source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
                       ^
                       source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-                       ^^
-                       source.luau comment.block.luau keyword.operator.other.luau
+                       ^
+                       source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.end.luau
 >
  ^
  source.luau comment.block.luau keyword.operator.other.luau
@@ -88,15 +88,15 @@ original file
      ^^^^^
      source.luau comment.block.luau keyword.operator.other.luau support.function.luau
           ^
-          source.luau comment.block.luau keyword.operator.other.luau
+          source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.begin.luau
            ^
            source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
             ^^^^^^^^^^^^^
             source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
                          ^
                          source.luau comment.block.luau keyword.operator.other.luau string.quoted.double.luau
-                          ^^
-                          source.luau comment.block.luau keyword.operator.other.luau
+                          ^
+                          source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.end.luau
 >  	end
  ^^^
  source.luau comment.block.luau keyword.operator.other.luau

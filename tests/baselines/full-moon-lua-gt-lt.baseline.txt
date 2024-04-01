@@ -11,7 +11,7 @@ call(x >= y)
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau constant.numeric.decimal.luau
        ^
@@ -22,13 +22,13 @@ call(x >= y)
          source.luau
           ^
           source.luau constant.numeric.decimal.luau
-           ^^
-           source.luau
+           ^
+           source.luau punctuation.arguments.end.luau
 >call(1 <= 2)
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau constant.numeric.decimal.luau
        ^
@@ -39,13 +39,13 @@ call(x >= y)
           source.luau
            ^
            source.luau constant.numeric.decimal.luau
-            ^^
-            source.luau
+            ^
+            source.luau punctuation.arguments.end.luau
 >call(2 > 1)
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau constant.numeric.decimal.luau
        ^
@@ -56,13 +56,13 @@ call(x >= y)
          source.luau
           ^
           source.luau constant.numeric.decimal.luau
-           ^^
-           source.luau
+           ^
+           source.luau punctuation.arguments.end.luau
 >call(2 >= 1)
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau constant.numeric.decimal.luau
        ^
@@ -73,13 +73,13 @@ call(x >= y)
           source.luau
            ^
            source.luau constant.numeric.decimal.luau
-            ^^
-            source.luau
+            ^
+            source.luau punctuation.arguments.end.luau
 >call(x >= y)
  ^^^^
  source.luau entity.name.function.luau
      ^
-     source.luau
+     source.luau punctuation.arguments.begin.luau
       ^
       source.luau variable.other.readwrite.luau
        ^
@@ -90,5 +90,5 @@ call(x >= y)
           source.luau
            ^
            source.luau variable.other.readwrite.luau
-            ^^
-            source.luau
+            ^
+            source.luau punctuation.arguments.end.luau

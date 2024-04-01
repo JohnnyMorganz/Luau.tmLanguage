@@ -1,0 +1,70 @@
+original file
+-----------------------------------
+-- A
+a = A()
+
+-- B
+.B()
+
+-- C
+.C()
+
+-----------------------------------
+
+>-- A
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+>a = A()
+ ^
+ source.luau variable.other.readwrite.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^
+     source.luau entity.name.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>-- B
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+>.B()
+ ^
+ source.luau
+  ^
+  source.luau entity.name.function.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>-- C
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+>.C()
+ ^
+ source.luau
+  ^
+  source.luau entity.name.function.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau

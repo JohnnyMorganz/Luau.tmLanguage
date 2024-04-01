@@ -24,18 +24,24 @@ local inner = returnsComplexType().Key[1]
                 ^^^^^^^^^^^^^^^^^^
                 source.luau meta.function.luau entity.name.function.luau
                                   ^
-                                  source.luau meta.function.luau
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                                    ^
-                                   source.luau meta.function.luau
+                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  return {} :: { [string]: { number } }
  ^^
  source.luau
    ^^^^^^
    source.luau keyword.control.luau
-         ^^^^
+         ^
          source.luau
+          ^
+          source.luau punctuation.table.begin.luau
+           ^
+           source.luau punctuation.table.end.luau
+            ^
+            source.luau
              ^^
-             source.luau keyword.operator.typeassertion.luau
+             source.luau keyword.operator.typecast.luau
                ^
                source.luau
                 ^
@@ -48,10 +54,8 @@ local inner = returnsComplexType().Key[1]
                    source.luau support.type.primitive.luau
                          ^
                          source.luau
-                          ^
-                          source.luau keyword.operator.type.luau
-                           ^
-                           source.luau
+                          ^^
+                          source.luau
                             ^
                             source.luau
                              ^
@@ -83,7 +87,7 @@ local inner = returnsComplexType().Key[1]
      ^
      source.luau
       ^^^^^
-      source.luau entity.name.type.alias.luau
+      source.luau entity.name.type.luau
            ^
            source.luau
             ^
@@ -93,11 +97,15 @@ local inner = returnsComplexType().Key[1]
               ^^^^^^
               source.luau support.function.luau
                     ^
-                    source.luau
+                    source.luau punctuation.arguments.begin.typeof.luau
                      ^^^^^^^^^^^^^^^^^^
                      source.luau entity.name.function.luau
-                                       ^^^
-                                       source.luau
+                                       ^
+                                       source.luau punctuation.arguments.begin.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+                                         ^
+                                         source.luau
                                           ^^^
                                           source.luau variable.other.property.luau
                                              ^
@@ -107,7 +115,7 @@ local inner = returnsComplexType().Key[1]
                                                ^
                                                source.luau
                                                 ^
-                                                source.luau
+                                                source.luau punctuation.arguments.end.typeof.luau
 >
  ^
  source.luau
@@ -122,7 +130,7 @@ local inner = returnsComplexType().Key[1]
       ^
       source.luau
        ^^^^^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
             ^
             source.luau
              ^
@@ -131,8 +139,12 @@ local inner = returnsComplexType().Key[1]
               source.luau
                ^^^^^^^^^^^^^^^^^^
                source.luau entity.name.function.luau
-                                 ^^^
-                                 source.luau
+                                 ^
+                                 source.luau punctuation.arguments.begin.luau
+                                  ^
+                                  source.luau punctuation.arguments.end.luau
+                                   ^
+                                   source.luau
                                     ^^^
                                     source.luau variable.other.property.luau
                                        ^

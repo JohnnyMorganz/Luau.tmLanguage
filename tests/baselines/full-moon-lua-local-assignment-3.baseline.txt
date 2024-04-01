@@ -11,11 +11,11 @@ local e, f = 5, 6
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^^
         source.luau
           ^
-          source.luau variable.other.luau
+          source.luau variable.other.readwrite.luau
            ^
            source.luau
             ^
@@ -34,11 +34,11 @@ local e, f = 5, 6
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^^
         source.luau
           ^
-          source.luau variable.other.luau
+          source.luau variable.other.readwrite.luau
            ^
            source.luau
             ^
@@ -57,11 +57,11 @@ local e, f = 5, 6
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^^
         source.luau
           ^
-          source.luau variable.other.luau
+          source.luau variable.other.readwrite.luau
            ^
            source.luau
             ^

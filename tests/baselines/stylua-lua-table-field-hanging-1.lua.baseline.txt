@@ -1,0 +1,82 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/542
+-- https://github.com/JohnnyMorganz/StyLua/issues/541
+local thisIsATable = {
+  CreateAnElementFromThisTable = SomethingIsSelected and getTheSelectedThing(TheSelectedItem) or getTheSelectedThing(NoItemSelected)
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/542
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>-- https://github.com/JohnnyMorganz/StyLua/issues/541
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local thisIsATable = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau punctuation.table.begin.luau
+>  CreateAnElementFromThisTable = SomethingIsSelected and getTheSelectedThing(TheSelectedItem) or getTheSelectedThing(NoItemSelected)
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau keyword.operator.assignment.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^^^^^^^^^^^^^^
+                                  source.luau variable.other.readwrite.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^^
+                                                      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                         ^
+                                                         source.luau
+                                                          ^^^^^^^^^^^^^^^^^^^
+                                                          source.luau entity.name.function.luau
+                                                                             ^
+                                                                             source.luau punctuation.arguments.begin.luau
+                                                                              ^^^^^^^^^^^^^^^
+                                                                              source.luau variable.other.readwrite.luau
+                                                                                             ^
+                                                                                             source.luau punctuation.arguments.end.luau
+                                                                                              ^
+                                                                                              source.luau
+                                                                                               ^^
+                                                                                               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                                                                 ^
+                                                                                                 source.luau
+                                                                                                  ^^^^^^^^^^^^^^^^^^^
+                                                                                                  source.luau entity.name.function.luau
+                                                                                                                     ^
+                                                                                                                     source.luau punctuation.arguments.begin.luau
+                                                                                                                      ^^^^^^^^^^^^^^
+                                                                                                                      source.luau variable.other.readwrite.luau
+                                                                                                                                    ^
+                                                                                                                                    source.luau punctuation.arguments.end.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

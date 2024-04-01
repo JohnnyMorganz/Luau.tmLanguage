@@ -15,7 +15,7 @@ for _ = 1, 10, 2 do end
           ^
           source.luau
            ^
-           source.luau keyword.control.luau keyword.operator.assignment.luau
+           source.luau keyword.operator.assignment.luau
             ^
             source.luau
              ^
@@ -33,11 +33,13 @@ for _ = 1, 10, 2 do end
                       ^^^^
                       source.luau entity.name.function.luau
                           ^
-                          source.luau
+                          source.luau punctuation.arguments.begin.luau
                            ^^^^^
                            source.luau variable.other.readwrite.luau
-                                ^^
-                                source.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+                                 ^
+                                 source.luau
                                   ^^^
                                   source.luau keyword.control.luau
 >for _ = start, final do end
@@ -50,7 +52,7 @@ for _ = 1, 10, 2 do end
       ^
       source.luau
        ^
-       source.luau keyword.control.luau keyword.operator.assignment.luau
+       source.luau keyword.operator.assignment.luau
         ^
         source.luau
          ^^^^^
@@ -77,7 +79,7 @@ for _ = 1, 10, 2 do end
       ^
       source.luau
        ^
-       source.luau keyword.control.luau keyword.operator.assignment.luau
+       source.luau keyword.operator.assignment.luau
         ^
         source.luau
          ^

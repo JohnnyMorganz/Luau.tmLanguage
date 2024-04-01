@@ -1,0 +1,508 @@
+original file
+-----------------------------------
+-- Shouldn't hang since multiline comments arent an issue
+
+export type GraphQLEnumType =  --[[ <T> ]]{
+  name: string,
+  description: string?,
+  extensions: ReadOnlyObjMap<any>?,
+  astNode: EnumTypeDefinitionNode?,
+  extensionASTNodes: Array<EnumTypeExtensionNode>?,
+
+  _values: Array<GraphQLEnumValue --[[ <T> ]]>,
+  _valueLookup: Map<any --[[ T ]], GraphQLEnumValue>,
+  _nameLookup: ObjMap<GraphQLEnumValue>,
+  -- ROBLOX deviation: add self parameter for all ':' operator methods
+  getValues: (self: GraphQLEnumType) -> Array<GraphQLEnumValue --[[ <T> ]]>,
+  getValue: (self: GraphQLEnumType, string) -> GraphQLEnumValue?,
+  serialize: (
+  	self: GraphQLEnumType,
+  	any --[[ T ]]
+  ) -> string?,
+  parseValue: (self: GraphQLEnumType, any) -> any?, --[[ T ]]
+  parseLiteral: (self: GraphQLEnumType, ValueNode, ObjMap<any>?) -> any?, --[[ T ]]
+  toConfig: (self: GraphQLEnumType) -> GraphQLEnumTypeNormalizedConfig,
+}
+
+-----------------------------------
+
+>-- Shouldn't hang since multiline comments arent an issue
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>export type GraphQLEnumType =  --[[ <T> ]]{
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau keyword.operator.assignment.luau
+                              ^^
+                              source.luau
+                                ^^^^
+                                source.luau comment.block.luau
+                                    ^^^^^
+                                    source.luau comment.block.luau
+                                         ^^
+                                         source.luau comment.block.luau
+                                           ^
+                                           source.luau
+>  name: string,
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.property.luau
+       ^
+       source.luau keyword.operator.type.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau support.type.primitive.luau
+               ^
+               source.luau punctuation.separator.fields.type.luau
+>  description: string?,
+ ^^
+ source.luau
+   ^^^^^^^^^^^
+   source.luau variable.property.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau support.type.primitive.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau punctuation.separator.fields.type.luau
+>  extensions: ReadOnlyObjMap<any>?,
+ ^^
+ source.luau
+   ^^^^^^^^^^
+   source.luau variable.property.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^^^^^^^^^^^^^^
+               source.luau entity.name.type.luau
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^^^
+                              source.luau support.type.primitive.luau
+                                 ^
+                                 source.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau keyword.operator.type.luau
+                                   ^
+                                   source.luau punctuation.separator.fields.type.luau
+>  astNode: EnumTypeDefinitionNode?,
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.property.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^
+           source.luau
+            ^^^^^^^^^^^^^^^^^^^^^^
+            source.luau entity.name.type.luau
+                                  ^
+                                  source.luau keyword.operator.type.luau
+                                   ^
+                                   source.luau punctuation.separator.fields.type.luau
+>  extensionASTNodes: Array<EnumTypeExtensionNode>?,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^^^
+                      source.luau entity.name.type.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^^^^^^^^^^^^^^^^^^^^^
+                            source.luau entity.name.type.luau
+                                                 ^
+                                                 source.luau keyword.operator.type.luau
+                                                  ^
+                                                  source.luau keyword.operator.type.luau
+                                                   ^
+                                                   source.luau punctuation.separator.fields.type.luau
+>
+ ^
+ source.luau
+>  _values: Array<GraphQLEnumValue --[[ <T> ]]>,
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.property.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau entity.name.type.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^^^^^^^^^^^^^^^^
+                  source.luau entity.name.type.luau
+                                  ^
+                                  source.luau
+                                   ^^^^
+                                   source.luau comment.block.luau
+                                       ^^^^^
+                                       source.luau comment.block.luau
+                                            ^^
+                                            source.luau comment.block.luau
+                                              ^
+                                              source.luau keyword.operator.type.luau
+                                               ^
+                                               source.luau punctuation.separator.fields.type.luau
+>  _valueLookup: Map<any --[[ T ]], GraphQLEnumValue>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^
+   source.luau variable.property.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau entity.name.type.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^^^
+                     source.luau support.type.primitive.luau
+                        ^
+                        source.luau
+                         ^^^^
+                         source.luau comment.block.luau
+                             ^^^
+                             source.luau comment.block.luau
+                                ^^
+                                source.luau comment.block.luau
+                                  ^^
+                                  source.luau
+                                    ^^^^^^^^^^^^^^^^
+                                    source.luau entity.name.type.luau
+                                                    ^
+                                                    source.luau keyword.operator.type.luau
+                                                     ^
+                                                     source.luau punctuation.separator.fields.type.luau
+>  _nameLookup: ObjMap<GraphQLEnumValue>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^
+   source.luau variable.property.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau entity.name.type.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^^^^^^^^^^^^^^^^
+                       source.luau entity.name.type.luau
+                                       ^
+                                       source.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau punctuation.separator.fields.type.luau
+>  -- ROBLOX deviation: add self parameter for all ':' operator methods
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  getValues: (self: GraphQLEnumType) -> Array<GraphQLEnumValue --[[ <T> ]]>,
+ ^^
+ source.luau
+   ^^^^^^^^^
+   source.luau variable.property.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau variable.parameter.luau variable.parameter.luau
+                   ^
+                   source.luau variable.parameter.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^^^^^^
+                     source.luau entity.name.type.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau
+                                      ^^
+                                      source.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau
+                                         ^^^^^
+                                         source.luau entity.name.type.luau
+                                              ^
+                                              source.luau keyword.operator.type.luau
+                                               ^^^^^^^^^^^^^^^^
+                                               source.luau entity.name.type.luau
+                                                               ^
+                                                               source.luau
+                                                                ^^^^
+                                                                source.luau comment.block.luau
+                                                                    ^^^^^
+                                                                    source.luau comment.block.luau
+                                                                         ^^
+                                                                         source.luau comment.block.luau
+                                                                           ^
+                                                                           source.luau keyword.operator.type.luau
+                                                                            ^
+                                                                            source.luau punctuation.separator.fields.type.luau
+>  getValue: (self: GraphQLEnumType, string) -> GraphQLEnumValue?,
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau variable.property.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau variable.parameter.luau variable.parameter.luau
+                  ^
+                  source.luau variable.parameter.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^^^^^^^^^^
+                    source.luau entity.name.type.luau
+                                   ^^
+                                   source.luau
+                                     ^^^^^^
+                                     source.luau support.type.primitive.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau
+                                             ^^
+                                             source.luau keyword.operator.type.luau
+                                               ^
+                                               source.luau
+                                                ^^^^^^^^^^^^^^^^
+                                                source.luau entity.name.type.luau
+                                                                ^
+                                                                source.luau keyword.operator.type.luau
+                                                                 ^
+                                                                 source.luau punctuation.separator.fields.type.luau
+>  serialize: (
+ ^^
+ source.luau
+   ^^^^^^^^^
+   source.luau variable.property.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^
+              source.luau
+>  	self: GraphQLEnumType,
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.parameter.luau variable.parameter.luau
+        ^
+        source.luau variable.parameter.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^
+          source.luau entity.name.type.luau
+                         ^^
+                         source.luau
+>  	any --[[ T ]]
+ ^^^
+ source.luau
+    ^^^
+    source.luau support.type.primitive.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau comment.block.luau
+            ^^^
+            source.luau comment.block.luau
+               ^^
+               source.luau comment.block.luau
+>  ) -> string?,
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^
+    source.luau
+     ^^
+     source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau support.type.primitive.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau punctuation.separator.fields.type.luau
+>  parseValue: (self: GraphQLEnumType, any) -> any?, --[[ T ]]
+ ^^
+ source.luau
+   ^^^^^^^^^^
+   source.luau variable.property.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^
+               source.luau
+                ^^^^
+                source.luau variable.parameter.luau variable.parameter.luau
+                    ^
+                    source.luau variable.parameter.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^^^^^^^^^^^^^
+                      source.luau entity.name.type.luau
+                                     ^^
+                                     source.luau
+                                       ^^^
+                                       source.luau support.type.primitive.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau
+                                            ^^
+                                            source.luau keyword.operator.type.luau
+                                              ^
+                                              source.luau
+                                               ^^^
+                                               source.luau support.type.primitive.luau
+                                                  ^
+                                                  source.luau keyword.operator.type.luau
+                                                   ^
+                                                   source.luau punctuation.separator.fields.type.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^
+                                                     source.luau comment.block.luau
+                                                         ^^^
+                                                         source.luau comment.block.luau
+                                                            ^^
+                                                            source.luau comment.block.luau
+>  parseLiteral: (self: GraphQLEnumType, ValueNode, ObjMap<any>?) -> any?, --[[ T ]]
+ ^^
+ source.luau
+   ^^^^^^^^^^^^
+   source.luau variable.property.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+                  ^^^^
+                  source.luau variable.parameter.luau variable.parameter.luau
+                      ^
+                      source.luau variable.parameter.luau keyword.operator.type.luau
+                       ^
+                       source.luau
+                        ^^^^^^^^^^^^^^^
+                        source.luau entity.name.type.luau
+                                       ^^
+                                       source.luau
+                                         ^^^^^^^^^
+                                         source.luau entity.name.type.luau
+                                                  ^^
+                                                  source.luau
+                                                    ^^^^^^
+                                                    source.luau entity.name.type.luau
+                                                          ^
+                                                          source.luau keyword.operator.type.luau
+                                                           ^^^
+                                                           source.luau support.type.primitive.luau
+                                                              ^
+                                                              source.luau keyword.operator.type.luau
+                                                               ^
+                                                               source.luau keyword.operator.type.luau
+                                                                ^
+                                                                source.luau
+                                                                 ^
+                                                                 source.luau
+                                                                  ^^
+                                                                  source.luau keyword.operator.type.luau
+                                                                    ^
+                                                                    source.luau
+                                                                     ^^^
+                                                                     source.luau support.type.primitive.luau
+                                                                        ^
+                                                                        source.luau keyword.operator.type.luau
+                                                                         ^
+                                                                         source.luau punctuation.separator.fields.type.luau
+                                                                          ^
+                                                                          source.luau
+                                                                           ^^^^
+                                                                           source.luau comment.block.luau
+                                                                               ^^^
+                                                                               source.luau comment.block.luau
+                                                                                  ^^
+                                                                                  source.luau comment.block.luau
+>  toConfig: (self: GraphQLEnumType) -> GraphQLEnumTypeNormalizedConfig,
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau variable.property.luau
+           ^
+           source.luau keyword.operator.type.luau
+            ^
+            source.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau variable.parameter.luau variable.parameter.luau
+                  ^
+                  source.luau variable.parameter.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^^^^^^^^^^
+                    source.luau entity.name.type.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau
+                                     ^^
+                                     source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                        source.luau entity.name.type.luau
+                                                                       ^
+                                                                       source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau

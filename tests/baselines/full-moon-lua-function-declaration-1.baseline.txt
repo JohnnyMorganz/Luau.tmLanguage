@@ -13,16 +13,18 @@ end
           ^
           source.luau meta.function.luau entity.name.function.luau
            ^
-           source.luau meta.function.luau
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
             ^
-            source.luau meta.function.luau
+            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
 >  call()
  ^^
  source.luau
    ^^^^
    source.luau entity.name.function.luau
-       ^^^
-       source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau punctuation.arguments.end.luau
 >end
  ^^^
  source.luau keyword.control.luau

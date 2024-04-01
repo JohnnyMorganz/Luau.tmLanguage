@@ -17,15 +17,17 @@ local function baz(a, b, ...) end
                 ^^^
                 source.luau meta.function.luau entity.name.function.luau
                    ^
-                   source.luau meta.function.luau
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                     ^
-                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                     ^^
-                     source.luau meta.function.luau meta.parameters.luau
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau
                        ^
-                       source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
+                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
                         ^
-                        source.luau meta.function.luau
+                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
                          ^
                          source.luau
                           ^^^
@@ -42,11 +44,11 @@ local function baz(a, b, ...) end
                 ^^^
                 source.luau meta.function.luau entity.name.function.luau
                    ^
-                   source.luau meta.function.luau
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                     ^^^
-                    source.luau meta.function.luau meta.parameters.luau
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
                        ^
-                       source.luau meta.function.luau
+                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
                         ^
                         source.luau
                          ^^^
@@ -63,17 +65,23 @@ local function baz(a, b, ...) end
                 ^^^
                 source.luau meta.function.luau entity.name.function.luau
                    ^
-                   source.luau meta.function.luau
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                     ^
-                    source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                     ^^
-                     source.luau meta.function.luau meta.parameters.luau
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau
                        ^
-                       source.luau meta.function.luau meta.parameters.luau variable.parameter.luau
-                        ^^^^^
-                        source.luau meta.function.luau meta.parameters.luau
+                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau
+                          ^^^
+                          source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
                              ^
-                             source.luau meta.function.luau
+                             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
                               ^
                               source.luau
                                ^^^

@@ -1,0 +1,54 @@
+original file
+-----------------------------------
+local instance = someReallyLongConditionExtremelyLongSoLongYourMindWillMelt
+  and someReallyLongCondition
+  and someOtherReallyLongCondition
+  or somethingElse
+
+-----------------------------------
+
+>local instance = someReallyLongConditionExtremelyLongSoLongYourMindWillMelt
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^
+       source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.assignment.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  source.luau variable.other.readwrite.luau
+>  and someReallyLongCondition
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+>  and someOtherReallyLongCondition
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+>  or somethingElse
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^^
+      source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau

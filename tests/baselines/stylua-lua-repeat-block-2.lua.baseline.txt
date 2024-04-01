@@ -1,0 +1,94 @@
+original file
+-----------------------------------
+local function foo(bar)
+  local count = 0
+
+  repeat
+  	count = count + 1
+  until count == 10
+end
+-----------------------------------
+
+>local function foo(bar)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                    ^^^
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  local count = 0
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>  repeat
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+>  	count = count + 1
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.arithmetic.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau constant.numeric.decimal.luau
+>  until count == 10
+ ^^
+ source.luau
+   ^^^^^
+   source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^
+               source.luau keyword.operator.comparison.luau
+                 ^
+                 source.luau
+                  ^^
+                  source.luau constant.numeric.decimal.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

@@ -1,0 +1,476 @@
+original file
+-----------------------------------
+local function logTiger(tiger, depth)
+  log(
+  string.rep("  ", depth) ..
+  "- " ..
+  -- need to explicitly coerce to a string
+  tiger.type and (tiger.type.name or tostring(tiger.type)) or "[r00t]",
+  "[" ..
+  tiger.commonExtraTentacles ..
+  (tiger.pendingPartyHats and "*" or "") ..
+  "]"
+  )
+  end
+  
+local function logTiger(tiger, depth)
+  log(
+  string.rep("  ", depth) ..
+  -- need to explicitly coerce to a string
+  "- " ..
+  tiger.type and (tiger.type.name or tostring(tiger.type)) or "[r00t]",
+  "[" ..
+  tiger.commonExtraTentacles ..
+  (tiger.pendingPartyHats and "*" or "") ..
+  "]"
+  )
+  end
+  
+-----------------------------------
+
+>local function logTiger(tiger, depth)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                         ^^^^^
+                         source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                              ^
+                              source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                               ^
+                               source.luau meta.function.luau meta.parameter.luau
+                                ^^^^^
+                                source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  log(
+ ^^
+ source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+>  string.rep("  ", depth) ..
+ ^^
+ source.luau
+   ^^^^^^^^^^
+   source.luau support.function.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^
+               source.luau string.quoted.double.luau
+                 ^
+                 source.luau string.quoted.double.luau
+                  ^
+                  source.luau punctuation.separator.arguments.luau
+                   ^
+                   source.luau
+                    ^^^^^
+                    source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau punctuation.arguments.end.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau keyword.operator.other.luau
+>  "- " ..
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^
+    source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^
+       source.luau
+        ^^
+        source.luau keyword.operator.other.luau
+>  -- need to explicitly coerce to a string
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  tiger.type and (tiger.type.name or tostring(tiger.type)) or "[r00t]",
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^
+         source.luau variable.other.property.luau
+             ^
+             source.luau
+              ^^^
+              source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau punctuation.arguments.begin.luau
+                   ^^^^^
+                   source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^^^^
+                         source.luau variable.other.property.luau
+                             ^
+                             source.luau
+                              ^^^^
+                              source.luau variable.other.property.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^^^
+                                      source.luau support.function.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^^^^^
+                                               source.luau variable.other.readwrite.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^
+                                                     source.luau variable.other.property.luau
+                                                         ^
+                                                         source.luau punctuation.arguments.end.luau
+                                                          ^
+                                                          source.luau punctuation.arguments.end.luau
+                                                           ^
+                                                           source.luau
+                                                            ^^
+                                                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                              ^
+                                                              source.luau
+                                                               ^
+                                                               source.luau string.quoted.double.luau
+                                                                ^^^^^^
+                                                                source.luau string.quoted.double.luau
+                                                                      ^
+                                                                      source.luau string.quoted.double.luau
+                                                                       ^
+                                                                       source.luau punctuation.separator.arguments.luau
+>  "[" ..
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau
+       ^^
+       source.luau keyword.operator.other.luau
+>  tiger.commonExtraTentacles ..
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^^^^^^^
+         source.luau variable.other.property.luau
+                             ^
+                             source.luau
+                              ^^
+                              source.luau keyword.operator.other.luau
+>  (tiger.pendingPartyHats and "*" or "") ..
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^^^^^
+    source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^^
+          source.luau variable.other.property.luau
+                          ^
+                          source.luau
+                           ^^^
+                           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau string.quoted.double.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+                                         ^
+                                         source.luau
+                                          ^^
+                                          source.luau keyword.operator.other.luau
+>  "]"
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+>  )
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>  
+ ^^^
+ source.luau
+>local function logTiger(tiger, depth)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                         ^^^^^
+                         source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                              ^
+                              source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                               ^
+                               source.luau meta.function.luau meta.parameter.luau
+                                ^^^^^
+                                source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  log(
+ ^^
+ source.luau
+   ^^^
+   source.luau entity.name.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+>  string.rep("  ", depth) ..
+ ^^
+ source.luau
+   ^^^^^^^^^^
+   source.luau support.function.luau
+             ^
+             source.luau punctuation.arguments.begin.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^
+               source.luau string.quoted.double.luau
+                 ^
+                 source.luau string.quoted.double.luau
+                  ^
+                  source.luau punctuation.separator.arguments.luau
+                   ^
+                   source.luau
+                    ^^^^^
+                    source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau punctuation.arguments.end.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau keyword.operator.other.luau
+>  -- need to explicitly coerce to a string
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  "- " ..
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^
+    source.luau string.quoted.double.luau
+      ^
+      source.luau string.quoted.double.luau
+       ^
+       source.luau
+        ^^
+        source.luau keyword.operator.other.luau
+>  tiger.type and (tiger.type.name or tostring(tiger.type)) or "[r00t]",
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^
+         source.luau variable.other.property.luau
+             ^
+             source.luau
+              ^^^
+              source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau punctuation.arguments.begin.luau
+                   ^^^^^
+                   source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^^^^
+                         source.luau variable.other.property.luau
+                             ^
+                             source.luau
+                              ^^^^
+                              source.luau variable.other.property.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^^^
+                                      source.luau support.function.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^^^^^
+                                               source.luau variable.other.readwrite.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^
+                                                     source.luau variable.other.property.luau
+                                                         ^
+                                                         source.luau punctuation.arguments.end.luau
+                                                          ^
+                                                          source.luau punctuation.arguments.end.luau
+                                                           ^
+                                                           source.luau
+                                                            ^^
+                                                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                                              ^
+                                                              source.luau
+                                                               ^
+                                                               source.luau string.quoted.double.luau
+                                                                ^^^^^^
+                                                                source.luau string.quoted.double.luau
+                                                                      ^
+                                                                      source.luau string.quoted.double.luau
+                                                                       ^
+                                                                       source.luau punctuation.separator.arguments.luau
+>  "[" ..
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^
+      source.luau
+       ^^
+       source.luau keyword.operator.other.luau
+>  tiger.commonExtraTentacles ..
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^^^^^^^
+         source.luau variable.other.property.luau
+                             ^
+                             source.luau
+                              ^^
+                              source.luau keyword.operator.other.luau
+>  (tiger.pendingPartyHats and "*" or "") ..
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.begin.luau
+    ^^^^^
+    source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^^
+          source.luau variable.other.property.luau
+                          ^
+                          source.luau
+                           ^^^
+                           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau string.quoted.double.luau
+                                ^
+                                source.luau string.quoted.double.luau
+                                 ^
+                                 source.luau string.quoted.double.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau string.quoted.double.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+                                         ^
+                                         source.luau
+                                          ^^
+                                          source.luau keyword.operator.other.luau
+>  "]"
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^
+     source.luau string.quoted.double.luau
+>  )
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.arguments.end.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>  
+ ^^^
+ source.luau

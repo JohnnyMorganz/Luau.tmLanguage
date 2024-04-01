@@ -6,9 +6,13 @@ call "hello"
 
 >call { x = 1 }
  ^^^^
- source.luau variable.other.readwrite.luau
-     ^^^
+ source.luau entity.name.function.luau
+     ^
      source.luau
+      ^
+      source.luau punctuation.table.begin.luau
+       ^
+       source.luau
         ^
         source.luau variable.other.readwrite.luau
          ^
@@ -19,11 +23,13 @@ call "hello"
            source.luau
             ^
             source.luau constant.numeric.decimal.luau
-             ^^^
+             ^
              source.luau
+              ^
+              source.luau punctuation.table.end.luau
 >call "hello"
  ^^^^
- source.luau variable.other.readwrite.luau
+ source.luau entity.name.function.luau
      ^
      source.luau
       ^

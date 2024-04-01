@@ -8,12 +8,20 @@ function x.y:z() end
  source.luau meta.function.luau keyword.control.luau
          ^
          source.luau meta.function.luau
-          ^^^^^
+          ^
           source.luau meta.function.luau entity.name.function.luau
+           ^
+           source.luau meta.function.luau
+            ^
+            source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau
+              ^
+              source.luau meta.function.luau entity.name.function.luau
                ^
-               source.luau meta.function.luau
+               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                 ^
-                source.luau meta.function.luau
+                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
                  ^
                  source.luau
                   ^^^

@@ -9,18 +9,20 @@ print("foo\
  ^^^^^
  source.luau support.function.luau
       ^
-      source.luau
+      source.luau punctuation.arguments.begin.luau
        ^
        source.luau string.quoted.double.luau
-        ^^^^^
+        ^^^
         source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau constant.character.escape.luau
 >  bar")
  ^^^^^
  source.luau string.quoted.double.luau
       ^
       source.luau string.quoted.double.luau
-       ^^
-       source.luau
+       ^
+       source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau

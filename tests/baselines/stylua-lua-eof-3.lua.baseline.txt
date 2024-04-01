@@ -1,0 +1,46 @@
+original file
+-----------------------------------
+local x = 1
+
+
+-- this is a comment
+
+
+
+-----------------------------------
+
+>local x = 1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau constant.numeric.decimal.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>-- this is a comment
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>
+ ^
+ source.luau

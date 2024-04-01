@@ -1,0 +1,290 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/302
+return {
+  foo = bar,
+  foo = bar,
+  foo = bar,
+  foo = bar,
+  foo = bar,
+  foo = bar,
+  foo = bar,
+  foo = bar,
+}, {
+  bar = baz,
+  bar = baz,
+  bar = baz,
+  bar = baz,
+  bar = baz,
+  bar = baz,
+  bar = baz,
+  bar = baz,
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/302
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>return {
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.table.begin.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  foo = bar,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>}, {
+ ^
+ source.luau punctuation.table.end.luau
+  ^^
+  source.luau
+    ^
+    source.luau punctuation.table.begin.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>  bar = baz,
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^
+       source.luau keyword.operator.assignment.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

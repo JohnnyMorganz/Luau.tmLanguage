@@ -1,0 +1,334 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/378
+export type KindEnum =
+  "Name" |
+  -- Document
+  "Document"
+  | "OperationDefinition"
+  | "VariableDefinition"
+  | "SelectionSet"
+  | "Field"
+  | "Argument" |
+  -- Fragments
+  "FragmentSpread"
+  | "InlineFragment"
+  | "FragmentDefinition"
+
+-- https://github.com/JohnnyMorganz/StyLua/issues/384
+export type React_AbstractComponent<Config, Instance> = {
+  ["$$typeof"]: number,
+  render: (props: Config, ref: React_Ref<Instance>) -> React_Node,
+  displayName: string?,
+  defaultProps: Config?,
+  name: string?,
+  -- this comment causes the brace above to be misformatted: the quick fox jumps over the lazy dog foo bar baz foo bar baz
+  [string]: any,
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/378
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>export type KindEnum =
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau entity.name.type.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+>  "Name" |
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^^
+    source.luau string.quoted.double.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^^^
+         source.luau
+>  -- Document
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  "Document"
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^^^^^^
+    source.luau string.quoted.double.luau
+            ^
+            source.luau string.quoted.double.luau
+>  | "OperationDefinition"
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+>  | "VariableDefinition"
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                        ^
+                        source.luau string.quoted.double.luau
+>  | "SelectionSet"
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                  ^
+                  source.luau string.quoted.double.luau
+>  | "Field"
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^
+      source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+>  | "Argument" |
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^
+      source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^^^
+               source.luau
+>  -- Fragments
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  "FragmentSpread"
+ ^^
+ source.luau
+   ^
+   source.luau string.quoted.double.luau
+    ^^^^^^^^^^^^^^
+    source.luau string.quoted.double.luau
+                  ^
+                  source.luau string.quoted.double.luau
+>  | "InlineFragment"
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                    ^
+                    source.luau string.quoted.double.luau
+>  | "FragmentDefinition"
+ ^^^^
+ source.luau
+     ^
+     source.luau string.quoted.double.luau
+      ^^^^^^^^^^^^^^^^^^
+      source.luau string.quoted.double.luau
+                        ^
+                        source.luau string.quoted.double.luau
+>
+ ^
+ source.luau
+>-- https://github.com/JohnnyMorganz/StyLua/issues/384
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>export type React_AbstractComponent<Config, Instance> = {
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                    ^
+                                    source.luau keyword.operator.type.luau
+                                     ^^^^^^
+                                     source.luau entity.name.type.luau
+                                           ^^
+                                           source.luau
+                                             ^^^^^^^^
+                                             source.luau entity.name.type.luau
+                                                     ^
+                                                     source.luau keyword.operator.type.luau
+                                                      ^
+                                                      source.luau
+                                                       ^
+                                                       source.luau keyword.operator.assignment.luau
+                                                        ^
+                                                        source.luau
+                                                         ^
+                                                         source.luau
+>  ["$$typeof"]: number,
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^
+    source.luau string.quoted.double.luau
+     ^^^^^^^^
+     source.luau string.quoted.double.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^
+              source.luau
+               ^^
+               source.luau
+                 ^^^^^^
+                 source.luau support.type.primitive.luau
+                       ^
+                       source.luau punctuation.separator.fields.type.luau
+>  render: (props: Config, ref: React_Ref<Instance>) -> React_Node,
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.property.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.parameter.luau variable.parameter.luau
+                 ^
+                 source.luau variable.parameter.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau entity.name.type.luau
+                         ^^
+                         source.luau
+                           ^^^
+                           source.luau variable.parameter.luau variable.parameter.luau
+                              ^
+                              source.luau variable.parameter.luau keyword.operator.type.luau
+                               ^
+                               source.luau
+                                ^^^^^^^^^
+                                source.luau entity.name.type.luau
+                                         ^
+                                         source.luau keyword.operator.type.luau
+                                          ^^^^^^^^
+                                          source.luau entity.name.type.luau
+                                                  ^
+                                                  source.luau keyword.operator.type.luau
+                                                   ^
+                                                   source.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^
+                                                     source.luau keyword.operator.type.luau
+                                                       ^
+                                                       source.luau
+                                                        ^^^^^^^^^^
+                                                        source.luau entity.name.type.luau
+                                                                  ^
+                                                                  source.luau punctuation.separator.fields.type.luau
+>  displayName: string?,
+ ^^
+ source.luau
+   ^^^^^^^^^^^
+   source.luau variable.property.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau support.type.primitive.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau punctuation.separator.fields.type.luau
+>  defaultProps: Config?,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^
+   source.luau variable.property.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^^^^^^
+                 source.luau entity.name.type.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>  name: string?,
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.property.luau
+       ^
+       source.luau keyword.operator.type.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau support.type.primitive.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau punctuation.separator.fields.type.luau
+>  -- this comment causes the brace above to be misformatted: the quick fox jumps over the lazy dog foo bar baz foo bar baz
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  [string]: any,
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^^^^^^
+    source.luau support.type.primitive.luau
+          ^
+          source.luau
+           ^^
+           source.luau
+             ^^^
+             source.luau support.type.primitive.luau
+                ^
+                source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau

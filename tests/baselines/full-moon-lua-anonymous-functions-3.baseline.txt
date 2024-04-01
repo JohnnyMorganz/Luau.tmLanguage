@@ -9,7 +9,7 @@ local x = function(...) end
       ^
       source.luau
        ^
-       source.luau variable.other.luau
+       source.luau variable.other.readwrite.luau
         ^
         source.luau
          ^
@@ -19,11 +19,11 @@ local x = function(...) end
            ^^^^^^^^
            source.luau meta.function.luau keyword.control.luau
                    ^
-                   source.luau meta.function.luau
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
                     ^^^
-                    source.luau meta.function.luau meta.parameters.luau
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
                        ^
-                       source.luau meta.function.luau
+                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
                         ^
                         source.luau
                          ^^^

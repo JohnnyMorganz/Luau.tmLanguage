@@ -1,0 +1,62 @@
+original file
+-----------------------------------
+print(`{ {} }`)
+print(`{ foo({}).bar }`)
+-----------------------------------
+
+>print(`{ {} }`)
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau string.interpolated.luau
+        ^
+        source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+         ^
+         source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+          ^
+          source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.begin.luau
+           ^
+           source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.end.luau
+            ^
+            source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+             ^
+             source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+              ^
+              source.luau string.interpolated.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>print(`{ foo({}).bar }`)
+ ^^^^^
+ source.luau support.function.luau
+      ^
+      source.luau punctuation.arguments.begin.luau
+       ^
+       source.luau string.interpolated.luau
+        ^
+        source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.begin.luau
+         ^
+         source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+          ^^^
+          source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau entity.name.function.luau
+             ^
+             source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.arguments.begin.luau
+              ^
+              source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.begin.luau
+               ^
+               source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.table.end.luau
+                ^
+                source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau punctuation.arguments.end.luau
+                 ^
+                 source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                  ^^^
+                  source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau variable.other.property.luau
+                     ^
+                     source.luau string.interpolated.luau meta.template.expression.luau meta.embedded.line.luau
+                      ^
+                      source.luau string.interpolated.luau meta.template.expression.luau punctuation.definition.interpolated-string-expression.end.luau
+                       ^
+                       source.luau string.interpolated.luau
+                        ^
+                        source.luau punctuation.arguments.end.luau

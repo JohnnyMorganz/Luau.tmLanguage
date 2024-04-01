@@ -1,0 +1,410 @@
+original file
+-----------------------------------
+export type IntrospectionNamedTypeRef<
+  T, -- TODO: add generic constraints and default types: IntrospectionType = IntrospectionType,
+  P
+> = {
+  kind: any, -- deviation: add this type spec later: $PropertyType<T, 'kind'>,
+  name: string,
+  ofType: T -- TODO: this field is missing
+}
+
+export type ReactScopeQuery = (
+  string, -- type
+  { [any]: any }, -- props
+  any -- instance
+) -> boolean
+
+export type Thenable<R> = {
+  andThen: <U>(
+  	self: Thenable<R>,
+  	onFulfill: (R) -> () | _Thenable<U> | U,
+  	onReject: (error: any) -> () | _Thenable<U> | U
+  -- note: need union type packs to parse () | Thenable<U>
+  ) -> nil | _Thenable<U>,
+}
+
+-----------------------------------
+
+>export type IntrospectionNamedTypeRef<
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+>  T, -- TODO: add generic constraints and default types: IntrospectionType = IntrospectionType,
+ ^^
+ source.luau
+   ^
+   source.luau entity.name.type.luau
+    ^^
+    source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.luau comment.line.double-dash.luau
+>  P
+ ^^
+ source.luau
+   ^
+   source.luau entity.name.type.luau
+>> = {
+ ^
+ source.luau keyword.operator.type.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+    ^
+    source.luau
+     ^
+     source.luau
+>  kind: any, -- deviation: add this type spec later: $PropertyType<T, 'kind'>,
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.property.luau
+       ^
+       source.luau keyword.operator.type.luau
+        ^
+        source.luau
+         ^^^
+         source.luau support.type.primitive.luau
+            ^
+            source.luau punctuation.separator.fields.type.luau
+             ^
+             source.luau
+              ^^
+              source.luau comment.line.double-dash.luau
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.luau comment.line.double-dash.luau
+>  name: string,
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.property.luau
+       ^
+       source.luau keyword.operator.type.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau support.type.primitive.luau
+               ^
+               source.luau punctuation.separator.fields.type.luau
+>  ofType: T -- TODO: this field is missing
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.property.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^
+           source.luau entity.name.type.luau
+            ^
+            source.luau
+             ^^
+             source.luau comment.line.double-dash.luau
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               source.luau comment.line.double-dash.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>export type ReactScopeQuery = (
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau keyword.operator.assignment.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau
+>  string, -- type
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.type.primitive.luau
+         ^^
+         source.luau
+           ^^
+           source.luau comment.line.double-dash.luau
+             ^^^^^
+             source.luau comment.line.double-dash.luau
+>  { [any]: any }, -- props
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^
+    source.luau
+     ^
+     source.luau
+      ^^^
+      source.luau support.type.primitive.luau
+         ^
+         source.luau
+          ^^
+          source.luau
+            ^^^
+            source.luau support.type.primitive.luau
+               ^
+               source.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau
+                   ^^
+                   source.luau comment.line.double-dash.luau
+                     ^^^^^^
+                     source.luau comment.line.double-dash.luau
+>  any -- instance
+ ^^
+ source.luau
+   ^^^
+   source.luau support.type.primitive.luau
+      ^
+      source.luau
+       ^^
+       source.luau comment.line.double-dash.luau
+         ^^^^^^^^^
+         source.luau comment.line.double-dash.luau
+>) -> boolean
+ ^
+ source.luau
+  ^
+  source.luau
+   ^^
+   source.luau keyword.operator.type.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau support.type.primitive.luau
+>
+ ^
+ source.luau
+>export type Thenable<R> = {
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau entity.name.type.luau
+                     ^
+                     source.luau keyword.operator.type.luau
+                      ^
+                      source.luau entity.name.type.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau keyword.operator.assignment.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau
+>  andThen: <U>(
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.property.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau entity.name.type.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+>  	self: Thenable<R>,
+ ^^^
+ source.luau
+    ^^^^
+    source.luau variable.parameter.luau variable.parameter.luau
+        ^
+        source.luau variable.parameter.luau keyword.operator.type.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau entity.name.type.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau entity.name.type.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+                     ^^
+                     source.luau
+>  	onFulfill: (R) -> () | _Thenable<U> | U,
+ ^^^
+ source.luau
+    ^^^^^^^^^
+    source.luau variable.parameter.luau variable.parameter.luau
+             ^
+             source.luau variable.parameter.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^
+               source.luau
+                ^
+                source.luau entity.name.type.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^^^^^^^^^
+                           source.luau entity.name.type.luau
+                                    ^
+                                    source.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau entity.name.type.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau entity.name.type.luau
+                                           ^^
+                                           source.luau
+>  	onReject: (error: any) -> () | _Thenable<U> | U
+ ^^^
+ source.luau
+    ^^^^^^^^
+    source.luau variable.parameter.luau variable.parameter.luau
+            ^
+            source.luau variable.parameter.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^
+              source.luau
+               ^^^^^
+               source.luau variable.parameter.luau variable.parameter.luau
+                    ^
+                    source.luau variable.parameter.luau keyword.operator.type.luau
+                     ^
+                     source.luau
+                      ^^^
+                      source.luau support.type.primitive.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau
+                           ^^
+                           source.luau keyword.operator.type.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau
+                                 ^
+                                 source.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^^^
+                                   source.luau entity.name.type.luau
+                                            ^
+                                            source.luau keyword.operator.type.luau
+                                             ^
+                                             source.luau entity.name.type.luau
+                                              ^
+                                              source.luau keyword.operator.type.luau
+                                               ^
+                                               source.luau
+                                                ^
+                                                source.luau keyword.operator.type.luau
+                                                 ^
+                                                 source.luau
+                                                  ^
+                                                  source.luau entity.name.type.luau
+>  -- note: need union type packs to parse () | Thenable<U>
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  ) -> nil | _Thenable<U>,
+ ^^
+ source.luau
+   ^
+   source.luau
+    ^
+    source.luau
+     ^^
+     source.luau keyword.operator.type.luau
+       ^
+       source.luau
+        ^^^
+        source.luau support.type.primitive.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^
+             source.luau
+              ^^^^^^^^^
+              source.luau entity.name.type.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^
+                        source.luau entity.name.type.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau
