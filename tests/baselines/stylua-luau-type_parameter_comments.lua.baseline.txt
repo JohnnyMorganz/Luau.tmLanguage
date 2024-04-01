@@ -1,0 +1,76 @@
+original file
+-----------------------------------
+function foo(
+  bar: number,
+  baz: number -- test
+): number
+  print("test")
+end
+-----------------------------------
+
+>function foo(
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  bar: number,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+      ^
+      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+       ^
+       source.luau meta.function.luau meta.parameter.luau
+        ^^^^^^
+        source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  baz: number -- test
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+      ^
+      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+       ^
+       source.luau meta.function.luau meta.parameter.luau
+        ^^^^^^
+        source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau
+               ^^
+               source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+                 ^^^^^
+                 source.luau meta.function.luau meta.parameter.luau comment.line.double-dash.luau
+>): number
+ ^
+ source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+  ^
+  source.luau
+   ^
+   source.luau
+    ^^^^^^
+    source.luau support.type.primitive.luau
+>  print("test")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^
+          source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

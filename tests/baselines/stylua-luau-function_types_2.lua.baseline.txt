@@ -1,0 +1,164 @@
+original file
+-----------------------------------
+local function foo(bar: Instance, baz: Instance, qux: Instance, quux: Instance, corge: Instance, grault: Instance, garply: Instance, waldo: Instance, fred: Instance, plugh: Instance, xyzzy: Instance, thud: Instance)
+end
+-----------------------------------
+
+>local function foo(bar: Instance, baz: Instance, qux: Instance, quux: Instance, corge: Instance, grault: Instance, garply: Instance, waldo: Instance, fred: Instance, plugh: Instance, xyzzy: Instance, thud: Instance)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                    ^^^
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau
+                         ^^^^^^^^
+                         source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                 ^
+                                 source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau
+                                   ^^^
+                                   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau meta.function.luau meta.parameter.luau
+                                        ^^^^^^^^
+                                        source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                ^
+                                                source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                 ^
+                                                 source.luau meta.function.luau meta.parameter.luau
+                                                  ^^^
+                                                  source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                     ^
+                                                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                      ^
+                                                      source.luau meta.function.luau meta.parameter.luau
+                                                       ^^^^^^^^
+                                                       source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                               ^
+                                                               source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                ^
+                                                                source.luau meta.function.luau meta.parameter.luau
+                                                                 ^^^^
+                                                                 source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                     ^
+                                                                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                      ^
+                                                                      source.luau meta.function.luau meta.parameter.luau
+                                                                       ^^^^^^^^
+                                                                       source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                               ^
+                                                                               source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                ^
+                                                                                source.luau meta.function.luau meta.parameter.luau
+                                                                                 ^^^^^
+                                                                                 source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                      ^
+                                                                                      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                       ^
+                                                                                       source.luau meta.function.luau meta.parameter.luau
+                                                                                        ^^^^^^^^
+                                                                                        source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                ^
+                                                                                                source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                 ^
+                                                                                                 source.luau meta.function.luau meta.parameter.luau
+                                                                                                  ^^^^^^
+                                                                                                  source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                        ^
+                                                                                                        source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                         ^
+                                                                                                         source.luau meta.function.luau meta.parameter.luau
+                                                                                                          ^^^^^^^^
+                                                                                                          source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                  ^
+                                                                                                                  source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                                   ^
+                                                                                                                   source.luau meta.function.luau meta.parameter.luau
+                                                                                                                    ^^^^^^
+                                                                                                                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                          ^
+                                                                                                                          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                                           ^
+                                                                                                                           source.luau meta.function.luau meta.parameter.luau
+                                                                                                                            ^^^^^^^^
+                                                                                                                            source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                                    ^
+                                                                                                                                    source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                                                     ^
+                                                                                                                                     source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                      ^^^^^
+                                                                                                                                      source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                                           ^
+                                                                                                                                           source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                                                            ^
+                                                                                                                                            source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                             ^^^^^^^^
+                                                                                                                                             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                                                     ^
+                                                                                                                                                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                                                                      ^
+                                                                                                                                                      source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                       ^^^^
+                                                                                                                                                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                                                           ^
+                                                                                                                                                           source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                                                                            ^
+                                                                                                                                                            source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                             ^^^^^^^^
+                                                                                                                                                             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                                                                     ^
+                                                                                                                                                                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                                                                                      ^
+                                                                                                                                                                      source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                                       ^^^^^
+                                                                                                                                                                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                                                                            ^
+                                                                                                                                                                            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                                                                                             ^
+                                                                                                                                                                             source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                                              ^^^^^^^^
+                                                                                                                                                                              source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                                                                                      ^
+                                                                                                                                                                                      source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                                                                                                       ^
+                                                                                                                                                                                       source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                                                        ^^^^^
+                                                                                                                                                                                        source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                                                                                             ^
+                                                                                                                                                                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                                                                                                              ^
+                                                                                                                                                                                              source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                                                               ^^^^^^^^
+                                                                                                                                                                                               source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                                                                                                       ^
+                                                                                                                                                                                                       source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                                                                                                                                                        ^
+                                                                                                                                                                                                        source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                                                                         ^^^^
+                                                                                                                                                                                                         source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                                                                                                                                                             ^
+                                                                                                                                                                                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                                                                                                                                              ^
+                                                                                                                                                                                                              source.luau meta.function.luau meta.parameter.luau
+                                                                                                                                                                                                               ^^^^^^^^
+                                                                                                                                                                                                               source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                                                                                                                                       ^
+                                                                                                                                                                                                                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

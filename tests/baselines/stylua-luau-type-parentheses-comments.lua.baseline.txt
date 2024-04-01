@@ -1,0 +1,132 @@
+original file
+-----------------------------------
+function foo(): (
+  nil -- Some comment
+)
+  return nil
+end
+
+type X = (
+  string,
+  number -- testing
+) -> (
+  number,
+  string -- testing
+)
+
+-----------------------------------
+
+>function foo(): (
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+               ^
+               source.luau
+                ^
+                source.luau
+                 ^
+                 source.luau
+>  nil -- Some comment
+ ^^
+ source.luau
+   ^^^
+   source.luau support.type.primitive.luau
+      ^
+      source.luau
+       ^^
+       source.luau comment.line.double-dash.luau
+         ^^^^^^^^^^^^^
+         source.luau comment.line.double-dash.luau
+>)
+ ^
+ source.luau
+>  return nil
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^
+          source.luau constant.language.nil.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>type X = (
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^
+      source.luau entity.name.type.luau
+       ^
+       source.luau
+        ^
+        source.luau keyword.operator.assignment.luau
+         ^
+         source.luau
+          ^
+          source.luau
+>  string,
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.type.primitive.luau
+         ^^
+         source.luau
+>  number -- testing
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.type.primitive.luau
+         ^
+         source.luau
+          ^^
+          source.luau comment.line.double-dash.luau
+            ^^^^^^^^
+            source.luau comment.line.double-dash.luau
+>) -> (
+ ^
+ source.luau
+  ^
+  source.luau
+   ^^
+   source.luau keyword.operator.type.luau
+     ^
+     source.luau
+      ^
+      source.luau
+>  number,
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.type.primitive.luau
+         ^^
+         source.luau
+>  string -- testing
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.type.primitive.luau
+         ^
+         source.luau
+          ^^
+          source.luau comment.line.double-dash.luau
+            ^^^^^^^^
+            source.luau comment.line.double-dash.luau
+>)
+ ^
+ source.luau
+>
+ ^
+ source.luau

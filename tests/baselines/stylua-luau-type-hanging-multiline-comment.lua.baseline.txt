@@ -1,0 +1,116 @@
+original file
+-----------------------------------
+export type CoverageReporterWithOptions<K> =
+  Array<string | Object> --[[ [K, Partial<ReportOptions[K]>] ]]
+  | nil
+
+export type CoverageReporterWithOptions<K> =
+  Array<string | Object> --[[ [K, Partial<ReportOptions[K]>] ]]
+  & nil
+
+-----------------------------------
+
+>export type CoverageReporterWithOptions<K> =
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau entity.name.type.luau
+                                          ^
+                                          source.luau keyword.operator.type.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau keyword.operator.assignment.luau
+>  Array<string | Object> --[[ [K, Partial<ReportOptions[K]>] ]]
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau keyword.operator.comparison.luau
+         ^^^^^^
+         source.luau support.constant.luau
+               ^^^
+               source.luau
+                  ^^^^^^
+                  source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau keyword.operator.comparison.luau
+                         ^
+                         source.luau
+                          ^^^^
+                          source.luau comment.block.luau
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              source.luau comment.block.luau
+                                                              ^^
+                                                              source.luau comment.block.luau
+>  | nil
+ ^^^^
+ source.luau
+     ^^^
+     source.luau constant.language.nil.luau
+>
+ ^
+ source.luau
+>export type CoverageReporterWithOptions<K> =
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau entity.name.type.luau
+                                          ^
+                                          source.luau keyword.operator.type.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau keyword.operator.assignment.luau
+>  Array<string | Object> --[[ [K, Partial<ReportOptions[K]>] ]]
+ ^^
+ source.luau
+   ^^^^^
+   source.luau variable.other.readwrite.luau
+        ^
+        source.luau keyword.operator.comparison.luau
+         ^^^^^^
+         source.luau support.constant.luau
+               ^^^
+               source.luau
+                  ^^^^^^
+                  source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau keyword.operator.comparison.luau
+                         ^
+                         source.luau
+                          ^^^^
+                          source.luau comment.block.luau
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              source.luau comment.block.luau
+                                                              ^^
+                                                              source.luau comment.block.luau
+>  & nil
+ ^^^^
+ source.luau
+     ^^^
+     source.luau constant.language.nil.luau
+>
+ ^
+ source.luau

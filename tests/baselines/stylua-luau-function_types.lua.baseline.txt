@@ -1,0 +1,52 @@
+original file
+-----------------------------------
+function test(x:any, y:number): bar print(test) end
+-----------------------------------
+
+>function test(x:any, y:number): bar print(test) end
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^^
+          source.luau meta.function.luau entity.name.function.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^^^
+                 source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                        ^^^^^^
+                        source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                              ^
+                              source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau
+                                 ^^^
+                                 source.luau entity.name.type.luau
+                                    ^
+                                    source.luau
+                                     ^^^^^
+                                     source.luau entity.name.type.luau
+                                          ^
+                                          source.luau
+                                           ^^^^
+                                           source.luau entity.name.type.luau
+                                               ^
+                                               source.luau
+                                                ^
+                                                source.luau
+                                                 ^^^
+                                                 source.luau keyword.control.luau

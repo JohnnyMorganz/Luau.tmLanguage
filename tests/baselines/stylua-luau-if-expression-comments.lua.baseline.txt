@@ -1,0 +1,584 @@
+original file
+-----------------------------------
+local options = if useDisposableConcast
+  -- Disposable Concast fetches receive a shallow copy of this.options
+    -- (merged with newOptions), leaving this.options unmodified.
+  then compact(self.options, newOptions)
+  else Object.assign(self.options, compact(newOptions))
+
+do
+    local state: S = if hook ~= nil
+        then hook.memoizedState
+        elseif typeof(initialState) == "function"
+            then
+                -- Luau needs a little help, even with the generic function
+                (initialState :: (() -> S))()
+            else initialState
+
+  local state: S = if hook ~= nil then hook.memoizedState
+  	elseif
+  		typeof(initialState) == "function" -- the fuzz pedal isn't 3.3V
+  		or _G.__DEV__                      -- in DEV mode, undervolt anyway
+  	then
+  		-- Luau needs a little help, even with the generic function
+  		(initialState :: (() -> S))()
+  	else initialState
+end
+
+local foo = if true then
+  -- comment here
+  bar
+else baz
+
+local x = if true
+  then -- comment
+  	bar
+  else -- comment
+  	baz
+
+local p = if true then bar
+else
+  -- comment
+  baz
+
+-----------------------------------
+
+>local options = if useDisposableConcast
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.control.luau
+                   ^
+                   source.luau
+                    ^^^^^^^^^^^^^^^^^^^^
+                    source.luau variable.other.readwrite.luau
+>  -- Disposable Concast fetches receive a shallow copy of this.options
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>    -- (merged with newOptions), leaving this.options unmodified.
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  then compact(self.options, newOptions)
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^^^^
+        source.luau entity.name.function.luau
+               ^
+               source.luau punctuation.arguments.begin.luau
+                ^^^^
+                source.luau variable.language.self.luau
+                    ^
+                    source.luau
+                     ^^^^^^^
+                     source.luau variable.other.property.luau
+                            ^
+                            source.luau punctuation.separator.arguments.luau
+                             ^
+                             source.luau
+                              ^^^^^^^^^^
+                              source.luau variable.other.readwrite.luau
+                                        ^
+                                        source.luau punctuation.arguments.end.luau
+>  else Object.assign(self.options, compact(newOptions))
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^^^^
+               source.luau entity.name.function.luau
+                     ^
+                     source.luau punctuation.arguments.begin.luau
+                      ^^^^
+                      source.luau variable.language.self.luau
+                          ^
+                          source.luau
+                           ^^^^^^^
+                           source.luau variable.other.property.luau
+                                  ^
+                                  source.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^^^
+                                    source.luau entity.name.function.luau
+                                           ^
+                                           source.luau punctuation.arguments.begin.luau
+                                            ^^^^^^^^^^
+                                            source.luau variable.other.readwrite.luau
+                                                      ^
+                                                      source.luau punctuation.arguments.end.luau
+                                                       ^
+                                                       source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>do
+ ^^
+ source.luau keyword.control.luau
+>    local state: S = if hook ~= nil
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau storage.modifier.local.luau
+          ^
+          source.luau
+           ^^^^^
+           source.luau variable.other.readwrite.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau entity.name.type.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^^
+                      source.luau keyword.control.luau
+                        ^
+                        source.luau
+                         ^^^^
+                         source.luau variable.other.readwrite.luau
+                             ^
+                             source.luau
+                              ^^
+                              source.luau keyword.operator.comparison.luau
+                                ^
+                                source.luau
+                                 ^^^
+                                 source.luau constant.language.nil.luau
+>        then hook.memoizedState
+ ^^^^^^^^
+ source.luau
+         ^^^^
+         source.luau keyword.control.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^^^^^^
+                   source.luau variable.other.property.luau
+>        elseif typeof(initialState) == "function"
+ ^^^^^^^^
+ source.luau
+         ^^^^^^
+         source.luau keyword.control.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau support.function.luau
+                      ^
+                      source.luau punctuation.arguments.begin.luau
+                       ^^^^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+                                   ^
+                                   source.luau punctuation.arguments.end.luau
+                                    ^
+                                    source.luau
+                                     ^^
+                                     source.luau keyword.operator.comparison.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau string.quoted.double.luau
+                                         ^^^^^^^^
+                                         source.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau string.quoted.double.luau
+>            then
+ ^^^^^^^^^^^^
+ source.luau
+             ^^^^
+             source.luau keyword.control.luau
+>                -- Luau needs a little help, even with the generic function
+ ^^^^^^^^^^^^^^^^
+ source.luau
+                 ^^
+                 source.luau comment.line.double-dash.luau
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   source.luau comment.line.double-dash.luau
+>                (initialState :: (() -> S))()
+ ^^^^^^^^^^^^^^^^
+ source.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^^^^^^^^^^^^
+                  source.luau variable.other.readwrite.luau
+                              ^
+                              source.luau
+                               ^^
+                               source.luau keyword.operator.typecast.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau
+                                      ^^
+                                      source.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau
+                                         ^
+                                         source.luau entity.name.type.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau punctuation.arguments.end.luau
+                                            ^
+                                            source.luau punctuation.arguments.begin.luau
+                                             ^
+                                             source.luau punctuation.arguments.end.luau
+>            else initialState
+ ^^^^^^^^^^^^
+ source.luau
+             ^^^^
+             source.luau keyword.control.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^^^
+                  source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>  local state: S = if hook ~= nil then hook.memoizedState
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau variable.other.readwrite.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^
+                source.luau entity.name.type.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.control.luau
+                      ^
+                      source.luau
+                       ^^^^
+                       source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^
+                            source.luau keyword.operator.comparison.luau
+                              ^
+                              source.luau
+                               ^^^
+                               source.luau constant.language.nil.luau
+                                  ^
+                                  source.luau
+                                   ^^^^
+                                   source.luau keyword.control.luau
+                                       ^
+                                       source.luau
+                                        ^^^^
+                                        source.luau variable.other.readwrite.luau
+                                            ^
+                                            source.luau
+                                             ^^^^^^^^^^^^^
+                                             source.luau variable.other.property.luau
+>  	elseif
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau keyword.control.luau
+>  		typeof(initialState) == "function" -- the fuzz pedal isn't 3.3V
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau support.function.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^^^^^^^^^^^^
+            source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau punctuation.arguments.end.luau
+                         ^
+                         source.luau
+                          ^^
+                          source.luau keyword.operator.comparison.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau string.quoted.double.luau
+                              ^^^^^^^^
+                              source.luau string.quoted.double.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^
+                                       source.luau
+                                        ^^
+                                        source.luau comment.line.double-dash.luau
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                          source.luau comment.line.double-dash.luau
+>  		or _G.__DEV__                      -- in DEV mode, undervolt anyway
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+       ^
+       source.luau
+        ^^
+        source.luau constant.language.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau variable.other.property.luau
+                  ^^^^^^^^^^^^^^^^^^^^^^
+                  source.luau
+                                        ^^
+                                        source.luau comment.line.double-dash.luau
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                          source.luau comment.line.double-dash.luau
+>  	then
+ ^^^
+ source.luau
+    ^^^^
+    source.luau keyword.control.luau
+>  		-- Luau needs a little help, even with the generic function
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  		(initialState :: (() -> S))()
+ ^^^^
+ source.luau
+     ^
+     source.luau punctuation.arguments.begin.luau
+      ^^^^^^^^^^^^
+      source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.operator.typecast.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau
+                          ^^
+                          source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau entity.name.type.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+                                ^
+                                source.luau punctuation.arguments.begin.luau
+                                 ^
+                                 source.luau punctuation.arguments.end.luau
+>  	else initialState
+ ^^^
+ source.luau
+    ^^^^
+    source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^
+         source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local foo = if true then
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.control.luau
+               ^
+               source.luau
+                ^^^^
+                source.luau constant.language.boolean.true.luau
+                    ^
+                    source.luau
+                     ^^^^
+                     source.luau keyword.control.luau
+>  -- comment here
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  bar
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+>else baz
+ ^^^^
+ source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^
+      source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>local x = if true
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.control.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau constant.language.boolean.true.luau
+>  then -- comment
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  	bar
+ ^^^
+ source.luau
+    ^^^
+    source.luau variable.other.readwrite.luau
+>  else -- comment
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  	baz
+ ^^^
+ source.luau
+    ^^^
+    source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>local p = if true then bar
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.control.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau constant.language.boolean.true.luau
+                  ^
+                  source.luau
+                   ^^^^
+                   source.luau keyword.control.luau
+                       ^
+                       source.luau
+                        ^^^
+                        source.luau variable.other.readwrite.luau
+>else
+ ^^^^
+ source.luau keyword.control.luau
+>  -- comment
+ ^^
+ source.luau
+   ^^
+   source.luau comment.line.double-dash.luau
+     ^^^^^^^^
+     source.luau comment.line.double-dash.luau
+>  baz
+ ^^
+ source.luau
+   ^^^
+   source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau

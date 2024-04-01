@@ -1,0 +1,58 @@
+original file
+-----------------------------------
+type SubscribeToMoreOptions<TData, TSubscriptionVariables, TSubscriptionData> =
+  watchQueryOptionsModule.SubscribeToMoreOptions<TData, TSubscriptionVariables, TSubscriptionData>
+
+-----------------------------------
+
+>type SubscribeToMoreOptions<TData, TSubscriptionVariables, TSubscriptionData> =
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^^^^^^^^^^^^^^^
+      source.luau entity.name.type.luau
+                            ^
+                            source.luau keyword.operator.type.luau
+                             ^^^^^
+                             source.luau entity.name.type.luau
+                                  ^^
+                                  source.luau
+                                    ^^^^^^^^^^^^^^^^^^^^^^
+                                    source.luau entity.name.type.luau
+                                                          ^^
+                                                          source.luau
+                                                            ^^^^^^^^^^^^^^^^^
+                                                            source.luau entity.name.type.luau
+                                                                             ^
+                                                                             source.luau keyword.operator.type.luau
+                                                                              ^
+                                                                              source.luau
+                                                                               ^
+                                                                               source.luau keyword.operator.assignment.luau
+>  watchQueryOptionsModule.SubscribeToMoreOptions<TData, TSubscriptionVariables, TSubscriptionData>
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                          ^
+                          source.luau
+                           ^^^^^^^^^^^^^^^^^^^^^^
+                           source.luau variable.other.property.luau
+                                                 ^
+                                                 source.luau keyword.operator.comparison.luau
+                                                  ^^^^^
+                                                  source.luau variable.other.readwrite.luau
+                                                       ^^
+                                                       source.luau
+                                                         ^^^^^^^^^^^^^^^^^^^^^^
+                                                         source.luau variable.other.readwrite.luau
+                                                                               ^^
+                                                                               source.luau
+                                                                                 ^^^^^^^^^^^^^^^^^
+                                                                                 source.luau variable.other.readwrite.luau
+                                                                                                  ^
+                                                                                                  source.luau keyword.operator.comparison.luau
+>
+ ^
+ source.luau

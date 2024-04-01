@@ -1,0 +1,736 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/596rr
+local function xyzzy()
+  return hagCoding.open
+  	.. "<"
+  	.. type_
+  	.. (if id10t(hintedProps)
+  		then hagCoding.close .. hintedProps .. config.flinchingOuter .. indentation .. hagCoding.open
+  		else hintedProps)
+  	.. (if id10t(hintedChildren)
+  		then ">"
+  		.. hagCoding.close
+  		.. hintedChildren
+  		.. config.flinchingOuter
+  		.. indentation
+  		.. hagCoding.open
+  		.. "</"
+  		.. type_
+  		else (if id10t(hintedProps) and not id10t(config.min) then "" else " ") .. "/")
+  	.. ">"
+  	.. hagCoding.close
+end
+
+-- https://github.com/JohnnyMorganz/StyLua/issues/596#issuecomment-1275547227
+local function het(xyzzy: Sirius_InscribeBlock): boolean
+  local ref = getState()
+  local hasFeaturedTeats, teatNamePattern = ref.hasFeaturedTeats, ref.teatNamePattern
+  return Array.some(inscribeBlock.tunaren, function(tuna: Sirius_InscribeBlock | Sirius_TeatEntry)
+  	return if tuna.type == "inscribeBlock"
+  		then hasEnabledTeat(tuna)
+  		else
+  			not (
+  				tuna.mode == "soot"
+  				or (hasFeaturedTeats and tuna.mode ~= "moot")
+  				or (
+  					teatNamePattern
+  					and not teatNamePattern:teat(getTeatID(tuna :: Sirius_TeatEntry))
+  				)
+  			)
+  end)
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/596rr
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local function xyzzy()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return hagCoding.open
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^^
+          source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^^^
+                    source.luau variable.other.property.luau
+>  	.. "<"
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.other.luau
+      ^
+      source.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^
+         source.luau string.quoted.double.luau
+>  	.. type_
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.other.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+>  	.. (if id10t(hintedProps)
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.other.luau
+      ^
+      source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^
+        source.luau keyword.control.luau
+          ^
+          source.luau
+           ^^^^^
+           source.luau entity.name.function.luau
+                ^
+                source.luau punctuation.arguments.begin.luau
+                 ^^^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+                            ^
+                            source.luau punctuation.arguments.end.luau
+>  		then hagCoding.close .. hintedProps .. config.flinchingOuter .. indentation .. hagCoding.open
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^^
+          source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^^^^
+                    source.luau variable.other.property.luau
+                         ^
+                         source.luau
+                          ^^
+                          source.luau keyword.operator.other.luau
+                            ^
+                            source.luau
+                             ^^^^^^^^^^^
+                             source.luau variable.other.readwrite.luau
+                                        ^
+                                        source.luau
+                                         ^^
+                                         source.luau keyword.operator.other.luau
+                                           ^
+                                           source.luau
+                                            ^^^^^^
+                                            source.luau variable.other.readwrite.luau
+                                                  ^
+                                                  source.luau
+                                                   ^^^^^^^^^^^^^^
+                                                   source.luau variable.other.property.luau
+                                                                 ^
+                                                                 source.luau
+                                                                  ^^
+                                                                  source.luau keyword.operator.other.luau
+                                                                    ^
+                                                                    source.luau
+                                                                     ^^^^^^^^^^^
+                                                                     source.luau variable.other.readwrite.luau
+                                                                                ^
+                                                                                source.luau
+                                                                                 ^^
+                                                                                 source.luau keyword.operator.other.luau
+                                                                                   ^
+                                                                                   source.luau
+                                                                                    ^^^^^^^^^
+                                                                                    source.luau variable.other.readwrite.luau
+                                                                                             ^
+                                                                                             source.luau
+                                                                                              ^^^^
+                                                                                              source.luau variable.other.property.luau
+>  		else hintedProps)
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^
+          source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau
+>  	.. (if id10t(hintedChildren)
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.other.luau
+      ^
+      source.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^
+        source.luau keyword.control.luau
+          ^
+          source.luau
+           ^^^^^
+           source.luau entity.name.function.luau
+                ^
+                source.luau punctuation.arguments.begin.luau
+                 ^^^^^^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+>  		then ">"
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+            ^
+            source.luau string.quoted.double.luau
+>  		.. hagCoding.close
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^
+                  source.luau variable.other.property.luau
+>  		.. hintedChildren
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^^^^^^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+>  		.. config.flinchingOuter
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^^^^^^
+        source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^^^^^^^^^^^^
+               source.luau variable.other.property.luau
+>  		.. indentation
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^^^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+>  		.. hagCoding.open
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^
+                  source.luau variable.other.property.luau
+>  		.. "</"
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^^
+         source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+>  		.. type_
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.other.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau variable.other.readwrite.luau
+>  		else (if id10t(hintedProps) and not id10t(config.min) then "" else " ") .. "/")
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^^
+           source.luau keyword.control.luau
+             ^
+             source.luau
+              ^^^^^
+              source.luau entity.name.function.luau
+                   ^
+                   source.luau punctuation.arguments.begin.luau
+                    ^^^^^^^^^^^
+                    source.luau variable.other.readwrite.luau
+                               ^
+                               source.luau punctuation.arguments.end.luau
+                                ^
+                                source.luau
+                                 ^^^
+                                 source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                    ^
+                                    source.luau
+                                     ^^^
+                                     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                        ^
+                                        source.luau
+                                         ^^^^^
+                                         source.luau entity.name.function.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^^^^^^
+                                               source.luau variable.other.readwrite.luau
+                                                     ^
+                                                     source.luau
+                                                      ^^^
+                                                      source.luau variable.other.property.luau
+                                                         ^
+                                                         source.luau punctuation.arguments.end.luau
+                                                          ^
+                                                          source.luau
+                                                           ^^^^
+                                                           source.luau keyword.control.luau
+                                                               ^
+                                                               source.luau
+                                                                ^
+                                                                source.luau string.quoted.double.luau
+                                                                 ^
+                                                                 source.luau string.quoted.double.luau
+                                                                  ^
+                                                                  source.luau
+                                                                   ^^^^
+                                                                   source.luau keyword.control.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^
+                                                                        source.luau string.quoted.double.luau
+                                                                         ^
+                                                                         source.luau string.quoted.double.luau
+                                                                          ^
+                                                                          source.luau string.quoted.double.luau
+                                                                           ^
+                                                                           source.luau punctuation.arguments.end.luau
+                                                                            ^
+                                                                            source.luau
+                                                                             ^^
+                                                                             source.luau keyword.operator.other.luau
+                                                                               ^
+                                                                               source.luau
+                                                                                ^
+                                                                                source.luau string.quoted.double.luau
+                                                                                 ^
+                                                                                 source.luau string.quoted.double.luau
+                                                                                  ^
+                                                                                  source.luau string.quoted.double.luau
+                                                                                   ^
+                                                                                   source.luau punctuation.arguments.end.luau
+>  	.. ">"
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.other.luau
+      ^
+      source.luau
+       ^
+       source.luau string.quoted.double.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^
+         source.luau string.quoted.double.luau
+>  	.. hagCoding.close
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.operator.other.luau
+      ^
+      source.luau
+       ^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^^^^^
+                 source.luau variable.other.property.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>-- https://github.com/JohnnyMorganz/StyLua/issues/596#issuecomment-1275547227
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local function het(xyzzy: Sirius_InscribeBlock): boolean
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^
+                source.luau meta.function.luau entity.name.function.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                    ^^^^^
+                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau
+                           ^^^^^^^^^^^^^^^^^^^^
+                           source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                               ^
+                                               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                                ^
+                                                source.luau
+                                                 ^
+                                                 source.luau
+                                                  ^^^^^^^
+                                                  source.luau support.type.primitive.luau
+>  local ref = getState()
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^
+         source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^^
+               source.luau entity.name.function.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
+                        ^
+                        source.luau punctuation.arguments.end.luau
+>  local hasFeaturedTeats, teatNamePattern = ref.hasFeaturedTeats, ref.teatNamePattern
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^^^
+         source.luau variable.other.readwrite.luau
+                         ^^
+                         source.luau
+                           ^^^^^^^^^^^^^^^
+                           source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau keyword.operator.assignment.luau
+                                            ^
+                                            source.luau
+                                             ^^^
+                                             source.luau variable.other.readwrite.luau
+                                                ^
+                                                source.luau
+                                                 ^^^^^^^^^^^^^^^^
+                                                 source.luau variable.other.property.luau
+                                                                 ^^
+                                                                 source.luau
+                                                                   ^^^
+                                                                   source.luau variable.other.readwrite.luau
+                                                                      ^
+                                                                      source.luau
+                                                                       ^^^^^^^^^^^^^^^
+                                                                       source.luau variable.other.property.luau
+>  return Array.some(inscribeBlock.tunaren, function(tuna: Sirius_InscribeBlock | Sirius_TeatEntry)
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^
+          source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^
+                source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^^^^^^^^^^^^^
+                     source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^
+                                   source.luau variable.other.property.luau
+                                          ^
+                                          source.luau punctuation.separator.arguments.luau
+                                           ^
+                                           source.luau
+                                            ^^^^^^^^
+                                            source.luau meta.function.luau keyword.control.luau
+                                                    ^
+                                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                                     ^^^^
+                                                     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                         ^
+                                                         source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                          ^
+                                                          source.luau meta.function.luau meta.parameter.luau
+                                                           ^^^^^^^^^^^^^^^^^^^^
+                                                           source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                               ^
+                                                                               source.luau meta.function.luau meta.parameter.luau
+                                                                                ^
+                                                                                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                                 ^
+                                                                                 source.luau meta.function.luau meta.parameter.luau
+                                                                                  ^^^^^^^^^^^^^^^^
+                                                                                  source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                                  ^
+                                                                                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	return if tuna.type == "inscribeBlock"
+ ^^^
+ source.luau
+    ^^^^^^
+    source.luau keyword.control.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.control.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^
+                   source.luau variable.other.property.luau
+                       ^
+                       source.luau
+                        ^^
+                        source.luau keyword.operator.comparison.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau string.quoted.double.luau
+                            ^^^^^^^^^^^^^
+                            source.luau string.quoted.double.luau
+                                         ^
+                                         source.luau string.quoted.double.luau
+>  		then hasEnabledTeat(tuna)
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^
+          source.luau entity.name.function.luau
+                        ^
+                        source.luau punctuation.arguments.begin.luau
+                         ^^^^
+                         source.luau variable.other.readwrite.luau
+                             ^
+                             source.luau punctuation.arguments.end.luau
+>  		else
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+>  			not (
+ ^^^^^
+ source.luau
+      ^^^
+      source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+>  				tuna.mode == "soot"
+ ^^^^^^
+ source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau variable.other.property.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.operator.comparison.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau string.quoted.double.luau
+                     ^^^^
+                     source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+>  				or (hasFeaturedTeats and tuna.mode ~= "moot")
+ ^^^^^^
+ source.luau
+       ^^
+       source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^^^^^^^^^^^^^^^^
+           source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^^
+                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                               ^
+                               source.luau
+                                ^^^^
+                                source.luau variable.other.readwrite.luau
+                                    ^
+                                    source.luau
+                                     ^^^^
+                                     source.luau variable.other.property.luau
+                                         ^
+                                         source.luau
+                                          ^^
+                                          source.luau keyword.operator.comparison.luau
+                                            ^
+                                            source.luau
+                                             ^
+                                             source.luau string.quoted.double.luau
+                                              ^^^^
+                                              source.luau string.quoted.double.luau
+                                                  ^
+                                                  source.luau string.quoted.double.luau
+                                                   ^
+                                                   source.luau punctuation.arguments.end.luau
+>  				or (
+ ^^^^^^
+ source.luau
+       ^^
+       source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+>  					teatNamePattern
+ ^^^^^^^
+ source.luau
+        ^^^^^^^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+>  					and not teatNamePattern:teat(getTeatID(tuna :: Sirius_TeatEntry))
+ ^^^^^^^
+ source.luau
+        ^^^
+        source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+           ^
+           source.luau
+            ^^^
+            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+               ^
+               source.luau
+                ^^^^^^^^^^^^^^^
+                source.luau variable.other.readwrite.luau
+                               ^
+                               source.luau
+                                ^^^^
+                                source.luau entity.name.function.luau
+                                    ^
+                                    source.luau punctuation.arguments.begin.luau
+                                     ^^^^^^^^^
+                                     source.luau entity.name.function.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^^^^
+                                               source.luau variable.other.readwrite.luau
+                                                   ^
+                                                   source.luau
+                                                    ^^
+                                                    source.luau keyword.operator.typecast.luau
+                                                      ^
+                                                      source.luau
+                                                       ^^^^^^^^^^^^^^^^
+                                                       source.luau entity.name.type.luau
+                                                                       ^
+                                                                       source.luau punctuation.arguments.end.luau
+                                                                        ^
+                                                                        source.luau punctuation.arguments.end.luau
+>  				)
+ ^^^^^^
+ source.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+>  			)
+ ^^^^^
+ source.luau
+      ^
+      source.luau punctuation.arguments.end.luau
+>  end)
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^
+      source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

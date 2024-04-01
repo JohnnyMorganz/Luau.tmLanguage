@@ -1,0 +1,160 @@
+original file
+-----------------------------------
+export type IntrospectionType = IntrospectionScalarType | IntrospectionObjectType | IntrospectionInterfaceType | IntrospectionUnionType | IntrospectionEnumType | IntrospectionInputObjectType
+
+export type IntrospectionOutputType = IntrospectionScalarType | IntrospectionObjectType | IntrospectionInterfaceType | IntrospectionUnionType | IntrospectionEnumType
+
+export type IntrospectionInputType = IntrospectionScalarType | IntrospectionEnumType | IntrospectionInputObjectType
+-----------------------------------
+
+>export type IntrospectionType = IntrospectionScalarType | IntrospectionObjectType | IntrospectionInterfaceType | IntrospectionUnionType | IntrospectionEnumType | IntrospectionInputObjectType
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau keyword.operator.assignment.luau
+                                ^
+                                source.luau
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+                                 source.luau entity.name.type.luau
+                                                        ^
+                                                        source.luau
+                                                         ^
+                                                         source.luau keyword.operator.type.luau
+                                                          ^
+                                                          source.luau
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^
+                                                           source.luau entity.name.type.luau
+                                                                                  ^
+                                                                                  source.luau
+                                                                                   ^
+                                                                                   source.luau keyword.operator.type.luau
+                                                                                    ^
+                                                                                    source.luau
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                     source.luau entity.name.type.luau
+                                                                                                               ^
+                                                                                                               source.luau
+                                                                                                                ^
+                                                                                                                source.luau keyword.operator.type.luau
+                                                                                                                 ^
+                                                                                                                 source.luau
+                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                  source.luau entity.name.type.luau
+                                                                                                                                        ^
+                                                                                                                                        source.luau
+                                                                                                                                         ^
+                                                                                                                                         source.luau keyword.operator.type.luau
+                                                                                                                                          ^
+                                                                                                                                          source.luau
+                                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                                           source.luau entity.name.type.luau
+                                                                                                                                                                ^
+                                                                                                                                                                source.luau
+                                                                                                                                                                 ^
+                                                                                                                                                                 source.luau keyword.operator.type.luau
+                                                                                                                                                                  ^
+                                                                                                                                                                  source.luau
+                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                                                                   source.luau entity.name.type.luau
+>
+ ^
+ source.luau
+>export type IntrospectionOutputType = IntrospectionScalarType | IntrospectionObjectType | IntrospectionInterfaceType | IntrospectionUnionType | IntrospectionEnumType
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau keyword.operator.assignment.luau
+                                      ^
+                                      source.luau
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                       source.luau entity.name.type.luau
+                                                              ^
+                                                              source.luau
+                                                               ^
+                                                               source.luau keyword.operator.type.luau
+                                                                ^
+                                                                source.luau
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+                                                                 source.luau entity.name.type.luau
+                                                                                        ^
+                                                                                        source.luau
+                                                                                         ^
+                                                                                         source.luau keyword.operator.type.luau
+                                                                                          ^
+                                                                                          source.luau
+                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                           source.luau entity.name.type.luau
+                                                                                                                     ^
+                                                                                                                     source.luau
+                                                                                                                      ^
+                                                                                                                      source.luau keyword.operator.type.luau
+                                                                                                                       ^
+                                                                                                                       source.luau
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                        source.luau entity.name.type.luau
+                                                                                                                                              ^
+                                                                                                                                              source.luau
+                                                                                                                                               ^
+                                                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                                                ^
+                                                                                                                                                source.luau
+                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^
+                                                                                                                                                 source.luau entity.name.type.luau
+>
+ ^
+ source.luau
+>export type IntrospectionInputType = IntrospectionScalarType | IntrospectionEnumType | IntrospectionInputObjectType
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau keyword.operator.assignment.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+                                      source.luau entity.name.type.luau
+                                                             ^
+                                                             source.luau
+                                                              ^
+                                                              source.luau keyword.operator.type.luau
+                                                               ^
+                                                               source.luau
+                                                                ^^^^^^^^^^^^^^^^^^^^^
+                                                                source.luau entity.name.type.luau
+                                                                                     ^
+                                                                                     source.luau
+                                                                                      ^
+                                                                                      source.luau keyword.operator.type.luau
+                                                                                       ^
+                                                                                       source.luau
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                                                        source.luau entity.name.type.luau

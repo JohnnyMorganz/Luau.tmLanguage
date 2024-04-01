@@ -1,0 +1,112 @@
+original file
+-----------------------------------
+do
+  for _, foo in
+  	applyFoooooo(
+  		aaaaaaaaaaaaaaaaaaaa, --[[:: Array<aaaaaaaaaaaaaaaaa>]]
+  		bbbbbbbbbbbbbbbbbb --[[:: Array<bbbbbbbbbbbbbbb>]]
+  	) :: Array<aaaaaaaaaaaaaaaaa | bbbbbbbbbbbbbbb>
+  do
+  end
+end
+
+-----------------------------------
+
+>do
+ ^^
+ source.luau keyword.control.luau
+>  for _, foo in
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.parameter.luau
+        ^^
+        source.luau
+          ^^^
+          source.luau variable.parameter.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.control.luau
+>  	applyFoooooo(
+ ^^^
+ source.luau
+    ^^^^^^^^^^^^
+    source.luau entity.name.function.luau
+                ^
+                source.luau punctuation.arguments.begin.luau
+>  		aaaaaaaaaaaaaaaaaaaa, --[[:: Array<aaaaaaaaaaaaaaaaa>]]
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau punctuation.separator.arguments.luau
+                          ^
+                          source.luau
+                           ^^^^
+                           source.luau comment.block.luau
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               source.luau comment.block.luau
+                                                          ^^
+                                                          source.luau comment.block.luau
+>  		bbbbbbbbbbbbbbbbbb --[[:: Array<bbbbbbbbbbbbbbb>]]
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau
+                        ^^^^
+                        source.luau comment.block.luau
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+                            source.luau comment.block.luau
+                                                     ^^
+                                                     source.luau comment.block.luau
+>  	) :: Array<aaaaaaaaaaaaaaaaa | bbbbbbbbbbbbbbb>
+ ^^^
+ source.luau
+    ^
+    source.luau punctuation.arguments.end.luau
+     ^
+     source.luau
+      ^^
+      source.luau keyword.operator.typecast.luau
+        ^
+        source.luau
+         ^^^^^
+         source.luau entity.name.type.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^^^^^^^^^^^^^^^^^
+               source.luau entity.name.type.luau
+                                ^
+                                source.luau
+                                 ^
+                                 source.luau keyword.operator.type.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^^^^^^^^^
+                                   source.luau entity.name.type.luau
+                                                  ^
+                                                  source.luau keyword.operator.type.luau
+>  do
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

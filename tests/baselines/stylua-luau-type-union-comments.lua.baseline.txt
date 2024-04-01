@@ -1,0 +1,72 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/351
+export type ReactNode =
+  React_Element<any>
+  | ReactPortal
+--   | ReactText
+  | ReactFragment
+--   | ReactProvider<any>
+--   | ReactConsumer<any>
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/351
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>export type ReactNode =
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^
+             source.luau entity.name.type.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+>  React_Element<any>
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                ^
+                source.luau keyword.operator.comparison.luau
+                 ^^^
+                 source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau keyword.operator.comparison.luau
+>  | ReactPortal
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+>--   | ReactText
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>  | ReactFragment
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^
+     source.luau variable.other.readwrite.luau
+>--   | ReactProvider<any>
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>--   | ReactConsumer<any>
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau

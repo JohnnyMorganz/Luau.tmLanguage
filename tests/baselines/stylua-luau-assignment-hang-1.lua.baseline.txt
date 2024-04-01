@@ -1,0 +1,516 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/439
+exports.separateDisplayNameAndHOCs =
+  function(displayName: string | nil, type_: ElementType): (string | nil, Array<string> | nil)
+  	if displayName == nil then
+  		return nil, nil
+  	end
+
+  	local hocDisplayNames: Array<string>? = nil
+
+  	if
+  		type_ == ElementTypeClass
+  		or type_ == ElementTypeForwardRef
+  		or type_ == ElementTypeFunction
+  		or type_ == ElementTypeMemo
+  	then
+  		-- ROBLOX deviation: use match instead of indexOf
+  		if (displayName :: string):match("%(") then
+  			-- ROBLOX deviation: use gmatch instead of /[^()]+/g
+  			local matches = (displayName :: string):gmatch("[^()]+")
+  			local nextMatch = matches()
+  			if nextMatch then
+  				displayName = nextMatch
+  				hocDisplayNames = {}
+  				while nextMatch :: any ~= nil do
+  					-- TODO: https://github.com/Kampfkarren/full-moon/issues/140
+  					-- Including the following statements cause a stack overflow:
+  					-- nextMatch = matches()
+  					-- table.insert(hocDisplayNames :: Array<string>, nextMatch)
+  				end
+  			end
+  		end
+  	end
+  end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/439
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>exports.separateDisplayNameAndHOCs =
+ ^^^^^^^
+ source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.luau variable.other.property.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau keyword.operator.assignment.luau
+>  function(displayName: string | nil, type_: ElementType): (string | nil, Array<string> | nil)
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau meta.function.luau keyword.control.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+            ^^^^^^^^^^^
+            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau
+                         ^^^^^^
+                         source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                               ^
+                               source.luau meta.function.luau meta.parameter.luau
+                                ^
+                                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                 ^
+                                 source.luau meta.function.luau meta.parameter.luau
+                                  ^^^
+                                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau
+                                       ^^^^^
+                                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                            ^
+                                            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                             ^
+                                             source.luau meta.function.luau meta.parameter.luau
+                                              ^^^^^^^^^^^
+                                              source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                         ^
+                                                         source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                                          ^
+                                                          source.luau
+                                                           ^
+                                                           source.luau
+                                                            ^
+                                                            source.luau
+                                                             ^^^^^^
+                                                             source.luau support.type.primitive.luau
+                                                                   ^
+                                                                   source.luau
+                                                                    ^
+                                                                    source.luau keyword.operator.type.luau
+                                                                     ^
+                                                                     source.luau
+                                                                      ^^^
+                                                                      source.luau support.type.primitive.luau
+                                                                         ^^
+                                                                         source.luau
+                                                                           ^^^^^
+                                                                           source.luau entity.name.type.luau
+                                                                                ^
+                                                                                source.luau keyword.operator.type.luau
+                                                                                 ^^^^^^
+                                                                                 source.luau support.type.primitive.luau
+                                                                                       ^
+                                                                                       source.luau keyword.operator.type.luau
+                                                                                        ^
+                                                                                        source.luau
+                                                                                         ^
+                                                                                         source.luau keyword.operator.type.luau
+                                                                                          ^
+                                                                                          source.luau
+                                                                                           ^^^
+                                                                                           source.luau support.type.primitive.luau
+                                                                                              ^
+                                                                                              source.luau
+>  	if displayName == nil then
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.control.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.operator.comparison.luau
+                     ^
+                     source.luau
+                      ^^^
+                      source.luau constant.language.nil.luau
+                         ^
+                         source.luau
+                          ^^^^
+                          source.luau keyword.control.luau
+>  		return nil, nil
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^
+            source.luau constant.language.nil.luau
+               ^^
+               source.luau
+                 ^^^
+                 source.luau constant.language.nil.luau
+>  	end
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>  	local hocDisplayNames: Array<string>? = nil
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau storage.modifier.local.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^
+          source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^^^^^
+                           source.luau entity.name.type.luau
+                                ^
+                                source.luau keyword.operator.type.luau
+                                 ^^^^^^
+                                 source.luau support.type.primitive.luau
+                                       ^
+                                       source.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau keyword.operator.assignment.luau
+                                           ^
+                                           source.luau
+                                            ^^^
+                                            source.luau constant.language.nil.luau
+>
+ ^
+ source.luau
+>  	if
+ ^^^
+ source.luau
+    ^^
+    source.luau keyword.control.luau
+>  		type_ == ElementTypeClass
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.operator.comparison.luau
+             ^
+             source.luau
+              ^^^^^^^^^^^^^^^^
+              source.luau variable.other.readwrite.luau
+>  		or type_ == ElementTypeForwardRef
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.operator.comparison.luau
+                ^
+                source.luau
+                 ^^^^^^^^^^^^^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+>  		or type_ == ElementTypeFunction
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.operator.comparison.luau
+                ^
+                source.luau
+                 ^^^^^^^^^^^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+>  		or type_ == ElementTypeMemo
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.operator.comparison.luau
+                ^
+                source.luau
+                 ^^^^^^^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+>  	then
+ ^^^
+ source.luau
+    ^^^^
+    source.luau keyword.control.luau
+>  		-- ROBLOX deviation: use match instead of indexOf
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  		if (displayName :: string):match("%(") then
+ ^^^^
+ source.luau
+     ^^
+     source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^^^^^^^^^^^
+         source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^
+                     source.luau keyword.operator.typecast.luau
+                       ^
+                       source.luau
+                        ^^^^^^
+                        source.luau support.type.primitive.luau
+                              ^
+                              source.luau punctuation.arguments.end.luau
+                               ^
+                               source.luau
+                                ^^^^^
+                                source.luau entity.name.function.luau
+                                     ^
+                                     source.luau punctuation.arguments.begin.luau
+                                      ^
+                                      source.luau string.quoted.double.luau
+                                       ^^
+                                       source.luau string.quoted.double.luau
+                                         ^
+                                         source.luau string.quoted.double.luau
+                                          ^
+                                          source.luau punctuation.arguments.end.luau
+                                           ^
+                                           source.luau
+                                            ^^^^
+                                            source.luau keyword.control.luau
+>  			-- ROBLOX deviation: use gmatch instead of /[^()]+/g
+ ^^^^^
+ source.luau
+      ^^
+      source.luau comment.line.double-dash.luau
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        source.luau comment.line.double-dash.luau
+>  			local matches = (displayName :: string):gmatch("[^()]+")
+ ^^^^^
+ source.luau
+      ^^^^^
+      source.luau storage.modifier.local.luau
+           ^
+           source.luau
+            ^^^^^^^
+            source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau punctuation.arguments.begin.luau
+                       ^^^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau
+                                   ^^
+                                   source.luau keyword.operator.typecast.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^
+                                      source.luau support.type.primitive.luau
+                                            ^
+                                            source.luau punctuation.arguments.end.luau
+                                             ^
+                                             source.luau
+                                              ^^^^^^
+                                              source.luau entity.name.function.luau
+                                                    ^
+                                                    source.luau punctuation.arguments.begin.luau
+                                                     ^
+                                                     source.luau string.quoted.double.luau
+                                                      ^^^^^^
+                                                      source.luau string.quoted.double.luau
+                                                            ^
+                                                            source.luau string.quoted.double.luau
+                                                             ^
+                                                             source.luau punctuation.arguments.end.luau
+>  			local nextMatch = matches()
+ ^^^^^
+ source.luau
+      ^^^^^
+      source.luau storage.modifier.local.luau
+           ^
+           source.luau
+            ^^^^^^^^^
+            source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau
+                        ^^^^^^^
+                        source.luau entity.name.function.luau
+                               ^
+                               source.luau punctuation.arguments.begin.luau
+                                ^
+                                source.luau punctuation.arguments.end.luau
+>  			if nextMatch then
+ ^^^^^
+ source.luau
+      ^^
+      source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^^^^^
+         source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^^^
+                   source.luau keyword.control.luau
+>  				displayName = nextMatch
+ ^^^^^^
+ source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^
+                     source.luau variable.other.readwrite.luau
+>  				hocDisplayNames = {}
+ ^^^^^^
+ source.luau
+       ^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau punctuation.table.begin.luau
+                          ^
+                          source.luau punctuation.table.end.luau
+>  				while nextMatch :: any ~= nil do
+ ^^^^^^
+ source.luau
+       ^^^^^
+       source.luau keyword.control.luau
+            ^
+            source.luau
+             ^^^^^^^^^
+             source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau
+                       ^^
+                       source.luau keyword.operator.typecast.luau
+                         ^
+                         source.luau
+                          ^^^
+                          source.luau support.type.primitive.luau
+                             ^^^^
+                             source.luau
+                                 ^^^
+                                 source.luau support.type.primitive.luau
+                                    ^
+                                    source.luau
+                                     ^^
+                                     source.luau keyword.control.luau
+>  					-- TODO: https://github.com/Kampfkarren/full-moon/issues/140
+ ^^^^^^^
+ source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  					-- Including the following statements cause a stack overflow:
+ ^^^^^^^
+ source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  					-- nextMatch = matches()
+ ^^^^^^^
+ source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^^^^^^^^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  					-- table.insert(hocDisplayNames :: Array<string>, nextMatch)
+ ^^^^^^^
+ source.luau
+        ^^
+        source.luau comment.line.double-dash.luau
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          source.luau comment.line.double-dash.luau
+>  				end
+ ^^^^^^
+ source.luau
+       ^^^
+       source.luau keyword.control.luau
+>  			end
+ ^^^^^
+ source.luau
+      ^^^
+      source.luau keyword.control.luau
+>  		end
+ ^^^^
+ source.luau
+     ^^^
+     source.luau keyword.control.luau
+>  	end
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+>  end
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+>
+ ^
+ source.luau

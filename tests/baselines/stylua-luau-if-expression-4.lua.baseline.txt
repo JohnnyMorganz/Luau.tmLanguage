@@ -1,0 +1,642 @@
+original file
+-----------------------------------
+cache:writeQuery({
+  data = {
+  	items = Array.concat({}, (function()
+  		local ref = if Boing.toXYZBoxinf(data) and data ~= nil
+  				then  data.items
+  				else data
+  		return Boing.toXYZBoxinf(ref) and ref
+  	end)() or {}, { item }),
+  },
+})
+
+local error_ = if errors and #(errors :: Array<any>) > 0
+  then ApolloError.new({ graphQLErrors = errors })
+  else nil
+
+local function useMutation<TData, TVariables, TContext, TCache>(
+  mutation: DocumentNode | TypedDocumentNode<TData, TContext>,
+  options: MutationHookOptions_<TData, TVariables, TContext>?
+): MutationTuple<TData, TVariables, TContext, TCache>
+  local context = useContext(getApolloContext())
+  local result, setResult = useState({ called = false, loading = false })
+  local updatedOptions = if options
+  	then Object.assign({}, options, { mutation = mutation })
+  	else { mutation = mutation }
+end
+
+-----------------------------------
+
+>cache:writeQuery({
+ ^^^^^
+ source.luau variable.other.readwrite.luau
+      ^
+      source.luau
+       ^^^^^^^^^^
+       source.luau entity.name.function.luau
+                 ^
+                 source.luau punctuation.arguments.begin.luau
+                  ^
+                  source.luau punctuation.table.begin.luau
+>  data = {
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^
+        source.luau keyword.operator.assignment.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.table.begin.luau
+>  	items = Array.concat({}, (function()
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^^
+                  source.luau entity.name.function.luau
+                        ^
+                        source.luau punctuation.arguments.begin.luau
+                         ^
+                         source.luau punctuation.table.begin.luau
+                          ^
+                          source.luau punctuation.table.end.luau
+                           ^
+                           source.luau punctuation.separator.arguments.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+                              ^^^^^^^^
+                              source.luau meta.function.luau keyword.control.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                       ^
+                                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  		local ref = if Boing.toXYZBoxinf(data) and data ~= nil
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau storage.modifier.local.luau
+          ^
+          source.luau
+           ^^^
+           source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.assignment.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.control.luau
+                   ^
+                   source.luau
+                    ^^^^^
+                    source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau
+                          ^^^^^^^^^^^
+                          source.luau entity.name.function.luau
+                                     ^
+                                     source.luau punctuation.arguments.begin.luau
+                                      ^^^^
+                                      source.luau variable.other.readwrite.luau
+                                          ^
+                                          source.luau punctuation.arguments.end.luau
+                                           ^
+                                           source.luau
+                                            ^^^
+                                            source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                               ^
+                                               source.luau
+                                                ^^^^
+                                                source.luau variable.other.readwrite.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^
+                                                     source.luau keyword.operator.comparison.luau
+                                                       ^
+                                                       source.luau
+                                                        ^^^
+                                                        source.luau constant.language.nil.luau
+>  				then  data.items
+ ^^^^^^
+ source.luau
+       ^^^^
+       source.luau keyword.control.luau
+           ^^
+           source.luau
+             ^^^^
+             source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^
+                  source.luau variable.other.property.luau
+>  				else data
+ ^^^^^^
+ source.luau
+       ^^^^
+       source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau variable.other.readwrite.luau
+>  		return Boing.toXYZBoxinf(ref) and ref
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^^
+                  source.luau entity.name.function.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+                              ^^^
+                              source.luau variable.other.readwrite.luau
+                                 ^
+                                 source.luau punctuation.arguments.end.luau
+                                  ^
+                                  source.luau
+                                   ^^^
+                                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                                      ^
+                                      source.luau
+                                       ^^^
+                                       source.luau variable.other.readwrite.luau
+>  	end)() or {}, { item }),
+ ^^^
+ source.luau
+    ^^^
+    source.luau keyword.control.luau
+       ^
+       source.luau punctuation.arguments.end.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau punctuation.arguments.end.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+             ^
+             source.luau
+              ^
+              source.luau punctuation.table.begin.luau
+               ^
+               source.luau punctuation.table.end.luau
+                ^
+                source.luau punctuation.separator.arguments.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau punctuation.table.begin.luau
+                   ^
+                   source.luau
+                    ^^^^
+                    source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau punctuation.table.end.luau
+                          ^
+                          source.luau punctuation.arguments.end.luau
+                           ^
+                           source.luau punctuation.separator.fields.luau
+>  },
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.table.end.luau
+    ^
+    source.luau punctuation.separator.fields.luau
+>})
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>local error_ = if errors and #(errors :: Array<any>) > 0
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau variable.other.readwrite.luau
+             ^
+             source.luau
+              ^
+              source.luau keyword.operator.assignment.luau
+               ^
+               source.luau
+                ^^
+                source.luau keyword.control.luau
+                  ^
+                  source.luau
+                   ^^^^^^
+                   source.luau variable.other.readwrite.luau
+                         ^
+                         source.luau
+                          ^^^
+                          source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau keyword.operator.other.luau
+                               ^
+                               source.luau punctuation.arguments.begin.luau
+                                ^^^^^^
+                                source.luau variable.other.readwrite.luau
+                                      ^
+                                      source.luau
+                                       ^^
+                                       source.luau keyword.operator.typecast.luau
+                                         ^
+                                         source.luau
+                                          ^^^^^
+                                          source.luau entity.name.type.luau
+                                               ^
+                                               source.luau keyword.operator.type.luau
+                                                ^^^
+                                                source.luau support.type.primitive.luau
+                                                   ^
+                                                   source.luau keyword.operator.type.luau
+                                                    ^
+                                                    source.luau punctuation.arguments.end.luau
+                                                     ^
+                                                     source.luau
+                                                      ^
+                                                      source.luau keyword.operator.comparison.luau
+                                                       ^
+                                                       source.luau
+                                                        ^
+                                                        source.luau constant.numeric.decimal.luau
+>  then ApolloError.new({ graphQLErrors = errors })
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^^^^^^^^^
+        source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau entity.name.function.luau
+                       ^
+                       source.luau punctuation.arguments.begin.luau
+                        ^
+                        source.luau punctuation.table.begin.luau
+                         ^
+                         source.luau
+                          ^^^^^^^^^^^^^
+                          source.luau variable.other.readwrite.luau
+                                       ^
+                                       source.luau
+                                        ^
+                                        source.luau keyword.operator.assignment.luau
+                                         ^
+                                         source.luau
+                                          ^^^^^^
+                                          source.luau variable.other.readwrite.luau
+                                                ^
+                                                source.luau
+                                                 ^
+                                                 source.luau punctuation.table.end.luau
+                                                  ^
+                                                  source.luau punctuation.arguments.end.luau
+>  else nil
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^
+        source.luau constant.language.nil.luau
+>
+ ^
+ source.luau
+>local function useMutation<TData, TVariables, TContext, TCache>(
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                           ^
+                           source.luau meta.function.luau
+                            ^^^^^
+                            source.luau meta.function.luau entity.name.type.luau
+                                 ^^
+                                 source.luau meta.function.luau
+                                   ^^^^^^^^^^
+                                   source.luau meta.function.luau entity.name.type.luau
+                                             ^^
+                                             source.luau meta.function.luau
+                                               ^^^^^^^^
+                                               source.luau meta.function.luau entity.name.type.luau
+                                                       ^^
+                                                       source.luau meta.function.luau
+                                                         ^^^^^^
+                                                         source.luau meta.function.luau entity.name.type.luau
+                                                               ^
+                                                               source.luau meta.function.luau
+                                                                ^
+                                                                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  mutation: DocumentNode | TypedDocumentNode<TData, TContext>,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau
+             ^^^^^^^^^^^^
+             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau
+                            ^^^^^^^^^^^^^^^^^
+                            source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                             ^
+                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                              ^^^^^
+                                              source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                   ^^
+                                                   source.luau meta.function.luau meta.parameter.luau
+                                                     ^^^^^^^^
+                                                     source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                             ^
+                                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                              ^
+                                                              source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  options: MutationHookOptions_<TData, TVariables, TContext>?
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+          ^
+          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau
+            ^^^^^^^^^^^^^^^^^^^^
+            source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                ^
+                                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                 ^^^^^
+                                 source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                      ^^
+                                      source.luau meta.function.luau meta.parameter.luau
+                                        ^^^^^^^^^^
+                                        source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                  ^^
+                                                  source.luau meta.function.luau meta.parameter.luau
+                                                    ^^^^^^^^
+                                                    source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                            ^
+                                                            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                             ^
+                                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+>): MutationTuple<TData, TVariables, TContext, TCache>
+ ^
+ source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+  ^
+  source.luau
+   ^
+   source.luau
+    ^^^^^^^^^^^^^
+    source.luau entity.name.type.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^^^^^
+                  source.luau entity.name.type.luau
+                       ^^
+                       source.luau
+                         ^^^^^^^^^^
+                         source.luau entity.name.type.luau
+                                   ^^
+                                   source.luau
+                                     ^^^^^^^^
+                                     source.luau entity.name.type.luau
+                                             ^^
+                                             source.luau
+                                               ^^^^^^
+                                               source.luau entity.name.type.luau
+                                                     ^
+                                                     source.luau keyword.operator.type.luau
+>  local context = useContext(getApolloContext())
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^^^
+         source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^^^
+                   source.luau entity.name.function.luau
+                             ^
+                             source.luau punctuation.arguments.begin.luau
+                              ^^^^^^^^^^^^^^^^
+                              source.luau entity.name.function.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+                                                ^
+                                                source.luau punctuation.arguments.end.luau
+>  local result, setResult = useState({ called = false, loading = false })
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau variable.other.readwrite.luau
+               ^^
+               source.luau
+                 ^^^^^^^^^
+                 source.luau variable.other.readwrite.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.assignment.luau
+                            ^
+                            source.luau
+                             ^^^^^^^^
+                             source.luau entity.name.function.luau
+                                     ^
+                                     source.luau punctuation.arguments.begin.luau
+                                      ^
+                                      source.luau punctuation.table.begin.luau
+                                       ^
+                                       source.luau
+                                        ^^^^^^
+                                        source.luau variable.other.readwrite.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau keyword.operator.assignment.luau
+                                                ^
+                                                source.luau
+                                                 ^^^^^
+                                                 source.luau constant.language.boolean.false.luau
+                                                      ^
+                                                      source.luau punctuation.separator.fields.luau
+                                                       ^
+                                                       source.luau
+                                                        ^^^^^^^
+                                                        source.luau variable.other.readwrite.luau
+                                                               ^
+                                                               source.luau
+                                                                ^
+                                                                source.luau keyword.operator.assignment.luau
+                                                                 ^
+                                                                 source.luau
+                                                                  ^^^^^
+                                                                  source.luau constant.language.boolean.false.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^
+                                                                        source.luau punctuation.table.end.luau
+                                                                         ^
+                                                                         source.luau punctuation.arguments.end.luau
+>  local updatedOptions = if options
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^
+         source.luau variable.other.readwrite.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau
+                          ^^
+                          source.luau keyword.control.luau
+                            ^
+                            source.luau
+                             ^^^^^^^
+                             source.luau variable.other.readwrite.luau
+>  	then Object.assign({}, options, { mutation = mutation })
+ ^^^
+ source.luau
+    ^^^^
+    source.luau keyword.control.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau entity.name.function.luau
+                      ^
+                      source.luau punctuation.arguments.begin.luau
+                       ^
+                       source.luau punctuation.table.begin.luau
+                        ^
+                        source.luau punctuation.table.end.luau
+                         ^
+                         source.luau punctuation.separator.arguments.luau
+                          ^
+                          source.luau
+                           ^^^^^^^
+                           source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau
+                                    ^
+                                    source.luau punctuation.table.begin.luau
+                                     ^
+                                     source.luau
+                                      ^^^^^^^^
+                                      source.luau variable.other.readwrite.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau keyword.operator.assignment.luau
+                                                ^
+                                                source.luau
+                                                 ^^^^^^^^
+                                                 source.luau variable.other.readwrite.luau
+                                                         ^
+                                                         source.luau
+                                                          ^
+                                                          source.luau punctuation.table.end.luau
+                                                           ^
+                                                           source.luau punctuation.arguments.end.luau
+>  	else { mutation = mutation }
+ ^^^
+ source.luau
+    ^^^^
+    source.luau keyword.control.luau
+        ^
+        source.luau
+         ^
+         source.luau punctuation.table.begin.luau
+          ^
+          source.luau
+           ^^^^^^^^
+           source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^^^^^^^^
+                      source.luau variable.other.readwrite.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau punctuation.table.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

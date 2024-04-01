@@ -1,0 +1,204 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/394
+export type DehydratedData = {
+  cleaned: Array<Array<string | number>>,
+  data: string | Dehydrated | Unserializable | Array<Dehydrated> | Array<Unserializable> | { [string]: string | Dehydrated | Unserializable },
+  unserializable: Array<Array<string | number>>,
+}
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/394
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>export type DehydratedData = {
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.assignment.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau
+>  cleaned: Array<Array<string | number>>,
+ ^^
+ source.luau
+   ^^^^^^^
+   source.luau variable.property.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau entity.name.type.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^^^^^
+                  source.luau entity.name.type.luau
+                       ^
+                       source.luau keyword.operator.type.luau
+                        ^^^^^^
+                        source.luau support.type.primitive.luau
+                              ^
+                              source.luau
+                               ^
+                               source.luau keyword.operator.type.luau
+                                ^
+                                source.luau
+                                 ^^^^^^
+                                 source.luau support.type.primitive.luau
+                                       ^
+                                       source.luau keyword.operator.type.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau punctuation.separator.fields.type.luau
+>  data: string | Dehydrated | Unserializable | Array<Dehydrated> | Array<Unserializable> | { [string]: string | Dehydrated | Unserializable },
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.property.luau
+       ^
+       source.luau keyword.operator.type.luau
+        ^
+        source.luau
+         ^^^^^^
+         source.luau support.type.primitive.luau
+               ^
+               source.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^
+                  source.luau entity.name.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^
+                              source.luau
+                               ^^^^^^^^^^^^^^
+                               source.luau entity.name.type.luau
+                                             ^
+                                             source.luau
+                                              ^
+                                              source.luau keyword.operator.type.luau
+                                               ^
+                                               source.luau
+                                                ^^^^^
+                                                source.luau entity.name.type.luau
+                                                     ^
+                                                     source.luau keyword.operator.type.luau
+                                                      ^^^^^^^^^^
+                                                      source.luau entity.name.type.luau
+                                                                ^
+                                                                source.luau keyword.operator.type.luau
+                                                                 ^
+                                                                 source.luau
+                                                                  ^
+                                                                  source.luau keyword.operator.type.luau
+                                                                   ^
+                                                                   source.luau
+                                                                    ^^^^^
+                                                                    source.luau entity.name.type.luau
+                                                                         ^
+                                                                         source.luau keyword.operator.type.luau
+                                                                          ^^^^^^^^^^^^^^
+                                                                          source.luau entity.name.type.luau
+                                                                                        ^
+                                                                                        source.luau keyword.operator.type.luau
+                                                                                         ^
+                                                                                         source.luau
+                                                                                          ^
+                                                                                          source.luau keyword.operator.type.luau
+                                                                                           ^
+                                                                                           source.luau
+                                                                                            ^
+                                                                                            source.luau
+                                                                                             ^
+                                                                                             source.luau
+                                                                                              ^
+                                                                                              source.luau
+                                                                                               ^^^^^^
+                                                                                               source.luau support.type.primitive.luau
+                                                                                                     ^
+                                                                                                     source.luau
+                                                                                                      ^^
+                                                                                                      source.luau
+                                                                                                        ^^^^^^
+                                                                                                        source.luau support.type.primitive.luau
+                                                                                                              ^
+                                                                                                              source.luau
+                                                                                                               ^
+                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                ^
+                                                                                                                source.luau
+                                                                                                                 ^^^^^^^^^^
+                                                                                                                 source.luau entity.name.type.luau
+                                                                                                                           ^
+                                                                                                                           source.luau
+                                                                                                                            ^
+                                                                                                                            source.luau keyword.operator.type.luau
+                                                                                                                             ^
+                                                                                                                             source.luau
+                                                                                                                              ^^^^^^^^^^^^^^
+                                                                                                                              source.luau entity.name.type.luau
+                                                                                                                                            ^
+                                                                                                                                            source.luau
+                                                                                                                                             ^
+                                                                                                                                             source.luau
+                                                                                                                                              ^
+                                                                                                                                              source.luau punctuation.separator.fields.type.luau
+>  unserializable: Array<Array<string | number>>,
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^
+   source.luau variable.property.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^^^
+                   source.luau entity.name.type.luau
+                        ^
+                        source.luau keyword.operator.type.luau
+                         ^^^^^
+                         source.luau entity.name.type.luau
+                              ^
+                              source.luau keyword.operator.type.luau
+                               ^^^^^^
+                               source.luau support.type.primitive.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau
+                                        ^^^^^^
+                                        source.luau support.type.primitive.luau
+                                              ^
+                                              source.luau keyword.operator.type.luau
+                                               ^
+                                               source.luau keyword.operator.type.luau
+                                                ^
+                                                source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau

@@ -1,0 +1,338 @@
+original file
+-----------------------------------
+function foo(args: {
+  id: string,
+  fenderer: SubBassGuitar,
+  fendererInterface: BasGuitarInterface,
+})
+  print("foo")
+end
+
+function foo(args: {
+  id: string,
+  fenderer: SubBassGuitar,
+  fendererInterface: BasGuitarInterface,
+}, type: string)
+  print("foo")
+end
+
+local subs = {
+  amps.sub("fenderer-nations", function(
+  	args: {
+  	id: string,
+  	fenderer: SubBassGuitar,
+  	fendererInterface: BasGuitarInterface,
+  }
+  )
+  	print("test")
+  end),
+}
+
+-----------------------------------
+
+>function foo(args: {
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^^^^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau
+>  id: string,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^
+   source.luau meta.function.luau meta.parameter.luau variable.property.luau
+     ^
+     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+      ^
+      source.luau meta.function.luau meta.parameter.luau
+       ^^^^^^
+       source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  fenderer: SubBassGuitar,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.property.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau
+             ^^^^^^^^^^^^^
+             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  fendererInterface: BasGuitarInterface,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.property.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau
+                      ^^^^^^^^^^^^^^^^^^
+                      source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                        ^
+                                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>})
+ ^
+ source.luau meta.function.luau meta.parameter.luau
+  ^
+  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  print("foo")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^
+          source.luau string.quoted.double.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>function foo(args: {
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^^^
+          source.luau meta.function.luau entity.name.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+              ^^^^
+              source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau
+>  id: string,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^
+   source.luau meta.function.luau meta.parameter.luau variable.property.luau
+     ^
+     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+      ^
+      source.luau meta.function.luau meta.parameter.luau
+       ^^^^^^
+       source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  fenderer: SubBassGuitar,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.property.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau
+             ^^^^^^^^^^^^^
+             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  fendererInterface: BasGuitarInterface,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.property.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau
+                      ^^^^^^^^^^^^^^^^^^
+                      source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                        ^
+                                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>}, type: string)
+ ^
+ source.luau meta.function.luau meta.parameter.luau
+  ^
+  source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau
+    ^^^^
+    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+        ^
+        source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+         ^
+         source.luau meta.function.luau meta.parameter.luau
+          ^^^^^^
+          source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  print("foo")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^
+          source.luau string.quoted.double.luau
+             ^
+             source.luau string.quoted.double.luau
+              ^
+              source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local subs = {
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^
+       source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau punctuation.table.begin.luau
+>  amps.sub("fenderer-nations", function(
+ ^^
+ source.luau
+   ^^^^
+   source.luau variable.other.readwrite.luau
+       ^
+       source.luau
+        ^^^
+        source.luau entity.name.function.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^
+            source.luau string.quoted.double.luau
+             ^^^^^^^^^^^^^^^^
+             source.luau string.quoted.double.luau
+                             ^
+                             source.luau string.quoted.double.luau
+                              ^
+                              source.luau punctuation.separator.arguments.luau
+                               ^
+                               source.luau
+                                ^^^^^^^^
+                                source.luau meta.function.luau keyword.control.luau
+                                        ^
+                                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  	args: {
+ ^^^
+ source.luau meta.function.luau meta.parameter.luau
+    ^^^^
+    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+        ^
+        source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+         ^
+         source.luau meta.function.luau meta.parameter.luau
+          ^
+          source.luau meta.function.luau meta.parameter.luau
+>  	id: string,
+ ^^^
+ source.luau meta.function.luau meta.parameter.luau
+    ^^
+    source.luau meta.function.luau meta.parameter.luau variable.property.luau
+      ^
+      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+       ^
+       source.luau meta.function.luau meta.parameter.luau
+        ^^^^^^
+        source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  	fenderer: SubBassGuitar,
+ ^^^
+ source.luau meta.function.luau meta.parameter.luau
+    ^^^^^^^^
+    source.luau meta.function.luau meta.parameter.luau variable.property.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau
+              ^^^^^^^^^^^^^
+              source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  	fendererInterface: BasGuitarInterface,
+ ^^^
+ source.luau meta.function.luau meta.parameter.luau
+    ^^^^^^^^^^^^^^^^^
+    source.luau meta.function.luau meta.parameter.luau variable.property.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau
+                       ^^^^^^^^^^^^^^^^^^
+                       source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                         ^
+                                         source.luau meta.function.luau meta.parameter.luau punctuation.separator.fields.type.luau
+>  }
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau
+>  )
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  	print("test")
+ ^^^
+ source.luau
+    ^^^^^
+    source.luau support.function.luau
+         ^
+         source.luau punctuation.arguments.begin.luau
+          ^
+          source.luau string.quoted.double.luau
+           ^^^^
+           source.luau string.quoted.double.luau
+               ^
+               source.luau string.quoted.double.luau
+                ^
+                source.luau punctuation.arguments.end.luau
+>  end),
+ ^^
+ source.luau
+   ^^^
+   source.luau keyword.control.luau
+      ^
+      source.luau punctuation.arguments.end.luau
+       ^
+       source.luau punctuation.separator.fields.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau
+>
+ ^
+ source.luau

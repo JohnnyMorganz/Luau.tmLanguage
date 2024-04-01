@@ -1,0 +1,374 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/397
+
+--[[opening type comment]]
+type Doo<
+  T --[[ per-generic argument comment]]
+> =
+  --[[ opening RHS comment]]
+  string --[[ per-RHS comment]]
+
+type Foo<T = --[[leading]]
+string
+--[[trailing]]> = { baz: T, }
+
+type Bar<T
+--[[ Trailing comment ]]> = {}
+
+-- This is a comment before
+type Foo = --[[ Comment before Bar ]]
+Bar<--[[ Before X ]]
+X, --[[ After X ]]
+--[[ Before Y ]]
+Y, --[[ After Y ]]
+--[[ Before Z ]]
+Z
+--[[ After Z ]]> -- This is a comment after
+
+--[[comment]]
+type Doo
+--[[comment]]
+<
+--[[comment]]
+T
+--[[comment]]
+>
+--[[comment]]
+=
+--[[comment]]
+string
+--[[comment]]
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/397
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>--[[opening type comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^^^^^^^^^^^^^^
+     source.luau comment.block.luau
+                         ^^
+                         source.luau comment.block.luau
+>type Doo<
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau keyword.operator.type.luau
+>  T --[[ per-generic argument comment]]
+ ^^
+ source.luau
+   ^
+   source.luau entity.name.type.luau
+    ^
+    source.luau
+     ^^^^
+     source.luau comment.block.luau
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.luau comment.block.luau
+                                      ^^
+                                      source.luau comment.block.luau
+>> =
+ ^
+ source.luau keyword.operator.type.luau
+  ^
+  source.luau
+   ^
+   source.luau keyword.operator.assignment.luau
+>  --[[ opening RHS comment]]
+ ^^
+ source.luau
+   ^^^^
+   source.luau comment.block.luau
+       ^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.block.luau
+                           ^^
+                           source.luau comment.block.luau
+>  string --[[ per-RHS comment]]
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau support.constant.luau
+         ^
+         source.luau
+          ^^^^
+          source.luau comment.block.luau
+              ^^^^^^^^^^^^^^^^
+              source.luau comment.block.luau
+                              ^^
+                              source.luau comment.block.luau
+>
+ ^
+ source.luau
+>type Foo<T = --[[leading]]
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau comment.block.luau
+                  ^^^^^^^
+                  source.luau comment.block.luau
+                         ^^
+                         source.luau comment.block.luau
+>string
+ ^^^^^^
+ source.luau support.type.primitive.luau
+>--[[trailing]]> = { baz: T, }
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^^
+     source.luau comment.block.luau
+             ^^
+             source.luau comment.block.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau
+                     ^^^
+                     source.luau variable.property.luau
+                        ^
+                        source.luau keyword.operator.type.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau entity.name.type.luau
+                           ^
+                           source.luau punctuation.separator.fields.type.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau
+>
+ ^
+ source.luau
+>type Bar<T
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau entity.name.type.luau
+>--[[ Trailing comment ]]> = {}
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^^^^^^^^^^^^
+     source.luau comment.block.luau
+                       ^^
+                       source.luau comment.block.luau
+                         ^
+                         source.luau keyword.operator.type.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau keyword.operator.assignment.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau
+>
+ ^
+ source.luau
+>-- This is a comment before
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>type Foo = --[[ Comment before Bar ]]
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau comment.block.luau
+                ^^^^^^^^^^^^^^^^^^^^
+                source.luau comment.block.luau
+                                    ^^
+                                    source.luau comment.block.luau
+>Bar<--[[ Before X ]]
+ ^^^
+ source.luau variable.other.readwrite.luau
+    ^
+    source.luau keyword.operator.comparison.luau
+     ^^^^
+     source.luau comment.block.luau
+         ^^^^^^^^^^
+         source.luau comment.block.luau
+                   ^^
+                   source.luau comment.block.luau
+>X, --[[ After X ]]
+ ^
+ source.luau variable.other.constant.luau
+  ^^
+  source.luau
+    ^^^^
+    source.luau comment.block.luau
+        ^^^^^^^^^
+        source.luau comment.block.luau
+                 ^^
+                 source.luau comment.block.luau
+>--[[ Before Y ]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^^^^
+     source.luau comment.block.luau
+               ^^
+               source.luau comment.block.luau
+>Y, --[[ After Y ]]
+ ^
+ source.luau variable.other.constant.luau
+  ^^
+  source.luau
+    ^^^^
+    source.luau comment.block.luau
+        ^^^^^^^^^
+        source.luau comment.block.luau
+                 ^^
+                 source.luau comment.block.luau
+>--[[ Before Z ]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^^^^
+     source.luau comment.block.luau
+               ^^
+               source.luau comment.block.luau
+>Z
+ ^
+ source.luau variable.other.constant.luau
+>--[[ After Z ]]> -- This is a comment after
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^^^
+     source.luau comment.block.luau
+              ^^
+              source.luau comment.block.luau
+                ^
+                source.luau keyword.operator.comparison.luau
+                 ^
+                 source.luau
+                  ^^
+                  source.luau comment.line.double-dash.luau
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+                    source.luau comment.line.double-dash.luau
+>
+ ^
+ source.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>type Doo
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^
+      source.luau entity.name.type.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+><
+ ^
+ source.luau keyword.operator.comparison.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>T
+ ^
+ source.luau variable.other.constant.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>>
+ ^
+ source.luau keyword.operator.comparison.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>=
+ ^
+ source.luau keyword.operator.assignment.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>string
+ ^^^^^^
+ source.luau support.constant.luau
+>--[[comment]]
+ ^^^^
+ source.luau comment.block.luau
+     ^^^^^^^
+     source.luau comment.block.luau
+            ^^
+            source.luau comment.block.luau
+>
+ ^
+ source.luau

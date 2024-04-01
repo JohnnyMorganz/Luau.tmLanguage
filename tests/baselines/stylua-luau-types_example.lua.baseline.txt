@@ -1,0 +1,562 @@
+original file
+-----------------------------------
+local srcWorkspace = script.Parent.Parent
+local PromiseModule = require(srcWorkspace.luaUtils.Promise)
+type Promise<T> = PromiseModule.Promise<T>
+type Resolver<T, U> = any
+type Result = any
+
+export type SubscriptionArgs = {
+    rootValue: any?,
+    contextValue: any?,
+    variableValues: { [string]: any },
+    operationName: string?,
+    fieldResolver: Resolver<any, any>?,
+    subscribeFieldResolver: Resolver<any, any>?
+}
+
+local function subscribe(
+  args: SubscriptionArgs
+  ): Promise<Result>
+  error("nope")
+end
+
+local function createEventStream(
+  rootValue: any?,
+  contextValue: any?,
+  variableValues: { [string]: any }?,
+  operationName: string?,
+  fieldResolver: Resolver<any, any>?
+  ): Promise<Result>
+  error("nope")
+end
+
+return {
+  subscribe = subscribe,
+  createEventStream = createEventStream
+}
+-----------------------------------
+
+>local srcWorkspace = script.Parent.Parent
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^^^^^^
+                      source.luau constant.language.luau
+                            ^
+                            source.luau
+                             ^^^^^^
+                             source.luau variable.other.property.luau
+                                   ^
+                                   source.luau
+                                    ^^^^^^
+                                    source.luau variable.other.property.luau
+>local PromiseModule = require(srcWorkspace.luaUtils.Promise)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.assignment.luau
+                      ^
+                      source.luau
+                       ^^^^^^^
+                       source.luau support.function.luau
+                              ^
+                              source.luau punctuation.arguments.begin.luau
+                               ^^^^^^^^^^^^
+                               source.luau variable.other.readwrite.luau
+                                           ^
+                                           source.luau
+                                            ^^^^^^^^
+                                            source.luau variable.other.property.luau
+                                                    ^
+                                                    source.luau
+                                                     ^^^^^^^
+                                                     source.luau variable.other.property.luau
+                                                            ^
+                                                            source.luau punctuation.arguments.end.luau
+>type Promise<T> = PromiseModule.Promise<T>
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau entity.name.type.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau entity.name.type.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^
+                 source.luau keyword.operator.assignment.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^^^^^^
+                   source.luau entity.name.type.luau
+                                ^
+                                source.luau
+                                 ^^^^^^^
+                                 source.luau entity.name.type.luau
+                                        ^
+                                        source.luau keyword.operator.type.luau
+                                         ^
+                                         source.luau entity.name.type.luau
+                                          ^
+                                          source.luau keyword.operator.type.luau
+>type Resolver<T, U> = any
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^^^
+      source.luau entity.name.type.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau entity.name.type.luau
+                ^^
+                source.luau
+                  ^
+                  source.luau entity.name.type.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.assignment.luau
+                      ^
+                      source.luau
+                       ^^^
+                       source.luau support.type.primitive.luau
+>type Result = any
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^^^
+      source.luau entity.name.type.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau support.type.primitive.luau
+>
+ ^
+ source.luau
+>export type SubscriptionArgs = {
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^
+        source.luau storage.type.luau
+            ^
+            source.luau
+             ^^^^^^^^^^^^^^^^
+             source.luau entity.name.type.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau keyword.operator.assignment.luau
+                               ^
+                               source.luau
+                                ^
+                                source.luau
+>    rootValue: any?,
+ ^^^^
+ source.luau
+     ^^^^^^^^^
+     source.luau variable.property.luau
+              ^
+              source.luau keyword.operator.type.luau
+               ^
+               source.luau
+                ^^^
+                source.luau support.type.primitive.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau punctuation.separator.fields.type.luau
+>    contextValue: any?,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^
+     source.luau variable.property.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^
+                   source.luau support.type.primitive.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau punctuation.separator.fields.type.luau
+>    variableValues: { [string]: any },
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^^
+     source.luau variable.property.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau
+                        ^^^^^^
+                        source.luau support.type.primitive.luau
+                              ^
+                              source.luau
+                               ^^
+                               source.luau
+                                 ^^^
+                                 source.luau support.type.primitive.luau
+                                    ^
+                                    source.luau
+                                     ^
+                                     source.luau
+                                      ^
+                                      source.luau punctuation.separator.fields.type.luau
+>    operationName: string?,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^
+     source.luau variable.property.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+                          ^
+                          source.luau keyword.operator.type.luau
+                           ^
+                           source.luau punctuation.separator.fields.type.luau
+>    fieldResolver: Resolver<any, any>?,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^
+     source.luau variable.property.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^^^
+                    source.luau entity.name.type.luau
+                            ^
+                            source.luau keyword.operator.type.luau
+                             ^^^
+                             source.luau support.type.primitive.luau
+                                ^^
+                                source.luau
+                                  ^^^
+                                  source.luau support.type.primitive.luau
+                                     ^
+                                     source.luau keyword.operator.type.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau punctuation.separator.fields.type.luau
+>    subscribeFieldResolver: Resolver<any, any>?
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^^^^^^^^^^^
+     source.luau variable.property.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^^^^^^^^
+                             source.luau entity.name.type.luau
+                                     ^
+                                     source.luau keyword.operator.type.luau
+                                      ^^^
+                                      source.luau support.type.primitive.luau
+                                         ^^
+                                         source.luau
+                                           ^^^
+                                           source.luau support.type.primitive.luau
+                                              ^
+                                              source.luau keyword.operator.type.luau
+                                               ^
+                                               source.luau keyword.operator.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau
+>local function subscribe(
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  args: SubscriptionArgs
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+       ^
+       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+        ^
+        source.luau meta.function.luau meta.parameter.luau
+         ^^^^^^^^^^^^^^^^
+         source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+>  ): Promise<Result>
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+    ^
+    source.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau entity.name.type.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^^^^^^
+              source.luau entity.name.type.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+>  error("nope")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^
+          source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local function createEventStream(
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                                 ^
+                                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  rootValue: any?,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau
+              ^^^
+              source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  contextValue: any?,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau
+                 ^^^
+                 source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  variableValues: { [string]: any }?,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau
+                      ^^^^^^
+                      source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                            ^
+                            source.luau meta.function.luau meta.parameter.luau
+                             ^^
+                             source.luau meta.function.luau meta.parameter.luau
+                               ^^^
+                               source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  operationName: string?,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  fieldResolver: Resolver<any, any>?
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                           ^^^
+                           source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                              ^^
+                              source.luau meta.function.luau meta.parameter.luau
+                                ^^^
+                                source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+>  ): Promise<Result>
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^
+   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+    ^
+    source.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau entity.name.type.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^^^^^^
+              source.luau entity.name.type.luau
+                    ^
+                    source.luau keyword.operator.type.luau
+>  error("nope")
+ ^^
+ source.luau
+   ^^^^^
+   source.luau support.function.luau
+        ^
+        source.luau punctuation.arguments.begin.luau
+         ^
+         source.luau string.quoted.double.luau
+          ^^^^
+          source.luau string.quoted.double.luau
+              ^
+              source.luau string.quoted.double.luau
+               ^
+               source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>return {
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau punctuation.table.begin.luau
+>  subscribe = subscribe,
+ ^^
+ source.luau
+   ^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau punctuation.separator.fields.luau
+>  createEventStream = createEventStream
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.assignment.luau
+                      ^
+                      source.luau
+                       ^^^^^^^^^^^^^^^^^
+                       source.luau variable.other.readwrite.luau
+>}
+ ^
+ source.luau punctuation.table.end.luau

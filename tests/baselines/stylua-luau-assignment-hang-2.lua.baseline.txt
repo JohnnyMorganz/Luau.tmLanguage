@@ -1,0 +1,248 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/595
+exports.createResource = function(
+  glitch: (Input) -> Thenable<Value>,
+  hasInput: (Input) -> Key,
+  config: Config?
+): Pleasing<Input, Key, Value>
+  config = config or {}
+  local pleasing
+  pleasing = {
+  		clear = function(): ()
+  				entries[pleasing] = nil
+  		end,
+  }
+  return pleasing
+end
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/595
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>exports.createResource = function(
+ ^^^^^^^
+ source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^^^^
+         source.luau variable.other.property.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau keyword.operator.assignment.luau
+                         ^
+                         source.luau
+                          ^^^^^^^^
+                          source.luau meta.function.luau keyword.control.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>  glitch: (Input) -> Thenable<Value>,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+         ^
+         source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+          ^
+          source.luau meta.function.luau meta.parameter.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau
+            ^^^^^
+            source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau
+                   ^^
+                   source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau
+                      ^^^^^^^^
+                      source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                              ^
+                              source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                               ^^^^^
+                               source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  hasInput: (Input) -> Key,
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+           ^
+           source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+            ^
+            source.luau meta.function.luau meta.parameter.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau
+              ^^^^^
+              source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau
+                     ^^
+                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau
+                        ^^^
+                        source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>  config: Config?
+ ^^
+ source.luau meta.function.luau meta.parameter.luau
+   ^^^^^^
+   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+         ^
+         source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+          ^
+          source.luau meta.function.luau meta.parameter.luau
+           ^^^^^^
+           source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+>): Pleasing<Input, Key, Value>
+ ^
+ source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+  ^
+  source.luau
+   ^
+   source.luau
+    ^^^^^^^^
+    source.luau entity.name.type.luau
+            ^
+            source.luau keyword.operator.type.luau
+             ^^^^^
+             source.luau entity.name.type.luau
+                  ^^
+                  source.luau
+                    ^^^
+                    source.luau entity.name.type.luau
+                       ^^
+                       source.luau
+                         ^^^^^
+                         source.luau entity.name.type.luau
+                              ^
+                              source.luau keyword.operator.type.luau
+>  config = config or {}
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^
+          source.luau keyword.operator.assignment.luau
+           ^
+           source.luau
+            ^^^^^^
+            source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau punctuation.table.begin.luau
+                       ^
+                       source.luau punctuation.table.end.luau
+>  local pleasing
+ ^^
+ source.luau
+   ^^^^^
+   source.luau storage.modifier.local.luau
+        ^
+        source.luau
+         ^^^^^^^^
+         source.luau variable.other.readwrite.luau
+>  pleasing = {
+ ^^
+ source.luau
+   ^^^^^^^^
+   source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau punctuation.table.begin.luau
+>  		clear = function(): ()
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau variable.other.readwrite.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^^^^^^^^
+             source.luau meta.function.luau keyword.control.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau
+>  				entries[pleasing] = nil
+ ^^^^^^
+ source.luau
+       ^^^^^^^
+       source.luau variable.other.readwrite.luau
+              ^
+              source.luau
+               ^^^^^^^^
+               source.luau variable.other.readwrite.luau
+                       ^^
+                       source.luau
+                         ^
+                         source.luau keyword.operator.assignment.luau
+                          ^
+                          source.luau
+                           ^^^
+                           source.luau constant.language.nil.luau
+>  		end,
+ ^^^^
+ source.luau
+     ^^^
+     source.luau keyword.control.luau
+        ^
+        source.luau punctuation.separator.fields.luau
+>  }
+ ^^
+ source.luau
+   ^
+   source.luau punctuation.table.end.luau
+>  return pleasing
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^^^^^^
+          source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

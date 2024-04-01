@@ -1,0 +1,236 @@
+original file
+-----------------------------------
+-- https://github.com/JohnnyMorganz/StyLua/issues/375
+local x = if true
+  then foo -- comment
+  else nil
+
+-- https://github.com/JohnnyMorganz/StyLua/issues/374
+context:reportError(("Required input field %s.%s cannot be deprecated."):format(inputObj.name, field.name), {
+  getDeprecatedNode((field :: InputField).astNode),
+  if field.astNode ~= nil
+  		-- ROBLOX FUNTIME START: Luau
+  		then (field :: any).astNode.type
+  		-- ROBLOX FUNTIME END
+  		else nil,
+})
+
+-----------------------------------
+
+>-- https://github.com/JohnnyMorganz/StyLua/issues/375
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local x = if true
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^^
+           source.luau keyword.control.luau
+             ^
+             source.luau
+              ^^^^
+              source.luau constant.language.boolean.true.luau
+>  then foo -- comment
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^
+        source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^
+            source.luau comment.line.double-dash.luau
+              ^^^^^^^^
+              source.luau comment.line.double-dash.luau
+>  else nil
+ ^^
+ source.luau
+   ^^^^
+   source.luau keyword.control.luau
+       ^
+       source.luau
+        ^^^
+        source.luau constant.language.nil.luau
+>
+ ^
+ source.luau
+>-- https://github.com/JohnnyMorganz/StyLua/issues/374
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>context:reportError(("Required input field %s.%s cannot be deprecated."):format(inputObj.name, field.name), {
+ ^^^^^^^
+ source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^^^^^^^^
+         source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^
+                     source.luau punctuation.arguments.begin.luau
+                      ^
+                      source.luau string.quoted.double.luau
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       source.luau string.quoted.double.luau
+                                                                       ^
+                                                                       source.luau string.quoted.double.luau
+                                                                        ^
+                                                                        source.luau punctuation.arguments.end.luau
+                                                                         ^
+                                                                         source.luau
+                                                                          ^^^^^^
+                                                                          source.luau entity.name.function.luau
+                                                                                ^
+                                                                                source.luau punctuation.arguments.begin.luau
+                                                                                 ^^^^^^^^
+                                                                                 source.luau variable.other.readwrite.luau
+                                                                                         ^
+                                                                                         source.luau
+                                                                                          ^^^^
+                                                                                          source.luau variable.other.property.luau
+                                                                                              ^
+                                                                                              source.luau punctuation.separator.arguments.luau
+                                                                                               ^
+                                                                                               source.luau
+                                                                                                ^^^^^
+                                                                                                source.luau variable.other.readwrite.luau
+                                                                                                     ^
+                                                                                                     source.luau
+                                                                                                      ^^^^
+                                                                                                      source.luau variable.other.property.luau
+                                                                                                          ^
+                                                                                                          source.luau punctuation.arguments.end.luau
+                                                                                                           ^
+                                                                                                           source.luau punctuation.separator.arguments.luau
+                                                                                                            ^
+                                                                                                            source.luau
+                                                                                                             ^
+                                                                                                             source.luau punctuation.table.begin.luau
+>  getDeprecatedNode((field :: InputField).astNode),
+ ^^
+ source.luau
+   ^^^^^^^^^^^^^^^^^
+   source.luau entity.name.function.luau
+                    ^
+                    source.luau punctuation.arguments.begin.luau
+                     ^
+                     source.luau punctuation.arguments.begin.luau
+                      ^^^^^
+                      source.luau variable.other.readwrite.luau
+                           ^
+                           source.luau
+                            ^^
+                            source.luau keyword.operator.typecast.luau
+                              ^
+                              source.luau
+                               ^^^^^^^^^^
+                               source.luau entity.name.type.luau
+                                         ^
+                                         source.luau punctuation.arguments.end.luau
+                                          ^
+                                          source.luau
+                                           ^^^^^^^
+                                           source.luau variable.other.property.luau
+                                                  ^
+                                                  source.luau punctuation.arguments.end.luau
+                                                   ^
+                                                   source.luau punctuation.separator.fields.luau
+>  if field.astNode ~= nil
+ ^^
+ source.luau
+   ^^
+   source.luau keyword.control.luau
+     ^
+     source.luau
+      ^^^^^
+      source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^^^^^^^
+            source.luau variable.other.property.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^^^
+                       source.luau constant.language.nil.luau
+>  		-- ROBLOX FUNTIME START: Luau
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  		then (field :: any).astNode.type
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^
+          source.luau punctuation.arguments.begin.luau
+           ^^^^^
+           source.luau variable.other.readwrite.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.operator.typecast.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau support.type.primitive.luau
+                       ^
+                       source.luau punctuation.arguments.end.luau
+                        ^
+                        source.luau
+                         ^^^^^^^
+                         source.luau variable.other.property.luau
+                                ^
+                                source.luau
+                                 ^^^^
+                                 source.luau variable.other.property.luau
+>  		-- ROBLOX FUNTIME END
+ ^^^^
+ source.luau
+     ^^
+     source.luau comment.line.double-dash.luau
+       ^^^^^^^^^^^^^^^^^^^
+       source.luau comment.line.double-dash.luau
+>  		else nil,
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau keyword.control.luau
+         ^
+         source.luau
+          ^^^
+          source.luau constant.language.nil.luau
+             ^
+             source.luau punctuation.separator.fields.luau
+>})
+ ^
+ source.luau punctuation.table.end.luau
+  ^
+  source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
