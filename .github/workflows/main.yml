@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build Grammar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        run: npm ci
+      - name: Build Tool
+        run: npm run build:grammar
+      - name: Ensure no diff
+        run: git diff --exit-code
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        run: npm ci
+      - name: Run Tests
+        run: npm run test
