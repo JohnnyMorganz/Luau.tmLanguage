@@ -1,0 +1,36 @@
+original file
+-----------------------------------
+if test.type ~= "value" then
+end
+-----------------------------------
+
+>if test.type ~= "value" then
+ ^^
+ source.luau keyword.control.luau
+   ^
+   source.luau
+    ^^^^
+    source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^^^^
+         source.luau variable.other.property.luau
+             ^
+             source.luau
+              ^^
+              source.luau keyword.operator.comparison.luau
+                ^
+                source.luau
+                 ^
+                 source.luau string.quoted.double.luau
+                  ^^^^^
+                  source.luau string.quoted.double.luau
+                       ^
+                       source.luau string.quoted.double.luau
+                        ^
+                        source.luau
+                         ^^^^
+                         source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
