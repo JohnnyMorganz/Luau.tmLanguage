@@ -1,0 +1,300 @@
+original file
+-----------------------------------
+@attr_1 @attr_2
+local function a()
+end
+
+local b = @attr_1 @attr_2 function() end
+
+c(@attr_1 @attr_2 function() end)
+
+@attr_1
+local function d()
+end
+
+local e = @attr_1 function() end
+
+f(@attr_1 function() end)
+
+@attr_1 @attr_2 local function g() end
+@attr1 local function h() end
+
+---@doc_comment
+@attr_1
+local function i() end
+-----------------------------------
+
+>@attr_1 @attr_2
+ ^
+ source.luau meta.attribute.luau keyword.operator.attribute.luau
+  ^^^^^^
+  source.luau meta.attribute.luau storage.type.attribute.luau
+        ^
+        source.luau
+         ^
+         source.luau meta.attribute.luau keyword.operator.attribute.luau
+          ^^^^^^
+          source.luau meta.attribute.luau storage.type.attribute.luau
+>local function a()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^
+                source.luau meta.function.luau entity.name.function.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local b = @attr_1 @attr_2 function() end
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau meta.attribute.luau keyword.operator.attribute.luau
+            ^^^^^^
+            source.luau meta.attribute.luau storage.type.attribute.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau meta.attribute.luau keyword.operator.attribute.luau
+                    ^^^^^^
+                    source.luau meta.attribute.luau storage.type.attribute.luau
+                          ^
+                          source.luau
+                           ^^^^^^^^
+                           source.luau meta.function.luau keyword.control.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                     ^
+                                     source.luau
+                                      ^^^
+                                      source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>c(@attr_1 @attr_2 function() end)
+ ^
+ source.luau entity.name.function.luau
+  ^
+  source.luau punctuation.arguments.begin.luau
+   ^
+   source.luau meta.attribute.luau keyword.operator.attribute.luau
+    ^^^^^^
+    source.luau meta.attribute.luau storage.type.attribute.luau
+          ^
+          source.luau
+           ^
+           source.luau meta.attribute.luau keyword.operator.attribute.luau
+            ^^^^^^
+            source.luau meta.attribute.luau storage.type.attribute.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^
+                   source.luau meta.function.luau keyword.control.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                            ^
+                            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                             ^
+                             source.luau
+                              ^^^
+                              source.luau keyword.control.luau
+                                 ^
+                                 source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>@attr_1
+ ^
+ source.luau meta.attribute.luau keyword.operator.attribute.luau
+  ^^^^^^
+  source.luau meta.attribute.luau storage.type.attribute.luau
+>local function d()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^
+                source.luau meta.function.luau entity.name.function.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local e = @attr_1 function() end
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau meta.attribute.luau keyword.operator.attribute.luau
+            ^^^^^^
+            source.luau meta.attribute.luau storage.type.attribute.luau
+                  ^
+                  source.luau
+                   ^^^^^^^^
+                   source.luau meta.function.luau keyword.control.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                            ^
+                            source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                             ^
+                             source.luau
+                              ^^^
+                              source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>f(@attr_1 function() end)
+ ^
+ source.luau entity.name.function.luau
+  ^
+  source.luau punctuation.arguments.begin.luau
+   ^
+   source.luau meta.attribute.luau keyword.operator.attribute.luau
+    ^^^^^^
+    source.luau meta.attribute.luau storage.type.attribute.luau
+          ^
+          source.luau
+           ^^^^^^^^
+           source.luau meta.function.luau keyword.control.luau
+                   ^
+                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                     ^
+                     source.luau
+                      ^^^
+                      source.luau keyword.control.luau
+                         ^
+                         source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>@attr_1 @attr_2 local function g() end
+ ^
+ source.luau meta.attribute.luau keyword.operator.attribute.luau
+  ^^^^^^
+  source.luau meta.attribute.luau storage.type.attribute.luau
+        ^
+        source.luau
+         ^
+         source.luau meta.attribute.luau keyword.operator.attribute.luau
+          ^^^^^^
+          source.luau meta.attribute.luau storage.type.attribute.luau
+                ^
+                source.luau
+                 ^^^^^
+                 source.luau meta.function.luau storage.modifier.local.luau
+                      ^
+                      source.luau meta.function.luau
+                       ^^^^^^^^
+                       source.luau meta.function.luau keyword.control.luau
+                               ^
+                               source.luau meta.function.luau
+                                ^
+                                source.luau meta.function.luau entity.name.function.luau
+                                 ^
+                                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                   ^
+                                   source.luau
+                                    ^^^
+                                    source.luau keyword.control.luau
+>@attr1 local function h() end
+ ^
+ source.luau meta.attribute.luau keyword.operator.attribute.luau
+  ^^^^^
+  source.luau meta.attribute.luau storage.type.attribute.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau meta.function.luau storage.modifier.local.luau
+             ^
+             source.luau meta.function.luau
+              ^^^^^^^^
+              source.luau meta.function.luau keyword.control.luau
+                      ^
+                      source.luau meta.function.luau
+                       ^
+                       source.luau meta.function.luau entity.name.function.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                          ^
+                          source.luau
+                           ^^^
+                           source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>---@doc_comment
+ ^^^
+ source.luau comment.line.double-dash.documentation.luau
+    ^^^^^^^^^^^^
+    source.luau comment.line.double-dash.documentation.luau storage.type.class.luadoc.luau
+>@attr_1
+ ^
+ source.luau meta.attribute.luau keyword.operator.attribute.luau
+  ^^^^^^
+  source.luau meta.attribute.luau storage.type.attribute.luau
+>local function i() end
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^
+                source.luau meta.function.luau entity.name.function.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                   ^
+                   source.luau
+                    ^^^
+                    source.luau keyword.control.luau
