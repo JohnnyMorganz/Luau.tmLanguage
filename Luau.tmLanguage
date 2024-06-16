@@ -86,6 +86,10 @@
         <key>include</key>
         <string>#type_annotation</string>
       </dict>
+      <dict>
+        <key>include</key>
+        <string>#attribute</string>
+      </dict>
     </array>
     <key>repository</key>
     <dict>
@@ -223,6 +227,10 @@
           <dict>
             <key>include</key>
             <string>#comment</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#attribute</string>
           </dict>
           <dict>
             <key>begin</key>
@@ -1135,6 +1143,31 @@
                 <string>#type_literal</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>attribute</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>meta.attribute.luau</string>
+            <key>match</key>
+            <string>(@)([a-zA-Z_][a-zA-Z0-9_]*)</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.attribute.luau</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.attribute.luau</string>
+              </dict>
+            </dict>
           </dict>
         </array>
       </dict>
