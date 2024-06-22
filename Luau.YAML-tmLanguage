@@ -33,6 +33,7 @@ patterns:
   - include: "#table"
   - include: "#type_cast"
   - include: "#type_annotation"
+  - include: "#attribute"
 
 repository:
   function-definition:
@@ -78,6 +79,7 @@ repository:
       "1": { name: storage.modifier.local.luau }
     patterns:
       - include: "#comment"
+      - include: "#attribute"
       - begin: "(:)"
         beginCaptures:
           "1": { name: keyword.operator.type.luau }
@@ -398,3 +400,12 @@ repository:
               "1": { name: variable.parameter.luau }
               "2": { name: keyword.operator.type.luau }
           - include: "#type_literal"
+
+  attribute:
+    patterns:
+      # TODO: support parameters for attributes as defined in the RFC
+      - name: meta.attribute.luau
+        match: "(@)({{identifier}})"
+        captures:
+          "1": { name: keyword.operator.attribute.luau }
+          "2": { name: storage.type.attribute.luau}
