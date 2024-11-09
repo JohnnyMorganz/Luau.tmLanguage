@@ -51,7 +51,7 @@ end
                                                    ^
                                                    source.luau
                                                     ^^
-                                                    source.luau keyword.operator.type.luau
+                                                    source.luau keyword.operator.type.function.luau
                                                       ^
                                                       source.luau
                                                        ^^^^^^
@@ -85,7 +85,7 @@ end
                            ^
                            source.luau
                             ^^
-                            source.luau keyword.operator.type.luau
+                            source.luau keyword.operator.type.function.luau
                               ^
                               source.luau
                                ^^^^^^
@@ -124,7 +124,7 @@ end
                                       ^
                                       source.luau meta.function.luau meta.parameter.luau
                                        ^^
-                                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.function.luau
                                          ^
                                          source.luau meta.function.luau meta.parameter.luau
                                           ^
@@ -187,7 +187,7 @@ end
                                                 ^
                                                 source.luau
                                                  ^^
-                                                 source.luau keyword.operator.type.luau
+                                                 source.luau keyword.operator.type.function.luau
                                                    ^
                                                    source.luau
                                                     ^^^^^^
@@ -246,7 +246,7 @@ end
                                                 ^
                                                 source.luau
                                                  ^^
-                                                 source.luau keyword.operator.type.luau
+                                                 source.luau keyword.operator.type.function.luau
                                                    ^
                                                    source.luau
                                                     ^
@@ -262,17 +262,17 @@ end
                                                              ^^^^^
                                                              source.luau entity.name.type.luau
                                                                   ^
-                                                                  source.luau keyword.operator.type.luau
+                                                                  source.luau punctuation.definition.typeparameters.begin.luau
                                                                    ^^^^^^
                                                                    source.luau support.type.primitive.luau
                                                                          ^
-                                                                         source.luau keyword.operator.type.luau
+                                                                         source.luau punctuation.definition.typeparameters.end.luau
                                                                           ^
                                                                           source.luau
                                                                            ^
                                                                            source.luau
                                                                             ^^
-                                                                            source.luau keyword.operator.type.luau
+                                                                            source.luau keyword.operator.type.function.luau
                                                                               ^^^^
                                                                               source.luau
                                                                                   ^^^

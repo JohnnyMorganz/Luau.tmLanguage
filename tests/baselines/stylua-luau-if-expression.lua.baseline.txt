@@ -780,7 +780,7 @@ end
                                                                                                                          ^
                                                                                                                          source.luau
                                                                                                                           ^^
-                                                                                                                          source.luau keyword.operator.type.luau
+                                                                                                                          source.luau keyword.operator.type.function.luau
                                                                                                                             ^
                                                                                                                             source.luau
                                                                                                                              ^

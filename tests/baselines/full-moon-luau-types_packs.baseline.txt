@@ -56,7 +56,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                               ^
                               source.luau meta.function.luau meta.parameter.luau
                                ^^
-                               source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                               source.luau meta.function.luau meta.parameter.luau keyword.operator.type.function.luau
                                  ^
                                  source.luau meta.function.luau meta.parameter.luau
                                   ^
@@ -79,13 +79,13 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
           ^
           source.luau entity.name.type.luau
            ^^^
            source.luau
               ^
-              source.luau keyword.operator.type.luau
+              source.luau punctuation.definition.typeparameters.end.luau
                ^
                source.luau
                 ^
@@ -99,7 +99,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                     ^
                     source.luau
                      ^^
-                     source.luau keyword.operator.type.luau
+                     source.luau keyword.operator.type.function.luau
                        ^
                        source.luau
                         ^
@@ -152,7 +152,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
       ^
       source.luau entity.name.type.luau
        ^
-       source.luau keyword.operator.type.luau
+       source.luau punctuation.definition.typeparameters.begin.luau
         ^
         source.luau entity.name.type.luau
          ^^
@@ -162,7 +162,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
             ^^^
             source.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.end.luau
                 ^
                 source.luau
                  ^
@@ -181,13 +181,13 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
       ^
       source.luau entity.name.type.luau
        ^
-       source.luau keyword.operator.type.luau
+       source.luau punctuation.definition.typeparameters.begin.luau
         ^
         source.luau entity.name.type.luau
          ^^^
          source.luau
             ^
-            source.luau keyword.operator.type.luau
+            source.luau punctuation.definition.typeparameters.end.luau
              ^
              source.luau
               ^
@@ -197,7 +197,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                 ^
                 source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^^^^
                   source.luau support.type.primitive.luau
                         ^^
@@ -207,7 +207,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                            ^^^
                            source.luau
                               ^
-                              source.luau keyword.operator.type.luau
+                              source.luau punctuation.definition.typeparameters.end.luau
                                ^
                                source.luau
                                 ^^
@@ -230,7 +230,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
           ^
           source.luau entity.name.type.luau
            ^
-           source.luau keyword.operator.type.luau
+           source.luau punctuation.definition.typeparameters.begin.luau
             ^^^^^^
             source.luau support.type.primitive.luau
                   ^^^^^
@@ -238,7 +238,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                        ^^^^^^
                        source.luau support.type.primitive.luau
                              ^
-                             source.luau keyword.operator.type.luau
+                             source.luau punctuation.definition.typeparameters.end.luau
                               ^
                               source.luau
                                ^^
@@ -261,7 +261,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
           ^
           source.luau entity.name.type.luau
            ^
-           source.luau keyword.operator.type.luau
+           source.luau punctuation.definition.typeparameters.begin.luau
             ^^^^^^
             source.luau support.type.primitive.luau
                   ^^
@@ -271,7 +271,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                      ^
                      source.luau
                       ^
-                      source.luau keyword.operator.type.luau
+                      source.luau punctuation.definition.typeparameters.end.luau
                        ^
                        source.luau
                         ^^
@@ -289,7 +289,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
       ^^^^^^^^
       source.luau entity.name.type.luau
               ^
-              source.luau keyword.operator.type.luau
+              source.luau punctuation.definition.typeparameters.begin.luau
                ^^^^
                source.luau entity.name.type.luau
                    ^^^^^
@@ -299,7 +299,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                               ^^^
                               source.luau
                                  ^
-                                 source.luau keyword.operator.type.luau
+                                 source.luau punctuation.definition.typeparameters.end.luau
                                   ^
                                   source.luau
                                    ^
@@ -317,7 +317,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                                               ^
                                               source.luau
                                                ^^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau keyword.operator.type.function.luau
                                                  ^
                                                  source.luau
                                                   ^^^^^^
@@ -343,7 +343,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                     ^^^^^^^^
                     source.luau entity.name.type.luau
                             ^
-                            source.luau keyword.operator.type.luau
+                            source.luau punctuation.definition.typeparameters.begin.luau
                              ^^^
                              source.luau
                                 ^^^
@@ -353,7 +353,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                                         ^^^
                                         source.luau support.type.primitive.luau
                                            ^
-                                           source.luau keyword.operator.type.luau
+                                           source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau
@@ -371,7 +371,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
            ^^^^^^^^
            source.luau entity.name.type.luau
                    ^
-                   source.luau keyword.operator.type.luau
+                   source.luau punctuation.definition.typeparameters.begin.luau
                     ^
                     source.luau
                      ^^^^^^
@@ -399,7 +399,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                                                                 ^
                                                                 source.luau
                                                                  ^
-                                                                 source.luau keyword.operator.type.luau
+                                                                 source.luau punctuation.definition.typeparameters.end.luau
                                                                   ^
                                                                   source.luau keyword.operator.type.luau
                                                                    ^

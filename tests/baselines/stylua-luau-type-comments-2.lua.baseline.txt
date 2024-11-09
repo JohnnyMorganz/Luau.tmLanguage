@@ -65,7 +65,7 @@ string
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
 >  T --[[ per-generic argument comment]]
  ^^
  source.luau
@@ -81,7 +81,7 @@ string
                                       source.luau comment.block.luau
 >> =
  ^
- source.luau keyword.operator.type.luau
+ source.luau punctuation.definition.typeparameters.end.luau
   ^
   source.luau
    ^
@@ -119,7 +119,7 @@ string
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
           ^
           source.luau entity.name.type.luau
            ^
@@ -145,7 +145,7 @@ string
              ^^
              source.luau comment.block.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.end.luau
                 ^
                 source.luau
                  ^
@@ -181,7 +181,7 @@ string
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
           ^
           source.luau entity.name.type.luau
 >--[[ Trailing comment ]]> = {}
@@ -192,7 +192,7 @@ string
                        ^^
                        source.luau comment.block.luau
                          ^
-                         source.luau keyword.operator.type.luau
+                         source.luau punctuation.definition.typeparameters.end.luau
                           ^
                           source.luau
                            ^

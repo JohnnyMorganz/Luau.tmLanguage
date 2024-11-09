@@ -18,7 +18,7 @@ export type Thenable<R, U> = {
              ^^^^^^^^
              source.luau entity.name.type.luau
                      ^
-                     source.luau keyword.operator.type.luau
+                     source.luau punctuation.definition.typeparameters.begin.luau
                       ^
                       source.luau entity.name.type.luau
                        ^^
@@ -26,7 +26,7 @@ export type Thenable<R, U> = {
                          ^
                          source.luau entity.name.type.luau
                           ^
-                          source.luau keyword.operator.type.luau
+                          source.luau punctuation.definition.typeparameters.end.luau
                            ^
                            source.luau
                             ^
@@ -59,7 +59,7 @@ export type Thenable<R, U> = {
                                    ^
                                    source.luau
                                     ^^
-                                    source.luau keyword.operator.type.luau
+                                    source.luau keyword.operator.type.function.luau
                                       ^
                                       source.luau
                                        ^
@@ -75,7 +75,7 @@ export type Thenable<R, U> = {
                                             ^^^^^^^^
                                             source.luau entity.name.type.luau
                                                     ^
-                                                    source.luau keyword.operator.type.luau
+                                                    source.luau punctuation.definition.typeparameters.begin.luau
                                                      ^
                                                      source.luau entity.name.type.luau
                                                       ^^
@@ -83,7 +83,7 @@ export type Thenable<R, U> = {
                                                         ^
                                                         source.luau entity.name.type.luau
                                                          ^
-                                                         source.luau keyword.operator.type.luau
+                                                         source.luau punctuation.definition.typeparameters.end.luau
                                                           ^
                                                           source.luau
                                                            ^
@@ -103,7 +103,7 @@ export type Thenable<R, U> = {
                                                                      ^
                                                                      source.luau
                                                                       ^^
-                                                                      source.luau keyword.operator.type.luau
+                                                                      source.luau keyword.operator.type.function.luau
                                                                         ^
                                                                         source.luau
                                                                          ^
@@ -119,7 +119,7 @@ export type Thenable<R, U> = {
                                                                               ^^^^^^^^
                                                                               source.luau entity.name.type.luau
                                                                                       ^
-                                                                                      source.luau keyword.operator.type.luau
+                                                                                      source.luau punctuation.definition.typeparameters.begin.luau
                                                                                        ^
                                                                                        source.luau entity.name.type.luau
                                                                                         ^^
@@ -127,7 +127,7 @@ export type Thenable<R, U> = {
                                                                                           ^
                                                                                           source.luau entity.name.type.luau
                                                                                            ^
-                                                                                           source.luau keyword.operator.type.luau
+                                                                                           source.luau punctuation.definition.typeparameters.end.luau
                                                                                             ^
                                                                                             source.luau
                                                                                              ^
@@ -141,7 +141,7 @@ export type Thenable<R, U> = {
                                                                                                  ^
                                                                                                  source.luau
                                                                                                   ^^
-                                                                                                  source.luau keyword.operator.type.luau
+                                                                                                  source.luau keyword.operator.type.function.luau
                                                                                                     ^
                                                                                                     source.luau
                                                                                                      ^
@@ -157,7 +157,7 @@ export type Thenable<R, U> = {
                                                                                                           ^^^^^^^^
                                                                                                           source.luau entity.name.type.luau
                                                                                                                   ^
-                                                                                                                  source.luau keyword.operator.type.luau
+                                                                                                                  source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                    ^
                                                                                                                    source.luau entity.name.type.luau
                                                                                                                     ^^
@@ -165,7 +165,7 @@ export type Thenable<R, U> = {
                                                                                                                       ^
                                                                                                                       source.luau entity.name.type.luau
                                                                                                                        ^
-                                                                                                                       source.luau keyword.operator.type.luau
+                                                                                                                       source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                         ^
                                                                                                                         source.luau punctuation.separator.fields.type.luau
 >}

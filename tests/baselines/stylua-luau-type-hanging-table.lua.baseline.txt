@@ -20,11 +20,11 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
       ^^^^^^^^^^^^^^^^^^^
       source.luau entity.name.type.luau
                          ^
-                         source.luau keyword.operator.type.luau
+                         source.luau punctuation.definition.typeparameters.begin.luau
                           ^^^^^^
                           source.luau entity.name.type.luau
                                 ^
-                                source.luau keyword.operator.type.luau
+                                source.luau punctuation.definition.typeparameters.end.luau
                                  ^
                                  source.luau
                                   ^
@@ -34,11 +34,11 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                                     ^^^^^^^^^^^^
                                     source.luau entity.name.type.luau
                                                 ^
-                                                source.luau keyword.operator.type.luau
+                                                source.luau punctuation.definition.typeparameters.begin.luau
                                                  ^^^^^^
                                                  source.luau entity.name.type.luau
                                                        ^
-                                                       source.luau keyword.operator.type.luau
+                                                       source.luau punctuation.definition.typeparameters.end.luau
                                                         ^
                                                         source.luau
                                                          ^
@@ -59,7 +59,7 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                             ^^^
                             source.luau entity.name.type.luau
                                ^
-                               source.luau keyword.operator.type.luau
+                               source.luau punctuation.definition.typeparameters.begin.luau
                                 ^^^^^^^^^^^^
                                 source.luau entity.name.type.luau
                                             ^^
@@ -67,7 +67,7 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                                               ^^^
                                               source.luau entity.name.type.luau
                                                  ^
-                                                 source.luau keyword.operator.type.luau
+                                                 source.luau punctuation.definition.typeparameters.begin.luau
                                                   ^^^^^^
                                                   source.luau support.type.primitive.luau
                                                         ^^
@@ -75,11 +75,11 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                                                           ^^^^^^^^^^
                                                           source.luau entity.name.type.luau
                                                                     ^
-                                                                    source.luau keyword.operator.type.luau
+                                                                    source.luau punctuation.definition.typeparameters.begin.luau
                                                                      ^^^^^^^^^^^
                                                                      source.luau entity.name.type.luau
                                                                                 ^
-                                                                                source.luau keyword.operator.type.luau
+                                                                                source.luau punctuation.definition.typeparameters.begin.luau
                                                                                  ^
                                                                                  source.luau
                                                                                   ^
@@ -103,7 +103,7 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                                                                                                     ^^^^^^
                                                                                                     source.luau entity.name.type.luau
                                                                                                           ^
-                                                                                                          source.luau keyword.operator.type.luau
+                                                                                                          source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                            ^^^^^^
                                                                                                            source.luau support.type.primitive.luau
                                                                                                                  ^^
@@ -111,13 +111,13 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                                                                                                                    ^^^
                                                                                                                    source.luau support.type.primitive.luau
                                                                                                                       ^
-                                                                                                                      source.luau keyword.operator.type.luau
+                                                                                                                      source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                        ^^
                                                                                                                        source.luau
                                                                                                                          ^^^^^^
                                                                                                                          source.luau entity.name.type.luau
                                                                                                                                ^
-                                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                               source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                 ^^^^^^
                                                                                                                                 source.luau support.type.primitive.luau
                                                                                                                                       ^
@@ -125,15 +125,15 @@ type QueryManagerPrivate<TStore> = QueryManager<TStore> & {
                                                                                                                                        ^^^
                                                                                                                                        source.luau support.type.primitive.luau
                                                                                                                                           ^
-                                                                                                                                          source.luau keyword.operator.type.luau
+                                                                                                                                          source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                            ^
-                                                                                                                                           source.luau keyword.operator.type.luau
+                                                                                                                                           source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                             ^
-                                                                                                                                            source.luau keyword.operator.type.luau
+                                                                                                                                            source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                              ^
-                                                                                                                                             source.luau keyword.operator.type.luau
+                                                                                                                                             source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                               ^
-                                                                                                                                              source.luau keyword.operator.type.luau
+                                                                                                                                              source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                                ^
                                                                                                                                                source.luau punctuation.separator.fields.type.luau
 >}

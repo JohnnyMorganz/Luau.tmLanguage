@@ -97,11 +97,11 @@ return {
       ^^^^^^^
       source.luau entity.name.type.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.begin.luau
               ^
               source.luau entity.name.type.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.end.luau
                 ^
                 source.luau
                  ^
@@ -115,11 +115,11 @@ return {
                                  ^^^^^^^
                                  source.luau entity.name.type.luau
                                         ^
-                                        source.luau keyword.operator.type.luau
+                                        source.luau punctuation.definition.typeparameters.begin.luau
                                          ^
                                          source.luau entity.name.type.luau
                                           ^
-                                          source.luau keyword.operator.type.luau
+                                          source.luau punctuation.definition.typeparameters.end.luau
 >type Resolver<T, U> = any
  ^^^^
  source.luau storage.type.luau
@@ -128,7 +128,7 @@ return {
       ^^^^^^^^
       source.luau entity.name.type.luau
               ^
-              source.luau keyword.operator.type.luau
+              source.luau punctuation.definition.typeparameters.begin.luau
                ^
                source.luau entity.name.type.luau
                 ^^
@@ -136,7 +136,7 @@ return {
                   ^
                   source.luau entity.name.type.luau
                    ^
-                   source.luau keyword.operator.type.luau
+                   source.luau punctuation.definition.typeparameters.end.luau
                     ^
                     source.luau
                      ^
@@ -268,7 +268,7 @@ return {
                     ^^^^^^^^
                     source.luau entity.name.type.luau
                             ^
-                            source.luau keyword.operator.type.luau
+                            source.luau punctuation.definition.typeparameters.begin.luau
                              ^^^
                              source.luau support.type.primitive.luau
                                 ^^
@@ -276,7 +276,7 @@ return {
                                   ^^^
                                   source.luau support.type.primitive.luau
                                      ^
-                                     source.luau keyword.operator.type.luau
+                                     source.luau punctuation.definition.typeparameters.end.luau
                                       ^
                                       source.luau keyword.operator.type.luau
                                        ^
@@ -293,7 +293,7 @@ return {
                              ^^^^^^^^
                              source.luau entity.name.type.luau
                                      ^
-                                     source.luau keyword.operator.type.luau
+                                     source.luau punctuation.definition.typeparameters.begin.luau
                                       ^^^
                                       source.luau support.type.primitive.luau
                                          ^^
@@ -301,7 +301,7 @@ return {
                                            ^^^
                                            source.luau support.type.primitive.luau
                                               ^
-                                              source.luau keyword.operator.type.luau
+                                              source.luau punctuation.definition.typeparameters.end.luau
                                                ^
                                                source.luau keyword.operator.type.luau
 >}
@@ -346,11 +346,11 @@ return {
       ^^^^^^^
       source.luau entity.name.type.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.begin.luau
               ^^^^^^
               source.luau entity.name.type.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.end.luau
 >  error("nope")
  ^^
  source.luau
@@ -473,7 +473,7 @@ return {
                   ^^^^^^^^
                   source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                           ^
-                          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                          source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.begin.luau
                            ^^^
                            source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
                               ^^
@@ -481,7 +481,7 @@ return {
                                 ^^^
                                 source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
                                    ^
-                                   source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.end.luau
                                     ^
                                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
 >  ): Promise<Result>
@@ -496,11 +496,11 @@ return {
       ^^^^^^^
       source.luau entity.name.type.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.begin.luau
               ^^^^^^
               source.luau entity.name.type.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.end.luau
 >  error("nope")
  ^^
  source.luau

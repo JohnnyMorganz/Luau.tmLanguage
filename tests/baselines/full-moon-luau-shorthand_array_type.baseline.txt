@@ -12,11 +12,11 @@ type Array<T> = { [number]: T }
       ^^^^^
       source.luau entity.name.type.luau
            ^
-           source.luau keyword.operator.type.luau
+           source.luau punctuation.definition.typeparameters.begin.luau
             ^
             source.luau entity.name.type.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.end.luau
               ^
               source.luau
                ^
@@ -41,11 +41,11 @@ type Array<T> = { [number]: T }
       ^^^^^
       source.luau entity.name.type.luau
            ^
-           source.luau keyword.operator.type.luau
+           source.luau punctuation.definition.typeparameters.begin.luau
             ^
             source.luau entity.name.type.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.end.luau
               ^
               source.luau
                ^

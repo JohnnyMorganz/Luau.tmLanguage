@@ -42,7 +42,7 @@ Y
              ^^^^^^^^^^^^^^^^^^^^^
              source.luau entity.name.type.luau
                                   ^
-                                  source.luau keyword.operator.type.luau
+                                  source.luau punctuation.definition.typeparameters.begin.luau
                                    ^^^^^
                                    source.luau entity.name.type.luau
                                         ^^
@@ -50,7 +50,7 @@ Y
                                           ^^^^^^^^^^
                                           source.luau entity.name.type.luau
                                                     ^
-                                                    source.luau keyword.operator.type.luau
+                                                    source.luau punctuation.definition.typeparameters.end.luau
                                                      ^
                                                      source.luau
                                                       ^
@@ -60,7 +60,7 @@ Y
                                                         ^^^^^^^^^^^^^^^^^^^
                                                         source.luau entity.name.type.luau
                                                                            ^
-                                                                           source.luau keyword.operator.type.luau
+                                                                           source.luau punctuation.definition.typeparameters.begin.luau
                                                                             ^^^^^
                                                                             source.luau entity.name.type.luau
                                                                                  ^^
@@ -68,7 +68,7 @@ Y
                                                                                    ^^^^^^^^^^
                                                                                    source.luau entity.name.type.luau
                                                                                              ^
-                                                                                             source.luau keyword.operator.type.luau
+                                                                                             source.luau punctuation.definition.typeparameters.end.luau
                                                                                               ^
                                                                                               source.luau
                                                                                                ^
@@ -115,7 +115,7 @@ Y
                            ^^^^^^^^^^^^^^^^^^^^^
                            source.luau entity.name.type.luau
                                                 ^
-                                                source.luau keyword.operator.type.luau
+                                                source.luau punctuation.definition.typeparameters.begin.luau
                                                  ^^^^^^^^^^
                                                  source.luau entity.name.type.luau
                                                            ^^
@@ -123,7 +123,7 @@ Y
                                                              ^^^^^
                                                              source.luau entity.name.type.luau
                                                                   ^
-                                                                  source.luau keyword.operator.type.luau
+                                                                  source.luau punctuation.definition.typeparameters.end.luau
                                                                    ^
                                                                    source.luau
                                                                     ^
@@ -133,7 +133,7 @@ Y
                                                                       ^^^^^^^^^^^^^^^^
                                                                       source.luau entity.name.type.luau
                                                                                       ^
-                                                                                      source.luau keyword.operator.type.luau
+                                                                                      source.luau punctuation.definition.typeparameters.begin.luau
                                                                                        ^^^^^
                                                                                        source.luau entity.name.type.luau
                                                                                             ^^
@@ -141,7 +141,7 @@ Y
                                                                                               ^^^^^^^^^^
                                                                                               source.luau entity.name.type.luau
                                                                                                         ^
-                                                                                                        source.luau keyword.operator.type.luau
+                                                                                                        source.luau punctuation.definition.typeparameters.end.luau
 >    ) -> Promise<ApolloQueryResult<TData>>) & ((<TData2, TVariables2>(
  ^^^^
  source.luau
@@ -150,23 +150,23 @@ Y
       ^
       source.luau
        ^^
-       source.luau keyword.operator.type.luau
+       source.luau keyword.operator.type.function.luau
          ^
          source.luau
           ^^^^^^^
           source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^^^^^^^^^^^^^^^
                   source.luau entity.name.type.luau
                                    ^
-                                   source.luau keyword.operator.type.luau
+                                   source.luau punctuation.definition.typeparameters.begin.luau
                                     ^^^^^
                                     source.luau entity.name.type.luau
                                          ^
-                                         source.luau keyword.operator.type.luau
+                                         source.luau punctuation.definition.typeparameters.end.luau
                                           ^
-                                          source.luau keyword.operator.type.luau
+                                          source.luau punctuation.definition.typeparameters.end.luau
                                            ^
                                            source.luau
                                             ^
@@ -180,7 +180,7 @@ Y
                                                 ^
                                                 source.luau
                                                  ^
-                                                 source.luau keyword.operator.type.luau
+                                                 source.luau punctuation.definition.typeparameters.begin.luau
                                                   ^^^^^^
                                                   source.luau entity.name.type.luau
                                                         ^^
@@ -188,7 +188,7 @@ Y
                                                           ^^^^^^^^^^^
                                                           source.luau entity.name.type.luau
                                                                      ^
-                                                                     source.luau keyword.operator.type.luau
+                                                                     source.luau punctuation.definition.typeparameters.end.luau
                                                                       ^
                                                                       source.luau
 >        _self: any,
@@ -236,7 +236,7 @@ Y
                                                     ^^^^^^^^^^^^^^^^^
                                                     source.luau entity.name.type.luau
                                                                      ^
-                                                                     source.luau keyword.operator.type.luau
+                                                                     source.luau punctuation.definition.typeparameters.begin.luau
                                                                       ^^^^^
                                                                       source.luau entity.name.type.luau
                                                                            ^^
@@ -244,7 +244,7 @@ Y
                                                                              ^^^^^^^^^^
                                                                              source.luau entity.name.type.luau
                                                                                        ^
-                                                                                       source.luau keyword.operator.type.luau
+                                                                                       source.luau punctuation.definition.typeparameters.end.luau
                                                                                         ^
                                                                                         source.luau
                                                                                          ^
@@ -262,7 +262,7 @@ Y
                                                                                                ^^^^^^^^^^^^^^^^^^^^^
                                                                                                source.luau entity.name.type.luau
                                                                                                                     ^
-                                                                                                                    source.luau keyword.operator.type.luau
+                                                                                                                    source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                      ^^^^^^^^^^^
                                                                                                                      source.luau entity.name.type.luau
                                                                                                                                 ^^
@@ -270,7 +270,7 @@ Y
                                                                                                                                   ^^^^^
                                                                                                                                   source.luau entity.name.type.luau
                                                                                                                                        ^
-                                                                                                                                       source.luau keyword.operator.type.luau
+                                                                                                                                       source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                         ^
                                                                                                                                         source.luau
                                                                                                                                          ^
@@ -280,7 +280,7 @@ Y
                                                                                                                                            ^^^^^^^^^^^^^^^^
                                                                                                                                            source.luau entity.name.type.luau
                                                                                                                                                            ^
-                                                                                                                                                           source.luau keyword.operator.type.luau
+                                                                                                                                                           source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                                             ^^^^^^
                                                                                                                                                             source.luau entity.name.type.luau
                                                                                                                                                                   ^^
@@ -288,7 +288,7 @@ Y
                                                                                                                                                                     ^^^^^^^^^^^
                                                                                                                                                                     source.luau entity.name.type.luau
                                                                                                                                                                                ^
-                                                                                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                                                                               source.luau punctuation.definition.typeparameters.end.luau
 >    ) -> Promise<ApolloQueryResult<TData2>>)),
  ^^^^
  source.luau
@@ -297,23 +297,23 @@ Y
       ^
       source.luau
        ^^
-       source.luau keyword.operator.type.luau
+       source.luau keyword.operator.type.function.luau
          ^
          source.luau
           ^^^^^^^
           source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^^^^^^^^^^^^^^^
                   source.luau entity.name.type.luau
                                    ^
-                                   source.luau keyword.operator.type.luau
+                                   source.luau punctuation.definition.typeparameters.begin.luau
                                     ^^^^^^
                                     source.luau entity.name.type.luau
                                           ^
-                                          source.luau keyword.operator.type.luau
+                                          source.luau punctuation.definition.typeparameters.end.luau
                                            ^
-                                           source.luau keyword.operator.type.luau
+                                           source.luau punctuation.definition.typeparameters.end.luau
                                             ^
                                             source.luau
                                              ^
@@ -338,7 +338,7 @@ Y
              ^^^^^^^^^^^^^^^^^^^^^
              source.luau entity.name.type.luau
                                   ^
-                                  source.luau keyword.operator.type.luau
+                                  source.luau punctuation.definition.typeparameters.begin.luau
                                    ^^^^^
                                    source.luau entity.name.type.luau
                                         ^^
@@ -346,7 +346,7 @@ Y
                                           ^^^^^^^^^^
                                           source.luau entity.name.type.luau
                                                     ^
-                                                    source.luau keyword.operator.type.luau
+                                                    source.luau punctuation.definition.typeparameters.end.luau
                                                      ^
                                                      source.luau
                                                       ^
@@ -356,7 +356,7 @@ Y
                                                         ^^^^^^^^^^^^^^^^^^^
                                                         source.luau entity.name.type.luau
                                                                            ^
-                                                                           source.luau keyword.operator.type.luau
+                                                                           source.luau punctuation.definition.typeparameters.begin.luau
                                                                             ^^^^^
                                                                             source.luau entity.name.type.luau
                                                                                  ^^
@@ -364,7 +364,7 @@ Y
                                                                                    ^^^^^^^^^^
                                                                                    source.luau entity.name.type.luau
                                                                                              ^
-                                                                                             source.luau keyword.operator.type.luau
+                                                                                             source.luau punctuation.definition.typeparameters.end.luau
                                                                                               ^
                                                                                               source.luau
                                                                                                ^
@@ -405,7 +405,7 @@ Y
     ^^^^^^^^^^^^^^^^^^^^^
     source.luau entity.name.type.luau
                          ^
-                         source.luau keyword.operator.type.luau
+                         source.luau punctuation.definition.typeparameters.begin.luau
                           ^^^^^^^^^^
                           source.luau entity.name.type.luau
                                     ^^
@@ -413,7 +413,7 @@ Y
                                       ^^^^^
                                       source.luau entity.name.type.luau
                                            ^
-                                           source.luau keyword.operator.type.luau
+                                           source.luau punctuation.definition.typeparameters.end.luau
                                             ^
                                             source.luau
                                              ^
@@ -423,7 +423,7 @@ Y
                                                ^^^^^^^^^^^^^^^^
                                                source.luau entity.name.type.luau
                                                                ^
-                                                               source.luau keyword.operator.type.luau
+                                                               source.luau punctuation.definition.typeparameters.begin.luau
                                                                 ^^^^^
                                                                 source.luau entity.name.type.luau
                                                                      ^^
@@ -431,7 +431,7 @@ Y
                                                                        ^^^^^^^^^^
                                                                        source.luau entity.name.type.luau
                                                                                  ^
-                                                                                 source.luau keyword.operator.type.luau
+                                                                                 source.luau punctuation.definition.typeparameters.end.luau
 >  ) -> Promise<ApolloQueryResult<TData>>) & ((
  ^^
  source.luau
@@ -440,23 +440,23 @@ Y
     ^
     source.luau
      ^^
-     source.luau keyword.operator.type.luau
+     source.luau keyword.operator.type.function.luau
        ^
        source.luau
         ^^^^^^^
         source.luau entity.name.type.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.begin.luau
                 ^^^^^^^^^^^^^^^^^
                 source.luau entity.name.type.luau
                                  ^
-                                 source.luau keyword.operator.type.luau
+                                 source.luau punctuation.definition.typeparameters.begin.luau
                                   ^^^^^
                                   source.luau entity.name.type.luau
                                        ^
-                                       source.luau keyword.operator.type.luau
+                                       source.luau punctuation.definition.typeparameters.end.luau
                                         ^
-                                        source.luau keyword.operator.type.luau
+                                        source.luau punctuation.definition.typeparameters.end.luau
                                          ^
                                          source.luau
                                           ^
@@ -502,7 +502,7 @@ Y
                              ^^^^^^^^^^^^^^^^^
                              source.luau entity.name.type.luau
                                               ^
-                                              source.luau keyword.operator.type.luau
+                                              source.luau punctuation.definition.typeparameters.begin.luau
                                                ^^^^^
                                                source.luau entity.name.type.luau
                                                     ^^
@@ -510,7 +510,7 @@ Y
                                                       ^^^^^^^^^^
                                                       source.luau entity.name.type.luau
                                                                 ^
-                                                                source.luau keyword.operator.type.luau
+                                                                source.luau punctuation.definition.typeparameters.end.luau
                                                                  ^
                                                                  source.luau
                                                                   ^
@@ -528,7 +528,7 @@ Y
                                                                         ^^^^^^^^^^^^^^^^^^^^^
                                                                         source.luau entity.name.type.luau
                                                                                              ^
-                                                                                             source.luau keyword.operator.type.luau
+                                                                                             source.luau punctuation.definition.typeparameters.begin.luau
                                                                                               ^^^
                                                                                               source.luau support.type.primitive.luau
                                                                                                  ^^
@@ -536,7 +536,7 @@ Y
                                                                                                    ^^^^^
                                                                                                    source.luau entity.name.type.luau
                                                                                                         ^
-                                                                                                        source.luau keyword.operator.type.luau
+                                                                                                        source.luau punctuation.definition.typeparameters.end.luau
                                                                                                          ^
                                                                                                          source.luau
                                                                                                           ^
@@ -546,7 +546,7 @@ Y
                                                                                                             ^^^^^^^^^^^^^^^^
                                                                                                             source.luau entity.name.type.luau
                                                                                                                             ^
-                                                                                                                            source.luau keyword.operator.type.luau
+                                                                                                                            source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                              ^^^
                                                                                                                              source.luau support.type.primitive.luau
                                                                                                                                 ^^
@@ -554,7 +554,7 @@ Y
                                                                                                                                   ^^^
                                                                                                                                   source.luau support.type.primitive.luau
                                                                                                                                      ^
-                                                                                                                                     source.luau keyword.operator.type.luau
+                                                                                                                                     source.luau punctuation.definition.typeparameters.end.luau
 >  ) -> Promise<ApolloQueryResult<any>>),
  ^^
  source.luau
@@ -563,23 +563,23 @@ Y
     ^
     source.luau
      ^^
-     source.luau keyword.operator.type.luau
+     source.luau keyword.operator.type.function.luau
        ^
        source.luau
         ^^^^^^^
         source.luau entity.name.type.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.begin.luau
                 ^^^^^^^^^^^^^^^^^
                 source.luau entity.name.type.luau
                                  ^
-                                 source.luau keyword.operator.type.luau
+                                 source.luau punctuation.definition.typeparameters.begin.luau
                                   ^^^
                                   source.luau support.type.primitive.luau
                                      ^
-                                     source.luau keyword.operator.type.luau
+                                     source.luau punctuation.definition.typeparameters.end.luau
                                       ^
-                                      source.luau keyword.operator.type.luau
+                                      source.luau punctuation.definition.typeparameters.end.luau
                                        ^
                                        source.luau
                                         ^
@@ -637,7 +637,7 @@ Y
   ^
   source.luau
    ^^
-   source.luau keyword.operator.type.luau
+   source.luau keyword.operator.type.function.luau
      ^
      source.luau
       ^^^^^^
@@ -665,7 +665,7 @@ Y
               ^
               source.luau
                ^^
-               source.luau keyword.operator.type.luau
+               source.luau keyword.operator.type.function.luau
                  ^
                  source.luau
                   ^

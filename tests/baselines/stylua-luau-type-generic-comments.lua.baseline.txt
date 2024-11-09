@@ -24,7 +24,7 @@ export type IntrospectionNamedTypeRef<
              ^^^^^^^^^^^^^^^^^^^^^^^^^
              source.luau entity.name.type.luau
                                       ^
-                                      source.luau keyword.operator.type.luau
+                                      source.luau punctuation.definition.typeparameters.begin.luau
 >  T -- XYZ ABC
  ^^
  source.luau
@@ -38,7 +38,7 @@ export type IntrospectionNamedTypeRef<
        source.luau comment.line.double-dash.luau
 >> = {}
  ^
- source.luau keyword.operator.type.luau
+ source.luau punctuation.definition.typeparameters.end.luau
   ^
   source.luau
    ^

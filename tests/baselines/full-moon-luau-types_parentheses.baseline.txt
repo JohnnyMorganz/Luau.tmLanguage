@@ -44,7 +44,7 @@ type IProperties = {
       ^^^^^^
       source.luau entity.name.type.luau
             ^
-            source.luau keyword.operator.type.luau
+            source.luau punctuation.definition.typeparameters.begin.luau
              ^^^^^^
              source.luau entity.name.type.luau
                    ^^
@@ -52,7 +52,7 @@ type IProperties = {
                      ^^^^^^^^^
                      source.luau entity.name.type.luau
                               ^
-                              source.luau keyword.operator.type.luau
+                              source.luau punctuation.definition.typeparameters.end.luau
                                ^
                                source.luau
                                 ^
@@ -111,13 +111,13 @@ type IProperties = {
                      ^
                      source.luau meta.function.luau meta.parameter.luau
                       ^^
-                      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                      source.luau meta.function.luau meta.parameter.luau keyword.operator.type.function.luau
                         ^
                         source.luau meta.function.luau meta.parameter.luau
                          ^^^^^^
                          source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                ^
-                               source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                               source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.begin.luau
                                 ^^^
                                 source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
                                    ^^
@@ -125,7 +125,7 @@ type IProperties = {
                                      ^^^
                                      source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
                                         ^
-                                        source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                        source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.end.luau
                                          ^
                                          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
                                           ^
@@ -153,11 +153,11 @@ type IProperties = {
              ^^^^^
              source.luau entity.name.type.luau
                   ^
-                  source.luau keyword.operator.type.luau
+                  source.luau punctuation.definition.typeparameters.begin.luau
                    ^
                    source.luau entity.name.type.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.end.luau
                      ^
                      source.luau
                       ^
@@ -173,7 +173,7 @@ type IProperties = {
                            ^
                            source.luau
                             ^^
-                            source.luau keyword.operator.type.luau
+                            source.luau keyword.operator.type.function.luau
                               ^
                               source.luau
                                ^
@@ -203,11 +203,11 @@ type IProperties = {
              ^^^^^^^^^^^
              source.luau entity.name.type.luau
                         ^
-                        source.luau keyword.operator.type.luau
+                        source.luau punctuation.definition.typeparameters.begin.luau
                          ^
                          source.luau entity.name.type.luau
                           ^
-                          source.luau keyword.operator.type.luau
+                          source.luau punctuation.definition.typeparameters.end.luau
                            ^
                            source.luau
                             ^
@@ -241,7 +241,7 @@ type IProperties = {
                      ^
                      source.luau
                       ^^
-                      source.luau keyword.operator.type.luau
+                      source.luau keyword.operator.type.function.luau
                         ^
                         source.luau
                          ^
@@ -261,11 +261,11 @@ type IProperties = {
                                 ^^^^^^^^^^^
                                 source.luau entity.name.type.luau
                                            ^
-                                           source.luau keyword.operator.type.luau
+                                           source.luau punctuation.definition.typeparameters.begin.luau
                                             ^
                                             source.luau entity.name.type.luau
                                              ^
-                                             source.luau keyword.operator.type.luau
+                                             source.luau punctuation.definition.typeparameters.end.luau
                                               ^
                                               source.luau
                                                ^
@@ -290,7 +290,7 @@ type IProperties = {
                        ^
                        source.luau
                         ^^
-                        source.luau keyword.operator.type.luau
+                        source.luau keyword.operator.type.function.luau
                           ^
                           source.luau
                            ^
@@ -306,11 +306,11 @@ type IProperties = {
                                 ^^^^^^^^^^^
                                 source.luau entity.name.type.luau
                                            ^
-                                           source.luau keyword.operator.type.luau
+                                           source.luau punctuation.definition.typeparameters.begin.luau
                                             ^
                                             source.luau entity.name.type.luau
                                              ^
-                                             source.luau keyword.operator.type.luau
+                                             source.luau punctuation.definition.typeparameters.end.luau
                                               ^
                                               source.luau
                                                ^
@@ -329,17 +329,17 @@ type IProperties = {
           ^
           source.luau
            ^^
-           source.luau keyword.operator.type.luau
+           source.luau keyword.operator.type.function.luau
              ^
              source.luau
               ^^^^^^^^^^^
               source.luau entity.name.type.luau
                          ^
-                         source.luau keyword.operator.type.luau
+                         source.luau punctuation.definition.typeparameters.begin.luau
                           ^
                           source.luau entity.name.type.luau
                            ^
-                           source.luau keyword.operator.type.luau
+                           source.luau punctuation.definition.typeparameters.end.luau
 >}
  ^
  source.luau
@@ -580,7 +580,7 @@ type IProperties = {
                                                                                                 ^
                                                                                                 source.luau
                                                                                                  ^^
-                                                                                                 source.luau keyword.operator.type.luau
+                                                                                                 source.luau keyword.operator.type.function.luau
                                                                                                    ^
                                                                                                    source.luau
                                                                                                     ^^^^^^^

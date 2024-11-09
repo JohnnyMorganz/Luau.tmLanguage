@@ -349,7 +349,7 @@ repository:
       - match: "\\?|\\&|\\|"
         name: keyword.operator.type.luau
       - match: "->"
-        name: keyword.operator.type.luau
+        name: keyword.operator.type.function.luau
       - match: "\\b(false)\\b"
         name: constant.language.boolean.false.luau
       - match: "\\b(true)\\b"
@@ -368,9 +368,9 @@ repository:
       - begin: "(<)"
         end: "(>)"
         beginCaptures:
-          "1": { name: keyword.operator.type.luau }
+          "1": { name: punctuation.definition.typeparameters.begin.luau }
         endCaptures:
-          "1": { name: keyword.operator.type.luau }
+          "1": { name: punctuation.definition.typeparameters.end.luau }
         patterns:
           - match: "=" # for generics declarations
             name: keyword.operator.assignment.luau
@@ -408,4 +408,4 @@ repository:
         match: "(@)({{identifier}})"
         captures:
           "1": { name: keyword.operator.attribute.luau }
-          "2": { name: storage.type.attribute.luau}
+          "2": { name: storage.type.attribute.luau }

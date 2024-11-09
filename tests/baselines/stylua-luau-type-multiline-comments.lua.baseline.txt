@@ -99,11 +99,11 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                ^^^^^^^^^^^^^^
                source.luau entity.name.type.luau
                              ^
-                             source.luau keyword.operator.type.luau
+                             source.luau punctuation.definition.typeparameters.begin.luau
                               ^^^
                               source.luau support.type.primitive.luau
                                  ^
-                                 source.luau keyword.operator.type.luau
+                                 source.luau punctuation.definition.typeparameters.end.luau
                                   ^
                                   source.luau keyword.operator.type.luau
                                    ^
@@ -135,11 +135,11 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                       ^^^^^
                       source.luau entity.name.type.luau
                            ^
-                           source.luau keyword.operator.type.luau
+                           source.luau punctuation.definition.typeparameters.begin.luau
                             ^^^^^^^^^^^^^^^^^^^^^
                             source.luau entity.name.type.luau
                                                  ^
-                                                 source.luau keyword.operator.type.luau
+                                                 source.luau punctuation.definition.typeparameters.end.luau
                                                   ^
                                                   source.luau keyword.operator.type.luau
                                                    ^
@@ -159,7 +159,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
             ^^^^^
             source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^^^^^^^^^^^^^^
                   source.luau entity.name.type.luau
                                   ^
@@ -171,7 +171,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                             ^^
                                             source.luau comment.block.luau
                                               ^
-                                              source.luau keyword.operator.type.luau
+                                              source.luau punctuation.definition.typeparameters.end.luau
                                                ^
                                                source.luau punctuation.separator.fields.type.luau
 >  _valueLookup: Map<any --[[ T ]], GraphQLEnumValue>,
@@ -186,7 +186,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                  ^^^
                  source.luau entity.name.type.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.begin.luau
                      ^^^
                      source.luau support.type.primitive.luau
                         ^
@@ -202,7 +202,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                     ^^^^^^^^^^^^^^^^
                                     source.luau entity.name.type.luau
                                                     ^
-                                                    source.luau keyword.operator.type.luau
+                                                    source.luau punctuation.definition.typeparameters.end.luau
                                                      ^
                                                      source.luau punctuation.separator.fields.type.luau
 >  _nameLookup: ObjMap<GraphQLEnumValue>,
@@ -217,11 +217,11 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                 ^^^^^^
                 source.luau entity.name.type.luau
                       ^
-                      source.luau keyword.operator.type.luau
+                      source.luau punctuation.definition.typeparameters.begin.luau
                        ^^^^^^^^^^^^^^^^
                        source.luau entity.name.type.luau
                                        ^
-                                       source.luau keyword.operator.type.luau
+                                       source.luau punctuation.definition.typeparameters.end.luau
                                         ^
                                         source.luau punctuation.separator.fields.type.luau
 >  -- ROBLOX deviation: add self parameter for all ':' operator methods
@@ -255,13 +255,13 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                      ^
                                      source.luau
                                       ^^
-                                      source.luau keyword.operator.type.luau
+                                      source.luau keyword.operator.type.function.luau
                                         ^
                                         source.luau
                                          ^^^^^
                                          source.luau entity.name.type.luau
                                               ^
-                                              source.luau keyword.operator.type.luau
+                                              source.luau punctuation.definition.typeparameters.begin.luau
                                                ^^^^^^^^^^^^^^^^
                                                source.luau entity.name.type.luau
                                                                ^
@@ -273,7 +273,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                                                          ^^
                                                                          source.luau comment.block.luau
                                                                            ^
-                                                                           source.luau keyword.operator.type.luau
+                                                                           source.luau punctuation.definition.typeparameters.end.luau
                                                                             ^
                                                                             source.luau punctuation.separator.fields.type.luau
 >  getValue: (self: GraphQLEnumType, string) -> GraphQLEnumValue?,
@@ -304,7 +304,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                             ^
                                             source.luau
                                              ^^
-                                             source.luau keyword.operator.type.luau
+                                             source.luau keyword.operator.type.function.luau
                                                ^
                                                source.luau
                                                 ^^^^^^^^^^^^^^^^
@@ -358,7 +358,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
     ^
     source.luau
      ^^
-     source.luau keyword.operator.type.luau
+     source.luau keyword.operator.type.function.luau
        ^
        source.luau
         ^^^^^^
@@ -395,7 +395,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                            ^
                                            source.luau
                                             ^^
-                                            source.luau keyword.operator.type.luau
+                                            source.luau keyword.operator.type.function.luau
                                               ^
                                               source.luau
                                                ^^^
@@ -440,11 +440,11 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                                     ^^^^^^
                                                     source.luau entity.name.type.luau
                                                           ^
-                                                          source.luau keyword.operator.type.luau
+                                                          source.luau punctuation.definition.typeparameters.begin.luau
                                                            ^^^
                                                            source.luau support.type.primitive.luau
                                                               ^
-                                                              source.luau keyword.operator.type.luau
+                                                              source.luau punctuation.definition.typeparameters.end.luau
                                                                ^
                                                                source.luau keyword.operator.type.luau
                                                                 ^
@@ -452,7 +452,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                                                  ^
                                                                  source.luau
                                                                   ^^
-                                                                  source.luau keyword.operator.type.luau
+                                                                  source.luau keyword.operator.type.function.luau
                                                                     ^
                                                                     source.luau
                                                                      ^^^
@@ -493,7 +493,7 @@ export type GraphQLEnumType =  --[[ <T> ]]{
                                     ^
                                     source.luau
                                      ^^
-                                     source.luau keyword.operator.type.luau
+                                     source.luau keyword.operator.type.function.luau
                                        ^
                                        source.luau
                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

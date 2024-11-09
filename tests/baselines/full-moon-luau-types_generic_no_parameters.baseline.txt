@@ -20,9 +20,9 @@ type Baz = module.Foo<>
             ^^^
             source.luau entity.name.type.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.begin.luau
                 ^
-                source.luau keyword.operator.type.luau
+                source.luau punctuation.definition.typeparameters.end.luau
 >type Baz = module.Foo<>
  ^^^^
  source.luau storage.type.luau
@@ -43,6 +43,6 @@ type Baz = module.Foo<>
                    ^^^
                    source.luau entity.name.type.luau
                       ^
-                      source.luau keyword.operator.type.luau
+                      source.luau punctuation.definition.typeparameters.begin.luau
                        ^
-                       source.luau keyword.operator.type.luau
+                       source.luau punctuation.definition.typeparameters.end.luau

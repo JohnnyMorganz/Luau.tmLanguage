@@ -58,17 +58,17 @@ end
                   ^
                   source.luau meta.function.luau meta.parameter.luau
                    ^^
-                   source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                   source.luau meta.function.luau meta.parameter.luau keyword.operator.type.function.luau
                      ^
                      source.luau meta.function.luau meta.parameter.luau
                       ^^^^^^^^
                       source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                               ^
-                              source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                              source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.begin.luau
                                ^^^^^
                                source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                     ^
-                                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.end.luau
                                      ^
                                      source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
 >  hasInput: (Input) -> Key,
@@ -89,7 +89,7 @@ end
                     ^
                     source.luau meta.function.luau meta.parameter.luau
                      ^^
-                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.function.luau
                        ^
                        source.luau meta.function.luau meta.parameter.luau
                         ^^^
@@ -119,7 +119,7 @@ end
     ^^^^^^^^
     source.luau entity.name.type.luau
             ^
-            source.luau keyword.operator.type.luau
+            source.luau punctuation.definition.typeparameters.begin.luau
              ^^^^^
              source.luau entity.name.type.luau
                   ^^
@@ -131,7 +131,7 @@ end
                          ^^^^^
                          source.luau entity.name.type.luau
                               ^
-                              source.luau keyword.operator.type.luau
+                              source.luau punctuation.definition.typeparameters.end.luau
 >  config = config or {}
  ^^
  source.luau

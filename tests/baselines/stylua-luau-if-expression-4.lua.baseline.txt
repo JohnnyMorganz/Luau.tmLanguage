@@ -277,11 +277,11 @@ end
                                           ^^^^^
                                           source.luau entity.name.type.luau
                                                ^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau punctuation.definition.typeparameters.begin.luau
                                                 ^^^
                                                 source.luau support.type.primitive.luau
                                                    ^
-                                                   source.luau keyword.operator.type.luau
+                                                   source.luau punctuation.definition.typeparameters.end.luau
                                                     ^
                                                     source.luau punctuation.arguments.end.luau
                                                      ^
@@ -390,7 +390,7 @@ end
                             ^^^^^^^^^^^^^^^^^
                             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                              ^
-                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                             source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.begin.luau
                                               ^^^^^
                                               source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                                    ^^
@@ -398,7 +398,7 @@ end
                                                      ^^^^^^^^
                                                      source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                                              ^
-                                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                             source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.end.luau
                                                               ^
                                                               source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
 >  options: MutationHookOptions_<TData, TVariables, TContext>?
@@ -413,7 +413,7 @@ end
             ^^^^^^^^^^^^^^^^^^^^
             source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                 ^
-                                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.begin.luau
                                  ^^^^^
                                  source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                       ^^
@@ -425,7 +425,7 @@ end
                                                     ^^^^^^^^
                                                     source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
                                                             ^
-                                                            source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                            source.luau meta.function.luau meta.parameter.luau punctuation.definition.typeparameters.end.luau
                                                              ^
                                                              source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
 >): MutationTuple<TData, TVariables, TContext, TCache>
@@ -438,7 +438,7 @@ end
     ^^^^^^^^^^^^^
     source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^^^
                   source.luau entity.name.type.luau
                        ^^
@@ -454,7 +454,7 @@ end
                                                ^^^^^^
                                                source.luau entity.name.type.luau
                                                      ^
-                                                     source.luau keyword.operator.type.luau
+                                                     source.luau punctuation.definition.typeparameters.end.luau
 >  local context = useContext(getApolloContext())
  ^^
  source.luau

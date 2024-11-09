@@ -194,11 +194,11 @@ local fn: SomeType<(string, number), (boolean)>
                                                                 ^^^^^^
                                                                 source.luau entity.name.type.luau
                                                                       ^
-                                                                      source.luau keyword.operator.type.luau
+                                                                      source.luau punctuation.definition.typeparameters.begin.luau
                                                                        ^^^^^
                                                                        source.luau entity.name.type.luau
                                                                             ^
-                                                                            source.luau keyword.operator.type.luau
+                                                                            source.luau punctuation.definition.typeparameters.end.luau
                                                                              ^
                                                                              source.luau punctuation.arguments.end.luau
 >
@@ -232,11 +232,11 @@ local fn: SomeType<(string, number), (boolean)>
                       ^^^^^
                       source.luau entity.name.type.luau
                            ^
-                           source.luau keyword.operator.type.luau
+                           source.luau punctuation.definition.typeparameters.begin.luau
                             ^^^^^^
                             source.luau support.type.primitive.luau
                                   ^
-                                  source.luau keyword.operator.type.luau
+                                  source.luau punctuation.definition.typeparameters.end.luau
                                    ^
                                    source.luau punctuation.arguments.end.luau
 >
@@ -364,7 +364,7 @@ local fn: SomeType<(string, number), (boolean)>
                                       ^
                                       source.luau
                                        ^^
-                                       source.luau keyword.operator.type.luau
+                                       source.luau keyword.operator.type.function.luau
                                          ^
                                          source.luau
                                           ^^^
@@ -760,7 +760,7 @@ local fn: SomeType<(string, number), (boolean)>
                    ^
                    source.luau
                     ^^
-                    source.luau keyword.operator.type.luau
+                    source.luau keyword.operator.type.function.luau
                       ^
                       source.luau
                        ^^^^^^
@@ -784,7 +784,7 @@ local fn: SomeType<(string, number), (boolean)>
                                           ^
                                           source.luau
                                            ^^
-                                           source.luau keyword.operator.type.luau
+                                           source.luau keyword.operator.type.function.luau
                                              ^
                                              source.luau
                                               ^^^^^^
@@ -869,7 +869,7 @@ local fn: SomeType<(string, number), (boolean)>
       ^^^^^^^^
       source.luau entity.name.type.luau
               ^
-              source.luau keyword.operator.type.luau
+              source.luau punctuation.definition.typeparameters.begin.luau
                ^
                source.luau entity.name.type.luau
                 ^^^^^
@@ -879,7 +879,7 @@ local fn: SomeType<(string, number), (boolean)>
                       ^^^
                       source.luau
                          ^
-                         source.luau keyword.operator.type.luau
+                         source.luau punctuation.definition.typeparameters.end.luau
                           ^
                           source.luau
                            ^
@@ -897,7 +897,7 @@ local fn: SomeType<(string, number), (boolean)>
                                    ^
                                    source.luau
                                     ^^
-                                    source.luau keyword.operator.type.luau
+                                    source.luau keyword.operator.type.function.luau
                                       ^
                                       source.luau
                                        ^
@@ -918,7 +918,7 @@ local fn: SomeType<(string, number), (boolean)>
            ^^^^^^^^
            source.luau entity.name.type.luau
                    ^
-                   source.luau keyword.operator.type.luau
+                   source.luau punctuation.definition.typeparameters.begin.luau
                     ^
                     source.luau
                      ^^^^^^
@@ -938,7 +938,7 @@ local fn: SomeType<(string, number), (boolean)>
                                               ^
                                               source.luau
                                                ^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau

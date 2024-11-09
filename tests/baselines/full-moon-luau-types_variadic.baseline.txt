@@ -56,7 +56,7 @@ type T = Fn<...'ok'>
                        ^
                        source.luau
                         ^^
-                        source.luau keyword.operator.type.luau
+                        source.luau keyword.operator.type.function.luau
                           ^
                           source.luau
                            ^
@@ -89,7 +89,7 @@ type T = Fn<...'ok'>
                             ^
                             source.luau
                              ^^
-                             source.luau keyword.operator.type.luau
+                             source.luau keyword.operator.type.function.luau
                                ^^^^
                                source.luau
                                    ^^^
@@ -118,7 +118,7 @@ type T = Fn<...'ok'>
                        ^
                        source.luau
                         ^^
-                        source.luau keyword.operator.type.luau
+                        source.luau keyword.operator.type.function.luau
                           ^
                           source.luau
                            ^
@@ -134,7 +134,7 @@ type T = Fn<...'ok'>
                                               ^
                                               source.luau
                                                ^^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau keyword.operator.type.function.luau
                                                  ^^^^
                                                  source.luau
                                                      ^^^
@@ -179,7 +179,7 @@ type T = Fn<...'ok'>
                                 ^
                                 source.luau
                                  ^^
-                                 source.luau keyword.operator.type.luau
+                                 source.luau keyword.operator.type.function.luau
                                    ^
                                    source.luau
                                     ^
@@ -227,7 +227,7 @@ type T = Fn<...'ok'>
                                                                                  ^
                                                                                  source.luau
                                                                                   ^^
-                                                                                  source.luau keyword.operator.type.luau
+                                                                                  source.luau keyword.operator.type.function.luau
                                                                                     ^^^^
                                                                                     source.luau
                                                                                         ^
@@ -454,7 +454,7 @@ type T = Fn<...'ok'>
                                               ^
                                               source.luau
                                                ^^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau keyword.operator.type.function.luau
                                                  ^
                                                  source.luau
                                                   ^
@@ -470,7 +470,7 @@ type T = Fn<...'ok'>
                                                                   ^
                                                                   source.luau
                                                                    ^^
-                                                                   source.luau keyword.operator.type.luau
+                                                                   source.luau keyword.operator.type.function.luau
                                                                      ^
                                                                      source.luau
                                                                       ^
@@ -546,13 +546,13 @@ type T = Fn<...'ok'>
       ^^
       source.luau entity.name.type.luau
         ^
-        source.luau keyword.operator.type.luau
+        source.luau punctuation.definition.typeparameters.begin.luau
          ^
          source.luau entity.name.type.luau
           ^^^
           source.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.end.luau
               ^
               source.luau
                ^
@@ -577,7 +577,7 @@ type T = Fn<...'ok'>
           ^^
           source.luau entity.name.type.luau
             ^
-            source.luau keyword.operator.type.luau
+            source.luau punctuation.definition.typeparameters.begin.luau
              ^^^
              source.luau
                 ^
@@ -587,4 +587,4 @@ type T = Fn<...'ok'>
                    ^
                    source.luau string.quoted.single.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.end.luau

@@ -22,7 +22,7 @@ type Indexed<T...> = module.Indexed<T...>
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
           ^
           source.luau entity.name.type.luau
            ^^^^^
@@ -32,7 +32,7 @@ type Indexed<T...> = module.Indexed<T...>
                  ^^^
                  source.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.end.luau
                      ^
                      source.luau
                       ^
@@ -50,7 +50,7 @@ type Indexed<T...> = module.Indexed<T...>
                               ^
                               source.luau
                                ^^
-                               source.luau keyword.operator.type.luau
+                               source.luau keyword.operator.type.function.luau
                                  ^
                                  source.luau
                                   ^
@@ -65,7 +65,7 @@ type Indexed<T...> = module.Indexed<T...>
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
           ^
           source.luau entity.name.type.luau
            ^^
@@ -75,7 +75,7 @@ type Indexed<T...> = module.Indexed<T...>
               ^^^
               source.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.end.luau
                   ^
                   source.luau
                    ^
@@ -92,7 +92,7 @@ type Indexed<T...> = module.Indexed<T...>
       ^^^^^^^^
       source.luau entity.name.type.luau
               ^
-              source.luau keyword.operator.type.luau
+              source.luau punctuation.definition.typeparameters.begin.luau
                ^^^^
                source.luau entity.name.type.luau
                    ^^^^
@@ -118,7 +118,7 @@ type Indexed<T...> = module.Indexed<T...>
                                               ^
                                               source.luau
                                                ^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau punctuation.definition.typeparameters.end.luau
                                                 ^
                                                 source.luau
                                                  ^
@@ -136,7 +136,7 @@ type Indexed<T...> = module.Indexed<T...>
                                                             ^
                                                             source.luau
                                                              ^^
-                                                             source.luau keyword.operator.type.luau
+                                                             source.luau keyword.operator.type.function.luau
                                                                ^
                                                                source.luau
                                                                 ^^^^^^
@@ -151,7 +151,7 @@ type Indexed<T...> = module.Indexed<T...>
       ^^^
       source.luau entity.name.type.luau
          ^
-         source.luau keyword.operator.type.luau
+         source.luau punctuation.definition.typeparameters.begin.luau
           ^
           source.luau entity.name.type.luau
            ^
@@ -183,7 +183,7 @@ type Indexed<T...> = module.Indexed<T...>
                                             ^
                                             source.luau
                                              ^
-                                             source.luau keyword.operator.type.luau
+                                             source.luau punctuation.definition.typeparameters.end.luau
                                               ^
                                               source.luau
                                                ^
@@ -200,13 +200,13 @@ type Indexed<T...> = module.Indexed<T...>
       ^^^^^^^
       source.luau entity.name.type.luau
              ^
-             source.luau keyword.operator.type.luau
+             source.luau punctuation.definition.typeparameters.begin.luau
               ^
               source.luau entity.name.type.luau
                ^^^
                source.luau
                   ^
-                  source.luau keyword.operator.type.luau
+                  source.luau punctuation.definition.typeparameters.end.luau
                    ^
                    source.luau
                     ^
@@ -220,13 +220,13 @@ type Indexed<T...> = module.Indexed<T...>
                              ^^^^^^^
                              source.luau entity.name.type.luau
                                     ^
-                                    source.luau keyword.operator.type.luau
+                                    source.luau punctuation.definition.typeparameters.begin.luau
                                      ^
                                      source.luau entity.name.type.luau
                                       ^^^
                                       source.luau
                                          ^
-                                         source.luau keyword.operator.type.luau
+                                         source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau

@@ -114,11 +114,11 @@ end
        ^
        source.luau
         ^
-        source.luau keyword.operator.type.luau
+        source.luau punctuation.definition.typeparameters.begin.luau
          ^
          source.luau entity.name.type.luau
           ^
-          source.luau keyword.operator.type.luau
+          source.luau punctuation.definition.typeparameters.end.luau
            ^
            source.luau
 >  	a: T,
@@ -169,7 +169,7 @@ end
     ^
     source.luau
      ^^
-     source.luau keyword.operator.type.luau
+     source.luau keyword.operator.type.function.luau
        ^
        source.luau
         ^
@@ -215,11 +215,11 @@ end
        ^
        source.luau
         ^
-        source.luau keyword.operator.type.luau
+        source.luau punctuation.definition.typeparameters.begin.luau
          ^
          source.luau entity.name.type.luau
           ^
-          source.luau keyword.operator.type.luau
+          source.luau punctuation.definition.typeparameters.end.luau
            ^
            source.luau
 >  	a: T,
@@ -270,7 +270,7 @@ end
     ^
     source.luau
      ^^
-     source.luau keyword.operator.type.luau
+     source.luau keyword.operator.type.function.luau
        ^
        source.luau
         ^
@@ -290,7 +290,7 @@ end
                   ^
                   source.luau
                    ^^
-                   source.luau keyword.operator.type.luau
+                   source.luau keyword.operator.type.function.luau
                      ^
                      source.luau
                       ^

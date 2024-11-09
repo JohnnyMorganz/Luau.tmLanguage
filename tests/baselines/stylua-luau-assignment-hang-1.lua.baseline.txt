@@ -110,11 +110,11 @@ exports.separateDisplayNameAndHOCs =
                                                                            ^^^^^
                                                                            source.luau entity.name.type.luau
                                                                                 ^
-                                                                                source.luau keyword.operator.type.luau
+                                                                                source.luau punctuation.definition.typeparameters.begin.luau
                                                                                  ^^^^^^
                                                                                  source.luau support.type.primitive.luau
                                                                                        ^
-                                                                                       source.luau keyword.operator.type.luau
+                                                                                       source.luau punctuation.definition.typeparameters.end.luau
                                                                                         ^
                                                                                         source.luau
                                                                                          ^
@@ -183,11 +183,11 @@ exports.separateDisplayNameAndHOCs =
                            ^^^^^
                            source.luau entity.name.type.luau
                                 ^
-                                source.luau keyword.operator.type.luau
+                                source.luau punctuation.definition.typeparameters.begin.luau
                                  ^^^^^^
                                  source.luau support.type.primitive.luau
                                        ^
-                                       source.luau keyword.operator.type.luau
+                                       source.luau punctuation.definition.typeparameters.end.luau
                                         ^
                                         source.luau keyword.operator.type.luau
                                          ^

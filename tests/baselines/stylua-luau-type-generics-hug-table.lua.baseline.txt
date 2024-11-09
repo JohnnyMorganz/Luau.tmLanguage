@@ -40,7 +40,7 @@ export type Store = EventEmitter<{
                      ^^^^^^^^^^^^
                      source.luau entity.name.type.luau
                                  ^
-                                 source.luau keyword.operator.type.luau
+                                 source.luau punctuation.definition.typeparameters.begin.luau
                                   ^
                                   source.luau
 >  collapseNodesByDefault: Array<any>,
@@ -55,11 +55,11 @@ export type Store = EventEmitter<{
                            ^^^^^
                            source.luau entity.name.type.luau
                                 ^
-                                source.luau keyword.operator.type.luau
+                                source.luau punctuation.definition.typeparameters.begin.luau
                                  ^^^
                                  source.luau support.type.primitive.luau
                                     ^
-                                    source.luau keyword.operator.type.luau
+                                    source.luau punctuation.definition.typeparameters.end.luau
                                      ^
                                      source.luau punctuation.separator.fields.type.luau
 >  componentFilters: Array<any>,
@@ -74,11 +74,11 @@ export type Store = EventEmitter<{
                      ^^^^^
                      source.luau entity.name.type.luau
                           ^
-                          source.luau keyword.operator.type.luau
+                          source.luau punctuation.definition.typeparameters.begin.luau
                            ^^^
                            source.luau support.type.primitive.luau
                               ^
-                              source.luau keyword.operator.type.luau
+                              source.luau punctuation.definition.typeparameters.end.luau
                                ^
                                source.luau punctuation.separator.fields.type.luau
 >  mutated: Array<any>, -- ROBLOX deviation: can't express jagged array types in Luau
@@ -93,11 +93,11 @@ export type Store = EventEmitter<{
             ^^^^^
             source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^
                   source.luau support.type.primitive.luau
                      ^
-                     source.luau keyword.operator.type.luau
+                     source.luau punctuation.definition.typeparameters.end.luau
                       ^
                       source.luau punctuation.separator.fields.type.luau
                        ^
@@ -118,11 +118,11 @@ export type Store = EventEmitter<{
                              ^^^^^
                              source.luau entity.name.type.luau
                                   ^
-                                  source.luau keyword.operator.type.luau
+                                  source.luau punctuation.definition.typeparameters.begin.luau
                                    ^^^
                                    source.luau support.type.primitive.luau
                                       ^
-                                      source.luau keyword.operator.type.luau
+                                      source.luau punctuation.definition.typeparameters.end.luau
                                        ^
                                        source.luau punctuation.separator.fields.type.luau
 >  roots: Array<any>,
@@ -137,11 +137,11 @@ export type Store = EventEmitter<{
           ^^^^^
           source.luau entity.name.type.luau
                ^
-               source.luau keyword.operator.type.luau
+               source.luau punctuation.definition.typeparameters.begin.luau
                 ^^^
                 source.luau support.type.primitive.luau
                    ^
-                   source.luau keyword.operator.type.luau
+                   source.luau punctuation.definition.typeparameters.end.luau
                     ^
                     source.luau punctuation.separator.fields.type.luau
 >  supportsNativeStyleEditor: Array<any>,
@@ -156,11 +156,11 @@ export type Store = EventEmitter<{
                               ^^^^^
                               source.luau entity.name.type.luau
                                    ^
-                                   source.luau keyword.operator.type.luau
+                                   source.luau punctuation.definition.typeparameters.begin.luau
                                     ^^^
                                     source.luau support.type.primitive.luau
                                        ^
-                                       source.luau keyword.operator.type.luau
+                                       source.luau punctuation.definition.typeparameters.end.luau
                                         ^
                                         source.luau punctuation.separator.fields.type.luau
 >  supportsProfiling: Array<any>,
@@ -175,11 +175,11 @@ export type Store = EventEmitter<{
                       ^^^^^
                       source.luau entity.name.type.luau
                            ^
-                           source.luau keyword.operator.type.luau
+                           source.luau punctuation.definition.typeparameters.begin.luau
                             ^^^
                             source.luau support.type.primitive.luau
                                ^
-                               source.luau keyword.operator.type.luau
+                               source.luau punctuation.definition.typeparameters.end.luau
                                 ^
                                 source.luau punctuation.separator.fields.type.luau
 >  supportsReloadAndProfile: Array<any>,
@@ -194,11 +194,11 @@ export type Store = EventEmitter<{
                              ^^^^^
                              source.luau entity.name.type.luau
                                   ^
-                                  source.luau keyword.operator.type.luau
+                                  source.luau punctuation.definition.typeparameters.begin.luau
                                    ^^^
                                    source.luau support.type.primitive.luau
                                       ^
-                                      source.luau keyword.operator.type.luau
+                                      source.luau punctuation.definition.typeparameters.end.luau
                                        ^
                                        source.luau punctuation.separator.fields.type.luau
 >  unsupportedRendererVersionDetected: Array<any>,
@@ -213,18 +213,18 @@ export type Store = EventEmitter<{
                                        ^^^^^
                                        source.luau entity.name.type.luau
                                             ^
-                                            source.luau keyword.operator.type.luau
+                                            source.luau punctuation.definition.typeparameters.begin.luau
                                              ^^^
                                              source.luau support.type.primitive.luau
                                                 ^
-                                                source.luau keyword.operator.type.luau
+                                                source.luau punctuation.definition.typeparameters.end.luau
                                                  ^
                                                  source.luau punctuation.separator.fields.type.luau
 >}>
  ^
  source.luau
   ^
-  source.luau keyword.operator.type.luau
+  source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau

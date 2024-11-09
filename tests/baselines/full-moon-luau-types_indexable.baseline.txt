@@ -50,11 +50,11 @@ local x: module.Foo<...string> = nil
                  ^^^^^
                  source.luau entity.name.type.luau
                       ^
-                      source.luau keyword.operator.type.luau
+                      source.luau punctuation.definition.typeparameters.begin.luau
                        ^^^^^^
                        source.luau support.type.primitive.luau
                              ^
-                             source.luau keyword.operator.type.luau
+                             source.luau punctuation.definition.typeparameters.end.luau
                               ^
                               source.luau
                                ^
@@ -157,13 +157,13 @@ local x: module.Foo<...string> = nil
                  ^^^
                  source.luau entity.name.type.luau
                     ^
-                    source.luau keyword.operator.type.luau
+                    source.luau punctuation.definition.typeparameters.begin.luau
                      ^^^
                      source.luau
                         ^^^^^^
                         source.luau support.type.primitive.luau
                               ^
-                              source.luau keyword.operator.type.luau
+                              source.luau punctuation.definition.typeparameters.end.luau
                                ^
                                source.luau
                                 ^

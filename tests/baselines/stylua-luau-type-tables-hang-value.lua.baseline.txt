@@ -45,11 +45,11 @@ export type DehydratedData = {
             ^^^^^
             source.luau entity.name.type.luau
                  ^
-                 source.luau keyword.operator.type.luau
+                 source.luau punctuation.definition.typeparameters.begin.luau
                   ^^^^^
                   source.luau entity.name.type.luau
                        ^
-                       source.luau keyword.operator.type.luau
+                       source.luau punctuation.definition.typeparameters.begin.luau
                         ^^^^^^
                         source.luau support.type.primitive.luau
                               ^
@@ -61,9 +61,9 @@ export type DehydratedData = {
                                  ^^^^^^
                                  source.luau support.type.primitive.luau
                                        ^
-                                       source.luau keyword.operator.type.luau
+                                       source.luau punctuation.definition.typeparameters.end.luau
                                         ^
-                                        source.luau keyword.operator.type.luau
+                                        source.luau punctuation.definition.typeparameters.end.luau
                                          ^
                                          source.luau punctuation.separator.fields.type.luau
 >  data: string | Dehydrated | Unserializable | Array<Dehydrated> | Array<Unserializable> | { [string]: string | Dehydrated | Unserializable },
@@ -102,11 +102,11 @@ export type DehydratedData = {
                                                 ^^^^^
                                                 source.luau entity.name.type.luau
                                                      ^
-                                                     source.luau keyword.operator.type.luau
+                                                     source.luau punctuation.definition.typeparameters.begin.luau
                                                       ^^^^^^^^^^
                                                       source.luau entity.name.type.luau
                                                                 ^
-                                                                source.luau keyword.operator.type.luau
+                                                                source.luau punctuation.definition.typeparameters.end.luau
                                                                  ^
                                                                  source.luau
                                                                   ^
@@ -116,11 +116,11 @@ export type DehydratedData = {
                                                                     ^^^^^
                                                                     source.luau entity.name.type.luau
                                                                          ^
-                                                                         source.luau keyword.operator.type.luau
+                                                                         source.luau punctuation.definition.typeparameters.begin.luau
                                                                           ^^^^^^^^^^^^^^
                                                                           source.luau entity.name.type.luau
                                                                                         ^
-                                                                                        source.luau keyword.operator.type.luau
+                                                                                        source.luau punctuation.definition.typeparameters.end.luau
                                                                                          ^
                                                                                          source.luau
                                                                                           ^
@@ -175,11 +175,11 @@ export type DehydratedData = {
                    ^^^^^
                    source.luau entity.name.type.luau
                         ^
-                        source.luau keyword.operator.type.luau
+                        source.luau punctuation.definition.typeparameters.begin.luau
                          ^^^^^
                          source.luau entity.name.type.luau
                               ^
-                              source.luau keyword.operator.type.luau
+                              source.luau punctuation.definition.typeparameters.begin.luau
                                ^^^^^^
                                source.luau support.type.primitive.luau
                                      ^
@@ -191,9 +191,9 @@ export type DehydratedData = {
                                         ^^^^^^
                                         source.luau support.type.primitive.luau
                                               ^
-                                              source.luau keyword.operator.type.luau
+                                              source.luau punctuation.definition.typeparameters.end.luau
                                                ^
-                                               source.luau keyword.operator.type.luau
+                                               source.luau punctuation.definition.typeparameters.end.luau
                                                 ^
                                                 source.luau punctuation.separator.fields.type.luau
 >}
