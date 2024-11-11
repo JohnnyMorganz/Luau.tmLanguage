@@ -1,0 +1,108 @@
+original file
+-----------------------------------
+--[[
+```luau
+local abc: number = 1
+print(abc)
+```
+]]
+
+--[[
+```lua
+local abc: number = 1
+print(abc)
+```
+]]
+
+-----------------------------------
+
+>--[[
+ ^^^^
+ source.luau comment.block.luau
+>```luau
+ ^^^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>local abc: number = 1
+ ^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau storage.modifier.local.luau
+      ^
+      source.luau comment.block.luau keyword.operator.other.luau
+       ^^^
+       source.luau comment.block.luau keyword.operator.other.luau variable.other.readwrite.luau
+          ^
+          source.luau comment.block.luau keyword.operator.other.luau keyword.operator.type.luau
+           ^
+           source.luau comment.block.luau keyword.operator.other.luau
+            ^^^^^^
+            source.luau comment.block.luau keyword.operator.other.luau support.type.primitive.luau
+                  ^
+                  source.luau comment.block.luau keyword.operator.other.luau
+                   ^
+                   source.luau comment.block.luau keyword.operator.other.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau comment.block.luau keyword.operator.other.luau
+                     ^
+                     source.luau comment.block.luau keyword.operator.other.luau constant.numeric.decimal.luau
+>print(abc)
+ ^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau support.function.luau
+      ^
+      source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.begin.luau
+       ^^^
+       source.luau comment.block.luau keyword.operator.other.luau variable.other.readwrite.luau
+          ^
+          source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.end.luau
+>```
+ ^^^
+ source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>]]
+ ^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau
+>--[[
+ ^^^^
+ source.luau comment.block.luau
+>```lua
+ ^^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>local abc: number = 1
+ ^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau storage.modifier.local.luau
+      ^
+      source.luau comment.block.luau keyword.operator.other.luau
+       ^^^
+       source.luau comment.block.luau keyword.operator.other.luau variable.other.readwrite.luau
+          ^
+          source.luau comment.block.luau keyword.operator.other.luau keyword.operator.type.luau
+           ^
+           source.luau comment.block.luau keyword.operator.other.luau
+            ^^^^^^
+            source.luau comment.block.luau keyword.operator.other.luau support.type.primitive.luau
+                  ^
+                  source.luau comment.block.luau keyword.operator.other.luau
+                   ^
+                   source.luau comment.block.luau keyword.operator.other.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau comment.block.luau keyword.operator.other.luau
+                     ^
+                     source.luau comment.block.luau keyword.operator.other.luau constant.numeric.decimal.luau
+>print(abc)
+ ^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau support.function.luau
+      ^
+      source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.begin.luau
+       ^^^
+       source.luau comment.block.luau keyword.operator.other.luau variable.other.readwrite.luau
+          ^
+          source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.end.luau
+>```
+ ^^^
+ source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>]]
+ ^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau

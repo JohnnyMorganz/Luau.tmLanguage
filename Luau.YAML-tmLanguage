@@ -270,7 +270,7 @@ repository:
         end: "\\]\\1\\]"
         patterns:
           - name: keyword.operator.other.luau
-            begin: "(```lua)\\s+"
+            begin: "(```luau?)\\s+"
             end: "(```)"
             beginCaptures:
               "1": { name: comment.luau }
