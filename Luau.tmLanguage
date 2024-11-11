@@ -760,7 +760,7 @@
                 <key>name</key>
                 <string>keyword.operator.other.luau</string>
                 <key>begin</key>
-                <string>(```lua)\s+</string>
+                <string>(```luau?)\s+</string>
                 <key>end</key>
                 <string>(```)</string>
                 <key>beginCaptures</key>
