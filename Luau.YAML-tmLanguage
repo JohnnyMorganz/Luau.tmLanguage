@@ -323,7 +323,7 @@ repository:
       "1": { name: storage.modifier.visibility.luau }
       "2": { name: storage.type.luau }
     patterns:
-      - include: "#function-declaration"
+      - include: "#function-definition"
 
   type-alias-declaration:
     # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
