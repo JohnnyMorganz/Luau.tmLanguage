@@ -384,10 +384,11 @@ repository:
             end: "\\]" # TODO: do we need to match the ':' afterwards?
             patterns:
               - include: "#type_literal"
-          - match: "\\b({{identifier}})\\b(:)"
+          - match: "\\b(?:(read|write)\\s+)?({{identifier}})\\b(:)"
             captures:
-              "1": { name: variable.property.luau }
-              "2": { name: keyword.operator.type.luau }
+              "1": { name: storage.modifier.access.luau }
+              "2": { name: variable.property.luau }
+              "3": { name: keyword.operator.type.luau }
           - include: "#type_literal"
           - match: "[,;]"
             name: punctuation.separator.fields.type.luau
