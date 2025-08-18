@@ -898,7 +898,7 @@
         <array>
           <dict>
             <key>include</key>
-            <string>#function-declaration</string>
+            <string>#function-definition</string>
           </dict>
         </array>
       </dict>
