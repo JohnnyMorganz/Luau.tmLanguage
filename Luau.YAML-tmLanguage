@@ -23,6 +23,7 @@ patterns:
   - include: "#comment"
   - include: "#local-declaration"
   - include: "#for-loop"
+  - include: "#type-function"
   - include: "#type-alias-declaration"
   - include: "#keyword"
   - include: "#language_constant"
@@ -314,6 +315,15 @@ repository:
       - include: "#type_literal"
       # - match: ","
       # name: punctuation.separator.generics.luau
+
+  type-function:
+    # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
+    begin: "^\\b(?:(export)\\s+)?(type)\\s+(?=function\\b)"
+    beginCaptures:
+      "1": { name: storage.modifier.visibility.luau }
+      "2": { name: storage.type.luau }
+    patterns:
+      - include: "#function-declaration"
 
   type-alias-declaration:
     # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
