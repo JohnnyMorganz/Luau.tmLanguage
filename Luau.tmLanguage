@@ -48,6 +48,10 @@
       </dict>
       <dict>
         <key>include</key>
+        <string>#type-function</string>
+      </dict>
+      <dict>
+        <key>include</key>
         <string>#type-alias-declaration</string>
       </dict>
       <dict>
@@ -873,6 +877,31 @@
           </dict>
         </array>
       </dict>
+      <key>type-function</key>
+      <dict>
+        <key>begin</key>
+        <string>^\b(?:(export)\s+)?(type)\s+(?=function\b)</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.visibility.luau</string>
+          </dict>
+          <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>storage.type.luau</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#function-declaration</string>
+          </dict>
+        </array>
+      </dict>
       <key>type-alias-declaration</key>
       <dict>
         <key>begin</key>
@@ -1085,15 +1114,20 @@
               </dict>
               <dict>
                 <key>match</key>
-                <string>\b([a-zA-Z_][a-zA-Z0-9_]*)\b(:)</string>
+                <string>\b(?:(read|write)\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\b(:)</string>
                 <key>captures</key>
                 <dict>
                   <key>1</key>
                   <dict>
                     <key>name</key>
-                    <string>variable.property.luau</string>
+                    <string>storage.modifier.access.luau</string>
                   </dict>
                   <key>2</key>
+                  <dict>
+                    <key>name</key>
+                    <string>variable.property.luau</string>
+                  </dict>
+                  <key>3</key>
                   <dict>
                     <key>name</key>
                     <string>keyword.operator.type.luau</string>
