@@ -1,0 +1,192 @@
+original file
+-----------------------------------
+type function UserDefinedTypeFunction(Foo: type, Bar: type, Qux: type): type
+    return types.intersectionof(Foo, Bar, Qux)
+end
+
+export type function ExportUserDefinedTypeFunction(Foo: type, Bar: type, Qux: type): type
+    return types.unionof(Foo, Bar, Qux)
+end
+-----------------------------------
+
+>type function UserDefinedTypeFunction(Foo: type, Bar: type, Qux: type): type
+ ^^^^
+ source.luau meta.function.luau storage.type.luau
+     ^
+     source.luau meta.function.luau
+      ^^^^^^^^
+      source.luau meta.function.luau keyword.control.luau
+              ^
+              source.luau meta.function.luau
+               ^^^^^^^^^^^^^^^^^^^^^^^
+               source.luau meta.function.luau entity.name.type.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                       ^^^
+                                       source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                          ^
+                                          source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                           ^
+                                           source.luau meta.function.luau meta.parameter.luau
+                                            ^^^^
+                                            source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                ^
+                                                source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                 ^
+                                                 source.luau meta.function.luau meta.parameter.luau
+                                                  ^^^
+                                                  source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                     ^
+                                                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                      ^
+                                                      source.luau meta.function.luau meta.parameter.luau
+                                                       ^^^^
+                                                       source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                           ^
+                                                           source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                            ^
+                                                            source.luau meta.function.luau meta.parameter.luau
+                                                             ^^^
+                                                             source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                ^
+                                                                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                 ^
+                                                                 source.luau meta.function.luau meta.parameter.luau
+                                                                  ^^^^
+                                                                  source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                      ^
+                                                                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                                                       ^
+                                                                       source.luau
+                                                                        ^
+                                                                        source.luau
+                                                                         ^^^^
+                                                                         source.luau entity.name.type.luau
+>    return types.intersectionof(Foo, Bar, Qux)
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^^^^^^^^^^
+                  source.luau entity.name.function.luau
+                                ^
+                                source.luau punctuation.arguments.begin.luau
+                                 ^^^
+                                 source.luau variable.other.readwrite.luau
+                                    ^
+                                    source.luau punctuation.separator.arguments.luau
+                                     ^
+                                     source.luau
+                                      ^^^
+                                      source.luau variable.other.readwrite.luau
+                                         ^
+                                         source.luau punctuation.separator.arguments.luau
+                                          ^
+                                          source.luau
+                                           ^^^
+                                           source.luau variable.other.readwrite.luau
+                                              ^
+                                              source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>export type function ExportUserDefinedTypeFunction(Foo: type, Bar: type, Qux: type): type
+ ^^^^^^
+ source.luau meta.function.luau storage.modifier.visibility.luau
+       ^
+       source.luau meta.function.luau
+        ^^^^
+        source.luau meta.function.luau storage.type.luau
+            ^
+            source.luau meta.function.luau
+             ^^^^^^^^
+             source.luau meta.function.luau keyword.control.luau
+                     ^
+                     source.luau meta.function.luau
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      source.luau meta.function.luau entity.name.type.luau
+                                                   ^
+                                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                                    ^^^
+                                                    source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                       ^
+                                                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                        ^
+                                                        source.luau meta.function.luau meta.parameter.luau
+                                                         ^^^^
+                                                         source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                             ^
+                                                             source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                              ^
+                                                              source.luau meta.function.luau meta.parameter.luau
+                                                               ^^^
+                                                               source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                  ^
+                                                                  source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                   ^
+                                                                   source.luau meta.function.luau meta.parameter.luau
+                                                                    ^^^^
+                                                                    source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                        ^
+                                                                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+                                                                         ^
+                                                                         source.luau meta.function.luau meta.parameter.luau
+                                                                          ^^^
+                                                                          source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                                                             ^
+                                                                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                                                              ^
+                                                                              source.luau meta.function.luau meta.parameter.luau
+                                                                               ^^^^
+                                                                               source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                                                                   ^
+                                                                                   source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                                                                    ^
+                                                                                    source.luau
+                                                                                     ^
+                                                                                     source.luau
+                                                                                      ^^^^
+                                                                                      source.luau entity.name.type.luau
+>    return types.unionof(Foo, Bar, Qux)
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^^
+            source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau
+                  ^^^^^^^
+                  source.luau entity.name.function.luau
+                         ^
+                         source.luau punctuation.arguments.begin.luau
+                          ^^^
+                          source.luau variable.other.readwrite.luau
+                             ^
+                             source.luau punctuation.separator.arguments.luau
+                              ^
+                              source.luau
+                               ^^^
+                               source.luau variable.other.readwrite.luau
+                                  ^
+                                  source.luau punctuation.separator.arguments.luau
+                                   ^
+                                   source.luau
+                                    ^^^
+                                    source.luau variable.other.readwrite.luau
+                                       ^
+                                       source.luau punctuation.arguments.end.luau
+>end
+ ^^^
+ source.luau keyword.control.luau

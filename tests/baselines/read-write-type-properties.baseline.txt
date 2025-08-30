@@ -1,0 +1,78 @@
+original file
+-----------------------------------
+type Test = {
+    read readonly_property: string,
+    write writeonly_property: string,
+    property: string,
+}
+
+-----------------------------------
+
+>type Test = {
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau entity.name.type.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau
+>    read readonly_property: string,
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau storage.modifier.access.luau
+         ^
+         source.luau
+          ^^^^^^^^^^^^^^^^^
+          source.luau variable.property.luau
+                           ^
+                           source.luau keyword.operator.type.luau
+                            ^
+                            source.luau
+                             ^^^^^^
+                             source.luau support.type.primitive.luau
+                                   ^
+                                   source.luau punctuation.separator.fields.type.luau
+>    write writeonly_property: string,
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau storage.modifier.access.luau
+          ^
+          source.luau
+           ^^^^^^^^^^^^^^^^^^
+           source.luau variable.property.luau
+                             ^
+                             source.luau keyword.operator.type.luau
+                              ^
+                              source.luau
+                               ^^^^^^
+                               source.luau support.type.primitive.luau
+                                     ^
+                                     source.luau punctuation.separator.fields.type.luau
+>    property: string,
+ ^^^^
+ source.luau
+     ^^^^^^^^
+     source.luau variable.property.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^^^^^^
+               source.luau support.type.primitive.luau
+                     ^
+                     source.luau punctuation.separator.fields.type.luau
+>}
+ ^
+ source.luau
+>
+ ^
+ source.luau
