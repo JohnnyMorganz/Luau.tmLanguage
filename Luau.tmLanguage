@@ -1101,10 +1101,10 @@
             <string>constant.language.boolean.true.luau</string>
           </dict>
           <dict>
+            <key>match</key>
+            <string>\b(nil|string|number|boolean|thread|userdata|symbol|vector|buffer|unknown|never|any)\b</string>
             <key>name</key>
             <string>support.type.primitive.luau</string>
-            <key>match</key>
-            <string>\b(nil|string|number|boolean|thread|userdata|symbol|any)\b</string>
           </dict>
           <dict>
             <key>begin</key>

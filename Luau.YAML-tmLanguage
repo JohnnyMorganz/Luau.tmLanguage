@@ -391,8 +391,8 @@ repository:
         name: constant.language.boolean.false.luau
       - match: "\\b(true)\\b"
         name: constant.language.boolean.true.luau
-      - name: support.type.primitive.luau
-        match: "\\b(nil|string|number|boolean|thread|userdata|symbol|any)\\b"
+      - match: "\\b(nil|string|number|boolean|thread|userdata|symbol|vector|buffer|unknown|never|any)\\b"
+        name: support.type.primitive.luau
       - begin: "\\b(typeof)\\b(\\()" # TODO: assign scope to punctuation?
         beginCaptures:
           "1": { name: support.function.luau }
