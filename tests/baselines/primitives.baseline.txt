@@ -1,0 +1,476 @@
+original file
+-----------------------------------
+local test_nil: nil
+local test_string: string
+local test_number: number
+local test_boolean: boolean
+local test_thread: thread
+local test_vector: vector
+local test_buffer: buffer
+local test_unknown: unknown
+local test_never: never
+local test_any: any
+
+local function test(
+    test_nil: nil,
+    test_string: string,
+    test_number: number,
+    test_boolean: boolean,
+    test_thread: thread,
+    test_vector: vector,
+    test_buffer: buffer,
+    test_unknown: unknown,
+    test_never: never,
+    test_any: any
+)
+    return
+end
+
+type Test = {
+    test_nil: nil,
+    test_string: string,
+    test_number: number,
+    test_boolean: boolean,
+    test_thread: thread,
+    test_vector: vector,
+    test_buffer: buffer,
+    test_unknown: unknown,
+    test_never: never,
+    test_any: any
+}
+-----------------------------------
+
+>local test_nil: nil
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^
+       source.luau variable.other.readwrite.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau support.type.primitive.luau
+>local test_string: string
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+>local test_number: number
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+>local test_boolean: boolean
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^^^^^^^
+                     source.luau support.type.primitive.luau
+>local test_thread: thread
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+>local test_vector: vector
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+>local test_buffer: buffer
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                  ^
+                  source.luau keyword.operator.type.luau
+                   ^
+                   source.luau
+                    ^^^^^^
+                    source.luau support.type.primitive.luau
+>local test_unknown: unknown
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                   ^
+                   source.luau keyword.operator.type.luau
+                    ^
+                    source.luau
+                     ^^^^^^^
+                     source.luau support.type.primitive.luau
+>local test_never: never
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^^^
+                   source.luau support.type.primitive.luau
+>local test_any: any
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^
+       source.luau variable.other.readwrite.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^^^
+                 source.luau support.type.primitive.luau
+>
+ ^
+ source.luau
+>local function test(
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                    ^
+                    source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+>    test_nil: nil,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau
+               ^^^
+               source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_string: string,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_number: number,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_boolean: boolean,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau
+                   ^^^^^^^
+                   source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_thread: thread,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_vector: vector,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_buffer: buffer,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau
+                  ^^^^^^
+                  source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_unknown: unknown,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                 ^
+                 source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                  ^
+                  source.luau meta.function.luau meta.parameter.luau
+                   ^^^^^^^
+                   source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_never: never,
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+               ^
+               source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                ^
+                source.luau meta.function.luau meta.parameter.luau
+                 ^^^^^
+                 source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.separator.arguments.luau
+>    test_any: any
+ ^^^^
+ source.luau meta.function.luau meta.parameter.luau
+     ^^^^^^^^
+     source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+             ^
+             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+              ^
+              source.luau meta.function.luau meta.parameter.luau
+               ^^^
+               source.luau meta.function.luau meta.parameter.luau support.type.primitive.luau
+>)
+ ^
+ source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>    return
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>type Test = {
+ ^^^^
+ source.luau storage.type.luau
+     ^
+     source.luau
+      ^^^^
+      source.luau entity.name.type.luau
+          ^
+          source.luau
+           ^
+           source.luau keyword.operator.assignment.luau
+            ^
+            source.luau
+             ^
+             source.luau
+>    test_nil: nil,
+ ^^^^
+ source.luau
+     ^^^^^^^^
+     source.luau variable.property.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^^^
+               source.luau support.type.primitive.luau
+                  ^
+                  source.luau punctuation.separator.fields.type.luau
+>    test_string: string,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^
+                  source.luau support.type.primitive.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>    test_number: number,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^
+                  source.luau support.type.primitive.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>    test_boolean: boolean,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^
+     source.luau variable.property.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^^^^^
+                   source.luau support.type.primitive.luau
+                          ^
+                          source.luau punctuation.separator.fields.type.luau
+>    test_thread: thread,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^
+                  source.luau support.type.primitive.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>    test_vector: vector,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^
+                  source.luau support.type.primitive.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>    test_buffer: buffer,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^
+     source.luau variable.property.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
+                  ^^^^^^
+                  source.luau support.type.primitive.luau
+                        ^
+                        source.luau punctuation.separator.fields.type.luau
+>    test_unknown: unknown,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^^^
+     source.luau variable.property.luau
+                 ^
+                 source.luau keyword.operator.type.luau
+                  ^
+                  source.luau
+                   ^^^^^^^
+                   source.luau support.type.primitive.luau
+                          ^
+                          source.luau punctuation.separator.fields.type.luau
+>    test_never: never,
+ ^^^^
+ source.luau
+     ^^^^^^^^^^
+     source.luau variable.property.luau
+               ^
+               source.luau keyword.operator.type.luau
+                ^
+                source.luau
+                 ^^^^^
+                 source.luau support.type.primitive.luau
+                      ^
+                      source.luau punctuation.separator.fields.type.luau
+>    test_any: any
+ ^^^^
+ source.luau
+     ^^^^^^^^
+     source.luau variable.property.luau
+             ^
+             source.luau keyword.operator.type.luau
+              ^
+              source.luau
+               ^^^
+               source.luau support.type.primitive.luau
+>}
+ ^
+ source.luau
