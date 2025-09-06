@@ -23,6 +23,7 @@ patterns:
   - include: "#comment"
   - include: "#local-declaration"
   - include: "#for-loop"
+  - include: "#type-function"
   - include: "#type-alias-declaration"
   - include: "#keyword"
   - include: "#language_constant"
@@ -315,6 +316,42 @@ repository:
       # - match: ","
       # name: punctuation.separator.generics.luau
 
+  type-function:
+    # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
+    begin: "^\\b(?:(export)\\s+)?(type)\\s+(function)\\b"
+    beginCaptures:
+      "1": { name: storage.modifier.visibility.luau }
+      "2": { name: storage.type.luau }
+      "3": { name: keyword.control.luau }
+    end: "(?<=[\\)\\-{}\\[\\]\"'])"
+    name: meta.function.luau
+    patterns:
+      - include: "#comment"
+      - include: "#generics-declaration"
+      - begin: "(\\()"
+        beginCaptures:
+          "1": { name: punctuation.definition.parameters.begin.luau }
+        end: "(\\))"
+        endCaptures:
+          "1": { name: punctuation.definition.parameters.end.luau }
+        name: meta.parameter.luau
+        patterns:
+          - include: "#comment"
+          - match: "\\.\\.\\."
+            name: variable.parameter.function.varargs.luau
+          - match: "{{identifier}}"
+            name: variable.parameter.function.luau
+          - match: ","
+            name: punctuation.separator.arguments.luau
+          - begin: ":"
+            beginCaptures:
+              "0": { name: keyword.operator.type.luau }
+            end: "(?=[\\),])"
+            patterns:
+              - include: "#type_literal"
+      - match: "\\b({{identifier}})\\b"
+        name: entity.name.type.luau
+
   type-alias-declaration:
     # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
     begin: "^\\b(?:(export)\\s+)?(type)\\b"
@@ -384,10 +421,11 @@ repository:
             end: "\\]" # TODO: do we need to match the ':' afterwards?
             patterns:
               - include: "#type_literal"
-          - match: "\\b({{identifier}})\\b(:)"
+          - match: "\\b(?:(read|write)\\s+)?({{identifier}})\\b(:)"
             captures:
-              "1": { name: variable.property.luau }
-              "2": { name: keyword.operator.type.luau }
+              "1": { name: storage.modifier.access.luau }
+              "2": { name: variable.property.luau }
+              "3": { name: keyword.operator.type.luau }
           - include: "#type_literal"
           - match: "[,;]"
             name: punctuation.separator.fields.type.luau
