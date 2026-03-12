@@ -1,0 +1,908 @@
+original file
+-----------------------------------
+--[[
+
+Taken from https://github.com/luau-lang/luau/blob/535f92589bdc304c8a2012d6cfad5e7b9faff2f7/tests/conformance/explicit_type_instantiations.luau
+
+MIT License
+
+Copyright (c) 2019-2025 Roblox Corporation
+Copyright (c) 1994-2019 Lua.org, PUC-Rio.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+]]
+
+-- Tests to ensure explicit type instantiations don't change runtime behavior
+local function identity<T>(x: T): T
+    return x
+end
+
+assert(identity<<number>>(1) == 1)
+
+local function multipleReturns<T>(x: T): (T, T)
+    return x, x
+end
+
+local a, b = multipleReturns<<number>>(1)
+assert(a == 1 and b == 1)
+
+local function typePacks<T...>(...: T...): T...
+    return ...
+end
+
+local a, b = typePacks<<(string, number)>>(1, "a")
+assert(a == 1 and b == "a")
+
+local t = {}
+function t:method<T>(x: T): T
+    assert(self == t)
+    return x
+end
+
+assert(t:method(1) == 1)
+
+function t:methodTypePacks<T...>(...: T...): T...
+    assert(self == t)
+    return ...
+end
+
+local a, b = t:methodTypePacks<<(string, number)>>(1, "a")
+assert(a == 1 and b == "a")
+
+-- full-moon tests
+local complicatedExpr = expr<<A<B<C>>>>()
+local complicatedMethod = a:method<<A<B<C>>>>()
+
+return "OK"
+
+-----------------------------------
+
+>--[[
+ ^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>Taken from https://github.com/luau-lang/luau/blob/535f92589bdc304c8a2012d6cfad5e7b9faff2f7/tests/conformance/explicit_type_instantiations.luau
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>MIT License
+ ^^^^^^^^^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>Copyright (c) 2019-2025 Roblox Corporation
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>Copyright (c) 1994-2019 Lua.org, PUC-Rio.
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>Permission is hereby granted, free of charge, to any person obtaining a copy of
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>this software and associated documentation files (the "Software"), to deal in
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>the Software without restriction, including without limitation the rights to
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>of the Software, and to permit persons to whom the Software is furnished to do
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>so, subject to the following conditions:
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>The above copyright notice and this permission notice shall be included in all
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>copies or substantial portions of the Software.
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.luau comment.block.luau
+>SOFTWARE.
+ ^^^^^^^^^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau comment.block.luau
+>]]
+ ^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau
+>-- Tests to ensure explicit type instantiations don't change runtime behavior
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local function identity<T>(x: T): T
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                        ^
+                        source.luau meta.function.luau
+                         ^
+                         source.luau meta.function.luau entity.name.type.luau
+                          ^
+                          source.luau meta.function.luau
+                           ^
+                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                            ^
+                            source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                             ^
+                             source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                              ^
+                              source.luau meta.function.luau meta.parameter.luau
+                               ^
+                               source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                ^
+                                source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                 ^
+                                 source.luau
+                                  ^
+                                  source.luau
+                                   ^
+                                   source.luau entity.name.type.luau
+>    return x
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>assert(identity<<number>>(1) == 1)
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^^^^^^^^
+        source.luau entity.name.function.luau
+                ^^
+                source.luau punctuation.definition.typeparameters.begin.luau
+                  ^^^^^^
+                  source.luau support.type.primitive.luau
+                        ^^
+                        source.luau punctuation.definition.typeparameters.end.luau
+                          ^
+                          source.luau punctuation.arguments.begin.luau
+                           ^
+                           source.luau constant.numeric.decimal.luau
+                            ^
+                            source.luau punctuation.arguments.end.luau
+                             ^
+                             source.luau
+                              ^^
+                              source.luau keyword.operator.comparison.luau
+                                ^
+                                source.luau
+                                 ^
+                                 source.luau constant.numeric.decimal.luau
+                                  ^
+                                  source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>local function multipleReturns<T>(x: T): (T, T)
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                               ^
+                               source.luau meta.function.luau
+                                ^
+                                source.luau meta.function.luau entity.name.type.luau
+                                 ^
+                                 source.luau meta.function.luau
+                                  ^
+                                  source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                       ^
+                                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                        ^
+                                        source.luau
+                                         ^
+                                         source.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau entity.name.type.luau
+                                            ^^
+                                            source.luau
+                                              ^
+                                              source.luau entity.name.type.luau
+                                               ^
+                                               source.luau
+>    return x, x
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+             ^^
+             source.luau
+               ^
+               source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local a, b = multipleReturns<<number>>(1)
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^^^^^^^^^^
+              source.luau entity.name.function.luau
+                             ^^
+                             source.luau punctuation.definition.typeparameters.begin.luau
+                               ^^^^^^
+                               source.luau support.type.primitive.luau
+                                     ^^
+                                     source.luau punctuation.definition.typeparameters.end.luau
+                                       ^
+                                       source.luau punctuation.arguments.begin.luau
+                                        ^
+                                        source.luau constant.numeric.decimal.luau
+                                         ^
+                                         source.luau punctuation.arguments.end.luau
+>assert(a == 1 and b == 1)
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^
+          source.luau keyword.operator.comparison.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau
+               ^^^
+               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^
+                     source.luau keyword.operator.comparison.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau constant.numeric.decimal.luau
+                         ^
+                         source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>local function typePacks<T...>(...: T...): T...
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                         ^
+                         source.luau meta.function.luau
+                          ^
+                          source.luau meta.function.luau entity.name.type.luau
+                           ^^^
+                           source.luau meta.function.luau
+                              ^
+                              source.luau meta.function.luau
+                               ^
+                               source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                ^^^
+                                source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
+                                   ^
+                                   source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                    ^
+                                    source.luau meta.function.luau meta.parameter.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                      ^^^
+                                      source.luau meta.function.luau meta.parameter.luau
+                                         ^
+                                         source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                          ^
+                                          source.luau
+                                           ^
+                                           source.luau
+                                            ^
+                                            source.luau entity.name.type.luau
+                                             ^^^
+                                             source.luau
+>    return ...
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^
+            source.luau keyword.other.unit.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local a, b = typePacks<<(string, number)>>(1, "a")
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^^^^^^^^^
+              source.luau entity.name.function.luau
+                       ^^
+                       source.luau punctuation.definition.typeparameters.begin.luau
+                         ^
+                         source.luau
+                          ^^^^^^
+                          source.luau support.type.primitive.luau
+                                ^^
+                                source.luau
+                                  ^^^^^^
+                                  source.luau support.type.primitive.luau
+                                        ^
+                                        source.luau
+                                         ^^
+                                         source.luau punctuation.definition.typeparameters.end.luau
+                                           ^
+                                           source.luau punctuation.arguments.begin.luau
+                                            ^
+                                            source.luau constant.numeric.decimal.luau
+                                             ^
+                                             source.luau punctuation.separator.arguments.luau
+                                              ^
+                                              source.luau
+                                               ^
+                                               source.luau string.quoted.double.luau
+                                                ^
+                                                source.luau string.quoted.double.luau
+                                                 ^
+                                                 source.luau string.quoted.double.luau
+                                                  ^
+                                                  source.luau punctuation.arguments.end.luau
+>assert(a == 1 and b == "a")
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^
+          source.luau keyword.operator.comparison.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau
+               ^^^
+               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^
+                     source.luau keyword.operator.comparison.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau string.quoted.double.luau
+                           ^
+                           source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>local t = {}
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau punctuation.table.begin.luau
+            ^
+            source.luau punctuation.table.end.luau
+>function t:method<T>(x: T): T
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^
+          source.luau meta.function.luau entity.name.function.luau
+           ^
+           source.luau meta.function.luau
+            ^^^^^^
+            source.luau meta.function.luau entity.name.function.luau
+                  ^
+                  source.luau meta.function.luau
+                   ^
+                   source.luau meta.function.luau entity.name.type.luau
+                    ^
+                    source.luau meta.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau variable.parameter.function.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                        ^
+                        source.luau meta.function.luau meta.parameter.luau
+                         ^
+                         source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                          ^
+                          source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau
+                             ^
+                             source.luau entity.name.type.luau
+>    assert(self == t)
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau support.function.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^^^^
+            source.luau variable.language.self.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.operator.comparison.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau
+>    return x
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^
+            source.luau variable.other.readwrite.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>assert(t:method(1) == 1)
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^^^^^
+          source.luau entity.name.function.luau
+                ^
+                source.luau punctuation.arguments.begin.luau
+                 ^
+                 source.luau constant.numeric.decimal.luau
+                  ^
+                  source.luau punctuation.arguments.end.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau keyword.operator.comparison.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau constant.numeric.decimal.luau
+                        ^
+                        source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>function t:methodTypePacks<T...>(...: T...): T...
+ ^^^^^^^^
+ source.luau meta.function.luau keyword.control.luau
+         ^
+         source.luau meta.function.luau
+          ^
+          source.luau meta.function.luau entity.name.function.luau
+           ^
+           source.luau meta.function.luau
+            ^^^^^^^^^^^^^^^
+            source.luau meta.function.luau entity.name.function.luau
+                           ^
+                           source.luau meta.function.luau
+                            ^
+                            source.luau meta.function.luau entity.name.type.luau
+                             ^^^
+                             source.luau meta.function.luau
+                                ^
+                                source.luau meta.function.luau
+                                 ^
+                                 source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                                  ^^^
+                                  source.luau meta.function.luau meta.parameter.luau variable.parameter.function.varargs.luau
+                                     ^
+                                     source.luau meta.function.luau meta.parameter.luau keyword.operator.type.luau
+                                      ^
+                                      source.luau meta.function.luau meta.parameter.luau
+                                       ^
+                                       source.luau meta.function.luau meta.parameter.luau entity.name.type.luau
+                                        ^^^
+                                        source.luau meta.function.luau meta.parameter.luau
+                                           ^
+                                           source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+                                            ^
+                                            source.luau
+                                             ^
+                                             source.luau
+                                              ^
+                                              source.luau entity.name.type.luau
+                                               ^^^
+                                               source.luau
+>    assert(self == t)
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau support.function.luau
+           ^
+           source.luau punctuation.arguments.begin.luau
+            ^^^^
+            source.luau variable.language.self.luau
+                ^
+                source.luau
+                 ^^
+                 source.luau keyword.operator.comparison.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau punctuation.arguments.end.luau
+>    return ...
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^
+            source.luau keyword.other.unit.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>local a, b = t:methodTypePacks<<(string, number)>>(1, "a")
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^^
+        source.luau
+          ^
+          source.luau variable.other.readwrite.luau
+           ^
+           source.luau
+            ^
+            source.luau keyword.operator.assignment.luau
+             ^
+             source.luau
+              ^
+              source.luau variable.other.readwrite.luau
+               ^
+               source.luau
+                ^^^^^^^^^^^^^^^
+                source.luau entity.name.function.luau
+                               ^^
+                               source.luau punctuation.definition.typeparameters.begin.luau
+                                 ^
+                                 source.luau
+                                  ^^^^^^
+                                  source.luau support.type.primitive.luau
+                                        ^^
+                                        source.luau
+                                          ^^^^^^
+                                          source.luau support.type.primitive.luau
+                                                ^
+                                                source.luau
+                                                 ^^
+                                                 source.luau punctuation.definition.typeparameters.end.luau
+                                                   ^
+                                                   source.luau punctuation.arguments.begin.luau
+                                                    ^
+                                                    source.luau constant.numeric.decimal.luau
+                                                     ^
+                                                     source.luau punctuation.separator.arguments.luau
+                                                      ^
+                                                      source.luau
+                                                       ^
+                                                       source.luau string.quoted.double.luau
+                                                        ^
+                                                        source.luau string.quoted.double.luau
+                                                         ^
+                                                         source.luau string.quoted.double.luau
+                                                          ^
+                                                          source.luau punctuation.arguments.end.luau
+>assert(a == 1 and b == "a")
+ ^^^^^^
+ source.luau support.function.luau
+       ^
+       source.luau punctuation.arguments.begin.luau
+        ^
+        source.luau variable.other.readwrite.luau
+         ^
+         source.luau
+          ^^
+          source.luau keyword.operator.comparison.luau
+            ^
+            source.luau
+             ^
+             source.luau constant.numeric.decimal.luau
+              ^
+              source.luau
+               ^^^
+               source.luau keyword.operator.logical.luau keyword.operator.wordlike.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau variable.other.readwrite.luau
+                    ^
+                    source.luau
+                     ^^
+                     source.luau keyword.operator.comparison.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^
+                         source.luau string.quoted.double.luau
+                          ^
+                          source.luau string.quoted.double.luau
+                           ^
+                           source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>-- full-moon tests
+ ^^
+ source.luau comment.line.double-dash.luau
+   ^^^^^^^^^^^^^^^^
+   source.luau comment.line.double-dash.luau
+>local complicatedExpr = expr<<A<B<C>>>>()
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau
+                       ^
+                       source.luau keyword.operator.assignment.luau
+                        ^
+                        source.luau
+                         ^^^^
+                         source.luau entity.name.function.luau
+                             ^^
+                             source.luau punctuation.definition.typeparameters.begin.luau
+                               ^
+                               source.luau entity.name.type.luau
+                                ^
+                                source.luau punctuation.definition.typeparameters.begin.luau
+                                 ^
+                                 source.luau entity.name.type.luau
+                                  ^
+                                  source.luau punctuation.definition.typeparameters.begin.luau
+                                   ^
+                                   source.luau entity.name.type.luau
+                                    ^
+                                    source.luau punctuation.definition.typeparameters.end.luau
+                                     ^
+                                     source.luau punctuation.definition.typeparameters.end.luau
+                                      ^^
+                                      source.luau punctuation.definition.typeparameters.end.luau
+                                        ^
+                                        source.luau punctuation.arguments.begin.luau
+                                         ^
+                                         source.luau punctuation.arguments.end.luau
+>local complicatedMethod = a:method<<A<B<C>>>>()
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^^^^^^^^^^^^^
+       source.luau variable.other.readwrite.luau
+                        ^
+                        source.luau
+                         ^
+                         source.luau keyword.operator.assignment.luau
+                          ^
+                          source.luau
+                           ^
+                           source.luau variable.other.readwrite.luau
+                            ^
+                            source.luau
+                             ^^^^^^
+                             source.luau entity.name.function.luau
+                                   ^^
+                                   source.luau punctuation.definition.typeparameters.begin.luau
+                                     ^
+                                     source.luau entity.name.type.luau
+                                      ^
+                                      source.luau punctuation.definition.typeparameters.begin.luau
+                                       ^
+                                       source.luau entity.name.type.luau
+                                        ^
+                                        source.luau punctuation.definition.typeparameters.begin.luau
+                                         ^
+                                         source.luau entity.name.type.luau
+                                          ^
+                                          source.luau punctuation.definition.typeparameters.end.luau
+                                           ^
+                                           source.luau punctuation.definition.typeparameters.end.luau
+                                            ^^
+                                            source.luau punctuation.definition.typeparameters.end.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+>
+ ^
+ source.luau
+>return "OK"
+ ^^^^^^
+ source.luau keyword.control.luau
+       ^
+       source.luau
+        ^
+        source.luau string.quoted.double.luau
+         ^^
+         source.luau string.quoted.double.luau
+           ^
+           source.luau string.quoted.double.luau
+>
+ ^
+ source.luau

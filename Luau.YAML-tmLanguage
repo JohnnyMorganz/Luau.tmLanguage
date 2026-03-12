@@ -28,6 +28,7 @@ patterns:
   - include: "#keyword"
   - include: "#language_constant"
   - include: "#standard_library"
+  - include: "#generics-instantiation"
   - include: "#identifier"
   - include: "#operator"
   - include: "#parentheses"
@@ -211,7 +212,7 @@ repository:
 
   identifier:
     patterns:
-      - match: "\\b({{identifier}})\\b(?=\\s*(?:[({\"']|\\[\\[))"
+      - match: "\\b({{identifier}})\\b(?=\\s*(?:<<|[({\"']|\\[\\[))"
         name: entity.name.function.luau # OLD: support.function.any-method.luau
       - match: "(?<=[^.]\\.|:)\\b({{identifier}})\\b"
         name: variable.other.property.luau # OLD: entity.other.attribute.luau
@@ -316,6 +317,17 @@ repository:
       # - match: ","
       # name: punctuation.separator.generics.luau
 
+  generics-instantiation:
+    begin: "(<<)"
+    beginCaptures:
+      "1": { name: punctuation.definition.typeparameters.begin.luau }
+    end: "(>>)"
+    endCaptures:
+      "1": { name: punctuation.definition.typeparameters.end.luau }
+    patterns:
+      - include: "#comment"
+      - include: "#type_literal"
+
   type-function:
     # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
     begin: "^\\b(?:(export)\\s+)?(type)\\s+(function)\\b"
@@ -365,7 +377,7 @@ repository:
         name: keyword.operator.assignment.luau
 
   type_annotation: # Type annotations not matched by other rules (i.e., function return type)
-    begin: ":(?!\\b({{identifier}})\\b(?=\\s*(?:[({\"']|\\[\\[)))" # negative lookahead: the syntax should not be of a method-call form `:name(`
+    begin: ":(?!\\b({{identifier}})\\b(?=\\s*(?:<<|[({\"']|\\[\\[)))" # negative lookahead: the syntax should not be of a method-call form like `:name(` or `:name<<`
     end: "(?<=\\))(?!\\s*->)|=|;|$|(?=\\breturn\\b)|(?=\\bend\\b)"
     patterns:
       - include: "#comment"
