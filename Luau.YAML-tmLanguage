@@ -329,8 +329,7 @@ repository:
       - include: "#type_literal"
 
   type-function:
-    # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
-    begin: "^\\b(?:(export)\\s+)?(type)\\s+(function)\\b"
+    begin: "(?<![^.]\\.|:)\\b(?:(export)\\s+)?(type)\\s+(function)\\b"
     beginCaptures:
       "1": { name: storage.modifier.visibility.luau }
       "2": { name: storage.type.luau }
@@ -365,8 +364,7 @@ repository:
         name: entity.name.type.luau
 
   type-alias-declaration:
-    # TODO: don't match start of line, it's not really correct. but we need to make sure we handle appropraitely if we remove ^
-    begin: "^\\b(?:(export)\\s+)?(type)\\b"
+    begin: "(?<![^.]\\.|:)\\b(?:(export)\\s+)?(type)\\b(?=\\s+(?!function\\b){{identifier}})"
     end: "(?=\\s*$)|(?=\\s*;)"
     beginCaptures:
       "1": { name: storage.modifier.visibility.luau }
