@@ -12,7 +12,7 @@ fileTypes: [luau]
 
 variables:
   matchingParentheses: (\(([^\(\)]|(\(([^\(\)]|\([^\(\)]*\))*\)))*\))
-  lookAheadEndOfType: '[;),}\]:?\-\+\>](?!\s*[&\|])|$|\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\b'
+  lookAheadEndOfType: '(?=[),}\]](?!\s*[&|]))|(?=\s*;)|(?=\s*\b(?:break|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*{{identifier}}(?:\.{{identifier}})*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))'
   identifier: "[a-zA-Z_][a-zA-Z0-9_]*"
 
 patterns:
@@ -365,7 +365,7 @@ repository:
 
   type-alias-declaration:
     begin: "(?<![^.]\\.|:)\\b(?:(export)\\s+)?(type)\\b(?=\\s+(?!function\\b){{identifier}})"
-    end: "(?=\\s*$)|(?=\\s*;)"
+    end: "{{lookAheadEndOfType}}"
     beginCaptures:
       "1": { name: storage.modifier.visibility.luau }
       "2": { name: storage.type.luau }
@@ -385,7 +385,7 @@ repository:
     begin: "(::)"
     beginCaptures:
       "1": { name: keyword.operator.typecast.luau }
-    end: (?=^|{{lookAheadEndOfType}})
+    end: "{{lookAheadEndOfType}}"
     patterns:
       - include: "#type_literal"
 

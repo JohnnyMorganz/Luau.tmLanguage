@@ -902,7 +902,7 @@ local fn: SomeType<(string, number), (boolean)>
                                       source.luau
                                        ^
                                        source.luau entity.name.type.luau
-                                        ^^^
+                                        ^^^^
                                         source.luau
 >local fn: SomeType<(string, number), (boolean)>
  ^^^^^

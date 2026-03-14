@@ -1034,7 +1034,7 @@
         <key>begin</key>
         <string>(?&lt;![^.]\.|:)\b(?:(export)\s+)?(type)\b(?=\s+(?!function\b)[a-zA-Z_][a-zA-Z0-9_]*)</string>
         <key>end</key>
-        <string>(?=\s*$)|(?=\s*;)</string>
+        <string>(?=[),}\]](?!\s*[&amp;|]))|(?=\s*;)|(?=\s*\b(?:break|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
@@ -1093,7 +1093,7 @@
           </dict>
         </dict>
         <key>end</key>
-        <string>(?=^|[;),}\]:?\-\+\&gt;](?!\s*[&amp;\|])|$|\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\b)</string>
+        <string>(?=[),}\]](?!\s*[&amp;|]))|(?=\s*;)|(?=\s*\b(?:break|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))</string>
         <key>patterns</key>
         <array>
           <dict>

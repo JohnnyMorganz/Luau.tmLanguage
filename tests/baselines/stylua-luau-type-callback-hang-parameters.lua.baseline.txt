@@ -682,7 +682,7 @@ Y
                         source.luau comment.line.double-dash.luau
 >Y
  ^
- source.luau variable.other.constant.luau
+ source.luau entity.name.type.luau
 >
  ^
  source.luau

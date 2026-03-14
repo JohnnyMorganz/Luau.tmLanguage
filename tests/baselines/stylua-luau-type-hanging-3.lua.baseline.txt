@@ -28,175 +28,279 @@ export type GraphQLInputType =
  ^^
  source.luau
    ^^^^^^^^^^^^^^^^^
-   source.luau variable.other.readwrite.luau
+   source.luau entity.name.type.luau
 >  | GraphQLEnumType
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^^^^^^^^^^^^^^^
-     source.luau variable.other.readwrite.luau
+     source.luau entity.name.type.luau
 >  | GraphQLInputObjectType
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^^^^^^^^^^^^^^^^^^^^^^
-     source.luau variable.other.readwrite.luau
+     source.luau entity.name.type.luau
 >  | GraphQLList<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType | GraphQLList<any> | GraphQLNonNull<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType | GraphQLList<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType | GraphQLList<any> | GraphQLNonNull<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType>>>>
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^^^^^^^^^^^
-     source.luau variable.other.readwrite.luau
+     source.luau entity.name.type.luau
                 ^
-                source.luau keyword.operator.comparison.luau
+                source.luau punctuation.definition.typeparameters.begin.luau
                  ^^^^^^^^^^^^^^^^^
-                 source.luau variable.other.readwrite.luau
-                                  ^^^
+                 source.luau entity.name.type.luau
+                                  ^
                                   source.luau
+                                   ^
+                                   source.luau keyword.operator.type.luau
+                                    ^
+                                    source.luau
                                      ^^^^^^^^^^^^^^^
-                                     source.luau variable.other.readwrite.luau
-                                                    ^^^
+                                     source.luau entity.name.type.luau
+                                                    ^
                                                     source.luau
+                                                     ^
+                                                     source.luau keyword.operator.type.luau
+                                                      ^
+                                                      source.luau
                                                        ^^^^^^^^^^^^^^^^^^^^^^
-                                                       source.luau variable.other.readwrite.luau
-                                                                             ^^^
+                                                       source.luau entity.name.type.luau
+                                                                             ^
                                                                              source.luau
+                                                                              ^
+                                                                              source.luau keyword.operator.type.luau
+                                                                               ^
+                                                                               source.luau
                                                                                 ^^^^^^^^^^^
-                                                                                source.luau variable.other.readwrite.luau
+                                                                                source.luau entity.name.type.luau
                                                                                            ^
-                                                                                           source.luau keyword.operator.comparison.luau
+                                                                                           source.luau punctuation.definition.typeparameters.begin.luau
                                                                                             ^^^
-                                                                                            source.luau variable.other.readwrite.luau
+                                                                                            source.luau support.type.primitive.luau
                                                                                                ^
-                                                                                               source.luau keyword.operator.comparison.luau
-                                                                                                ^^^
+                                                                                               source.luau punctuation.definition.typeparameters.end.luau
+                                                                                                ^
                                                                                                 source.luau
+                                                                                                 ^
+                                                                                                 source.luau keyword.operator.type.luau
+                                                                                                  ^
+                                                                                                  source.luau
                                                                                                    ^^^^^^^^^^^^^^
-                                                                                                   source.luau variable.other.readwrite.luau
+                                                                                                   source.luau entity.name.type.luau
                                                                                                                  ^
-                                                                                                                 source.luau keyword.operator.comparison.luau
+                                                                                                                 source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                   ^^^^^^^^^^^^^^^^^
-                                                                                                                  source.luau variable.other.readwrite.luau
-                                                                                                                                   ^^^
+                                                                                                                  source.luau entity.name.type.luau
+                                                                                                                                   ^
                                                                                                                                    source.luau
+                                                                                                                                    ^
+                                                                                                                                    source.luau keyword.operator.type.luau
+                                                                                                                                     ^
+                                                                                                                                     source.luau
                                                                                                                                       ^^^^^^^^^^^^^^^
-                                                                                                                                      source.luau variable.other.readwrite.luau
-                                                                                                                                                     ^^^
+                                                                                                                                      source.luau entity.name.type.luau
+                                                                                                                                                     ^
                                                                                                                                                      source.luau
+                                                                                                                                                      ^
+                                                                                                                                                      source.luau keyword.operator.type.luau
+                                                                                                                                                       ^
+                                                                                                                                                       source.luau
                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^
-                                                                                                                                                        source.luau variable.other.readwrite.luau
-                                                                                                                                                                              ^^^
+                                                                                                                                                        source.luau entity.name.type.luau
+                                                                                                                                                                              ^
                                                                                                                                                                               source.luau
+                                                                                                                                                                               ^
+                                                                                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                                                                                ^
+                                                                                                                                                                                source.luau
                                                                                                                                                                                  ^^^^^^^^^^^
-                                                                                                                                                                                 source.luau variable.other.readwrite.luau
+                                                                                                                                                                                 source.luau entity.name.type.luau
                                                                                                                                                                                             ^
-                                                                                                                                                                                            source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                            source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                                                                              ^^^^^^^^^^^^^^^^^
-                                                                                                                                                                                             source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                              ^^^
+                                                                                                                                                                                             source.luau entity.name.type.luau
+                                                                                                                                                                                                              ^
                                                                                                                                                                                                               source.luau
+                                                                                                                                                                                                               ^
+                                                                                                                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                ^
+                                                                                                                                                                                                                source.luau
                                                                                                                                                                                                                  ^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                 source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                                                ^^^
+                                                                                                                                                                                                                 source.luau entity.name.type.luau
+                                                                                                                                                                                                                                ^
                                                                                                                                                                                                                                 source.luau
+                                                                                                                                                                                                                                 ^
+                                                                                                                                                                                                                                 source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                                  ^
+                                                                                                                                                                                                                                  source.luau
                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                                   source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                                                                         ^^^
+                                                                                                                                                                                                                                   source.luau entity.name.type.luau
+                                                                                                                                                                                                                                                         ^
                                                                                                                                                                                                                                                          source.luau
+                                                                                                                                                                                                                                                          ^
+                                                                                                                                                                                                                                                          source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                                                           ^
+                                                                                                                                                                                                                                                           source.luau
                                                                                                                                                                                                                                                             ^^^^^^^^^^^
-                                                                                                                                                                                                                                                            source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                                            source.luau entity.name.type.luau
                                                                                                                                                                                                                                                                        ^
-                                                                                                                                                                                                                                                                       source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                                       source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                                                                                                                                                         ^^^
-                                                                                                                                                                                                                                                                        source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                                                        source.luau support.type.primitive.luau
                                                                                                                                                                                                                                                                            ^
-                                                                                                                                                                                                                                                                           source.luau keyword.operator.comparison.luau
-                                                                                                                                                                                                                                                                            ^^^
+                                                                                                                                                                                                                                                                           source.luau punctuation.definition.typeparameters.end.luau
+                                                                                                                                                                                                                                                                            ^
                                                                                                                                                                                                                                                                             source.luau
+                                                                                                                                                                                                                                                                             ^
+                                                                                                                                                                                                                                                                             source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                                                                              ^
+                                                                                                                                                                                                                                                                              source.luau
                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^
-                                                                                                                                                                                                                                                                               source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                                                               source.luau entity.name.type.luau
                                                                                                                                                                                                                                                                                              ^
-                                                                                                                                                                                                                                                                                             source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                                                             source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                                                                                              source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                                                                                                                               ^^^
+                                                                                                                                                                                                                                                                                              source.luau entity.name.type.luau
+                                                                                                                                                                                                                                                                                                               ^
                                                                                                                                                                                                                                                                                                                source.luau
+                                                                                                                                                                                                                                                                                                                ^
+                                                                                                                                                                                                                                                                                                                source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                                                                                                                 ^
+                                                                                                                                                                                                                                                                                                                 source.luau
                                                                                                                                                                                                                                                                                                                   ^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                                                                                                                  source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                                                                                                                                                 ^^^
+                                                                                                                                                                                                                                                                                                                  source.luau entity.name.type.luau
+                                                                                                                                                                                                                                                                                                                                 ^
                                                                                                                                                                                                                                                                                                                                  source.luau
+                                                                                                                                                                                                                                                                                                                                  ^
+                                                                                                                                                                                                                                                                                                                                  source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                                                                                                                                   ^
+                                                                                                                                                                                                                                                                                                                                   source.luau
                                                                                                                                                                                                                                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                                                                                                                                    source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                                                                                                                    source.luau entity.name.type.luau
                                                                                                                                                                                                                                                                                                                                                           ^
-                                                                                                                                                                                                                                                                                                                                                          source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                                                                                                                          source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                                                                                                                                                                                                                                            ^
-                                                                                                                                                                                                                                                                                                                                                           source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                                                                                                                           source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                                                                                                                                                                                                                                             ^
-                                                                                                                                                                                                                                                                                                                                                            source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                                                                                                                            source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                                                                                                                                                                                                                                              ^
-                                                                                                                                                                                                                                                                                                                                                             source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                                                                                                                             source.luau punctuation.definition.typeparameters.end.luau
 >  | GraphQLNonNull<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType | GraphQLList<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType | GraphQLList<any> | GraphQLNonNull<GraphQLScalarType | GraphQLEnumType | GraphQLInputObjectType>>>
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^^^^^^^^^^^^^^
-     source.luau variable.other.readwrite.luau
+     source.luau entity.name.type.luau
                    ^
-                   source.luau keyword.operator.comparison.luau
+                   source.luau punctuation.definition.typeparameters.begin.luau
                     ^^^^^^^^^^^^^^^^^
-                    source.luau variable.other.readwrite.luau
-                                     ^^^
+                    source.luau entity.name.type.luau
+                                     ^
                                      source.luau
+                                      ^
+                                      source.luau keyword.operator.type.luau
+                                       ^
+                                       source.luau
                                         ^^^^^^^^^^^^^^^
-                                        source.luau variable.other.readwrite.luau
-                                                       ^^^
+                                        source.luau entity.name.type.luau
+                                                       ^
                                                        source.luau
+                                                        ^
+                                                        source.luau keyword.operator.type.luau
+                                                         ^
+                                                         source.luau
                                                           ^^^^^^^^^^^^^^^^^^^^^^
-                                                          source.luau variable.other.readwrite.luau
-                                                                                ^^^
+                                                          source.luau entity.name.type.luau
+                                                                                ^
                                                                                 source.luau
+                                                                                 ^
+                                                                                 source.luau keyword.operator.type.luau
+                                                                                  ^
+                                                                                  source.luau
                                                                                    ^^^^^^^^^^^
-                                                                                   source.luau variable.other.readwrite.luau
+                                                                                   source.luau entity.name.type.luau
                                                                                               ^
-                                                                                              source.luau keyword.operator.comparison.luau
+                                                                                              source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                ^^^^^^^^^^^^^^^^^
-                                                                                               source.luau variable.other.readwrite.luau
-                                                                                                                ^^^
+                                                                                               source.luau entity.name.type.luau
+                                                                                                                ^
                                                                                                                 source.luau
+                                                                                                                 ^
+                                                                                                                 source.luau keyword.operator.type.luau
+                                                                                                                  ^
+                                                                                                                  source.luau
                                                                                                                    ^^^^^^^^^^^^^^^
-                                                                                                                   source.luau variable.other.readwrite.luau
-                                                                                                                                  ^^^
+                                                                                                                   source.luau entity.name.type.luau
+                                                                                                                                  ^
                                                                                                                                   source.luau
+                                                                                                                                   ^
+                                                                                                                                   source.luau keyword.operator.type.luau
+                                                                                                                                    ^
+                                                                                                                                    source.luau
                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^
-                                                                                                                                     source.luau variable.other.readwrite.luau
-                                                                                                                                                           ^^^
+                                                                                                                                     source.luau entity.name.type.luau
+                                                                                                                                                           ^
                                                                                                                                                            source.luau
+                                                                                                                                                            ^
+                                                                                                                                                            source.luau keyword.operator.type.luau
+                                                                                                                                                             ^
+                                                                                                                                                             source.luau
                                                                                                                                                               ^^^^^^^^^^^
-                                                                                                                                                              source.luau variable.other.readwrite.luau
+                                                                                                                                                              source.luau entity.name.type.luau
                                                                                                                                                                          ^
-                                                                                                                                                                         source.luau keyword.operator.comparison.luau
+                                                                                                                                                                         source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                                                           ^^^
-                                                                                                                                                                          source.luau variable.other.readwrite.luau
+                                                                                                                                                                          source.luau support.type.primitive.luau
                                                                                                                                                                              ^
-                                                                                                                                                                             source.luau keyword.operator.comparison.luau
-                                                                                                                                                                              ^^^
+                                                                                                                                                                             source.luau punctuation.definition.typeparameters.end.luau
+                                                                                                                                                                              ^
                                                                                                                                                                               source.luau
+                                                                                                                                                                               ^
+                                                                                                                                                                               source.luau keyword.operator.type.luau
+                                                                                                                                                                                ^
+                                                                                                                                                                                source.luau
                                                                                                                                                                                  ^^^^^^^^^^^^^^
-                                                                                                                                                                                 source.luau variable.other.readwrite.luau
+                                                                                                                                                                                 source.luau entity.name.type.luau
                                                                                                                                                                                                ^
-                                                                                                                                                                                               source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                               source.luau punctuation.definition.typeparameters.begin.luau
                                                                                                                                                                                                 ^^^^^^^^^^^^^^^^^
-                                                                                                                                                                                                source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                                 ^^^
+                                                                                                                                                                                                source.luau entity.name.type.luau
+                                                                                                                                                                                                                 ^
                                                                                                                                                                                                                  source.luau
+                                                                                                                                                                                                                  ^
+                                                                                                                                                                                                                  source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                   ^
+                                                                                                                                                                                                                   source.luau
                                                                                                                                                                                                                     ^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                    source.luau variable.other.readwrite.luau
-                                                                                                                                                                                                                                   ^^^
+                                                                                                                                                                                                                    source.luau entity.name.type.luau
+                                                                                                                                                                                                                                   ^
                                                                                                                                                                                                                                    source.luau
+                                                                                                                                                                                                                                    ^
+                                                                                                                                                                                                                                    source.luau keyword.operator.type.luau
+                                                                                                                                                                                                                                     ^
+                                                                                                                                                                                                                                     source.luau
                                                                                                                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^
-                                                                                                                                                                                                                                      source.luau variable.other.readwrite.luau
+                                                                                                                                                                                                                                      source.luau entity.name.type.luau
                                                                                                                                                                                                                                                             ^
-                                                                                                                                                                                                                                                            source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                            source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                                                                                                                                              ^
-                                                                                                                                                                                                                                                             source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                             source.luau punctuation.definition.typeparameters.end.luau
                                                                                                                                                                                                                                                               ^
-                                                                                                                                                                                                                                                              source.luau keyword.operator.comparison.luau
+                                                                                                                                                                                                                                                              source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau

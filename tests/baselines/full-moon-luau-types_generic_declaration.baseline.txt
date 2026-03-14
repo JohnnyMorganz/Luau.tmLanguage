@@ -55,7 +55,7 @@ type Indexed<T...> = module.Indexed<T...>
                                  source.luau
                                   ^
                                   source.luau entity.name.type.luau
-                                   ^^^
+                                   ^^^^
                                    source.luau
 >type Bar<U, T...> = nil
  ^^^^
@@ -141,7 +141,7 @@ type Indexed<T...> = module.Indexed<T...>
                                                                source.luau
                                                                 ^^^^^^
                                                                 source.luau entity.name.type.luau
-                                                                      ^^^
+                                                                      ^^^^
                                                                       source.luau
 >type Baz<U = string, T... = (string, number)> = nil
  ^^^^

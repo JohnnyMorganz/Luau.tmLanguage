@@ -34,25 +34,25 @@ type SubscribeToMoreOptions<TData, TSubscriptionVariables, TSubscriptionData> =
  ^^
  source.luau
    ^^^^^^^^^^^^^^^^^^^^^^^
-   source.luau variable.other.readwrite.luau
+   source.luau entity.name.type.luau
                           ^
                           source.luau
                            ^^^^^^^^^^^^^^^^^^^^^^
-                           source.luau variable.other.property.luau
+                           source.luau entity.name.type.luau
                                                  ^
-                                                 source.luau keyword.operator.comparison.luau
+                                                 source.luau punctuation.definition.typeparameters.begin.luau
                                                   ^^^^^
-                                                  source.luau variable.other.readwrite.luau
+                                                  source.luau entity.name.type.luau
                                                        ^^
                                                        source.luau
                                                          ^^^^^^^^^^^^^^^^^^^^^^
-                                                         source.luau variable.other.readwrite.luau
+                                                         source.luau entity.name.type.luau
                                                                                ^^
                                                                                source.luau
                                                                                  ^^^^^^^^^^^^^^^^^
-                                                                                 source.luau variable.other.readwrite.luau
+                                                                                 source.luau entity.name.type.luau
                                                                                                   ^
-                                                                                                  source.luau keyword.operator.comparison.luau
+                                                                                                  source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau

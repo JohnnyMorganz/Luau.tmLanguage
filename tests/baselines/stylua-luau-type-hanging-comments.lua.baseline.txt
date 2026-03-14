@@ -57,8 +57,10 @@ export type React_AbstractComponent<Config, Instance> = {
     source.luau string.quoted.double.luau
         ^
         source.luau string.quoted.double.luau
-         ^^^
+         ^
          source.luau
+          ^
+          source.luau keyword.operator.type.luau
 >  -- Document
  ^^
  source.luau
@@ -76,8 +78,12 @@ export type React_AbstractComponent<Config, Instance> = {
             ^
             source.luau string.quoted.double.luau
 >  | "OperationDefinition"
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^^^^^^^^^^^^^^^
@@ -85,8 +91,12 @@ export type React_AbstractComponent<Config, Instance> = {
                          ^
                          source.luau string.quoted.double.luau
 >  | "VariableDefinition"
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^^^^^^^^^^^^^^
@@ -94,8 +104,12 @@ export type React_AbstractComponent<Config, Instance> = {
                         ^
                         source.luau string.quoted.double.luau
 >  | "SelectionSet"
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^^^^^^^^
@@ -103,8 +117,12 @@ export type React_AbstractComponent<Config, Instance> = {
                   ^
                   source.luau string.quoted.double.luau
 >  | "Field"
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^
@@ -112,16 +130,22 @@ export type React_AbstractComponent<Config, Instance> = {
            ^
            source.luau string.quoted.double.luau
 >  | "Argument" |
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^^^^
       source.luau string.quoted.double.luau
               ^
               source.luau string.quoted.double.luau
-               ^^^
+               ^
                source.luau
+                ^
+                source.luau keyword.operator.type.luau
 >  -- Fragments
  ^^
  source.luau
@@ -139,8 +163,12 @@ export type React_AbstractComponent<Config, Instance> = {
                   ^
                   source.luau string.quoted.double.luau
 >  | "InlineFragment"
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^^^^^^^^^^
@@ -148,8 +176,12 @@ export type React_AbstractComponent<Config, Instance> = {
                     ^
                     source.luau string.quoted.double.luau
 >  | "FragmentDefinition"
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^
      source.luau string.quoted.double.luau
       ^^^^^^^^^^^^^^^^^^

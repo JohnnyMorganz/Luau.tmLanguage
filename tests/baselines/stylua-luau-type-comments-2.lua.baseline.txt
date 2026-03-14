@@ -99,7 +99,7 @@ string
  ^^
  source.luau
    ^^^^^^
-   source.luau support.constant.luau
+   source.luau support.type.primitive.luau
          ^
          source.luau
           ^^^^
@@ -232,9 +232,9 @@ string
                                     source.luau comment.block.luau
 >Bar<--[[ Before X ]]
  ^^^
- source.luau variable.other.readwrite.luau
+ source.luau entity.name.type.luau
     ^
-    source.luau keyword.operator.comparison.luau
+    source.luau punctuation.definition.typeparameters.begin.luau
      ^^^^
      source.luau comment.block.luau
          ^^^^^^^^^^
@@ -243,7 +243,7 @@ string
                    source.luau comment.block.luau
 >X, --[[ After X ]]
  ^
- source.luau variable.other.constant.luau
+ source.luau entity.name.type.luau
   ^^
   source.luau
     ^^^^
@@ -261,7 +261,7 @@ string
                source.luau comment.block.luau
 >Y, --[[ After Y ]]
  ^
- source.luau variable.other.constant.luau
+ source.luau entity.name.type.luau
   ^^
   source.luau
     ^^^^
@@ -279,7 +279,7 @@ string
                source.luau comment.block.luau
 >Z
  ^
- source.luau variable.other.constant.luau
+ source.luau entity.name.type.luau
 >--[[ After Z ]]> -- This is a comment after
  ^^^^
  source.luau comment.block.luau
@@ -288,7 +288,7 @@ string
               ^^
               source.luau comment.block.luau
                 ^
-                source.luau keyword.operator.comparison.luau
+                source.luau punctuation.definition.typeparameters.end.luau
                  ^
                  source.luau
                   ^^
@@ -321,7 +321,7 @@ string
             source.luau comment.block.luau
 ><
  ^
- source.luau keyword.operator.comparison.luau
+ source.luau punctuation.definition.typeparameters.begin.luau
 >--[[comment]]
  ^^^^
  source.luau comment.block.luau
@@ -331,7 +331,7 @@ string
             source.luau comment.block.luau
 >T
  ^
- source.luau variable.other.constant.luau
+ source.luau entity.name.type.luau
 >--[[comment]]
  ^^^^
  source.luau comment.block.luau
@@ -341,7 +341,7 @@ string
             source.luau comment.block.luau
 >>
  ^
- source.luau keyword.operator.comparison.luau
+ source.luau punctuation.definition.typeparameters.end.luau
 >--[[comment]]
  ^^^^
  source.luau comment.block.luau
@@ -361,7 +361,7 @@ string
             source.luau comment.block.luau
 >string
  ^^^^^^
- source.luau support.constant.luau
+ source.luau support.type.primitive.luau
 >--[[comment]]
  ^^^^
  source.luau comment.block.luau

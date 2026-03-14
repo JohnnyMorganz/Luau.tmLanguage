@@ -54,141 +54,149 @@ export type Visitor<KindToNode, Nodes = any> =
  ^^^^^^^
  source.luau
         ^^^^^^^^^^
-        source.luau variable.other.readwrite.luau
+        source.luau entity.name.type.luau
                   ^
-                  source.luau keyword.operator.comparison.luau
+                  source.luau punctuation.definition.typeparameters.begin.luau
 >               VisitFn<Nodes>
  ^^^^^^^^^^^^^^^
  source.luau
                 ^^^^^^^
-                source.luau variable.other.readwrite.luau
+                source.luau entity.name.type.luau
                        ^
-                       source.luau keyword.operator.comparison.luau
+                       source.luau punctuation.definition.typeparameters.begin.luau
                         ^^^^^
-                        source.luau variable.other.readwrite.luau
+                        source.luau entity.name.type.luau
                              ^
-                             source.luau keyword.operator.comparison.luau
+                             source.luau punctuation.definition.typeparameters.end.luau
 >               | ShapeMap<KindToNode, <Node>(Node) -> VisitFn<Nodes, Node>>
- ^^^^^^^^^^^^^^^^^
+ ^^^^^^^^^^^^^^^
  source.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
                   ^^^^^^^^
-                  source.luau variable.other.readwrite.luau
+                  source.luau entity.name.type.luau
                           ^
-                          source.luau keyword.operator.comparison.luau
+                          source.luau punctuation.definition.typeparameters.begin.luau
                            ^^^^^^^^^^
-                           source.luau variable.other.readwrite.luau
+                           source.luau entity.name.type.luau
                                      ^^
                                      source.luau
                                        ^
-                                       source.luau keyword.operator.comparison.luau
+                                       source.luau punctuation.definition.typeparameters.begin.luau
                                         ^^^^
-                                        source.luau variable.other.readwrite.luau
+                                        source.luau entity.name.type.luau
                                             ^
-                                            source.luau keyword.operator.comparison.luau
+                                            source.luau punctuation.definition.typeparameters.end.luau
                                              ^
-                                             source.luau punctuation.arguments.begin.luau
+                                             source.luau
                                               ^^^^
-                                              source.luau variable.other.readwrite.luau
+                                              source.luau entity.name.type.luau
                                                   ^
-                                                  source.luau punctuation.arguments.end.luau
+                                                  source.luau
                                                    ^
                                                    source.luau
-                                                    ^
-                                                    source.luau keyword.operator.arithmetic.luau
-                                                     ^
-                                                     source.luau keyword.operator.comparison.luau
+                                                    ^^
+                                                    source.luau keyword.operator.type.function.luau
                                                       ^
                                                       source.luau
                                                        ^^^^^^^
-                                                       source.luau variable.other.readwrite.luau
+                                                       source.luau entity.name.type.luau
                                                               ^
-                                                              source.luau keyword.operator.comparison.luau
+                                                              source.luau punctuation.definition.typeparameters.begin.luau
                                                                ^^^^^
-                                                               source.luau variable.other.readwrite.luau
+                                                               source.luau entity.name.type.luau
                                                                     ^^
                                                                     source.luau
                                                                       ^^^^
-                                                                      source.luau variable.other.readwrite.luau
+                                                                      source.luau entity.name.type.luau
                                                                           ^
-                                                                          source.luau keyword.operator.comparison.luau
+                                                                          source.luau punctuation.definition.typeparameters.end.luau
                                                                            ^
-                                                                           source.luau keyword.operator.comparison.luau
+                                                                           source.luau punctuation.definition.typeparameters.end.luau
 >       >
  ^^^^^^^
  source.luau
         ^
-        source.luau keyword.operator.comparison.luau
+        source.luau punctuation.definition.typeparameters.end.luau
 >       | ShapeMap<
- ^^^^^^^^^
+ ^^^^^^^
  source.luau
+        ^
+        source.luau keyword.operator.type.luau
+         ^
+         source.luau
           ^^^^^^^^
-          source.luau variable.other.readwrite.luau
+          source.luau entity.name.type.luau
                   ^
-                  source.luau keyword.operator.comparison.luau
+                  source.luau punctuation.definition.typeparameters.begin.luau
 >               KindToNode,
  ^^^^^^^^^^^^^^^
  source.luau
                 ^^^^^^^^^^
-                source.luau variable.other.readwrite.luau
+                source.luau entity.name.type.luau
                           ^^
                           source.luau
 >               <Node>(Node) -> VisitFn<Nodes, Node> | EnterLeave<VisitFn<Nodes, Node>>>
  ^^^^^^^^^^^^^^^
  source.luau
                 ^
-                source.luau keyword.operator.comparison.luau
+                source.luau punctuation.definition.typeparameters.begin.luau
                  ^^^^
-                 source.luau variable.other.readwrite.luau
+                 source.luau entity.name.type.luau
                      ^
-                     source.luau keyword.operator.comparison.luau
+                     source.luau punctuation.definition.typeparameters.end.luau
                       ^
-                      source.luau punctuation.arguments.begin.luau
+                      source.luau
                        ^^^^
-                       source.luau variable.other.readwrite.luau
+                       source.luau entity.name.type.luau
                            ^
-                           source.luau punctuation.arguments.end.luau
+                           source.luau
                             ^
                             source.luau
-                             ^
-                             source.luau keyword.operator.arithmetic.luau
-                              ^
-                              source.luau keyword.operator.comparison.luau
+                             ^^
+                             source.luau keyword.operator.type.function.luau
                                ^
                                source.luau
                                 ^^^^^^^
-                                source.luau variable.other.readwrite.luau
+                                source.luau entity.name.type.luau
                                        ^
-                                       source.luau keyword.operator.comparison.luau
+                                       source.luau punctuation.definition.typeparameters.begin.luau
                                         ^^^^^
-                                        source.luau variable.other.readwrite.luau
+                                        source.luau entity.name.type.luau
                                              ^^
                                              source.luau
                                                ^^^^
-                                               source.luau variable.other.readwrite.luau
+                                               source.luau entity.name.type.luau
                                                    ^
-                                                   source.luau keyword.operator.comparison.luau
-                                                    ^^^
+                                                   source.luau punctuation.definition.typeparameters.end.luau
+                                                    ^
                                                     source.luau
+                                                     ^
+                                                     source.luau keyword.operator.type.luau
+                                                      ^
+                                                      source.luau
                                                        ^^^^^^^^^^
-                                                       source.luau variable.other.readwrite.luau
+                                                       source.luau entity.name.type.luau
                                                                  ^
-                                                                 source.luau keyword.operator.comparison.luau
+                                                                 source.luau punctuation.definition.typeparameters.begin.luau
                                                                   ^^^^^^^
-                                                                  source.luau variable.other.readwrite.luau
+                                                                  source.luau entity.name.type.luau
                                                                          ^
-                                                                         source.luau keyword.operator.comparison.luau
+                                                                         source.luau punctuation.definition.typeparameters.begin.luau
                                                                           ^^^^^
-                                                                          source.luau variable.other.readwrite.luau
+                                                                          source.luau entity.name.type.luau
                                                                                ^^
                                                                                source.luau
                                                                                  ^^^^
-                                                                                 source.luau variable.other.readwrite.luau
+                                                                                 source.luau entity.name.type.luau
                                                                                      ^
-                                                                                     source.luau keyword.operator.comparison.luau
+                                                                                     source.luau punctuation.definition.typeparameters.end.luau
                                                                                       ^
-                                                                                      source.luau keyword.operator.comparison.luau
+                                                                                      source.luau punctuation.definition.typeparameters.end.luau
                                                                                        ^
-                                                                                       source.luau keyword.operator.comparison.luau
+                                                                                       source.luau punctuation.definition.typeparameters.end.luau
 >
  ^
  source.luau

@@ -35,17 +35,21 @@ export type CoverageReporterWithOptions<K> =
  ^^
  source.luau
    ^^^^^
-   source.luau variable.other.readwrite.luau
+   source.luau entity.name.type.luau
         ^
-        source.luau keyword.operator.comparison.luau
+        source.luau punctuation.definition.typeparameters.begin.luau
          ^^^^^^
-         source.luau support.constant.luau
-               ^^^
+         source.luau support.type.primitive.luau
+               ^
                source.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
                   ^^^^^^
-                  source.luau variable.other.readwrite.luau
+                  source.luau entity.name.type.luau
                         ^
-                        source.luau keyword.operator.comparison.luau
+                        source.luau punctuation.definition.typeparameters.end.luau
                          ^
                          source.luau
                           ^^^^
@@ -55,10 +59,14 @@ export type CoverageReporterWithOptions<K> =
                                                               ^^
                                                               source.luau comment.block.luau
 >  | nil
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^^^
-     source.luau constant.language.nil.luau
+     source.luau support.type.primitive.luau
 >
  ^
  source.luau
@@ -87,17 +95,21 @@ export type CoverageReporterWithOptions<K> =
  ^^
  source.luau
    ^^^^^
-   source.luau variable.other.readwrite.luau
+   source.luau entity.name.type.luau
         ^
-        source.luau keyword.operator.comparison.luau
+        source.luau punctuation.definition.typeparameters.begin.luau
          ^^^^^^
-         source.luau support.constant.luau
-               ^^^
+         source.luau support.type.primitive.luau
+               ^
                source.luau
+                ^
+                source.luau keyword.operator.type.luau
+                 ^
+                 source.luau
                   ^^^^^^
-                  source.luau variable.other.readwrite.luau
+                  source.luau entity.name.type.luau
                         ^
-                        source.luau keyword.operator.comparison.luau
+                        source.luau punctuation.definition.typeparameters.end.luau
                          ^
                          source.luau
                           ^^^^
@@ -107,10 +119,14 @@ export type CoverageReporterWithOptions<K> =
                                                               ^^
                                                               source.luau comment.block.luau
 >  & nil
- ^^^^
+ ^^
  source.luau
+   ^
+   source.luau keyword.operator.type.luau
+    ^
+    source.luau
      ^^^
-     source.luau constant.language.nil.luau
+     source.luau support.type.primitive.luau
 >
  ^
  source.luau

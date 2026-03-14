@@ -104,7 +104,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                        source.luau
                         ^
                         source.luau entity.name.type.luau
-                         ^^^
+                         ^^^^
                          source.luau
 >
  ^
@@ -322,7 +322,7 @@ local _g: Function<(number, string, ...string), (string, number)>? = nil
                                                  source.luau
                                                   ^^^^^^
                                                   source.luau entity.name.type.luau
-                                                        ^^^
+                                                        ^^^^
                                                         source.luau
 >
  ^

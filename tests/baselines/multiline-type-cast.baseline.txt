@@ -1,0 +1,80 @@
+original file
+-----------------------------------
+local x = y :: string
+    | number
+
+local a = b :: Foo
+    & Bar
+
+-----------------------------------
+
+>local x = y :: string
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.operator.typecast.luau
+               ^
+               source.luau
+                ^^^^^^
+                source.luau support.type.primitive.luau
+>    | number
+ ^^^^
+ source.luau
+     ^
+     source.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^^^^^^
+       source.luau support.type.primitive.luau
+>
+ ^
+ source.luau
+>local a = b :: Foo
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^
+       source.luau variable.other.readwrite.luau
+        ^
+        source.luau
+         ^
+         source.luau keyword.operator.assignment.luau
+          ^
+          source.luau
+           ^
+           source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^^
+             source.luau keyword.operator.typecast.luau
+               ^
+               source.luau
+                ^^^
+                source.luau entity.name.type.luau
+>    & Bar
+ ^^^^
+ source.luau
+     ^
+     source.luau keyword.operator.type.luau
+      ^
+      source.luau
+       ^^^
+       source.luau entity.name.type.luau
+>
+ ^
+ source.luau
