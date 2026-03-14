@@ -68,6 +68,10 @@
       </dict>
       <dict>
         <key>include</key>
+        <string>#generics-instantiation</string>
+      </dict>
+      <dict>
+        <key>include</key>
         <string>#identifier</string>
       </dict>
       <dict>
@@ -597,7 +601,7 @@
         <array>
           <dict>
             <key>match</key>
-            <string>\b([a-zA-Z_][a-zA-Z0-9_]*)\b(?=\s*(?:[({"']|\[\[))</string>
+            <string>\b([a-zA-Z_][a-zA-Z0-9_]*)\b(?=\s*(?:&lt;&lt;|[({"']|\[\[))</string>
             <key>name</key>
             <string>entity.name.function.luau</string>
           </dict>
@@ -877,6 +881,40 @@
           </dict>
         </array>
       </dict>
+      <key>generics-instantiation</key>
+      <dict>
+        <key>begin</key>
+        <string>(&lt;&lt;)</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.definition.typeparameters.begin.luau</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>(&gt;&gt;)</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.definition.typeparameters.end.luau</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#type_literal</string>
+          </dict>
+        </array>
+      </dict>
       <key>type-function</key>
       <dict>
         <key>begin</key>
@@ -1027,7 +1065,7 @@
       <key>type_annotation</key>
       <dict>
         <key>begin</key>
-        <string>:(?!\b([a-zA-Z_][a-zA-Z0-9_]*)\b(?=\s*(?:[({"']|\[\[)))</string>
+        <string>:(?!\b([a-zA-Z_][a-zA-Z0-9_]*)\b(?=\s*(?:&lt;&lt;|[({"']|\[\[)))</string>
         <key>end</key>
         <string>(?&lt;=\))(?!\s*-&gt;)|=|;|$|(?=\breturn\b)|(?=\bend\b)</string>
         <key>patterns</key>
