@@ -768,18 +768,10 @@
                 <key>name</key>
                 <string>keyword.operator.other.luau</string>
                 <key>begin</key>
-                <string>(```luau?)\s+</string>
-                <key>end</key>
-                <string>(```)</string>
+                <string>(```luau?)\s*$</string>
+                <key>while</key>
+                <string>^(?!\s*```)</string>
                 <key>beginCaptures</key>
-                <dict>
-                  <key>1</key>
-                  <dict>
-                    <key>name</key>
-                    <string>comment.luau</string>
-                  </dict>
-                </dict>
-                <key>endCaptures</key>
                 <dict>
                   <key>1</key>
                   <dict>
@@ -794,6 +786,20 @@
                     <string>source.luau</string>
                   </dict>
                 </array>
+              </dict>
+              <dict>
+                <key>match</key>
+                <string>(```)</string>
+                <key>name</key>
+                <string>keyword.operator.other.luau</string>
+                <key>captures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>comment.luau</string>
+                  </dict>
+                </dict>
               </dict>
               <dict>
                 <key>include</key>

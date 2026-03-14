@@ -506,14 +506,9 @@
           "patterns": [
             {
               "name": "keyword.operator.other.luau",
-              "begin": "(```luau?)\\s+",
-              "end": "(```)",
+              "begin": "(```luau?)\\s*$",
+              "while": "^(?!\\s*```)",
               "beginCaptures": {
-                "1": {
-                  "name": "comment.luau"
-                }
-              },
-              "endCaptures": {
                 "1": {
                   "name": "comment.luau"
                 }
@@ -523,6 +518,15 @@
                   "include": "source.luau"
                 }
               ]
+            },
+            {
+              "match": "(```)",
+              "name": "keyword.operator.other.luau",
+              "captures": {
+                "1": {
+                  "name": "comment.luau"
+                }
+              }
             },
             {
               "include": "#doc_comment_tags"

@@ -109,7 +109,7 @@ original file
    source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
 >  ```
  ^^
- source.luau comment.block.luau keyword.operator.other.luau
+ source.luau comment.block.luau
    ^^^
    source.luau comment.block.luau keyword.operator.other.luau comment.luau
 >

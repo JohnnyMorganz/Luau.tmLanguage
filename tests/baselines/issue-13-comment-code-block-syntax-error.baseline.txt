@@ -1,0 +1,108 @@
+original file
+-----------------------------------
+local function before()
+    return true
+end
+
+--[[
+```lua
+pcall(function()
+end
+```
+]]
+
+local function after()
+    return true
+end
+
+-----------------------------------
+
+>local function before()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>    return true
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau constant.language.boolean.true.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>--[[
+ ^^^^
+ source.luau comment.block.luau
+>```lua
+ ^^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>pcall(function()
+ ^^^^^
+ source.luau comment.block.luau keyword.operator.other.luau support.function.luau
+      ^
+      source.luau comment.block.luau keyword.operator.other.luau punctuation.arguments.begin.luau
+       ^^^^^^^^
+       source.luau comment.block.luau keyword.operator.other.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau comment.block.luau keyword.operator.other.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                ^
+                source.luau comment.block.luau keyword.operator.other.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>end
+ ^^^
+ source.luau comment.block.luau keyword.operator.other.luau keyword.control.luau
+>```
+ ^^^
+ source.luau comment.block.luau keyword.operator.other.luau comment.luau
+>]]
+ ^^
+ source.luau comment.block.luau
+>
+ ^
+ source.luau
+>local function after()
+ ^^^^^
+ source.luau meta.function.luau storage.modifier.local.luau
+      ^
+      source.luau meta.function.luau
+       ^^^^^^^^
+       source.luau meta.function.luau keyword.control.luau
+               ^
+               source.luau meta.function.luau
+                ^^^^^
+                source.luau meta.function.luau entity.name.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>    return true
+ ^^^^
+ source.luau
+     ^^^^^^
+     source.luau keyword.control.luau
+           ^
+           source.luau
+            ^^^^
+            source.luau constant.language.boolean.true.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
