@@ -44,6 +44,10 @@
       </dict>
       <dict>
         <key>include</key>
+        <string>#const-declaration</string>
+      </dict>
+      <dict>
+        <key>include</key>
         <string>#for-loop</string>
       </dict>
       <dict>
@@ -104,7 +108,7 @@
       <key>function-definition</key>
       <dict>
         <key>begin</key>
-        <string>\b(?:(local)\s+)?(function)\b(?![,:])</string>
+        <string>\b(?:(local)\s+|(const)\s+)?(function)\b(?![,:])</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
@@ -113,6 +117,11 @@
             <string>storage.modifier.local.luau</string>
           </dict>
           <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.const.luau</string>
+          </dict>
+          <key>3</key>
           <dict>
             <key>name</key>
             <string>keyword.control.luau</string>
@@ -253,6 +262,65 @@
             </dict>
             <key>end</key>
             <string>(?=\s*do\b|\s*[=;,]|\s*$)</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#type_literal</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.constant.luau</string>
+            <key>match</key>
+            <string>\b([A-Z_][A-Z0-9_]*)\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>variable.other.readwrite.luau</string>
+            <key>match</key>
+            <string>\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
+          </dict>
+        </array>
+      </dict>
+      <key>const-declaration</key>
+      <dict>
+        <key>begin</key>
+        <string>\b(const)\b</string>
+        <key>end</key>
+        <string>(?=\s*[=;]|\s*$)</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.const.luau</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#attribute</string>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>(:)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.type.luau</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*[=;,]|\s*$)</string>
             <key>patterns</key>
             <array>
               <dict>
@@ -562,6 +630,12 @@
             <string>\b(local)\b</string>
             <key>name</key>
             <string>storage.modifier.local.luau</string>
+          </dict>
+          <dict>
+            <key>match</key>
+            <string>\b(const)\b</string>
+            <key>name</key>
+            <string>storage.modifier.const.luau</string>
           </dict>
           <dict>
             <key>match</key>
@@ -1040,7 +1114,7 @@
         <key>begin</key>
         <string>(?&lt;![^.]\.|:)\b(?:(export)\s+)?(type)\b(?=\s+(?!function\b)[a-zA-Z_][a-zA-Z0-9_]*)</string>
         <key>end</key>
-        <string>(?=[),}\]](?!\s*[&amp;|]))|(?=\s*;)|(?=\s*\b(?:break|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))</string>
+        <string>(?=[),}\]](?!\s*[&amp;|]))|(?=\s*;)|(?=\s*\b(?:break|const|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
@@ -1099,7 +1173,7 @@
           </dict>
         </dict>
         <key>end</key>
-        <string>(?=[),}\]](?!\s*[&amp;|]))|(?=\s*;)|(?=\s*\b(?:break|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))</string>
+        <string>(?=[),}\]](?!\s*[&amp;|]))|(?=\s*;)|(?=\s*\b(?:break|const|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*[a-zA-Z_][a-zA-Z0-9_]*(?:\.[a-zA-Z_][a-zA-Z0-9_]*)*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))</string>
         <key>patterns</key>
         <array>
           <dict>
