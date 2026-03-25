@@ -40,10 +40,11 @@ patterns:
 
 repository:
   function-definition:
-    begin: "\\b(?:(local|const)\\s+)?(function)\\b(?![,:])"
+    begin: "\\b(?:(local)\\s+|(const)\\s+)?(function)\\b(?![,:])"
     beginCaptures:
       "1": { name: storage.modifier.local.luau } # OLD: keyword.local.luau
-      "2": { name: keyword.control.luau }
+      "2": { name: storage.modifier.const.luau }
+      "3": { name: keyword.control.luau }
     end: "(?<=[\\)\\-{}\\[\\]\"'])"
     name: meta.function.luau
     patterns:
@@ -98,7 +99,7 @@ repository:
     begin: "\\b(const)\\b"
     end: "(?=\\s*[=;]|\\s*$)"
     beginCaptures:
-      "1": { name: storage.modifier.local.luau }
+      "1": { name: storage.modifier.const.luau }
     patterns:
       - include: "#comment"
       - include: "#attribute"
@@ -217,8 +218,10 @@ repository:
     patterns:
       - match: "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|in|continue)\\b"
         name: keyword.control.luau
-      - match: "\\b(local|const)\\b"
+      - match: "\\b(local)\\b"
         name: storage.modifier.local.luau
+      - match: "\\b(const)\\b"
+        name: storage.modifier.const.luau
       - match: "\\b(function)\\b(?![,:])"
         name: keyword.control.luau
       - match: "(?<![^.]\\.|:)\\b(self)\\b"

@@ -108,7 +108,7 @@
       <key>function-definition</key>
       <dict>
         <key>begin</key>
-        <string>\b(?:(local|const)\s+)?(function)\b(?![,:])</string>
+        <string>\b(?:(local)\s+|(const)\s+)?(function)\b(?![,:])</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
@@ -117,6 +117,11 @@
             <string>storage.modifier.local.luau</string>
           </dict>
           <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.const.luau</string>
+          </dict>
+          <key>3</key>
           <dict>
             <key>name</key>
             <string>keyword.control.luau</string>
@@ -290,7 +295,7 @@
           <key>1</key>
           <dict>
             <key>name</key>
-            <string>storage.modifier.local.luau</string>
+            <string>storage.modifier.const.luau</string>
           </dict>
         </dict>
         <key>patterns</key>
@@ -622,9 +627,15 @@
           </dict>
           <dict>
             <key>match</key>
-            <string>\b(local|const)\b</string>
+            <string>\b(local)\b</string>
             <key>name</key>
             <string>storage.modifier.local.luau</string>
+          </dict>
+          <dict>
+            <key>match</key>
+            <string>\b(const)\b</string>
+            <key>name</key>
+            <string>storage.modifier.const.luau</string>
           </dict>
           <dict>
             <key>match</key>

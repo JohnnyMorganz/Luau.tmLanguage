@@ -11,7 +11,7 @@ end
 
 >const x = 5
  ^^^^^
- source.luau storage.modifier.local.luau
+ source.luau storage.modifier.const.luau
       ^
       source.luau
        ^
@@ -26,7 +26,7 @@ end
            source.luau constant.numeric.decimal.luau
 >const MY_CONST = "hello"
  ^^^^^
- source.luau storage.modifier.local.luau
+ source.luau storage.modifier.const.luau
       ^
       source.luau
        ^^^^^^^^
@@ -45,7 +45,7 @@ end
                         source.luau string.quoted.double.luau
 >const y: number = 10
  ^^^^^
- source.luau storage.modifier.local.luau
+ source.luau storage.modifier.const.luau
       ^
       source.luau
        ^
@@ -66,7 +66,7 @@ end
                    source.luau constant.numeric.decimal.luau
 >const function foo()
  ^^^^^
- source.luau meta.function.luau storage.modifier.local.luau
+ source.luau meta.function.luau storage.modifier.const.luau
       ^
       source.luau meta.function.luau
        ^^^^^^^^

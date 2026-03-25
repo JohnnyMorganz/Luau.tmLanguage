@@ -76,12 +76,15 @@
   ],
   "repository": {
     "function-definition": {
-      "begin": "\\b(?:(local|const)\\s+)?(function)\\b(?![,:])",
+      "begin": "\\b(?:(local)\\s+|(const)\\s+)?(function)\\b(?![,:])",
       "beginCaptures": {
         "1": {
           "name": "storage.modifier.local.luau"
         },
         "2": {
+          "name": "storage.modifier.const.luau"
+        },
+        "3": {
           "name": "keyword.control.luau"
         }
       },
@@ -194,7 +197,7 @@
       "end": "(?=\\s*[=;]|\\s*$)",
       "beginCaptures": {
         "1": {
-          "name": "storage.modifier.local.luau"
+          "name": "storage.modifier.const.luau"
         }
       },
       "patterns": [
@@ -412,8 +415,12 @@
           "name": "keyword.control.luau"
         },
         {
-          "match": "\\b(local|const)\\b",
+          "match": "\\b(local)\\b",
           "name": "storage.modifier.local.luau"
+        },
+        {
+          "match": "\\b(const)\\b",
+          "name": "storage.modifier.const.luau"
         },
         {
           "match": "\\b(function)\\b(?![,:])",
