@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES5",
+    "ignoreDeprecations": "6.0",
     "module": "commonjs",
     "strict": true,
     "skipLibCheck": true
