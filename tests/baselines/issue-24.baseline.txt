@@ -1,7 +1,6 @@
 original file
 -----------------------------------
 local a = tonumber("1")::number * 1000
-print(a)
 
 -----------------------------------
 
@@ -42,15 +41,6 @@ print(a)
                                   source.luau
                                    ^^^^
                                    source.luau constant.numeric.decimal.luau
->print(a)
- ^^^^^
- source.luau support.function.luau
-      ^
-      source.luau punctuation.arguments.begin.luau
-       ^
-       source.luau variable.other.readwrite.luau
-        ^
-        source.luau punctuation.arguments.end.luau
 >
  ^
  source.luau
