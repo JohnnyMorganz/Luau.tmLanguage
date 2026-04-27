@@ -450,10 +450,14 @@ exports.separateDisplayNameAndHOCs =
                          source.luau
                           ^^^
                           source.luau support.type.primitive.luau
-                             ^^^^
+                             ^
                              source.luau
+                              ^^
+                              source.luau keyword.operator.comparison.luau
+                                ^
+                                source.luau
                                  ^^^
-                                 source.luau support.type.primitive.luau
+                                 source.luau constant.language.nil.luau
                                     ^
                                     source.luau
                                      ^^

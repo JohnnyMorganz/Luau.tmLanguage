@@ -12,8 +12,15 @@ fileTypes: [luau]
 
 variables:
   matchingParentheses: (\(([^\(\)]|(\(([^\(\)]|\([^\(\)]*\))*\)))*\))
-  lookAheadEndOfType: '(?=[),}\]](?!\s*[&|]))|(?=\s*;)|(?=\s*\b(?:break|const|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while)\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*{{identifier}}(?:\.{{identifier}})*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))'
   identifier: "[a-zA-Z_][a-zA-Z0-9_]*"
+  # Arithmetic/comparison operators that are valid in expressions but cannot appear at the
+  # top level of a Luau type expression, so their presence signals the end of a type.
+  # Exclusions: ->  (function return type arrow), --  (comment), ...  (variadic pack)
+  nonTypeOperators: '[*+%^]|\/\/?|(?<!\.)\.\.(?!\.)|-(?![->`])|~=|=='
+  # Keywords that are valid outside a type expression (as binary operators or statement
+  # starters) but cannot appear within one, so their presence signals the end of a type.
+  nonTypeKeywords: 'and|or|break|const|continue|do|else|elseif|end|for|function|if|in|local|repeat|return|then|until|while'
+  lookAheadEndOfType: '(?=[),}\]](?!\s*[&|]))|(?=\s*;)|(?=\s*(?:{{nonTypeOperators}}))|(?=\s*\b(?:{{nonTypeKeywords}})\b)|(?=^\s*$)|(?=^\s*(?:@|\b(?:export\s+)?type\b))|(?=^\s*{{identifier}}(?:\.{{identifier}})*\s*(?:(?:[+\-*/%^]|\.\.)?=(?!=)|\(|\[|:))'
 
 patterns:
   - include: "#function-definition"
