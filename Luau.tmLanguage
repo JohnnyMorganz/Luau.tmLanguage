@@ -1220,7 +1220,7 @@
           </dict>
           <dict>
             <key>match</key>
-            <string>\b(nil|string|number|boolean|thread|userdata|symbol|vector|buffer|unknown|never|any)\b</string>
+            <string>\b(nil|string|number|boolean|thread|vector|buffer|unknown|never|any)\b</string>
             <key>name</key>
             <string>support.type.primitive.luau</string>
           </dict>
