@@ -253,7 +253,7 @@ repository:
 
   operator:
     patterns:
-      - match: "==|~=|!=|<=?|>=?"
+      - match: "==|~=|<=?|>=?"
         name: keyword.operator.comparison.luau
       - match: "\\+=|-=|/=|//=|\\*=|%=|\\^=|\\.\\.=|="
         name: keyword.operator.assignment.luau
