@@ -1,0 +1,184 @@
+original file
+-----------------------------------
+local num01 = -123456789
+local num02 = -1_048_576
+local num03 = -99
+const num04 = -0xfedcba9876543210
+const num05 = -0xFFFF_FFFF
+local num06 = -0b01010101
+local num07 = -0b_0101_0101
+const num08 = -1e5
+local num09 = -1e-5
+local num10 = -1e+5
+-----------------------------------
+
+>local num01 = -123456789
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^^^^^^
+                source.luau constant.numeric.decimal.luau
+>local num02 = -1_048_576
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^^^^^^
+                source.luau constant.numeric.decimal.luau
+>local num03 = -99
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^
+                source.luau constant.numeric.decimal.luau
+>const num04 = -0xfedcba9876543210
+ ^^^^^
+ source.luau storage.modifier.const.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^^^^^^^^^^^^^^^
+                source.luau constant.numeric.hex.luau
+>const num05 = -0xFFFF_FFFF
+ ^^^^^
+ source.luau storage.modifier.const.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^^^^^^^^
+                source.luau constant.numeric.hex.luau
+>local num06 = -0b01010101
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^^^^^^^
+                source.luau constant.numeric.binary.luau
+>local num07 = -0b_0101_0101
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^^^^^^^^^
+                source.luau constant.numeric.binary.luau
+>const num08 = -1e5
+ ^^^^^
+ source.luau storage.modifier.const.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^
+                source.luau constant.numeric.decimal.luau
+>local num09 = -1e-5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^
+                source.luau constant.numeric.decimal.luau
+>local num10 = -1e+5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^^^^
+                source.luau constant.numeric.decimal.luau

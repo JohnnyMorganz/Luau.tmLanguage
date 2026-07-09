@@ -1,0 +1,180 @@
+original file
+-----------------------------------
+local i1: integer = 123456789i
+local i2: integer = -1_048_576i
+local i3: integer = -99i
+const i4: integer = 0xfedcba9876543210i
+const i5: integer = -0xFFFF_FFFFi
+local i6: integer = 0b01010101i
+local i7: integer = -0b_0101_0101i
+-----------------------------------
+
+>local i1: integer = 123456789i
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^
+                     source.luau constant.numeric.decimal.luau
+                              ^^
+                              source.luau
+>local i2: integer = -1_048_576i
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.arithmetic.luau
+                      ^^^^^^^^^
+                      source.luau constant.numeric.decimal.luau
+                               ^^
+                               source.luau
+>local i3: integer = -99i
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.arithmetic.luau
+                      ^^
+                      source.luau constant.numeric.decimal.luau
+                        ^^
+                        source.luau
+>const i4: integer = 0xfedcba9876543210i
+ ^^^^^
+ source.luau storage.modifier.const.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^^^^^^^^^
+                     source.luau constant.numeric.hex.luau
+                                       ^^
+                                       source.luau
+>const i5: integer = -0xFFFF_FFFFi
+ ^^^^^
+ source.luau storage.modifier.const.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.arithmetic.luau
+                      ^^^^^^^^^^^
+                      source.luau constant.numeric.hex.luau
+                                 ^^
+                                 source.luau
+>local i6: integer = 0b01010101i
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^^^^^^^^^^
+                     source.luau constant.numeric.binary.luau
+                               ^^
+                               source.luau
+>local i7: integer = -0b_0101_0101i
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^
+       source.luau variable.other.readwrite.luau
+         ^
+         source.luau keyword.operator.type.luau
+          ^
+          source.luau
+           ^^^^^^^
+           source.luau entity.name.type.luau
+                  ^
+                  source.luau
+                   ^
+                   source.luau keyword.operator.assignment.luau
+                    ^
+                    source.luau
+                     ^
+                     source.luau keyword.operator.arithmetic.luau
+                      ^^^^^^^^^^^^
+                      source.luau constant.numeric.binary.luau
+                                  ^^
+                                  source.luau
