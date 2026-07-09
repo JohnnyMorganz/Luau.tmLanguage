@@ -21,7 +21,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
@@ -42,7 +42,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
@@ -65,7 +65,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
@@ -88,7 +88,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
@@ -109,7 +109,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
@@ -132,7 +132,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
@@ -153,7 +153,7 @@ local i7: integer = -0b_0101_0101i
           ^
           source.luau
            ^^^^^^^
-           source.luau entity.name.type.luau
+           source.luau support.type.primitive.luau
                   ^
                   source.luau
                    ^
