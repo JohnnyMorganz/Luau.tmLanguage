@@ -8,6 +8,10 @@ local num05 = 0.1.5
 local num06 = 0xA_B_Ce_D.E
 local num07 = 0b10e10
 local num08 = 0b10.10
+local num09 = 0x
+local num10 = 0b
+local num11 = 1e
+local num12 = -1e-
 -----------------------------------
 
 >local num01 = 123e4.5
@@ -140,3 +144,73 @@ local num08 = 0b10.10
                source.luau constant.numeric.binary.luau
                    ^^^
                    source.luau constant.numeric.decimal.luau
+>local num09 = 0x
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^
+               source.luau constant.numeric.hex.luau
+>local num10 = 0b
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^
+                source.luau
+>local num11 = 1e
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^
+                source.luau
+>local num12 = -1e-
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau keyword.operator.arithmetic.luau
+                ^
+                source.luau constant.numeric.decimal.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.arithmetic.luau

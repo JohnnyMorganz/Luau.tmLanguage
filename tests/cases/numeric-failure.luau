@@ -6,3 +6,7 @@ local num05 = 0.1.5
 local num06 = 0xA_B_Ce_D.E
 local num07 = 0b10e10
 local num08 = 0b10.10
+local num09 = 0x
+local num10 = 0b
+local num11 = 1e
+local num12 = -1e-
