@@ -305,7 +305,7 @@
       "patterns": [
         {
           "name": "constant.numeric.hex.luau",
-          "match": "\\b0_*[xX]_*[\\da-fA-F_][\\da-fA-F_]+i?"
+          "match": "\\b0_*[xX]_*[\\da-fA-F][\\da-fA-F_]*i?"
         },
         {
           "name": "constant.numeric.binary.luau",
