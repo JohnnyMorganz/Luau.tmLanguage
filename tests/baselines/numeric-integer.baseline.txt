@@ -199,8 +199,10 @@ local i13: integer = _5i
                    source.luau keyword.operator.assignment.luau
                     ^
                     source.luau
-                     ^^^
+                     ^^
                      source.luau constant.numeric.decimal.luau
+                       ^
+                       source.luau variable.other.property.luau
 >local i9: integer = -1.0i
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -222,8 +224,10 @@ local i13: integer = _5i
                     source.luau
                      ^
                      source.luau keyword.operator.arithmetic.luau
-                      ^^^^
+                      ^^^
                       source.luau constant.numeric.decimal.luau
+                         ^^
+                         source.luau
 >local i10: integer = 5e7i
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -293,10 +297,10 @@ local i13: integer = _5i
                     source.luau keyword.operator.assignment.luau
                      ^
                      source.luau
-                      ^^^^
+                      ^^^
                       source.luau constant.numeric.decimal.luau
-                          ^
-                          source.luau
+                         ^^
+                         source.luau
                            ^
                            source.luau constant.numeric.decimal.luau
 >local i13: integer = _5i

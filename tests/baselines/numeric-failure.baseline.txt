@@ -34,8 +34,10 @@ local num19 = 1e+_
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^^^^^^
+               ^^^^^
                source.luau constant.numeric.decimal.luau
+                    ^^
+                    source.luau constant.numeric.decimal.luau
 >local num02 = 1.2E3.4
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -49,8 +51,10 @@ local num19 = 1e+_
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^^^^^^
+               ^^^^^
                source.luau constant.numeric.decimal.luau
+                    ^^
+                    source.luau constant.numeric.decimal.luau
 >local num03 = _123
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -132,8 +136,12 @@ local num19 = 1e+_
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^^^^^^
+               ^^^^
                source.luau constant.numeric.binary.luau
+                   ^
+                   source.luau
+                    ^^
+                    source.luau constant.numeric.decimal.luau
 >local num08 = 0b10.10
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -164,8 +172,10 @@ local num19 = 1e+_
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^
-               source.luau constant.numeric.hex.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^
+                source.luau
 >local num10 = 0b
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -276,8 +286,10 @@ local num19 = 1e+_
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^^
-               source.luau constant.numeric.hex.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^^
+                source.luau
 >local num16 = 0b_
  ^^^^^
  source.luau storage.modifier.local.luau
@@ -291,8 +303,10 @@ local num19 = 1e+_
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^^
-               source.luau constant.numeric.binary.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^^
+                source.luau
 >local num17 = 1e_
  ^^^^^
  source.luau storage.modifier.local.luau
