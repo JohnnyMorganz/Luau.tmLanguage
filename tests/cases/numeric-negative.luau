@@ -8,3 +8,4 @@ local num07 = -0b_0101_0101
 const num08 = -1e5
 local num09 = -1e-5
 local num10 = -1e+5
+local num11 = -1_2._3e-_5_6

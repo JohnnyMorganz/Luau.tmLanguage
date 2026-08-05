@@ -1,0 +1,88 @@
+original file
+-----------------------------------
+local num01 = 123e4.5
+local num02 = 1.2E3.4
+local num03 = _123
+local num03 = _123.4
+local num03 = _1.3e5
+-----------------------------------
+
+>local num01 = 123e4.5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^
+               source.luau constant.numeric.decimal.luau
+>local num02 = 1.2E3.4
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^
+               source.luau constant.numeric.decimal.luau
+>local num03 = _123
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau variable.other.constant.luau
+>local num03 = _123.4
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau variable.other.constant.luau
+                   ^^
+                   source.luau constant.numeric.decimal.luau
+>local num03 = _1.3e5
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^
+               source.luau variable.other.constant.luau
+                 ^^^^
+                 source.luau constant.numeric.decimal.luau

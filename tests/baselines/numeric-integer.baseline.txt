@@ -8,12 +8,13 @@ const i5: integer = -0xFFFF_FFFFi
 local i6: integer = 0b01010101i
 local i7: integer = -0b_0101_0101i
 
--- negative cases
+-- failure cases
 local i8: integer = 1.i
 local i9: integer = -1.0i
 local i10: integer = 5e7i
 local i11: integer = -5ie7
 local i12: integer = 1.2ie3
+local i13: integer = _5i
 -----------------------------------
 
 >local i1: integer = 123456789i
@@ -174,10 +175,10 @@ local i12: integer = 1.2ie3
 >
  ^
  source.luau
->-- negative cases
+>-- failure cases
  ^^
  source.luau comment.line.double-dash.luau
-   ^^^^^^^^^^^^^^^
+   ^^^^^^^^^^^^^^
    source.luau comment.line.double-dash.luau
 >local i8: integer = 1.i
  ^^^^^
@@ -298,3 +299,24 @@ local i12: integer = 1.2ie3
                           source.luau
                            ^
                            source.luau constant.numeric.decimal.luau
+>local i13: integer = _5i
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^
+       source.luau variable.other.readwrite.luau
+          ^
+          source.luau keyword.operator.type.luau
+           ^
+           source.luau
+            ^^^^^^^
+            source.luau support.type.primitive.luau
+                   ^
+                   source.luau
+                    ^
+                    source.luau keyword.operator.assignment.luau
+                     ^
+                     source.luau
+                      ^^^
+                      source.luau variable.other.readwrite.luau
