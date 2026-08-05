@@ -12,6 +12,8 @@ local num09 = 0x
 local num10 = 0b
 local num11 = 1e
 local num12 = -1e-
+local num13 = 1e_-1
+local num13 = 1e_+1
 -----------------------------------
 
 >local num01 = 123e4.5
@@ -214,3 +216,45 @@ local num12 = -1e-
                  source.luau
                   ^
                   source.luau keyword.operator.arithmetic.luau
+>local num13 = 1e_-1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^
+                source.luau
+                  ^
+                  source.luau keyword.operator.arithmetic.luau
+                   ^
+                   source.luau constant.numeric.decimal.luau
+>local num13 = 1e_+1
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^
+               source.luau constant.numeric.decimal.luau
+                ^^
+                source.luau
+                  ^
+                  source.luau keyword.operator.arithmetic.luau
+                   ^
+                   source.luau constant.numeric.decimal.luau

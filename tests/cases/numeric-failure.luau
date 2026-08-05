@@ -10,3 +10,5 @@ local num09 = 0x
 local num10 = 0b
 local num11 = 1e
 local num12 = -1e-
+local num13 = 1e_-1
+local num13 = 1e_+1
