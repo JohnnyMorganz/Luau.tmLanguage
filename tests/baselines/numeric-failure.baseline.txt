@@ -3,8 +3,11 @@ original file
 local num01 = 123e4.5
 local num02 = 1.2E3.4
 local num03 = _123
-local num03 = _123.4
-local num03 = _1.3e5
+local num04 = _123.4
+local num05 = 0.1.5
+local num06 = 0xA_B_Ce_D.E
+local num07 = 0b10e10
+local num08 = 0b10.10
 -----------------------------------
 
 >local num01 = 123e4.5
@@ -52,7 +55,7 @@ local num03 = _1.3e5
               source.luau
                ^^^^
                source.luau variable.other.constant.luau
->local num03 = _123.4
+>local num04 = _123.4
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
@@ -69,7 +72,7 @@ local num03 = _1.3e5
                source.luau variable.other.constant.luau
                    ^^
                    source.luau constant.numeric.decimal.luau
->local num03 = _1.3e5
+>local num05 = 0.1.5
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
@@ -82,7 +85,58 @@ local num03 = _1.3e5
              source.luau keyword.operator.assignment.luau
               ^
               source.luau
-               ^^
-               source.luau variable.other.constant.luau
-                 ^^^^
-                 source.luau constant.numeric.decimal.luau
+               ^^^
+               source.luau constant.numeric.decimal.luau
+                  ^^
+                  source.luau constant.numeric.decimal.luau
+>local num06 = 0xA_B_Ce_D.E
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^^^^
+               source.luau constant.numeric.hex.luau
+                         ^
+                         source.luau
+                          ^
+                          source.luau variable.other.property.luau
+>local num07 = 0b10e10
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^^^^
+               source.luau constant.numeric.binary.luau
+>local num08 = 0b10.10
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^^
+               source.luau constant.numeric.binary.luau
+                   ^^^
+                   source.luau constant.numeric.decimal.luau
