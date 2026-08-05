@@ -14,9 +14,11 @@ local num11 = 1e
 local num12 = -1e-
 local num13 = 1e_-1
 local num14 = 1e_+1
-local num15 = 1e_
-local num16 = 1e-_
-local num17 = 1e+_
+local num15 = 0x_
+local num16 = 0b_
+local num17 = 1e_
+local num18 = 1e-_
+local num19 = 1e+_
 -----------------------------------
 
 >local num01 = 123e4.5
@@ -261,7 +263,37 @@ local num17 = 1e+_
                   source.luau keyword.operator.arithmetic.luau
                    ^
                    source.luau constant.numeric.decimal.luau
->local num15 = 1e_
+>local num15 = 0x_
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau constant.numeric.hex.luau
+>local num16 = 0b_
+ ^^^^^
+ source.luau storage.modifier.local.luau
+      ^
+      source.luau
+       ^^^^^
+       source.luau variable.other.readwrite.luau
+            ^
+            source.luau
+             ^
+             source.luau keyword.operator.assignment.luau
+              ^
+              source.luau
+               ^^^
+               source.luau constant.numeric.binary.luau
+>local num17 = 1e_
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
@@ -278,7 +310,7 @@ local num17 = 1e+_
                source.luau constant.numeric.decimal.luau
                 ^^^
                 source.luau
->local num16 = 1e-_
+>local num18 = 1e-_
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
@@ -299,7 +331,7 @@ local num17 = 1e+_
                  source.luau keyword.operator.arithmetic.luau
                   ^
                   source.luau variable.other.constant.luau
->local num17 = 1e+_
+>local num19 = 1e+_
  ^^^^^
  source.luau storage.modifier.local.luau
       ^
