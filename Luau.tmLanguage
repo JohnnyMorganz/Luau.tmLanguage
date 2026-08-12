@@ -108,7 +108,7 @@
       <key>function-definition</key>
       <dict>
         <key>begin</key>
-        <string>\b(?:(local)\s+|(const)\s+)?(function)\b(?![,:])</string>
+        <string>\b(?:(local)\s+|(const)\s+|(export)\s+)?(function)\b(?![,:])</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
@@ -122,6 +122,11 @@
             <string>storage.modifier.const.luau</string>
           </dict>
           <key>3</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.visibility.luau</string>
+          </dict>
+          <key>4</key>
           <dict>
             <key>name</key>
             <string>keyword.control.luau</string>
@@ -228,12 +233,17 @@
       <key>local-declaration</key>
       <dict>
         <key>begin</key>
-        <string>\b(local)\b</string>
+        <string>\b(?:(export)\s+)?(local)\b</string>
         <key>end</key>
         <string>(?=\s*do\b|\s*[=;]|\s*$)</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.visibility.luau</string>
+          </dict>
+          <key>2</key>
           <dict>
             <key>name</key>
             <string>storage.modifier.local.luau</string>
@@ -287,12 +297,17 @@
       <key>const-declaration</key>
       <dict>
         <key>begin</key>
-        <string>\b(const)\b</string>
+        <string>\b(?:(export)\s+)?(const)\b</string>
         <key>end</key>
         <string>(?=\s*[=;]|\s*$)</string>
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>storage.modifier.visibility.luau</string>
+          </dict>
+          <key>2</key>
           <dict>
             <key>name</key>
             <string>storage.modifier.const.luau</string>

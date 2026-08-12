@@ -47,11 +47,12 @@ patterns:
 
 repository:
   function-definition:
-    begin: "\\b(?:(local)\\s+|(const)\\s+)?(function)\\b(?![,:])"
+    begin: "\\b(?:(local)\\s+|(const)\\s+|(export)\\s+)?(function)\\b(?![,:])"
     beginCaptures:
       "1": { name: storage.modifier.local.luau } # OLD: keyword.local.luau
       "2": { name: storage.modifier.const.luau }
-      "3": { name: keyword.control.luau }
+      "3": { name: storage.modifier.visibility.luau }
+      "4": { name: keyword.control.luau }
     end: "(?<=[\\)\\-{}\\[\\]\"'])"
     name: meta.function.luau
     patterns:
@@ -84,10 +85,11 @@ repository:
         name: entity.name.function.luau
 
   local-declaration:
-    begin: "\\b(local)\\b"
+    begin: "\\b(?:(export)\\s+)?(local)\\b"
     end: "(?=\\s*do\\b|\\s*[=;]|\\s*$)"
     beginCaptures:
-      "1": { name: storage.modifier.local.luau }
+      "1": { name: storage.modifier.visibility.luau }
+      "2": { name: storage.modifier.local.luau }
     patterns:
       - include: "#comment"
       - include: "#attribute"
@@ -103,10 +105,11 @@ repository:
         match: "\\b({{identifier}})\\b"
 
   const-declaration:
-    begin: "\\b(const)\\b"
+    begin: "\\b(?:(export)\\s+)?(const)\\b"
     end: "(?=\\s*[=;]|\\s*$)"
     beginCaptures:
-      "1": { name: storage.modifier.const.luau }
+      "1": { name: storage.modifier.visibility.luau }
+      "2": { name: storage.modifier.const.luau }
     patterns:
       - include: "#comment"
       - include: "#attribute"
