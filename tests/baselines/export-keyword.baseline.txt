@@ -1,0 +1,204 @@
+original file
+-----------------------------------
+export function thing()
+  return
+end
+
+export local version = "5.1"
+export const TAU = math.pi * 2
+export local settings: Settings = getSettings()
+export local a, b, c = 1, 2, 3
+export local d
+
+@native
+export function fast()
+  return
+end
+
+-----------------------------------
+
+>export function thing()
+ ^^^^^^
+ source.luau meta.function.luau storage.modifier.visibility.luau
+       ^
+       source.luau meta.function.luau
+        ^^^^^^^^
+        source.luau meta.function.luau keyword.control.luau
+                ^
+                source.luau meta.function.luau
+                 ^^^^^
+                 source.luau meta.function.luau entity.name.function.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                       ^
+                       source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau
+>export local version = "5.1"
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau storage.modifier.local.luau
+             ^
+             source.luau
+              ^^^^^^^
+              source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau string.quoted.double.luau
+                         ^^^
+                         source.luau string.quoted.double.luau
+                            ^
+                            source.luau string.quoted.double.luau
+>export const TAU = math.pi * 2
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau storage.modifier.const.luau
+             ^
+             source.luau
+              ^^^
+              source.luau variable.other.constant.luau
+                 ^
+                 source.luau
+                  ^
+                  source.luau keyword.operator.assignment.luau
+                   ^
+                   source.luau
+                    ^^^^^^^
+                    source.luau support.constant.luau
+                           ^
+                           source.luau
+                            ^
+                            source.luau keyword.operator.arithmetic.luau
+                             ^
+                             source.luau
+                              ^
+                              source.luau constant.numeric.decimal.luau
+>export local settings: Settings = getSettings()
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau storage.modifier.local.luau
+             ^
+             source.luau
+              ^^^^^^^^
+              source.luau variable.other.readwrite.luau
+                      ^
+                      source.luau keyword.operator.type.luau
+                       ^
+                       source.luau
+                        ^^^^^^^^
+                        source.luau entity.name.type.luau
+                                ^
+                                source.luau
+                                 ^
+                                 source.luau keyword.operator.assignment.luau
+                                  ^
+                                  source.luau
+                                   ^^^^^^^^^^^
+                                   source.luau entity.name.function.luau
+                                              ^
+                                              source.luau punctuation.arguments.begin.luau
+                                               ^
+                                               source.luau punctuation.arguments.end.luau
+>export local a, b, c = 1, 2, 3
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau storage.modifier.local.luau
+             ^
+             source.luau
+              ^
+              source.luau variable.other.readwrite.luau
+               ^^
+               source.luau
+                 ^
+                 source.luau variable.other.readwrite.luau
+                  ^^
+                  source.luau
+                    ^
+                    source.luau variable.other.readwrite.luau
+                     ^
+                     source.luau
+                      ^
+                      source.luau keyword.operator.assignment.luau
+                       ^
+                       source.luau
+                        ^
+                        source.luau constant.numeric.decimal.luau
+                         ^^
+                         source.luau
+                           ^
+                           source.luau constant.numeric.decimal.luau
+                            ^^
+                            source.luau
+                              ^
+                              source.luau constant.numeric.decimal.luau
+>export local d
+ ^^^^^^
+ source.luau storage.modifier.visibility.luau
+       ^
+       source.luau
+        ^^^^^
+        source.luau storage.modifier.local.luau
+             ^
+             source.luau
+              ^
+              source.luau variable.other.readwrite.luau
+>
+ ^
+ source.luau
+>@native
+ ^
+ source.luau meta.attribute.luau keyword.operator.attribute.luau
+  ^^^^^^
+  source.luau meta.attribute.luau storage.type.attribute.luau
+>export function fast()
+ ^^^^^^
+ source.luau meta.function.luau storage.modifier.visibility.luau
+       ^
+       source.luau meta.function.luau
+        ^^^^^^^^
+        source.luau meta.function.luau keyword.control.luau
+                ^
+                source.luau meta.function.luau
+                 ^^^^
+                 source.luau meta.function.luau entity.name.function.luau
+                     ^
+                     source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.begin.luau
+                      ^
+                      source.luau meta.function.luau meta.parameter.luau punctuation.definition.parameters.end.luau
+>  return
+ ^^
+ source.luau
+   ^^^^^^
+   source.luau keyword.control.luau
+>end
+ ^^^
+ source.luau keyword.control.luau
+>
+ ^
+ source.luau

@@ -157,10 +157,13 @@
       ]
     },
     "local-declaration": {
-      "begin": "\\b(local)\\b",
+      "begin": "\\b(?:(export)\\s+)?(local)\\b",
       "end": "(?=\\s*do\\b|\\s*[=;]|\\s*$)",
       "beginCaptures": {
         "1": {
+          "name": "storage.modifier.visibility.luau"
+        },
+        "2": {
           "name": "storage.modifier.local.luau"
         }
       },
@@ -196,10 +199,13 @@
       ]
     },
     "const-declaration": {
-      "begin": "\\b(const)\\b",
+      "begin": "\\b(?:(export)\\s+)?(const)\\b",
       "end": "(?=\\s*[=;]|\\s*$)",
       "beginCaptures": {
         "1": {
+          "name": "storage.modifier.visibility.luau"
+        },
+        "2": {
           "name": "storage.modifier.const.luau"
         }
       },
