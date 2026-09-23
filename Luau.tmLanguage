@@ -622,18 +622,6 @@
             <key>match</key>
             <string>(?&lt;![^.]\.|:)\b(bit32|buffer|coroutine|debug|integer(\.(maxsigned|minsigned))?|math(\.(huge|pi|nan|e|phi|sqrt2|tau))?|os|string|table|task|utf8(\.charpattern)?|vector(\.(one|zero))?)\b</string>
           </dict>
-          <dict>
-            <key>name</key>
-            <string>support.function.luau</string>
-            <key>match</key>
-            <string>(?&lt;![^.]\.|:)\b(delay|DebuggerManager|elapsedTime|PluginManager|printidentity|settings|spawn|stats|tick|time|UserSettings|version|wait|warn)\b</string>
-          </dict>
-          <dict>
-            <key>name</key>
-            <string>constant.language.luau</string>
-            <key>match</key>
-            <string>(?&lt;![^.]\.|:)\b(game|plugin|shared|script|workspace|Enum(?:\.\w+){0,2})\b</string>
-          </dict>
         </array>
       </dict>
       <key>keyword</key>
