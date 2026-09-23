@@ -464,6 +464,8 @@ repository:
       - begin: "\\{"
         end: "\\}"
         patterns:
+          - match: "\\b(read|write)\\b(?=\\s*\\[)"
+            name: storage.modifier.access.luau
           - begin: "\\["
             end: "\\]" # TODO: do we need to match the ':' afterwards?
             patterns:
