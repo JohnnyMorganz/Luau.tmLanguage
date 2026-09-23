@@ -1328,6 +1328,12 @@
             <key>patterns</key>
             <array>
               <dict>
+                <key>match</key>
+                <string>\b(read|write)\b(?=\s*\[)</string>
+                <key>name</key>
+                <string>storage.modifier.access.luau</string>
+              </dict>
+              <dict>
                 <key>begin</key>
                 <string>\[</string>
                 <key>end</key>

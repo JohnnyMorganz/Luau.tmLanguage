@@ -4,6 +4,9 @@ type Test = {
     read readonly_property: string,
     write writeonly_property: string,
     property: string,
+    read [any]: any,
+    write [string]: number,
+    [boolean]: string,
 }
 
 -----------------------------------
@@ -70,6 +73,59 @@ type Test = {
                source.luau support.type.primitive.luau
                      ^
                      source.luau punctuation.separator.fields.type.luau
+>    read [any]: any,
+ ^^^^
+ source.luau
+     ^^^^
+     source.luau storage.modifier.access.luau
+         ^
+         source.luau
+          ^
+          source.luau
+           ^^^
+           source.luau support.type.primitive.luau
+              ^
+              source.luau
+               ^^
+               source.luau
+                 ^^^
+                 source.luau support.type.primitive.luau
+                    ^
+                    source.luau punctuation.separator.fields.type.luau
+>    write [string]: number,
+ ^^^^
+ source.luau
+     ^^^^^
+     source.luau storage.modifier.access.luau
+          ^
+          source.luau
+           ^
+           source.luau
+            ^^^^^^
+            source.luau support.type.primitive.luau
+                  ^
+                  source.luau
+                   ^^
+                   source.luau
+                     ^^^^^^
+                     source.luau support.type.primitive.luau
+                           ^
+                           source.luau punctuation.separator.fields.type.luau
+>    [boolean]: string,
+ ^^^^
+ source.luau
+     ^
+     source.luau
+      ^^^^^^^
+      source.luau support.type.primitive.luau
+             ^
+             source.luau
+              ^^
+              source.luau
+                ^^^^^^
+                source.luau support.type.primitive.luau
+                      ^
+                      source.luau punctuation.separator.fields.type.luau
 >}
  ^
  source.luau
